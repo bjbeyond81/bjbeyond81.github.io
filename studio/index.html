@@ -21,7 +21,7 @@
     .categories{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.35rem}.category{display:inline-flex;align-items:center;height:2.35rem;padding:0 .85rem;border-radius:999px;text-decoration:none;background:var(--surface);box-shadow:0 0 0 1px var(--ring);font-size:.78rem;font-weight:600;color:var(--fg)}.category:hover{box-shadow:0 0 0 1px rgba(236,234,228,.2)}
     section{padding:4rem 0;border-top:1px solid var(--ring)}.head{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.5rem}@media(min-width:700px){.head{flex-direction:row;align-items:end;justify-content:space-between}}.head h2{font-size:clamp(2rem,4vw,3.4rem);margin:.35rem 0 0}.head p{margin:0;color:var(--muted);max-width:30rem}.grid{display:grid;gap:1rem}.primary{grid-template-columns:1fr}@media(min-width:760px){.primary{grid-template-columns:repeat(3,1fr)}}.more{grid-template-columns:1fr}@media(min-width:640px){.more{grid-template-columns:repeat(2,1fr)}}@media(min-width:1000px){.more{grid-template-columns:repeat(4,1fr)}}
     .card{display:flex;flex-direction:column;overflow:hidden;border-radius:1rem;background:var(--surface);text-decoration:none;box-shadow:0 0 0 1px var(--ring);min-height:100%;transition:transform .18s ease,box-shadow .18s ease}.card:hover{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(236,234,228,.2)}.thumb{aspect-ratio:4/3;overflow:hidden}.thumb img{width:100%;height:100%;object-fit:cover;display:block}.body{display:flex;flex-direction:column;gap:.7rem;padding:1.2rem;flex:1}.body h3{font-size:1.35rem;margin:0}.body p{margin:0;color:var(--muted);font-size:.92rem}.tag{display:inline-flex;align-self:flex-start;padding:.33rem .55rem;border-radius:999px;background:rgba(236,234,228,.07);box-shadow:0 0 0 1px var(--ring);font-size:.64rem!important;letter-spacing:.12em;text-transform:uppercase;color:var(--fg)!important;font-weight:600}.meta{margin-top:auto;color:var(--subtle)!important;font-size:.72rem!important;letter-spacing:.1em;text-transform:uppercase}
-    .how{display:grid;gap:1rem}@media(min-width:760px){.how{grid-template-columns:repeat(3,1fr)}}.step{padding:1.4rem;border-radius:.9rem;background:var(--surface);box-shadow:0 0 0 1px var(--ring)}.step strong{display:block;margin-bottom:.45rem}.step p{margin:0;color:var(--muted);font-size:.92rem}.about{display:grid;gap:2rem;background:var(--surface);border-radius:1rem;padding:2rem;box-shadow:0 0 0 1px var(--ring)}@media(min-width:800px){.about{grid-template-columns:1.2fr .8fr}}footer{padding:3rem 0;border-top:1px solid var(--ring);color:var(--subtle);font-size:.85rem}
+    .how{display:grid;gap:1rem}@media(min-width:760px){.how{grid-template-columns:repeat(3,1fr)}}.step{padding:1.4rem;border-radius:.9rem;background:var(--surface);box-shadow:0 0 0 1px var(--ring)}.step strong{display:block;margin-bottom:.45rem}.step p{margin:0;color:var(--muted);font-size:.92rem}.about{display:grid;gap:2rem;background:var(--surface);border-radius:1rem;padding:2rem;box-shadow:0 0 0 1px var(--ring)}@media(min-width:800px){.about{grid-template-columns:1.2fr .8fr}}footer{padding:3rem 0;border-top:1px solid var(--ring);color:var(--subtle);font-size:.85rem}.footerlinks{display:flex;gap:1rem;flex-wrap:wrap;margin-top:.7rem}
   </style>
 </head>
 <body>
@@ -39,7 +39,7 @@
           <a class="category" href="#more">iPhone & Wellness</a>
           <a class="category" href="#more">Creator & Seller Tools</a>
           <a class="category" href="#more">Personal Experiences</a>
-          <a class="category" href="#amazon-deals">Amazon Deals</a>
+          <a class="category" href="amazon-deals/">Amazon Deals</a>
         </div>
         <p class="trust">Digital products · Secure Etsy checkout · Amazon affiliate recommendations clearly disclosed</p>
       </div>
@@ -70,21 +70,11 @@
       </div>
     </section>
 
-    <section id="amazon-deals">
-      <div class="head"><div><p class="kicker">Affiliate recommendations</p><h2>AMAZON DEALS</h2></div><p>Wearables, streaming gear, smart devices and useful tech selected by BJ Beyond.</p></div>
-      <div class="grid primary">
-        <a class="card" href="amazon-deals/"><div class="thumb"><img src="https://img.tailwindapp.net/images/62af/81dc/c2ff/5628c29bf730260e0681.jpg" alt="Apple Watch Amazon Deals" /></div><div class="body"><p class="tag">Amazon Deals</p><h3>Apple Watch Picks</h3><p>Series 11, Ultra 3 and SE 3 collected in one place.</p><p class="meta">Explore Amazon Deals →</p></div></a>
-        <a class="card" href="amazon-deals/"><div class="thumb"><img src="https://img.tailwindapp.net/images/ae2d/9e3c/ca42/43b46f304ee7a9005d0b.png" alt="Fire TV Stick 4K Plus Amazon Deal" /></div><div class="body"><p class="tag">Amazon Deals</p><h3>Streaming & Smart Tech</h3><p>Current featured picks including Fire TV Stick 4K Plus.</p><p class="meta">Explore Amazon Deals →</p></div></a>
-        <a class="card" href="amazon-deals/"><div class="thumb"><img src="shop/hero.jpg" alt="BJ Beyond Amazon Deals collection" /></div><div class="body"><p class="tag">Affiliate</p><h3>See All Deals</h3><p>Browse the full curated selection and check current availability directly on Amazon.</p><p class="meta">Open Amazon Deals →</p></div></a>
-      </div>
-      <p class="trust">Affiliate disclosure: as an Amazon Associate, I may earn from qualifying purchases at no additional cost to you.</p>
-    </section>
-
     <section>
-      <div class="about"><div><p class="kicker">About</p><h2 style="font-size:clamp(2rem,4vw,3.2rem);margin:.4rem 0 1rem">Built to make small parts of life easier.</h2><p style="color:var(--muted);margin:0">BJBeyondStudio creates compact digital tools for weddings, couples, iPhone wellness, creators and everyday routines. The portal also includes clearly disclosed Amazon affiliate recommendations.</p></div><div><p class="kicker">What stays simple</p><p style="color:var(--muted)">Digital products stay on Etsy.<br />Amazon products stay on Amazon.<br />No duplicate checkout system.<br />One clear portal for discovery.</p></div></div>
+      <div class="about"><div><p class="kicker">About</p><h2 style="font-size:clamp(2rem,4vw,3.2rem);margin:.4rem 0 1rem">Built to make small parts of life easier.</h2><p style="color:var(--muted);margin:0">BJBeyondStudio creates compact digital tools for weddings, couples, iPhone wellness, creators and everyday routines. Amazon affiliate recommendations live on a separate Amazon Deals page.</p></div><div><p class="kicker">What stays simple</p><p style="color:var(--muted)">Digital products stay on Etsy.<br />Amazon products stay on Amazon.<br />No duplicate checkout system.<br />One clear portal for discovery.</p></div></div>
     </section>
   </div>
 </main>
-<footer><div class="wrap">BJBeyondStudio · Digital products · Amazon Deals · Affiliate links clearly disclosed</div></footer>
+<footer><div class="wrap">BJBeyondStudio · BJ Beyond<div class="footerlinks"><a href="privacy/">Privacy Policy</a><a href="cookies/">Cookie Policy</a><a href="affiliate-disclosure/">Affiliate Disclosure</a><a href="https://www.etsy.com/shop/BJBeyondStudio" target="_blank" rel="noreferrer">Contact</a></div></div></footer>
 </body>
 </html>
