@@ -4,40 +4,144 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Amazon Deals | BJ Beyond</title>
-  <meta name="description" content="Amazon Deals by BJ Beyond: curated tech, smart devices, wearables and useful finds. Affiliate links may earn a commission at no extra cost to you." />
+  <meta name="description" content="Amazon Deals by BJ Beyond: curated Apple Watch picks, streaming devices and useful tech. Affiliate links are clearly disclosed." />
   <link rel="canonical" href="https://bjbeyond81.github.io/studio/amazon-deals/" />
   <meta property="og:title" content="Amazon Deals | BJ Beyond" />
-  <meta property="og:description" content="Tech, smart devices and useful Amazon finds selected by BJ Beyond." />
+  <meta property="og:description" content="A curated tech edit: Apple Watch picks, streaming gear and useful Amazon finds selected by BJ Beyond." />
   <meta property="og:url" content="https://bjbeyond81.github.io/studio/amazon-deals/" />
+  <meta name="theme-color" content="#090a0d" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet" />
   <style>
-    :root{--bg:#0b0b0c;--surface:#141416;--fg:#eceae4;--muted:#9a9892;--subtle:#6f6d68;--primary:#d4d0c8;--primary-fg:#0b0b0c;--ring:rgba(236,234,228,.09)}
-    *{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg);font-family:"IBM Plex Sans",system-ui,sans-serif}a{color:inherit}.wrap{max-width:72rem;margin:auto;padding:0 1.25rem}h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;letter-spacing:-.03em;line-height:1.08;font-weight:400}p{line-height:1.65}
-    header{position:sticky;top:0;z-index:10;background:rgba(11,11,12,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--ring)}.bar{min-height:4rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{text-decoration:none;font-size:.9rem;font-weight:600;letter-spacing:.04em}.ghost{display:inline-flex;align-items:center;justify-content:center;height:2.75rem;padding:0 1rem;border-radius:.55rem;text-decoration:none;box-shadow:0 0 0 1px var(--ring);font-size:.875rem;font-weight:600}
-    .hero{padding:5rem 0 3rem}.kicker{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}.hero h1{font-size:clamp(3rem,7vw,5.5rem);margin:.8rem 0 1rem}.lead{max-width:45rem;color:var(--muted);font-size:1.08rem}.notice{margin-top:1.5rem;padding:1rem 1.1rem;border-radius:.8rem;background:var(--surface);box-shadow:0 0 0 1px var(--ring);color:var(--muted);font-size:.9rem}.notice strong{color:var(--fg)}
-    section{padding:3.5rem 0;border-top:1px solid var(--ring)}.grid{display:grid;gap:1rem;grid-template-columns:1fr}@media(min-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}.card{display:flex;flex-direction:column;overflow:hidden;border-radius:1rem;background:var(--surface);text-decoration:none;box-shadow:0 0 0 1px var(--ring);transition:transform .18s ease,box-shadow .18s ease}.card:hover{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(236,234,228,.2)}.thumb{aspect-ratio:16/10;background:#1a1a1d;overflow:hidden}.thumb img{width:100%;height:100%;object-fit:cover;display:block}.body{display:flex;flex-direction:column;gap:.7rem;padding:1.2rem;flex:1}.tag{display:inline-flex;align-self:flex-start;padding:.33rem .55rem;border-radius:999px;background:rgba(236,234,228,.07);box-shadow:0 0 0 1px var(--ring);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}.body h3{font-size:1.45rem;margin:0}.body p{margin:0;color:var(--muted);font-size:.92rem}.paid{font-size:.72rem!important;color:var(--fg)!important;font-weight:600}.meta{margin-top:auto;color:var(--subtle)!important;font-size:.72rem!important;letter-spacing:.1em;text-transform:uppercase}footer{padding:3rem 0;border-top:1px solid var(--ring);color:var(--subtle);font-size:.85rem}.footerlinks{display:flex;gap:1rem;flex-wrap:wrap;margin-top:.65rem}
+    :root{
+      --bg:#090a0d;--surface:#11131a;--surface2:#171a22;--fg:#f3f1eb;--muted:#aaa9a5;--subtle:#777873;
+      --line:rgba(255,255,255,.09);--line2:rgba(255,255,255,.16);--accent:#f0b95d;--accent2:#8bc7ff;
+      --shadow:0 24px 80px rgba(0,0,0,.32)
+    }
+    *{box-sizing:border-box}html{scroll-behavior:smooth}html,body{margin:0;background:var(--bg);color:var(--fg);font-family:"IBM Plex Sans",system-ui,sans-serif}body{overflow-x:hidden}a{color:inherit}.wrap{max-width:76rem;margin:auto;padding:0 1.25rem}h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;letter-spacing:-.035em;line-height:1.02;font-weight:400;text-wrap:balance}p{line-height:1.65}
+    header{position:sticky;top:0;z-index:20;background:rgba(9,10,13,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.bar{min-height:4.2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{text-decoration:none;font-size:.9rem;font-weight:600;letter-spacing:.05em}.nav{display:flex;align-items:center;gap:.65rem}.ghost,.solid{display:inline-flex;align-items:center;justify-content:center;min-height:2.65rem;padding:0 1rem;border-radius:.65rem;text-decoration:none;font-size:.84rem;font-weight:600}.ghost{border:1px solid var(--line)}.solid{background:var(--fg);color:#0b0c0f}
+    .hero{position:relative;padding:5.4rem 0 4rem;border-top:0}.hero:before{content:"";position:absolute;width:42rem;height:42rem;right:-17rem;top:-18rem;background:radial-gradient(circle,rgba(240,185,93,.17),transparent 62%);pointer-events:none}.hero-grid{display:grid;gap:2rem}.kicker{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600}.hero h1{font-size:clamp(3.8rem,10vw,7.6rem);margin:.75rem 0 1rem;max-width:9ch}.lead{max-width:43rem;color:var(--muted);font-size:clamp(1rem,2vw,1.15rem);margin:0}.hero-actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}.micro{margin-top:1.2rem;color:var(--subtle);font-size:.78rem}.hero-panel{position:relative;overflow:hidden;border-radius:1.4rem;background:linear-gradient(135deg,#171922,#0f1117);border:1px solid var(--line);padding:1.4rem;box-shadow:var(--shadow)}.hero-panel:after{content:"";position:absolute;width:18rem;height:18rem;border-radius:50%;right:-8rem;bottom:-10rem;background:rgba(139,199,255,.09)}.panel-top{display:flex;justify-content:space-between;gap:1rem;align-items:start}.panel-num{font-family:"Instrument Serif",Georgia,serif;font-size:4.8rem;line-height:.85}.panel-label{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:.5rem}.panel-list{display:grid;gap:.55rem;margin-top:2rem}.panel-row{display:flex;justify-content:space-between;align-items:center;padding:.85rem 0;border-top:1px solid var(--line);font-size:.88rem}.panel-row span:last-child{color:var(--muted)}
+    @media(min-width:900px){.hero-grid{grid-template-columns:1.2fr .8fr;align-items:end}.hero{padding:7rem 0 5.2rem}}
+    .disclosure{display:grid;gap:.65rem;padding:1rem 1.1rem;border:1px solid rgba(240,185,93,.24);background:rgba(240,185,93,.06);border-radius:.9rem;margin-bottom:3rem}.disclosure strong{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:#ffd591}.disclosure p{margin:0;color:var(--muted);font-size:.86rem}.disclosure .required{color:var(--fg)}
+    section{padding:4rem 0;border-top:1px solid var(--line)}.section-head{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.5rem}.section-head h2{font-size:clamp(2.4rem,5vw,4rem);margin:.2rem 0}.section-head p{margin:0;color:var(--muted);max-width:42rem}.chips{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.7rem}.chip{display:inline-flex;padding:.4rem .7rem;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:.7rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.09em}
+    .feature{display:grid;overflow:hidden;border-radius:1.35rem;background:var(--surface);border:1px solid var(--line);box-shadow:var(--shadow);margin-bottom:1rem}.feature-media{position:relative;min-height:23rem;overflow:hidden;background:#171a22}.feature-media img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;transition:transform .35s ease}.feature:hover .feature-media img{transform:scale(1.02)}.feature-media:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(9,10,13,.55),transparent 55%)}.feature-copy{padding:1.5rem;display:flex;flex-direction:column;justify-content:center}.eyebrow{font-size:.68rem;text-transform:uppercase;letter-spacing:.15em;color:var(--accent);font-weight:600}.feature h3{font-size:clamp(2.2rem,4.6vw,3.8rem);margin:.55rem 0 .7rem}.feature-copy>p{margin:0;color:var(--muted);max-width:34rem}.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;margin:1.2rem 0}.fact{padding:.8rem;border-radius:.8rem;background:rgba(255,255,255,.03);border:1px solid var(--line)}.fact b{display:block;font-size:.82rem}.fact span{font-size:.72rem;color:var(--muted)}.paid{font-size:.72rem!important;color:#ffd591!important;font-weight:600;margin-top:.2rem!important}.buy{display:inline-flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1.2rem;min-height:3.1rem;padding:0 1rem;border-radius:.7rem;background:var(--fg);color:#0b0c0f;text-decoration:none;font-weight:600;font-size:.88rem}.buy span:last-child{font-size:1.1rem}
+    @media(min-width:850px){.feature{grid-template-columns:1.1fr .9fr}.feature-copy{padding:2.2rem}.feature-media{min-height:31rem}}
+    .grid{display:grid;gap:1rem;grid-template-columns:1fr}.card{display:flex;flex-direction:column;overflow:hidden;border-radius:1.15rem;background:var(--surface);border:1px solid var(--line);min-height:100%;transition:transform .2s ease,border-color .2s ease,background .2s ease}.card:hover{transform:translateY(-4px);border-color:var(--line2);background:var(--surface2)}.thumb{position:relative;aspect-ratio:4/3;background:#1a1d25;overflow:hidden}.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}.card:hover .thumb img{transform:scale(1.025)}.badge{position:absolute;left:.8rem;top:.8rem;padding:.38rem .58rem;border-radius:999px;background:rgba(9,10,13,.76);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.13);font-size:.62rem;text-transform:uppercase;letter-spacing:.12em;font-weight:600}.body{display:flex;flex-direction:column;gap:.65rem;padding:1.2rem;flex:1}.body h3{font-size:1.7rem;margin:0}.body p{margin:0;color:var(--muted);font-size:.9rem}.body .paid{margin-top:.2rem!important}.body .buy{margin-top:auto}.specs{display:flex;gap:.4rem;flex-wrap:wrap;margin:.15rem 0 .25rem}.spec{font-size:.66rem;color:var(--muted);padding:.3rem .48rem;border-radius:.45rem;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+    @media(min-width:700px){.grid{grid-template-columns:repeat(2,1fr)}}@media(min-width:1080px){.grid{grid-template-columns:repeat(3,1fr)}}
+    .why{display:grid;gap:1rem}.why-card{padding:1.2rem;border-radius:1rem;background:var(--surface);border:1px solid var(--line)}.why-card b{display:block;margin-bottom:.45rem}.why-card p{margin:0;color:var(--muted);font-size:.88rem}@media(min-width:760px){.why{grid-template-columns:repeat(3,1fr)}}
+    footer{padding:2.6rem 0;border-top:1px solid var(--line);color:var(--subtle);font-size:.82rem}.footer-grid{display:flex;flex-direction:column;gap:.8rem}.footerlinks{display:flex;gap:1rem;flex-wrap:wrap}.footerlinks a{text-decoration:none}.footerlinks a:hover{text-decoration:underline}@media(min-width:760px){.footer-grid{flex-direction:row;align-items:center;justify-content:space-between}}
   </style>
 </head>
 <body>
-<header><div class="wrap bar"><a class="brand" href="../">BJBeyondStudio</a><a class="ghost" href="../">Back to Studio</a></div></header>
-<main><div class="wrap">
-<section class="hero" style="border-top:0">
-  <p class="kicker">Amazon affiliate picks</p>
-  <h1>AMAZON DEALS</h1>
-  <p class="lead">Tech, smart devices & useful finds selected by BJ Beyond. Product availability and prices can change on Amazon.</p>
-  <div class="notice"><strong>Affiliate disclosure:</strong> In qualità di Affiliato Amazon io ricevo un guadagno dagli acquisti idonei. Affiliate links on this page are paid links; qualifying purchases may generate a commission for BJ Beyond at no additional cost to you.</div>
-</section>
-<section>
-  <div class="grid">
-    <a class="card" href="https://amzn.to/4hm9PVV" target="_blank" rel="nofollow sponsored noreferrer"><div class="thumb"><img src="https://img.tailwindapp.net/images/62af/81dc/c2ff/5628c29bf730260e0681.jpg" alt="Apple Watch Series 11" /></div><div class="body"><span class="tag">Wearable</span><h3>Apple Watch Series 11</h3><p>46 mm GPS model for everyday activity, workouts and notifications.</p><p class="paid">Amazon affiliate link · paid link</p><p class="meta">Check on Amazon →</p></div></a>
-    <a class="card" href="https://amzn.to/4r0R3rc" target="_blank" rel="nofollow sponsored noreferrer"><div class="thumb"><img src="https://img.tailwindapp.net/images/952a/db6d/a9d3/1122cac685edf2d9af23.jpg" alt="Apple Watch Ultra 3" /></div><div class="body"><span class="tag">Wearable</span><h3>Apple Watch Ultra 3</h3><p>49 mm GPS + Cellular model built for sport, outdoor use and intensive training.</p><p class="paid">Amazon affiliate link · paid link</p><p class="meta">Check on Amazon →</p></div></a>
-    <a class="card" href="https://amzn.to/4gL9sVK" target="_blank" rel="nofollow sponsored noreferrer"><div class="thumb"><img src="https://img.tailwindapp.net/images/8b4e/801b/3f29/43b15047cb6dec9cb618.png" alt="Apple Watch SE 3" /></div><div class="body"><span class="tag">Wearable</span><h3>Apple Watch SE 3</h3><p>A practical Apple Watch option for activity, workouts and everyday notifications.</p><p class="paid">Amazon affiliate link · paid link</p><p class="meta">Check on Amazon →</p></div></a>
-    <a class="card" href="https://amzn.to/4yorWBe" target="_blank" rel="nofollow sponsored noreferrer"><div class="thumb"><img src="https://img.tailwindapp.net/images/ae2d/9e3c/ca42/43b46f304ee7a9005d0b.png" alt="Fire TV Stick 4K Plus" /></div><div class="body"><span class="tag">Streaming</span><h3>Fire TV Stick 4K Plus</h3><p>4K streaming with Wi‑Fi 6, Dolby Vision, Dolby Atmos and Alexa support.</p><p class="paid">Amazon affiliate link · paid link</p><p class="meta">Check on Amazon →</p></div></a>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="../">BJ BEYOND</a>
+    <div class="nav"><a class="ghost" href="../">Studio</a><a class="solid" href="#deals">Browse deals</a></div>
   </div>
-</section>
-</div></main>
-<footer><div class="wrap">AMAZON DEALS · BJ Beyond<div class="footerlinks"><a href="../privacy/">Privacy Policy</a><a href="../cookies/">Cookie Policy</a><a href="../affiliate-disclosure/">Affiliate Disclosure</a></div></div></footer>
+</header>
+<main>
+  <div class="wrap">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">Curated tech · affiliate picks</p>
+          <h1>Amazon Deals.</h1>
+          <p class="lead">A focused edit of wearables, streaming gear and useful tech selected by BJ Beyond. No endless catalogue — just the current picks worth opening.</p>
+          <div class="hero-actions"><a class="solid" href="#deals">See the picks</a><a class="ghost" href="#how">How it works</a></div>
+          <p class="micro">Prices and availability are checked on Amazon when you open each product page and may change at any time.</p>
+        </div>
+        <aside class="hero-panel" aria-label="Current Amazon Deals overview">
+          <div class="panel-top"><div><div class="panel-num">04</div><div class="panel-label">current verified picks</div></div><span class="chip">BJ edit</span></div>
+          <div class="panel-list">
+            <div class="panel-row"><span>Apple Watch</span><span>3 picks</span></div>
+            <div class="panel-row"><span>Streaming</span><span>1 pick</span></div>
+            <div class="panel-row"><span>Checkout</span><span>Amazon</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <div class="disclosure" role="note" aria-label="Amazon affiliate disclosure">
+      <strong>Affiliate disclosure · paid links</strong>
+      <p class="required">In qualità di Affiliato Amazon io ricevo un guadagno dagli acquisti idonei.</p>
+      <p>Every Amazon button on this page is an affiliate / paid link. BJ Beyond may receive a commission from qualifying purchases, at no additional cost to you. Amazon determines current price, availability, delivery and final product details.</p>
+    </div>
+
+    <section id="deals">
+      <div class="section-head">
+        <p class="kicker">The current edit</p>
+        <h2>Four useful tech picks.</h2>
+        <p>Selected for different needs: a rugged training watch, two everyday Apple Watch options and a compact 4K streaming upgrade.</p>
+        <div class="chips"><span class="chip">Wearables</span><span class="chip">Fitness</span><span class="chip">Streaming</span><span class="chip">Smart tech</span></div>
+      </div>
+
+      <article class="feature">
+        <div class="feature-media"><img src="https://img.tailwindapp.net/images/952a/db6d/a9d3/1122cac685edf2d9af23.jpg" alt="Apple Watch Ultra 3 in black titanium" /></div>
+        <div class="feature-copy">
+          <span class="eyebrow">Featured · sport & outdoor</span>
+          <h3>Apple Watch Ultra 3</h3>
+          <p>The most performance-focused pick in this edit, with the larger 49 mm format and GPS + Cellular for sport, outdoor use and demanding training.</p>
+          <div class="facts">
+            <div class="fact"><b>49 mm</b><span>larger rugged format</span></div>
+            <div class="fact"><b>GPS + Cellular</b><span>connected away from iPhone</span></div>
+          </div>
+          <p class="paid">Amazon affiliate link · paid link</p>
+          <a class="buy" href="https://amzn.to/4r0R3rc" target="_blank" rel="nofollow sponsored noreferrer"><span>View on Amazon</span><span>↗</span></a>
+        </div>
+      </article>
+
+      <div class="grid">
+        <article class="card">
+          <div class="thumb"><img src="https://img.tailwindapp.net/images/62af/81dc/c2ff/5628c29bf730260e0681.jpg" alt="Apple Watch Series 11" /><span class="badge">Everyday wearable</span></div>
+          <div class="body">
+            <h3>Apple Watch Series 11</h3>
+            <p>A balanced everyday Apple Watch for activity, workouts and notifications, in the larger 46 mm GPS configuration.</p>
+            <div class="specs"><span class="spec">46 mm</span><span class="spec">GPS</span><span class="spec">Fitness</span></div>
+            <p class="paid">Amazon affiliate link · paid link</p>
+            <a class="buy" href="https://amzn.to/4hm9PVV" target="_blank" rel="nofollow sponsored noreferrer"><span>View on Amazon</span><span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb"><img src="https://img.tailwindapp.net/images/8b4e/801b/3f29/43b15047cb6dec9cb618.png" alt="Apple Watch SE 3" /><span class="badge">Smart value</span></div>
+          <div class="body">
+            <h3>Apple Watch SE 3</h3>
+            <p>The practical entry in the Apple Watch line-up for daily activity, workouts and essential notifications.</p>
+            <div class="specs"><span class="spec">44 mm</span><span class="spec">GPS</span><span class="spec">Everyday</span></div>
+            <p class="paid">Amazon affiliate link · paid link</p>
+            <a class="buy" href="https://amzn.to/4gL9sVK" target="_blank" rel="nofollow sponsored noreferrer"><span>View on Amazon</span><span>↗</span></a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="thumb"><img src="https://img.tailwindapp.net/images/ae2d/9e3c/ca42/43b46f304ee7a9005d0b.png" alt="Fire TV Stick 4K Plus with Alexa remote" /><span class="badge">Streaming</span></div>
+          <div class="body">
+            <h3>Fire TV Stick 4K Plus</h3>
+            <p>A compact 4K streaming upgrade with Wi‑Fi 6, Dolby Vision, Dolby Atmos, HDR10+ and Alexa support.</p>
+            <div class="specs"><span class="spec">4K</span><span class="spec">Wi‑Fi 6</span><span class="spec">Dolby</span></div>
+            <p class="paid">Amazon affiliate link · paid link</p>
+            <a class="buy" href="https://amzn.to/4yorWBe" target="_blank" rel="nofollow sponsored noreferrer"><span>View on Amazon</span><span>↗</span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="section-head"><p class="kicker">Simple by design</p><h2>How Amazon Deals works.</h2></div>
+      <div class="why">
+        <div class="why-card"><b>1 · Curated, not endless</b><p>Only selected products appear here. The page is intentionally smaller than a marketplace catalogue.</p></div>
+        <div class="why-card"><b>2 · You buy on Amazon</b><p>BJ Beyond does not process the order, payment, shipping or returns. The product button opens Amazon.</p></div>
+        <div class="why-card"><b>3 · Affiliate links are disclosed</b><p>Paid links are marked clearly. A qualifying purchase may generate a commission for BJ Beyond without increasing your price.</p></div>
+      </div>
+    </section>
+  </div>
+</main>
+<footer>
+  <div class="wrap footer-grid">
+    <div>AMAZON DEALS · BJ Beyond</div>
+    <div class="footerlinks"><a href="../privacy/">Privacy Policy</a><a href="../cookies/">Cookie Policy</a><a href="../affiliate-disclosure/">Affiliate Disclosure</a><a href="../">Back to Studio</a></div>
+  </div>
+</footer>
 </body>
 </html>
