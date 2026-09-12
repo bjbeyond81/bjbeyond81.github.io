@@ -3,256 +3,70 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BJBeyondStudio</title>
-  <meta name="description" content="Digital tools for couples, focus and calmer routines. Built in Verona. Nothing ships." />
+  <title>BJBeyondStudio | Digital Tools for Weddings, Couples & Focus</title>
+  <meta name="description" content="Small digital tools for real life: wedding planning, wedding countdowns, focus and calmer iPhone routines. Explore the tools, then purchase securely on Etsy." />
+  <link rel="canonical" href="https://bjbeyond81.github.io/studio/" />
+  <meta property="og:title" content="BJBeyondStudio | Small Digital Tools for Real Life" />
+  <meta property="og:description" content="Plan your wedding, count down to the big day, or make your phone a calmer place. Secure checkout on Etsy." />
+  <meta property="og:image" content="https://bjbeyond81.github.io/studio/shop/hero.jpg" />
+  <meta property="og:url" content="https://bjbeyond81.github.io/studio/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Instrument+Serif&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --bg: #0b0b0c;
-      --surface: #141416;
-      --fg: #eceae4;
-      --muted: #9a9892;
-      --subtle: #6f6d68;
-      --primary: #d4d0c8;
-      --primary-fg: #0b0b0c;
-      --ring: rgba(236,234,228,.08);
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; background: var(--bg); color: var(--fg); font-family: "IBM Plex Sans", system-ui, sans-serif; }
-    a { color: inherit; }
-    h1, h2, h3 { font-family: "Instrument Serif", Georgia, serif; letter-spacing: -0.03em; line-height: 1.1; text-wrap: balance; font-weight: 400; }
-    p { text-wrap: pretty; }
-    .wrap { max-width: 72rem; margin: 0 auto; padding: 0 1.25rem; }
-    header { position: sticky; top: 0; z-index: 10; background: color-mix(in oklab, var(--bg) 90%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid var(--ring); }
-    .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .75rem 1.25rem; max-width: 72rem; margin: 0 auto; }
-    .brand { font-size: .875rem; font-weight: 500; letter-spacing: .04em; text-decoration: none; }
-    .cta { display: inline-flex; height: 2.75rem; align-items: center; border-radius: .5rem; background: var(--primary); color: var(--primary-fg); padding: 0 .9rem; font-size: .875rem; font-weight: 500; text-decoration: none; }
-    .note { border-bottom: 1px solid var(--ring); background: var(--surface); text-align: center; font-size: .75rem; letter-spacing: .04em; color: var(--muted); padding: .5rem 1rem; }
-    .hero { display: grid; gap: 2.5rem; padding: 3rem 0; }
-    @media (min-width: 900px) { .hero { grid-template-columns: 1.1fr .9fr; align-items: end; padding: 5rem 0; } }
-    .kicker { font-size: .75rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
-    h1 { font-size: clamp(2.5rem, 1.4rem + 4vw, 4.25rem); margin: 1rem 0 0; }
-    .lead { max-width: 36rem; color: var(--muted); font-size: 1.05rem; margin-top: 1.25rem; }
-    .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
-    .ghost { display: inline-flex; height: 3rem; align-items: center; gap: .4rem; border-radius: .5rem; padding: 0 1.25rem; border: 1px solid var(--ring); text-decoration: none; font-size: .875rem; font-weight: 500; }
-    figure { margin: 0; overflow: hidden; border-radius: .9rem; box-shadow: 0 0 0 1px var(--ring); }
-    figure img { width: 100%; aspect-ratio: 16/10; object-fit: cover; display: block; }
-    section { padding: 3rem 0; }
-    .head { display: flex; flex-direction: column; gap: .5rem; border-bottom: 1px solid var(--ring); padding-bottom: 1rem; margin-bottom: 1.5rem; }
-    @media (min-width: 640px) { .head { flex-direction: row; align-items: end; justify-content: space-between; } }
-    .head h2 { font-size: clamp(1.5rem, 1.15rem + 1.4vw, 2.25rem); margin: .25rem 0 0; }
-    .head p { max-width: 24rem; color: var(--muted); font-size: .9rem; margin: 0; }
-    .grid { display: grid; gap: 1rem; }
-    .g4 { grid-template-columns: 1fr; }
-    .g2 { grid-template-columns: 1fr; }
-    @media (min-width: 640px) { .g4, .g2 { grid-template-columns: 1fr 1fr; } }
-    @media (min-width: 1024px) { .g4 { grid-template-columns: 1fr 1fr 1fr 1fr; } }
-    .card { display: flex; flex-direction: column; overflow: hidden; border-radius: .9rem; background: var(--surface); box-shadow: 0 0 0 1px var(--ring); text-decoration: none; min-height: 100%; }
-    .thumb { position: relative; aspect-ratio: 4/3; overflow: hidden; }
-    .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .badge { position: absolute; left: .75rem; top: .75rem; border-radius: .25rem; background: rgba(11,11,12,.8); color: var(--fg); padding: .25rem .5rem; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; }
-    .body { display: flex; flex-direction: column; gap: .75rem; padding: 1.15rem; flex: 1; }
-    .body h3 { font-size: 1.25rem; margin: 0; }
-    .body p { margin: 0; color: var(--muted); font-size: .9rem; }
-    .meta { margin-top: auto; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--subtle); }
-    .about { display: grid; gap: 2.5rem; background: var(--surface); border-radius: .9rem; padding: 1.5rem; box-shadow: 0 0 0 1px var(--ring); }
-    @media (min-width: 900px) { .about { grid-template-columns: 1fr 1fr; padding: 2.5rem; } }
-    footer { border-top: 1px solid var(--ring); padding: 3rem 0; }
-    .faq details { border-bottom: 1px solid var(--ring); padding: 1rem 0; }
-    .faq summary { cursor: pointer; font-weight: 500; }
-    .faq p { color: var(--muted); font-size: .9rem; max-width: 40rem; }
-    nav.scroll { display: flex; gap: 1rem; overflow-x: auto; padding: 0 1.25rem .75rem; font-size: .875rem; color: var(--muted); }
-    nav.scroll a { white-space: nowrap; text-decoration: none; }
+    :root{--bg:#0b0b0c;--surface:#141416;--fg:#eceae4;--muted:#9a9892;--subtle:#6f6d68;--primary:#d4d0c8;--primary-fg:#0b0b0c;--ring:rgba(236,234,228,.09)}
+    *{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg);font-family:"IBM Plex Sans",system-ui,sans-serif}a{color:inherit}h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;letter-spacing:-.03em;line-height:1.08;font-weight:400;text-wrap:balance}p{line-height:1.65}.wrap{max-width:72rem;margin:auto;padding:0 1.25rem}
+    header{position:sticky;top:0;z-index:10;background:rgba(11,11,12,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--ring)}.bar{min-height:4rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{text-decoration:none;font-size:.9rem;font-weight:600;letter-spacing:.04em}.cta{display:inline-flex;align-items:center;justify-content:center;height:2.75rem;padding:0 1rem;border-radius:.55rem;background:var(--primary);color:var(--primary-fg);text-decoration:none;font-size:.875rem;font-weight:600}
+    .hero{display:grid;gap:2.5rem;padding:4rem 0 5rem}.hero img{width:100%;border-radius:1rem;display:block;box-shadow:0 0 0 1px var(--ring)}@media(min-width:900px){.hero{grid-template-columns:1.05fr .95fr;align-items:center;padding:6rem 0 7rem}}.kicker{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}.hero h1{font-size:clamp(3rem,7vw,5.5rem);margin:.9rem 0 1rem}.lead{max-width:40rem;font-size:1.1rem;color:var(--muted)}.actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.75rem}.ghost{display:inline-flex;align-items:center;justify-content:center;height:3rem;padding:0 1.2rem;border-radius:.55rem;text-decoration:none;box-shadow:0 0 0 1px var(--ring);font-size:.9rem;font-weight:600}.trust{margin-top:1rem;color:var(--subtle);font-size:.8rem}
+    section{padding:4rem 0;border-top:1px solid var(--ring)}.head{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.5rem}@media(min-width:700px){.head{flex-direction:row;align-items:end;justify-content:space-between}}.head h2{font-size:clamp(2rem,4vw,3.4rem);margin:.35rem 0 0}.head p{margin:0;color:var(--muted);max-width:30rem}.grid{display:grid;gap:1rem}.primary{grid-template-columns:1fr}@media(min-width:760px){.primary{grid-template-columns:repeat(3,1fr)}}.more{grid-template-columns:1fr}@media(min-width:640px){.more{grid-template-columns:repeat(2,1fr)}}@media(min-width:1000px){.more{grid-template-columns:repeat(4,1fr)}}
+    .card{display:flex;flex-direction:column;overflow:hidden;border-radius:1rem;background:var(--surface);text-decoration:none;box-shadow:0 0 0 1px var(--ring);min-height:100%;transition:transform .18s ease,box-shadow .18s ease}.card:hover{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(236,234,228,.2)}.thumb{aspect-ratio:4/3;overflow:hidden}.thumb img{width:100%;height:100%;object-fit:cover;display:block}.body{display:flex;flex-direction:column;gap:.7rem;padding:1.2rem;flex:1}.body h3{font-size:1.35rem;margin:0}.body p{margin:0;color:var(--muted);font-size:.92rem}.meta{margin-top:auto;color:var(--subtle)!important;font-size:.72rem!important;letter-spacing:.1em;text-transform:uppercase}
+    .how{display:grid;gap:1rem}@media(min-width:760px){.how{grid-template-columns:repeat(3,1fr)}}.step{padding:1.4rem;border-radius:.9rem;background:var(--surface);box-shadow:0 0 0 1px var(--ring)}.step strong{display:block;margin-bottom:.45rem}.step p{margin:0;color:var(--muted);font-size:.92rem}.about{display:grid;gap:2rem;background:var(--surface);border-radius:1rem;padding:2rem;box-shadow:0 0 0 1px var(--ring)}@media(min-width:800px){.about{grid-template-columns:1.2fr .8fr}}footer{padding:3rem 0;border-top:1px solid var(--ring);color:var(--subtle);font-size:.85rem}
   </style>
 </head>
 <body>
-  <div class="note">Digital tools first. Pet portraits in the Cinematic Pets collection.</div>
-  <header>
-    <div class="bar">
-      <a class="brand" href="#top">BJBeyondStudio</a>
-      <a class="cta" href="https://www.etsy.com/shop/BJBeyondStudio" target="_blank" rel="noreferrer">Open Etsy</a>
-    </div>
-    <nav class="scroll">
-      <a href="#featured">Featured</a>
-      <a href="#couples">For Couples</a>
-      <a href="#focus">Focus & Reset</a>
-      <a href="#pets">Cinematic Pets</a>
-      <a href="#sellers">Seller Tools</a>
-    </nav>
-  </header>
-
-  <main id="top">
-    <div class="wrap">
-      <section class="hero">
-        <div>
-          <p class="kicker">Verona · digital only · 5.0 from 4 reviews</p>
-          <h1>Tools for couples and focus.</h1>
-          <p class="lead">Digital tools for couples, focus and calmer routines. Built in Verona. Pet portraits live in a side collection. Nothing ships.</p>
-          <div class="actions">
-            <a class="cta" href="#featured" style="height:3rem;padding:0 1.25rem">See the tools</a>
-            <a class="ghost" href="https://www.etsy.com/shop/BJBeyondStudio" target="_blank" rel="noreferrer">Shop on Etsy</a>
-          </div>
-        </div>
-        <figure>
-          <img src="shop/hero.jpg" alt="iPhone and laptop on a dark table. Digital tools, no pets." />
-        </figure>
-      </section>
-    </div>
-
-    <div class="wrap">
-      <section id="featured">
-        <div class="head">
-          <div>
-            <p class="kicker">Shop section</p>
-            <h2>Featured</h2>
-          </div>
-          <p>The vitrine. Tools only.</p>
-        </div>
-        <div class="grid g4">
-          <a class="card" href="https://www.etsy.com/listing/4571927209/wedding-countdown-app-editable-names" target="_blank" rel="noreferrer">
-            <div class="thumb"><img src="shop/countdown.jpg" alt="Wedding Countdown App" /><span class="badge">Instant download</span></div>
-            <div class="body"><h3>Wedding Countdown App</h3><p>Personalized wedding countdown you can open in a browser. Add names and date. Share with your partner. Digital download. No app store.</p><p class="meta">View on Etsy</p></div>
-          </a>
-          <a class="card" href="https://www.etsy.com/listing/4571575044/wedding-planner-app-guest-list-budget" target="_blank" rel="noreferrer">
-            <div class="thumb"><img src="shop/planner.jpg" alt="Wedding Planner App" /><span class="badge">Instant download</span></div>
-            <div class="body"><h3>Wedding Planner App</h3><p>One dashboard for guest list, budget, seating, vendors, checklist and wedding-day timeline. Browser based. Digital access after payment.</p><p class="meta">View on Etsy</p></div>
-          </a>
-          <a class="card" href="https://www.etsy.com/listing/4571568458/digital-detox-iphone-kit-calming" target="_blank" rel="noreferrer">
-            <div class="thumb"><img src="shop/detox.jpg" alt="Digital Detox iPhone Kit" /><span class="badge">Instant download</span></div>
-            <div class="body"><h3>Digital Detox iPhone Kit</h3><p>Wallpapers + audio + guide to lower phone noise. Lifestyle kit. Not medical treatment.</p><p class="meta">View on Etsy</p></div>
-          </a>
-          <a class="card" href="https://www.etsy.com/listing/4571332140/iphone-live-wallpaper-bundle-neon" target="_blank" rel="noreferrer">
-            <div class="thumb"><img src="shop/wallpapers.jpg" alt="iPhone Live Wallpaper Bundle" /><span class="badge">Instant download</span></div>
-            <div class="body"><h3>iPhone Live Wallpaper Bundle</h3><p>10 live lock screens. HEIC + MOV. Use as Live Photo wallpaper or spatial background.</p><p class="meta">View on Etsy</p></div>
-          </a>
-        </div>
-      </section>
-
-      <section id="couples">
-        <div class="head">
-          <div>
-            <p class="kicker">Shop section</p>
-            <h2>For Couples</h2>
-          </div>
-          <p>Countdown, planner, two-phone signal.</p>
-        </div>
-        <div class="grid g4">
-          <a class="card" href="https://www.etsy.com/listing/4571927209/wedding-countdown-app-editable-names" target="_blank" rel="noreferrer">
-            <div class="thumb"><img src="shop/countdown.jpg" alt="Wedding Countdown App" /><span class="badge">Instant download</span></div>
-            <div class="body"><h3>Wedding Countdown App</h3><p>Personalized wedding countdown you can open in a browser.</p><p class="meta">View on Etsy</p></div>
-          </a>
-          <a class="card" href="https://www.etsy.com/listing/4571575044/wedding-planner-app-guest-list-budget" target="_blank" rel="noreferrer">
-            <div class="thumb"><img src="shop/planner.jpg" alt="Wedding Planner App" /><span class="badge">Instant download</span></div>
-            <div class="body"><h3>Wedding Planner App</h3><p>Guest list, budget, seating, timeline. One dashboard.</p><p class="meta">View on Etsy</p></div>
-          </a>
-          <a class="card" href="https://www.etsy.com/listing/4572947132/synced-signal-online-for-couples-live" target="_blank" rel="noreferrer">
-            <div class="thumb"><img src="shop/synced.jpg" alt="Synced Signal for Couples" /><span class="badge">Instant download</span></div>
-            <div class="body"><h3>Synced Signal for Couples</h3><p>A small two-phone signal for couples. Not a social network.</p><p class="meta">View on Etsy</p></div>
-          </a>
-        </div>
-      </section>
-
-      <section id="focus">
-        <div class="head">
-          <div>
-            <p class="kicker">Shop section</p>
-            <h2>Focus & Reset</h2>
-          </div>
-          <p>Phone noise down. Screen stays useful.</p>
-        </div>
-        <div class="grid g4">
-          <a class="card" href="https://www.etsy.com/listing/4572280192/aura-personal-frequency-reading-7" target="_blank" rel="noreferrer">
-            <div class="thumb"><img src="shop/aura.jpg" alt="AURA Frequency Reading" /><span class="badge">Instant download</span></div>
-            <div class="body"><h3>AURA Frequency Reading</h3><p>Seven questions. One reading. Not medical. Not a fortune.</p><p class="meta">View on Etsy</p></div>
-          </a>
-          <a class="card" href="https://www.etsy.com/listing/4571568458/digital-detox-iphone-kit-calming" target="_blank" rel="noreferrer">
-            <div class="thumb"><img src="shop/detox.jpg" alt="Digital Detox iPhone Kit" /><span class="badge">Instant download</span></div>
-            <div class="body"><h3>Digital Detox iPhone Kit</h3><p>Wallpapers, audio, guide. Made for iPhone.</p><p class="meta">View on Etsy</p></div>
-          </a>
-          <a class="card" href="https://www.etsy.com/listing/4571332140/iphone-live-wallpaper-bundle-neon" target="_blank" rel="noreferrer">
-            <div class="thumb"><img src="shop/wallpapers.jpg" alt="iPhone Live Wallpaper Bundle" /><span class="badge">Instant download</span></div>
-            <div class="body"><h3>iPhone Live Wallpaper Bundle</h3><p>10 live lock screens. HEIC + MOV.</p><p class="meta">View on Etsy</p></div>
-          </a>
-        </div>
-      </section>
-
-      <section id="pets">
-        <div class="head">
-          <div>
-            <p class="kicker">Secondary collection</p>
-            <h2>Cinematic Pets</h2>
-          </div>
-          <p>Side room. Still on sale. Not the homepage.</p>
-        </div>
-        <div class="grid g2">
-          <a class="card" href="https://www.etsy.com/listing/4565673019/personalized-cinematic-portraits-of-your" target="_blank" rel="noreferrer">
-            <div class="thumb"><img src="shop/dog-movie.jpg" alt="Custom Dog Movie Poster Set of 3" /><span class="badge">Made to order</span></div>
-            <div class="body"><h3>Custom Dog Movie Poster Set of 3</h3><p>You send the photo. You get 3 cinematic poster files. Digital only.</p><p class="meta">Cinematic Pets</p></div>
-          </a>
-          <a class="card" href="https://www.etsy.com/listing/4565829756/personalized-regal-dog-portrait-2" target="_blank" rel="noreferrer">
-            <div class="thumb"><img src="shop/royal-dog.jpg" alt="Custom Royal Dog Portrait Set of 2" /><span class="badge">Made to order</span></div>
-            <div class="body"><h3>Custom Royal Dog Portrait Set of 2</h3><p>Made-to-order regal set from your photo. 2 digital files. Nothing ships.</p><p class="meta">Cinematic Pets</p></div>
-          </a>
-        </div>
-      </section>
-
-      <section id="sellers">
-        <div class="head">
-          <div>
-            <p class="kicker">Shop section</p>
-            <h2>Seller Tools</h2>
-          </div>
-          <p>One workbook. No junk pins.</p>
-        </div>
-        <div class="grid" style="max-width:28rem">
-          <a class="card" href="https://www.etsy.com/listing/4566553539/pinterest-guide-for-etsy-sellers" target="_blank" rel="noreferrer">
-            <div class="thumb"><img src="shop/pinterest.jpg" alt="Pinterest Guide for Etsy Sellers" /><span class="badge">Instant download</span></div>
-            <div class="body"><h3>Pinterest Guide for Etsy Sellers</h3><p>16-page workbook + prompts. No pin farming.</p><p class="meta">View on Etsy</p></div>
-          </a>
-        </div>
-      </section>
-
-      <section id="about">
-        <div class="about">
-          <div>
-            <p class="kicker">About</p>
-            <h2>Digital tools for couples, focus and calmer routines. Built in Verona.</h2>
-            <p style="color:var(--muted);margin-top:1.25rem;white-space:pre-line">BJBeyondStudio builds small digital tools you actually use: wedding countdown and planner, couple signals, focus kits, live wallpapers.
-Custom cinematic pet portraits stay available as a separate collection.
-Everything is digital. Nothing ships.
-If something breaks, message the shop. A human answers.</p>
-          </div>
-          <div>
-            <p class="kicker">Announcement</p>
-            <p style="color:var(--muted);margin-top:.75rem;white-space:pre-line">Digital tools first. Pet portraits in the Cinematic Pets collection.
-Instant download or made-to-order for custom portraits.
-Questions → message BJ.</p>
-            <p class="kicker" style="margin-top:2rem">IT</p>
-            <p style="color:var(--muted);margin-top:.75rem">Strumenti digitali per coppie, focus e routine più calme. I ritratti cinematici dei cani restano in una collezione a parte. Tutto digitale. Niente spedizioni.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="faq" style="padding-bottom:5rem">
-        <h2>FAQ</h2>
-        <details><summary>What is included in the Wedding Planner App?</summary><p>The app includes a wedding countdown dashboard, guest list, seating chart, budget tracker, vendor manager, task checklist and wedding-day timeline.</p></details>
-        <details><summary>Is AURA a medical product?</summary><p>No. AURA is a seven-question digital self-reflection. It does not diagnose, treat or cure any health condition.</p></details>
-        <details><summary>Is the Digital Detox kit medical treatment?</summary><p>No. It is a lifestyle kit: wallpapers, audio and a guide. Not medical treatment.</p></details>
-        <details><summary>Do you ship anything?</summary><p>No. Everything is digital. Instant download, or made-to-order files for custom portraits.</p></details>
-        <details><summary>Where are the pet portraits?</summary><p>In the Cinematic Pets collection only. They are not in Featured.</p></details>
-      </section>
-    </div>
-  </main>
-  <footer>
-    <div class="wrap" style="display:grid;gap:2rem">
+<header><div class="wrap bar"><a class="brand" href="#top">BJBeyondStudio</a><a class="cta" href="https://www.etsy.com/shop/BJBeyondStudio" target="_blank" rel="noreferrer">Shop on Etsy</a></div></header>
+<main id="top">
+  <div class="wrap">
+    <section class="hero" style="border-top:0">
       <div>
-        <p style="font-family:'Instrument Serif',Georgia,serif;font-size:1.5rem;margin:0">BJBeyondStudio</p>
-        <p style="color:var(--muted);font-size:.9rem;max-width:28rem">Digital tools for couples and focus. Pet portraits live in a side collection. Built in Verona. A human answers.</p>
+        <p class="kicker">Digital tools · secure Etsy checkout</p>
+        <h1>Small digital tools for real life.</h1>
+        <p class="lead">Plan your wedding, count down to the big day, or make your phone a calmer place. Explore the product here, then purchase securely on Etsy.</p>
+        <div class="actions"><a class="cta" href="#featured" style="height:3rem;padding:0 1.2rem">Explore the tools</a><a class="ghost" href="https://www.etsy.com/shop/BJBeyondStudio" target="_blank" rel="noreferrer">Open Etsy shop</a></div>
+        <p class="trust">Digital products only · No shipping · Etsy handles checkout and delivery</p>
       </div>
-      <p style="color:var(--subtle);font-size:.9rem">IT — Strumenti digitali per coppie, focus e routine più calme. Tutto digitale. Niente spedizioni. Costruito a Verona.</p>
-    </div>
-  </footer>
+      <img src="shop/hero.jpg" alt="BJBeyondStudio digital tools on phone and laptop" />
+    </section>
+
+    <section id="featured">
+      <div class="head"><div><p class="kicker">Start here</p><h2>Three tools worth opening first.</h2></div><p>Each product now has its own page so you can understand what it does before leaving for Etsy.</p></div>
+      <div class="grid primary">
+        <a class="card" href="wedding-planner/"><div class="thumb"><img src="shop/planner.jpg" alt="Wedding Planner App" /></div><div class="body"><h3>Wedding Planner App</h3><p>Budget, guest list, vendors, seating, checklist, countdown and wedding-day timeline in one dashboard.</p><p class="meta">Explore product →</p></div></a>
+        <a class="card" href="wedding-countdown/"><div class="thumb"><img src="shop/countdown.jpg" alt="Wedding Countdown App" /></div><div class="body"><h3>Wedding Countdown App</h3><p>Personalize your names and wedding date, then keep the countdown one tap away.</p><p class="meta">Explore product →</p></div></a>
+        <a class="card" href="mindetox/"><div class="thumb"><img src="shop/detox.jpg" alt="MinDetox iPhone Relaxation Bundle" /></div><div class="body"><h3>MinDetox</h3><p>Calming wallpapers, relaxing audio and private frequency studio access for a quieter iPhone routine.</p><p class="meta">Explore product →</p></div></a>
+      </div>
+    </section>
+
+    <section>
+      <div class="head"><div><p class="kicker">How this site works</p><h2>Discover here. Buy on Etsy.</h2></div></div>
+      <div class="how"><div class="step"><strong>1 · Find the right tool</strong><p>Browse a focused page instead of jumping straight into a marketplace listing.</p></div><div class="step"><strong>2 · See what it actually does</strong><p>Read the benefits, what is included and the main questions before buying.</p></div><div class="step"><strong>3 · Check out securely on Etsy</strong><p>The purchase, payment and digital delivery remain on Etsy.</p></div></div>
+    </section>
+
+    <section id="more">
+      <div class="head"><div><p class="kicker">More from BJBeyondStudio</p><h2>Other digital products.</h2></div><p>Secondary products stay available without competing with the three main conversion pages.</p></div>
+      <div class="grid more">
+        <a class="card" href="https://www.etsy.com/listing/4572947132/synced-signal-online-for-couples-live" target="_blank" rel="noreferrer"><div class="thumb"><img src="shop/synced.jpg" alt="Synced Signal for Couples" /></div><div class="body"><h3>Synced Signal</h3><p>A small two-phone signal for couples.</p><p class="meta">View on Etsy</p></div></a>
+        <a class="card" href="https://www.etsy.com/listing/4572280192/aura-personal-frequency-reading-7" target="_blank" rel="noreferrer"><div class="thumb"><img src="shop/aura.jpg" alt="AURA Frequency Reading" /></div><div class="body"><h3>AURA</h3><p>A seven-question digital self-reflection experience.</p><p class="meta">View on Etsy</p></div></a>
+        <a class="card" href="https://www.etsy.com/listing/4571332140/iphone-live-wallpaper-bundle-neon" target="_blank" rel="noreferrer"><div class="thumb"><img src="shop/wallpapers.jpg" alt="iPhone Live Wallpaper Bundle" /></div><div class="body"><h3>Live Wallpapers</h3><p>Digital lock-screen backgrounds for iPhone.</p><p class="meta">View on Etsy</p></div></a>
+        <a class="card" href="https://www.etsy.com/listing/4566553539/pinterest-guide-for-etsy-sellers" target="_blank" rel="noreferrer"><div class="thumb"><img src="shop/pinterest.jpg" alt="Pinterest Guide for Etsy Sellers" /></div><div class="body"><h3>Pinterest Guide</h3><p>A practical workbook for Etsy sellers.</p><p class="meta">View on Etsy</p></div></a>
+      </div>
+    </section>
+
+    <section>
+      <div class="about"><div><p class="kicker">About</p><h2 style="font-size:clamp(2rem,4vw,3.2rem);margin:.4rem 0 1rem">Built to make small parts of life easier.</h2><p style="color:var(--muted);margin:0">BJBeyondStudio creates compact digital tools for weddings, couples, focus and everyday routines. The site explains the products; Etsy remains the storefront and checkout.</p></div><div><p class="kicker">What stays simple</p><p style="color:var(--muted)">No physical shipping.<br />No second checkout system.<br />No duplicate store management.<br />One clear path from discovery to Etsy.</p></div></div>
+    </section>
+  </div>
+</main>
+<footer><div class="wrap">BJBeyondStudio · Digital products · Secure checkout on Etsy</div></footer>
 </body>
 </html>
