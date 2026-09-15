@@ -16,84 +16,43 @@
   <meta name="twitter:title" content="BJ Beyond Journal | Ideas Beyond the Feed" />
   <meta name="twitter:description" content="Essays on AI, Human Edge, art, creator platforms and digital culture." />
   <meta name="twitter:image" content="https://bjbeyond81.github.io/studio/shop/hero.jpg" />
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"Organization",
-        "@id":"https://bjbeyond81.github.io/studio/#organization",
-        "name":"BJ Beyond",
-        "url":"https://bjbeyond81.github.io/studio/"
-      },
-      {
-        "@type":"WebSite",
-        "@id":"https://bjbeyond81.github.io/studio/#website",
-        "url":"https://bjbeyond81.github.io/studio/",
-        "name":"BJ Beyond Journal",
-        "publisher":{"@id":"https://bjbeyond81.github.io/studio/#organization"},
-        "inLanguage":"en"
-      }
-    ]
-  }
-  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet" />
   <style>
     :root{--bg:#0b0b0c;--surface:#141416;--fg:#eceae4;--muted:#9a9892;--subtle:#6f6d68;--primary:#d4d0c8;--primary-fg:#0b0b0c;--ring:rgba(236,234,228,.09)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:"IBM Plex Sans",system-ui,sans-serif}a{color:inherit}h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;letter-spacing:-.03em;line-height:1.08;font-weight:400;text-wrap:balance}p{line-height:1.65}.wrap{max-width:72rem;margin:auto;padding:0 1.25rem}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font-family:"IBM Plex Sans",system-ui,sans-serif}a{color:inherit}h1,h2,h3{font-family:"Instrument Serif",Georgia,serif;letter-spacing:-.03em;line-height:1.08;font-weight:400;text-wrap:balance}p{line-height:1.65}.wrap{max-width:72rem;margin:auto;padding:0 1.25rem}img{display:block;width:100%}
     header{position:sticky;top:0;z-index:10;background:rgba(11,11,12,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--ring)}.bar{min-height:4rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}.brand{text-decoration:none;font-size:.9rem;font-weight:600;letter-spacing:.06em}.nav{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}.nav a{text-decoration:none;color:var(--muted);font-size:.82rem}.nav a:hover{color:var(--fg)}
-    .hero{display:grid;gap:2.5rem;padding:5rem 0 6rem}.hero h1{font-size:clamp(3.4rem,8vw,6.4rem);margin:.9rem 0 1rem}.kicker{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}.lead{max-width:44rem;font-size:1.12rem;color:var(--muted)}.actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.75rem}.cta,.ghost{display:inline-flex;align-items:center;justify-content:center;height:3rem;padding:0 1.2rem;border-radius:.55rem;text-decoration:none;font-size:.88rem;font-weight:600}.cta{background:var(--primary);color:var(--primary-fg)}.ghost{box-shadow:0 0 0 1px var(--ring)}
+    .hero{display:grid;gap:2rem;padding:5rem 0 6rem}@media(min-width:900px){.hero{grid-template-columns:1.02fr .98fr;align-items:center}}.hero h1{font-size:clamp(3.4rem,8vw,6.4rem);margin:.9rem 0 1rem}.hero-media{border-radius:1rem;overflow:hidden;box-shadow:0 0 0 1px var(--ring);min-height:26rem}.hero-media img{height:100%;object-fit:cover;aspect-ratio:4/3;filter:saturate(.8) contrast(1.05)}.kicker{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:600}.lead{max-width:44rem;font-size:1.12rem;color:var(--muted)}.actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.75rem}.cta,.ghost{display:inline-flex;align-items:center;justify-content:center;height:3rem;padding:0 1.2rem;border-radius:.55rem;text-decoration:none;font-size:.88rem;font-weight:600}.cta{background:var(--primary);color:var(--primary-fg)}.ghost{box-shadow:0 0 0 1px var(--ring)}
     .topics{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.5rem}.topic{display:inline-flex;align-items:center;height:2.3rem;padding:0 .85rem;border-radius:999px;background:var(--surface);box-shadow:0 0 0 1px var(--ring);font-size:.76rem;font-weight:600;color:var(--fg)}
     section{padding:4rem 0;border-top:1px solid var(--ring)}.head{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.5rem}@media(min-width:760px){.head{flex-direction:row;align-items:end;justify-content:space-between}}.head h2{font-size:clamp(2.2rem,4vw,3.5rem);margin:.35rem 0 0}.head p{margin:0;color:var(--muted);max-width:31rem}
-    .feature{display:grid;gap:1.2rem;padding:1.4rem;border-radius:1rem;background:var(--surface);box-shadow:0 0 0 1px var(--ring)}@media(min-width:820px){.feature{grid-template-columns:1.25fr .75fr;align-items:stretch;padding:1.6rem}}.feature-copy{padding:.5rem}.feature h3{font-size:clamp(2rem,4vw,3.1rem);margin:.5rem 0 .8rem}.feature p{color:var(--muted)}.meta{font-size:.72rem!important;letter-spacing:.1em;text-transform:uppercase;color:var(--subtle)!important}.feature-side{display:flex;align-items:flex-end;min-height:18rem;border-radius:.8rem;background:linear-gradient(145deg,#1a1b1f,#0e0f11);padding:1.4rem;box-shadow:inset 0 0 0 1px var(--ring)}.quote{font-family:"Instrument Serif",Georgia,serif;font-size:1.8rem;line-height:1.15;color:var(--fg)}
-    .archive{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:1rem}@media(min-width:760px){.archive{grid-template-columns:repeat(2,1fr)}}.article-card{display:flex;flex-direction:column;min-height:14rem;padding:1.35rem;border-radius:1rem;background:var(--surface);box-shadow:0 0 0 1px var(--ring);text-decoration:none;transition:transform .18s ease,box-shadow .18s ease}.article-card:hover{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(236,234,228,.2)}.article-card h3{font-size:1.75rem;margin:.55rem 0}.article-card p{margin:0;color:var(--muted);font-size:.92rem}.article-card .meta:last-child{margin-top:auto;padding-top:1.4rem}
-    .grid{display:grid;gap:1rem;grid-template-columns:1fr}@media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr)}}.card{display:flex;flex-direction:column;min-height:16rem;padding:1.35rem;border-radius:1rem;background:var(--surface);box-shadow:0 0 0 1px var(--ring);text-decoration:none}.card h3{font-size:1.65rem;margin:.6rem 0}.card p{margin:0;color:var(--muted);font-size:.92rem}.card .meta{margin-top:auto;padding-top:1.4rem}
+    .feature{display:grid;overflow:hidden;border-radius:1rem;background:var(--surface);box-shadow:0 0 0 1px var(--ring);text-decoration:none}@media(min-width:820px){.feature{grid-template-columns:1.05fr .95fr}}.feature-copy{padding:1.7rem}.feature h3{font-size:clamp(2rem,4vw,3.1rem);margin:.5rem 0 .8rem}.feature p{color:var(--muted)}.feature-img{min-height:20rem}.feature-img img{height:100%;object-fit:cover}.meta{font-size:.72rem!important;letter-spacing:.1em;text-transform:uppercase;color:var(--subtle)!important}
+    .archive{display:grid;gap:1rem;grid-template-columns:1fr;margin-top:1rem}@media(min-width:760px){.archive{grid-template-columns:repeat(2,1fr)}}.article-card{display:flex;flex-direction:column;overflow:hidden;min-height:18rem;border-radius:1rem;background:var(--surface);box-shadow:0 0 0 1px var(--ring);text-decoration:none;transition:transform .18s ease,box-shadow .18s ease}.article-card:hover{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(236,234,228,.2)}.article-card img{height:13rem;object-fit:cover}.article-body{padding:1.35rem;display:flex;flex-direction:column;flex:1}.article-card h3{font-size:1.75rem;margin:.55rem 0}.article-card p{margin:0;color:var(--muted);font-size:.92rem}.article-card .meta:last-child{margin-top:auto;padding-top:1.4rem}
+    .grid{display:grid;gap:1rem;grid-template-columns:1fr}@media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr)}}.card{display:flex;flex-direction:column;min-height:16rem;padding:1.35rem;border-radius:1rem;background:var(--surface);box-shadow:0 0 0 1px var(--ring)}.card h3{font-size:1.65rem;margin:.6rem 0}.card p{margin:0;color:var(--muted);font-size:.92rem}.card .meta{margin-top:auto;padding-top:1.4rem}
     .about{display:grid;gap:2rem;background:var(--surface);border-radius:1rem;padding:2rem;box-shadow:0 0 0 1px var(--ring)}@media(min-width:800px){.about{grid-template-columns:1.2fr .8fr}}footer{padding:3rem 0;border-top:1px solid var(--ring);color:var(--subtle);font-size:.84rem}.footerlinks{display:flex;gap:1rem;flex-wrap:wrap;margin-top:.8rem}.footerlinks a{color:var(--muted)}
   </style>
 </head>
 <body>
-<header>
-  <div class="wrap bar">
-    <a class="brand" href="#top">BJ BEYOND JOURNAL</a>
-    <nav class="nav" aria-label="Primary navigation">
-      <a href="#writing">Writing</a><a href="#themes">Themes</a><a href="#about">About</a><a href="https://www.etsy.com/shop/BJBeyondStudio" target="_blank" rel="noreferrer">Etsy</a>
-    </nav>
-  </div>
-</header>
+<header><div class="wrap bar"><a class="brand" href="#top">BJ BEYOND JOURNAL</a><nav class="nav"><a href="#writing">Writing</a><a href="#themes">Themes</a><a href="#about">About</a><a href="https://www.etsy.com/shop/BJBeyondStudio" target="_blank" rel="noreferrer">Etsy</a></nav></div></header>
 <main id="top"><div class="wrap">
-  <section class="hero" style="border-top:0"><div>
-    <p class="kicker">Independent writing by BJ Beyond</p>
-    <h1>Ideas beyond the feed.</h1>
-    <p class="lead">Long-form writing on artificial intelligence, Human Edge, art, creator platforms and digital culture. The articles live where readers already are. This portal is the map.</p>
-    <div class="actions"><a class="cta" href="#writing">Read the latest</a><a class="ghost" href="#themes">Explore themes</a></div>
-    <div class="topics" aria-label="Editorial topics"><span class="topic">AI & Human Edge</span><span class="topic">Art & Culture</span><span class="topic">Creator Economy</span><span class="topic">Platforms & Algorithms</span><span class="topic">Digital Life</span></div>
-  </div></section>
+  <section class="hero" style="border-top:0">
+    <div><p class="kicker">Independent writing by BJ Beyond</p><h1>Ideas beyond the feed.</h1><p class="lead">Long-form writing on artificial intelligence, Human Edge, art, creator platforms and digital culture. The articles live where readers already are. This portal is the map.</p><div class="actions"><a class="cta" href="#writing">Read the latest</a><a class="ghost" href="#themes">Explore themes</a></div><div class="topics"><span class="topic">AI & Human Edge</span><span class="topic">Art & Culture</span><span class="topic">Creator Economy</span><span class="topic">Platforms & Algorithms</span><span class="topic">Digital Life</span></div></div>
+    <div class="hero-media"><img src="shop/hero.jpg" alt="BJ Beyond editorial workspace and digital culture visual" /></div>
+  </section>
 
   <section id="writing">
     <div class="head"><div><p class="kicker">Published writing</p><h2>The long read.</h2></div><p>Original essays and documented experiments, linked to the platforms where they were first published.</p></div>
     <a class="feature" href="https://hackernoon.com/when-the-system-flags-the-human-who-was-helping-it" target="_blank" rel="noreferrer">
       <div class="feature-copy"><p class="meta">HackerNoon · AI & Human Edge · August 2026</p><h3>When the System Flags the Human Who Was Helping It</h3><p>A documented account of months of stress-testing Grok, platform incentives, automated detection and the tension between authentic high-value interaction and systems built to detect manipulation.</p><p class="meta">Read on HackerNoon →</p></div>
-      <div class="feature-side"><div class="quote">The signal does not require a payout to remain real.</div></div>
+      <div class="feature-img"><img src="shop/pinterest.jpg" alt="Digital platforms and algorithm systems visual" /></div>
     </a>
     <div class="archive">
-      <a class="article-card" href="https://bjbeyond.substack.com/p/i-am-the-fish" target="_blank" rel="noreferrer"><p class="meta">Substack · Personal Essay</p><h3>I am the fish</h3><p>A more personal piece about perspective, identity and what becomes visible when you stop looking at the system only from the outside.</p><p class="meta">Read on Substack →</p></a>
-      <div class="article-card"><p class="meta">Archive</p><h3>More published pieces will appear here.</h3><p>The Journal only lists work once it has a public destination. Drafts and unpublished pieces stay out of the archive until they are live.</p><p class="meta">One portal · verified links</p></div>
+      <a class="article-card" href="https://bjbeyond.substack.com/p/i-am-the-fish" target="_blank" rel="noreferrer"><img src="shop/aura.jpg" alt="Abstract reflective visual for I am the fish" /><div class="article-body"><p class="meta">Substack · Personal Essay</p><h3>I am the fish</h3><p>A personal piece about perspective, identity and what becomes visible when you stop looking at the system only from the outside.</p><p class="meta">Read on Substack →</p></div></a>
+      <div class="article-card"><img src="shop/detox.jpg" alt="Editorial archive visual" /><div class="article-body"><p class="meta">Archive</p><h3>More published pieces will appear here.</h3><p>The Journal only lists work once it has a public destination. Drafts and unpublished pieces stay out of the archive until they are live.</p><p class="meta">One portal · verified links</p></div></div>
     </div>
   </section>
 
-  <section id="themes">
-    <div class="head"><div><p class="kicker">Editorial map</p><h2>What BJ Beyond writes about.</h2></div><p>Five recurring themes connect the articles, experiments and cultural observations.</p></div>
-    <div class="grid">
-      <div class="card"><p class="meta">01</p><h3>AI & Human Edge</h3><p>Where machine capability ends, where human judgment still matters, and what changes when both work together.</p><p class="meta">Reasoning · agency · accountability</p></div>
-      <div class="card"><p class="meta">02</p><h3>Platforms & Algorithms</h3><p>Recommendation systems, creator incentives, moderation, monetization and the hidden rules shaping public digital life.</p><p class="meta">X · Pinterest · creator systems</p></div>
-      <div class="card"><p class="meta">03</p><h3>Art & Culture</h3><p>Stories, markets, authorship and the uncomfortable space where creativity, money and technology meet.</p><p class="meta">Artists · markets · authorship</p></div>
-      <div class="card"><p class="meta">04</p><h3>Creator Economy</h3><p>What creators actually own when distribution, discovery and monetization remain controlled by platforms.</p><p class="meta">Ownership · distribution · leverage</p></div>
-      <div class="card"><p class="meta">05</p><h3>Digital Life</h3><p>Attention, tools, habits and the design choices that shape how technology enters ordinary life.</p><p class="meta">Attention · rituals · technology</p></div>
-      <div class="card"><p class="meta">Archive</p><h3>One stable editorial index.</h3><p>External publications are collected here as they go live, while each article remains on its original platform.</p><p class="meta">HackerNoon · Substack · more</p></div>
-    </div>
-  </section>
+  <section id="themes"><div class="head"><div><p class="kicker">Editorial map</p><h2>What BJ Beyond writes about.</h2></div><p>Five recurring themes connect the articles, experiments and cultural observations.</p></div><div class="grid"><div class="card"><p class="meta">01</p><h3>AI & Human Edge</h3><p>Where machine capability ends, where human judgment still matters, and what changes when both work together.</p><p class="meta">Reasoning · agency · accountability</p></div><div class="card"><p class="meta">02</p><h3>Platforms & Algorithms</h3><p>Recommendation systems, creator incentives, moderation, monetization and the hidden rules shaping public digital life.</p><p class="meta">X · Pinterest · creator systems</p></div><div class="card"><p class="meta">03</p><h3>Art & Culture</h3><p>Stories, markets, authorship and the uncomfortable space where creativity, money and technology meet.</p><p class="meta">Artists · markets · authorship</p></div><div class="card"><p class="meta">04</p><h3>Creator Economy</h3><p>What creators actually own when distribution, discovery and monetization remain controlled by platforms.</p><p class="meta">Ownership · distribution · leverage</p></div><div class="card"><p class="meta">05</p><h3>Digital Life</h3><p>Attention, tools, habits and the design choices that shape how technology enters ordinary life.</p><p class="meta">Attention · rituals · technology</p></div><div class="card"><p class="meta">Archive</p><h3>One stable editorial index.</h3><p>External publications are collected here as they go live, while each article remains on its original platform.</p><p class="meta">HackerNoon · Substack · more</p></div></div></section>
 
   <section id="about"><div class="about"><div><p class="kicker">About BJ Beyond</p><h2 style="font-size:clamp(2rem,4vw,3.2rem);margin:.4rem 0 1rem">Independent thinking across data, AI, art and culture.</h2><p style="color:var(--muted);margin:0">BJ Beyond publishes long-form pieces where the audience already is, then collects them here. The goal is not to build another content feed. It is to preserve a clear path through the ideas.</p></div><div><p class="kicker">How this portal works</p><p style="color:var(--muted)">Articles stay on their original publishing platforms.<br />This page acts as the editorial index.<br />Commercial products go directly to Etsy.<br />No unnecessary intermediate checkout or sales funnel.</p></div></div></section>
 </div></main>
