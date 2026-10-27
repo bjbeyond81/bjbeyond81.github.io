@@ -1,0 +1,18 @@
+{
+  "name": "Deadline Radar Pro \u2014 BJ Beyond",
+  "short_name": "Deadline Pro",
+  "description": "Car, Home, ID Documents & 24-Month Warranty Tracker with Calendar Alerts",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b0f19",
+  "theme_color": "#0b0f19",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
