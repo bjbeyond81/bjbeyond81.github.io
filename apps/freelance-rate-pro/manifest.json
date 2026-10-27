@@ -1,0 +1,18 @@
+{
+  "name": "Freelance Rate & Quote Pro \u2014 BJ Beyond",
+  "short_name": "Rate Pro",
+  "description": "Freelance Hourly & Day Rate Calculator, Tax Reserve & 3-Tier Proposal Builder",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b0f19",
+  "theme_color": "#0b0f19",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
