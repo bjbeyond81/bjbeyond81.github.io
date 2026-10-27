@@ -490,8 +490,10 @@
 
 <script>
 const STORAGE_KEY = 'bj_subkiller_pro_v2';
-let currentLang = localStorage.getItem('bj_subkiller_pro_lang') || 'en';
-let currentCurrency = localStorage.getItem('bj_subkiller_pro_curr') || '$';
+const _urlLang = new URLSearchParams(window.location.search).get('lang');
+const _navLang = (navigator.language || 'en').slice(0, 2).toLowerCase();
+let currentLang = (['en','it','de'].includes(_urlLang) ? _urlLang : null) || localStorage.getItem('bj_subkiller_pro_lang') || (['en','it','de'].includes(_navLang) ? _navLang : 'en');
+let currentCurrency = localStorage.getItem('bj_subkiller_pro_curr') || (currentLang === 'it' || currentLang === 'de' ? '€' : '$');
 let currentFilter = 'all';
 let deferredPrompt = null;
 
