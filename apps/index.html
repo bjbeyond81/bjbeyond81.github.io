@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BJ Beyond — All-in-One Life & Finance Pro Web App Suite (4 Apps)</title>
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card: rgba(17, 24, 39, 0.85);
+      --border: rgba(148, 163, 184, 0.18);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --cyan: #06b6d4;
+      --purple: #8b5cf6;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: radial-gradient(circle at top right, #1e1b4b, #0b0f19 60%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+      padding: 28px 16px 60px;
+    }
+    .container { max-width: 1080px; margin: 0 auto; }
+    .topbar {
+      display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+      gap: 12px; padding-bottom: 24px; border-bottom: 1px solid var(--border); margin-bottom: 32px;
+    }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.15rem; letter-spacing: -0.02em; }
+    .badge {
+      background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.35);
+      padding: 4px 10px; border-radius: 999px; font-size: 0.78rem; font-weight: 700;
+    }
+    .lang-switch { display: flex; gap: 6px; }
+    .lang-btn {
+      background: rgba(30, 41, 59, 0.8); color: var(--text); border: 1px solid var(--border);
+      padding: 6px 12px; border-radius: 8px; cursor: pointer; font-size: 0.82rem; font-weight: 600;
+    }
+    .lang-btn.active { border-color: var(--cyan); background: rgba(6, 182, 212, 0.18); color: #67e8f9; }
+    .hero {
+      text-align: center; max-width: 780px; margin: 0 auto 36px;
+    }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 12px; }
+    .hero p { color: var(--muted); font-size: 1.05rem; margin-bottom: 20px; }
+    .master-box {
+      background: linear-gradient(135deg, rgba(6,182,212,0.14), rgba(139,92,246,0.14));
+      border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 16px; padding: 20px 24px;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;
+      margin-bottom: 36px;
+    }
+    .master-box h2 { font-size: 1.15rem; margin-bottom: 4px; }
+    .master-box p { color: var(--muted); font-size: 0.9rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 11px 18px; border-radius: 10px; font-weight: 700; font-size: 0.9rem;
+      text-decoration: none; transition: transform 0.15s, opacity 0.15s;
+    }
+    .btn:hover { transform: translateY(-1px); opacity: 0.95; }
+    .btn-master { background: linear-gradient(135deg, #06b6d4, #6366f1); color: #fff; box-shadow: 0 8px 20px rgba(6,182,212,0.25); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px; margin-bottom: 40px; }
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 24px;
+      display: flex; flex-direction: column; justify-content: space-between; gap: 18px;
+    }
+    .card-tag { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 3px 9px; border-radius: 6px; margin-bottom: 8px; }
+    .card h3 { font-size: 1.25rem; margin-bottom: 6px; }
+    .card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 12px; }
+    .card-actions { display: flex; flex-direction: column; gap: 8px; }
+    .btn-launch { background: #f8fafc; color: #0f172a; }
+    .btn-zip { background: rgba(30, 41, 59, 0.9); color: #e2e8f0; border: 1px solid var(--border); font-size: 0.84rem; }
+    .footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding-top: 24px; border-top: 1px solid var(--border); }
+    .footer a { color: #38bdf8; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div class="brand">
+        <span>BJ BEYOND STUDIO</span>
+        <span class="badge" data-i18n="badge">✓ 4 PRO APPS • LIFETIME LICENSE</span>
+      </div>
+      <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('en')" id="btn-en">🇬🇧 EN</button>
+        <button class="lang-btn" onclick="setLang('it')" id="btn-it">🇮🇹 IT</button>
+        <button class="lang-btn" onclick="setLang('de')" id="btn-de">🇩🇪 DE</button>
+      </div>
+    </div>
+
+    <div class="hero">
+      <h1 data-i18n="heroTitle">All-in-One Life & Finance Pro Suite</h1>
+      <p data-i18n="heroSub">Instant browser access (Installable PWA) + Standalone Offline .ZIP/.HTML packages for iPhone, iPad, Android, Mac & Windows. 100% Local Privacy & Zero Subscriptions.</p>
+    </div>
+
+    <div class="master-box">
+      <div>
+        <h2 data-i18n="masterTitle">📦 Complete 4-App Master Offline Archive (.ZIP)</h2>
+        <p data-i18n="masterSub">Includes all 4 standalone .HTML applications, all 4 full PWA folders, and multilingual PDF guides in one single download.</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="downloads/All_in_One_Pro_Bundle_Full_Package.zip" download class="btn btn-master" data-i18n="btnMasterZip">⬇ Download All 4 Apps (.ZIP)</a>
+        <a href="downloads/All_in_One_Pro_Bundle_Access.pdf" target="_blank" class="btn btn-zip" data-i18n="btnMasterPdf">📄 Bundle Access Guide (PDF)</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card" style="border-top: 3px solid var(--cyan);">
+        <div>
+          <span class="card-tag" style="background:rgba(6,182,212,0.15);color:#22d3ee;">App 1 • Finance</span>
+          <h3>Subscription Tracker Pro</h3>
+          <p data-i18n="app1Desc">Audit recurring bills, track cost-per-use, project 5-year compound savings, export .ICS renewal reminders & generate cancellation notices.</p>
+        </div>
+        <div class="card-actions">
+          <a href="subscription-killer-pro/" class="btn btn-launch" data-i18n="launchPwa">🚀 Launch Online Web App (PWA)</a>
+          <a href="downloads/Subscription_Tracker_Pro_Full_Package.zip" download class="btn btn-zip" data-i18n="dlZip">⬇ Download Offline Package (.ZIP)</a>
+        </div>
+      </div>
+
+      <div class="card" style="border-top: 3px solid var(--purple);">
+        <div>
+          <span class="card-tag" style="background:rgba(139,92,246,0.15);color:#c4b5fd;">App 2 • Business & Freelance</span>
+          <h3>Freelance Rate & Quote Pro</h3>
+          <p data-i18n="app2Desc">Calculate your true post-tax hourly/day rate from target net income, see your exact invoice tax reserve %, and build 3-tier PDF client proposals.</p>
+        </div>
+        <div class="card-actions">
+          <a href="freelance-rate-pro/" class="btn btn-launch" data-i18n="launchPwa">🚀 Launch Online Web App (PWA)</a>
+          <a href="downloads/Freelance_Rate_Quote_Pro_Full_Package.zip" download class="btn btn-zip" data-i18n="dlZip">⬇ Download Offline Package (.ZIP)</a>
+        </div>
+      </div>
+
+      <div class="card" style="border-top: 3px solid var(--emerald);">
+        <div>
+          <span class="card-tag" style="background:rgba(16,185,129,0.15);color:#6ee7b7;">App 3 • Couples & Household</span>
+          <h3>Fair Split Pro</h3>
+          <p data-i18n="app3Desc">Split household, couple, or travel expenses 50/50 or proportional to net income, settle balances with minimum transfers & share WhatsApp summaries.</p>
+        </div>
+        <div class="card-actions">
+          <a href="fair-split-pro/" class="btn btn-launch" data-i18n="launchPwa">🚀 Launch Online Web App (PWA)</a>
+          <a href="downloads/Fair_Split_Pro_Full_Package.zip" download class="btn btn-zip" data-i18n="dlZip">⬇ Download Offline Package (.ZIP)</a>
+        </div>
+      </div>
+
+      <div class="card" style="border-top: 3px solid var(--amber);">
+        <div>
+          <span class="card-tag" style="background:rgba(245,158,11,0.15);color:#fcd34d;">App 4 • Auto, Home & Docs</span>
+          <h3>Deadline Radar Pro</h3>
+          <p data-i18n="app4Desc">Track car inspections (MOT/HU/Revisione), insurance, home maintenance, IDs & 24-month warranties with traffic-light alerts & .ICS calendar sync.</p>
+        </div>
+        <div class="card-actions">
+          <a href="deadline-radar-pro/" class="btn btn-launch" data-i18n="launchPwa">🚀 Launch Online Web App (PWA)</a>
+          <a href="downloads/Deadline_Radar_Pro_Full_Package.zip" download class="btn btn-zip" data-i18n="dlZip">⬇ Download Offline Package (.ZIP)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>© BJ Beyond Studio • <a href="https://bjbeyond.studio">bjbeyond.studio</a> • 100% Local Storage Privacy • No Subscriptions</p>
+    </div>
+  </div>
+
+  <script>
+    const I18N = {
+      en: {
+        badge: "✓ 4 PRO APPS • LIFETIME LICENSE",
+        heroTitle: "All-in-One Life & Finance Pro Suite",
+        heroSub: "Instant browser access (Installable PWA) + Standalone Offline .ZIP/.HTML packages for iPhone, iPad, Android, Mac & Windows. 100% Local Privacy & Zero Subscriptions.",
+        masterTitle: "📦 Complete 4-App Master Offline Archive (.ZIP)",
+        masterSub: "Includes all 4 standalone .HTML applications, all 4 full PWA folders, and multilingual PDF guides in one single download.",
+        btnMasterZip: "⬇ Download All 4 Apps (.ZIP)",
+        btnMasterPdf: "📄 Bundle Access Guide (PDF)",
+        app1Desc: "Audit recurring bills, track cost-per-use, project 5-year compound savings, export .ICS renewal reminders & generate cancellation notices.",
+        app2Desc: "Calculate your true post-tax hourly/day rate from target net income, see your exact invoice tax reserve %, and build 3-tier PDF client proposals.",
+        app3Desc: "Split household, couple, or travel expenses 50/50 or proportional to net income, settle balances with minimum transfers & share WhatsApp summaries.",
+        app4Desc: "Track car inspections (MOT/HU/Revisione), insurance, home maintenance, IDs & 24-month warranties with traffic-light alerts & .ICS calendar sync.",
+        launchPwa: "🚀 Launch Online Web App (PWA)",
+        dlZip: "⬇ Download Offline Package (.ZIP)"
+      },
+      it: {
+        badge: "✓ 4 WEB APP PRO • LICENZA A VITA",
+        heroTitle: "Suite Completa Vita & Finanza (4 Web App Pro)",
+        heroSub: "Accesso immediato da browser (PWA installabile) + Pacchetti Offline .ZIP/.HTML per iPhone, iPad, Android, Mac e Windows. 100% Privacy Locale e Zero Abbonamenti.",
+        masterTitle: "📦 Archivio Master Completo delle 4 App Offline (.ZIP)",
+        masterSub: "Include tutti i 4 file .HTML standalone, le 4 cartelle PWA complete e le guide PDF multilingue in un unico download.",
+        btnMasterZip: "⬇ Scarica Tutte le 4 App (.ZIP)",
+        btnMasterPdf: "📄 Guida di Accesso Bundle (PDF)",
+        app1Desc: "Analizza gli abbonamenti, calcola il costo per utilizzo, simula il risparmio a 5 anni, esporta avvisi .ICS e genera disdette.",
+        app2Desc: "Calcola la tua vera tariffa oraria/giornaliera al netto delle tasse e genera preventivi PDF a 3 livelli pronti per il cliente.",
+        app3Desc: "Dividi le spese di coppia, casa e viaggi 50/50 o in proporzione al reddito, azzera i saldi con 1 bonifico e invia riepiloghi WhatsApp.",
+        app4Desc: "Monitora revisione auto, assicurazione, manutenzione casa, documenti e garanzie 24 mesi con semaforo d'urgenza ed export calendario .ICS.",
+        launchPwa: "🚀 Apri Web App Online (PWA)",
+        dlZip: "⬇ Scarica Pacchetto Offline (.ZIP)"
+      },
+      de: {
+        badge: "✓ 4 PRO WEB-APPS • LEBENSLANGE LIZENZ",
+        heroTitle: "All-in-One Leben & Finanzen Pro-Suite",
+        heroSub: "Sofortiger Browser-Zugang (installierbare PWA) + Offline-.ZIP/.HTML-Pakete für iPhone, iPad, Android, Mac & Windows. 100 % lokaler Datenschutz & kein Abo.",
+        masterTitle: "📦 Komplettes 4-App Master-Offline-Archiv (.ZIP)",
+        masterSub: "Enthält alle 4 eigenständigen .HTML-Apps, alle 4 PWA-Ordner und mehrsprachige PDF-Anleitungen in einem Download.",
+        btnMasterZip: "⬇ Alle 4 Apps herunterladen (.ZIP)",
+        btnMasterPdf: "📄 Bundle-Zugangskarte (PDF)",
+        app1Desc: "Prüfen Sie Abos, berechnen Sie Kosten pro Nutzung, 5-Jahres-Ersparnisse, .ICS-Kalenderwecker & Kündigungsschreiben.",
+        app2Desc: "Berechnen Sie Ihren wahren Netto-/Brutto-Stundensatz inkl. Steuerrücklage und erstellen Sie 3-stufige PDF-Kundenangebote.",
+        app3Desc: "Teilen Sie Paar-, Haushalts- & Reisekosten 50/50 oder einkommensproportional auf, inkl. Smart-Settlement & WhatsApp-Bericht.",
+        app4Desc: "Verwalten Sie TÜV/HU, Kfz-Versicherung, Hauswartung, Ausweise & 24-Monats-Garantien mit Ampel-Radar & .ICS-Kalender-Export.",
+        launchPwa: "🚀 Online-Web-App starten (PWA)",
+        dlZip: "⬇ Offline-Paket herunterladen (.ZIP)"
+      }
+    };
+    function setLang(lang) {
+      if (!I18N[lang]) lang = 'en';
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const k = el.getAttribute('data-i18n');
+        if (I18N[lang][k]) el.textContent = I18N[lang][k];
+      });
+      ['en','it','de'].forEach(l => {
+        document.getElementById('btn-' + l).classList.toggle('active', l === lang);
+      });
+    }
+    const navLang = (navigator.language || 'en').slice(0,2).toLowerCase();
+    if (navLang === 'it' || navLang === 'de') setLang(navLang);
+  </script>
+</body>
+</html>
