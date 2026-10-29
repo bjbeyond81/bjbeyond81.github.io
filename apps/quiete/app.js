@@ -1,6 +1,11 @@
 // Quiete — by BJ Beyond. Tutto resta sul dispositivo.
 export const SOUNDS_APP_URL = 'https://bjbeyond.it/frequency/'; // Frequency Studio di BJ Beyond
 const SITE_URL = 'https://bjbeyond.it';
+// Codici di attivazione: solo hash SHA-256 (maiuscolo, senza spazi). Aggiungi un hash per ogni nuovo codice.
+// Genera: echo -n 'QUIETE-XXXX-XXXX' | sha256sum
+const CODE_HASHES = [
+  '28296aa680a09434a4226a4b2141d038d69c847a2af3cb0428072478d31b01c4',
+];
 const MODELS = ['Llama-3.2-1B-Instruct-q4f16_1-MLC', 'Qwen2.5-0.5B-Instruct-q4f16_1-MLC'];
 const WEBLLM_URL = 'https://esm.run/@mlc-ai/web-llm@0.2.86';
 
@@ -19,7 +24,7 @@ footer:'Quiete non è un dispositivo medico né sostituisce un professionista. S
 hello:['Buonanotte','Buongiorno','Buon pomeriggio','Buonasera'],sub:'Un piccolo spazio per rallentare. Qui, adesso.',
 feel_q:'Mi sento…',feelings:{ansioso:'Ansioso/a',stressato:'Stressato/a',triste:'Triste',arrabbiato:'Arrabbiato/a',insonne:'Non riesco a dormire',sopraffatto:'Sopraffatto/a',solo:'Solo/a',calmo:'Abbastanza bene'},
 suggest:'Ti propongo',start:'Inizia',
-t_breathe:'Respirazione guidata',t_breathe_d:'4-7-8, quadrata, coerente',t_ground:'Grounding 5-4-3-2-1',t_ground_d:'Torna nel presente',t_pmr:'Rilassamento muscolare',t_pmr_d:'Progressivo, 8 minuti',t_reframe:'Riformula un pensiero',t_reframe_d:'Stile CBT',t_grat:'Nota di gratitudine',t_grat_d:'Una cosa buona di oggi',t_mood:'Diario dell\'umore',t_mood_d:'Come stai oggi?',t_chat:'Parla con Quiete',t_chat_d:'Compagna IA locale',t_sound:'Suoni ambient',t_sound_d:'Rumore e drone morbido',
+t_breathe:'Respirazione guidata',t_breathe_d:'4-7-8, quadrata, coerente',t_ground:'Grounding 5-4-3-2-1',t_ground_d:'Torna nel presente',t_pmr:'Rilassamento muscolare',t_pmr_d:'Progressivo, circa 3 minuti',t_reframe:'Riformula un pensiero',t_reframe_d:'Stile CBT',t_grat:'Nota di gratitudine',t_grat_d:'Una cosa buona di oggi',t_mood:'Diario dell\'umore',t_mood_d:'Come stai oggi?',t_chat:'Parla con Quiete',t_chat_d:'Compagna IA locale',t_sound:'Suoni d\'ambiente',t_sound_d:'Rumore e drone morbido',
 promo_t:'Frequency Studio di BJ Beyond',promo_d:'Per andare più a fondo: Frequency Studio, l\'app di suoni e frequenze di BJ Beyond, pensata per accompagnare respiro, sonno e concentrazione.',promo_b:'Apri Frequency Studio',
 promo_ctx:'Vuoi continuare con un suono? Prova Frequency Studio di BJ Beyond →',
 by:'Di BJ Beyond, scrittore',
@@ -35,7 +40,7 @@ b_title:'Respira',b_478:'4-7-8',b_box:'Quadrata',b_coh:'Coerente',b_in:'Inspira'
 b_desc:{'478':'Inspira 4s, trattieni 7s, espira 8s. Utile per addormentarsi.','box':'4s per ogni lato: inspira, trattieni, espira, trattieni.','coh':'5,5 respiri al minuto (5,45s dentro, 5,45s fuori). Equilibrio e calma.'},
 b_done:'Ben fatto. Nota come ti senti adesso.',
 // grounding
-g_title:'Grounding 5-4-3-2-1',g_steps:['Nomina 5 cose che puoi vedere','Nomina 4 cose che puoi toccare','Nomina 3 suoni che puoi sentire','Nomina 2 odori che puoi percepire','Nomina 1 sapore, o una cosa gentile su di te'],g_next:'Avanti',g_done:'Sei qui, nel presente. Ottimo lavoro.',
+g_title:'Grounding 5-4-3-2-1',g_steps:['Nomina 5 cose che puoi vedere','Nomina 4 cose che puoi toccare','Nomina 3 suoni che puoi sentire','Nomina 2 odori che senti','Nomina 1 sapore, oppure una cosa gentile che puoi dirti'],g_next:'Avanti',g_done:'Sei qui, nel presente. Ottimo lavoro.',
 // pmr
 p_title:'Rilassamento muscolare progressivo',p_d:'Contrai ogni gruppo muscolare per 5 secondi, poi rilascia per 10. Senza dolore: se un\'area fa male, saltala.',
 p_steps:['Mani e avambracci: stringi i pugni','Braccia: piega i gomiti e contrai i bicipiti','Spalle: portale verso le orecchie','Viso: strizza occhi e fronte','Mascella: stringi leggermente i denti','Petto e schiena: inspira e trattieni','Pancia: contrai gli addominali','Gambe: tendi cosce e polpacci','Piedi: arriccia le dita'],p_tense:'Contrai',p_release:'Rilascia…',p_start:'Inizia',p_done:'Tutto il corpo è più morbido. Resta qualche respiro così.',
@@ -46,7 +51,7 @@ r_title:'Riformula un pensiero',r_d:'Un esercizio ispirato alla terapia cognitiv
 // gratitude
 gr_title:'Nota di gratitudine',gr_q:'Una cosa, anche piccola, per cui oggi sei grato/a',gr_save:'Salva',gr_list:'Le tue note',
 // sound
-s_title:'Suoni ambient',s_d:'Un piccolo generatore integrato. Per un\'esperienza completa usa Frequency Studio di BJ Beyond.',s_brown:'Rumore marrone',s_pink:'Rumore rosa',s_drone:'Drone morbido',s_vol:'Volume',s_stop:'Ferma tutto',
+s_title:'Suoni d\'ambiente',s_d:'Un piccolo generatore integrato. Per un\'esperienza completa usa Frequency Studio di BJ Beyond.',s_brown:'Rumore marrone',s_pink:'Rumore rosa',s_drone:'Drone morbido',s_vol:'Volume',s_stop:'Ferma tutto',
 // chat
 ch_title:'Parla con Quiete',ch_ai:'Stai parlando con un\'intelligenza artificiale, non con una persona. Può sbagliare e non è un terapeuta.',
 ch_consent:'Per rispondere, Quiete scarica un piccolo modello IA (circa 0,7–0,9 GB) che resta nel tuo browser. Dopo il download funziona anche offline e nessun messaggio lascia il dispositivo. Consigliata una rete Wi-Fi.',
@@ -56,6 +61,10 @@ ch_hi:'Ciao, sono Quiete. Sono qui per ascoltarti, senza giudizio. Come ti senti
 // more / info
 more_title:'Altro',theme:'Tema',erase:'Cancella tutto',erase_q:'Cancellare tutti i dati (diario, note, chat, modello IA scaricato)? L\'operazione non si può annullare.',erased:'Tutti i dati sono stati cancellati.',install:'Installa l\'app',install_ios:'Su iPhone: tocca Condividi e poi "Aggiungi a Home".',
 info_title:'Informazioni e limiti',
+a_lang:'Cambia lingua',a_theme:'Cambia tema',a_home:'Torna alla home',a_nav:'Navigazione',a_sos:'Emergenza: numeri di aiuto',a_play:'Avvia',a_stopsnd:'Ferma',back:'← Indietro',
+doc_title:'Quiete — by BJ Beyond',doc_desc:'Quiete by BJ Beyond: respirazione guidata, grounding, diario dell\'umore e una compagna IA locale e privata. Non è un dispositivo medico.',
+gate_title:'Attiva Quiete',gate_d:'Inserisci il codice di attivazione che hai ricevuto con l\'acquisto.',gate_ph:'QUIETE-XXXX-XXXX',gate_btn:'Sblocca',gate_bad:'Codice non valido. Controlla e riprova.',gate_help:'Non hai un codice? Visita bjbeyond.it',gate_sos:'Hai bisogno di aiuto subito? I numeri di emergenza sono sempre disponibili, anche senza codice:',
+lock:'Blocca / esci',lock_q:'Bloccare l\'app? Servirà di nuovo il codice di attivazione. I tuoi dati restano sul dispositivo.',
 },
 en: {
 nav_home:'Home',nav_breathe:'Breathe',nav_chat:'Talk',nav_diary:'Diary',nav_more:'More',
@@ -63,7 +72,7 @@ footer:'Quiete is not a medical device and does not replace a professional. You 
 hello:['Good night','Good morning','Good afternoon','Good evening'],sub:'A small space to slow down. Here, now.',
 feel_q:'I feel…',feelings:{ansioso:'Anxious',stressato:'Stressed',triste:'Sad',arrabbiato:'Angry',insonne:'Can\'t sleep',sopraffatto:'Overwhelmed',solo:'Lonely',calmo:'Fairly ok'},
 suggest:'Try this',start:'Start',
-t_breathe:'Guided breathing',t_breathe_d:'4-7-8, box, coherent',t_ground:'5-4-3-2-1 grounding',t_ground_d:'Come back to now',t_pmr:'Muscle relaxation',t_pmr_d:'Progressive, 8 min',t_reframe:'Reframe a thought',t_reframe_d:'CBT-style',t_grat:'Gratitude note',t_grat_d:'One good thing today',t_mood:'Mood diary',t_mood_d:'How are you today?',t_chat:'Talk to Quiete',t_chat_d:'Local AI companion',t_sound:'Ambient sounds',t_sound_d:'Noise and soft drone',
+t_breathe:'Guided breathing',t_breathe_d:'4-7-8, box, coherent',t_ground:'5-4-3-2-1 grounding',t_ground_d:'Come back to now',t_pmr:'Muscle relaxation',t_pmr_d:'Progressive, about 3 min',t_reframe:'Reframe a thought',t_reframe_d:'CBT-style',t_grat:'Gratitude note',t_grat_d:'One good thing today',t_mood:'Mood diary',t_mood_d:'How are you today?',t_chat:'Talk to Quiete',t_chat_d:'Local AI companion',t_sound:'Ambient sounds',t_sound_d:'Noise and soft drone',
 promo_t:'BJ Beyond Frequency Studio',promo_d:'Go deeper with Frequency Studio, the BJ Beyond sounds and frequencies app, made for breathing, sleep and focus.',promo_b:'Open Frequency Studio',
 promo_ctx:'Want to continue with sound? Try BJ Beyond Frequency Studio →',
 by:'By BJ Beyond, writer',
@@ -89,6 +98,10 @@ ch_ph:'Write how you feel…',ch_send:'Send',ch_loading:'Loading model…',ch_re
 ch_hi:'Hi, I am Quiete. I am here to listen, without judgement. How are you feeling right now?',
 more_title:'More',theme:'Theme',erase:'Erase everything',erase_q:'Erase all data (diary, notes, chat, downloaded AI model)? This cannot be undone.',erased:'All data erased.',install:'Install the app',install_ios:'On iPhone: tap Share, then "Add to Home Screen".',
 info_title:'About & limits',
+a_lang:'Change language',a_theme:'Change theme',a_home:'Back to home',a_nav:'Navigation',a_sos:'Emergency: help numbers',a_play:'Play',a_stopsnd:'Stop',back:'← Back',
+doc_title:'Quiete — by BJ Beyond',doc_desc:'Quiete by BJ Beyond: guided breathing, grounding, mood diary and a private local AI companion. Not a medical device.',
+gate_title:'Activate Quiete',gate_d:'Enter the activation code you received with your purchase.',gate_ph:'QUIETE-XXXX-XXXX',gate_btn:'Unlock',gate_bad:'Invalid code. Please check and try again.',gate_help:'No code? Visit bjbeyond.it',gate_sos:'Need help right now? Emergency numbers are always available, even without a code:',
+lock:'Lock / sign out',lock_q:'Lock the app? You will need the activation code again. Your data stays on this device.',
 }};
 let lang = db.get('lang', 'it');
 const t = k => (T[lang][k] ?? T.it[k] ?? k);
@@ -231,10 +244,10 @@ gratitude() {
 },
 sound() {
   app.innerHTML = `<h1>${t('s_title')}</h1><p class="mu">${t('s_d')}</p><div class="card">
-  ${['brown','pink','drone'].map(k => `<div class="row" style="justify-content:space-between;margin:8px 0"><b>${t('s_' + k)}</b><button class="btn ghost" data-snd="${k}">${Sound.on[k] ? '■' : '▶'}</button></div>`).join('')}
+  ${['brown','pink','drone'].map(k => `<div class="row" style="justify-content:space-between;margin:8px 0"><b>${t('s_' + k)}</b><button class="btn ghost" data-snd="${k}" aria-label="${t(Sound.on[k] ? 'a_stopsnd' : 'a_play')}: ${t('s_' + k)}">${Sound.on[k] ? '■' : '▶'}</button></div>`).join('')}
   <label class="sm mu">${t('s_vol')}<input type="range" id="vol" min="0" max="1" step="0.01" value="${Sound.vol}"></label>
   <button class="btn ghost block" id="sst">${t('s_stop')}</button></div>${promo()}`;
-  app.querySelectorAll('[data-snd]').forEach(b => b.onclick = () => { Sound.toggle(b.dataset.snd); b.textContent = Sound.on[b.dataset.snd] ? '■' : '▶'; });
+  app.querySelectorAll('[data-snd]').forEach(b => b.onclick = () => { Sound.toggle(b.dataset.snd); b.textContent = Sound.on[b.dataset.snd] ? '■' : '▶'; b.setAttribute('aria-label', t(Sound.on[b.dataset.snd] ? 'a_stopsnd' : 'a_play') + ': ' + t('s_' + b.dataset.snd)); });
   $('#vol').oninput = e => Sound.setVol(+e.target.value);
   $('#sst').onclick = () => { Sound.stopAll(); views.sound(); };
 },
@@ -244,9 +257,11 @@ more() {
   ${promo()}
   <div class="card"><button class="btn ghost block" data-go="info">${t('info_title')}</button>
   <div style="height:10px"></div><button class="btn ghost block" id="inst">${t('install')}</button><p class="sm mu" id="insth"></p>
+  <div style="height:10px"></div><button class="btn ghost block" id="lock">${t('lock')}</button>
   <div style="height:10px"></div><button class="btn block" id="erase" style="background:var(--danger);color:#fff">${t('erase')}</button></div>
   <p class="sm mu" style="text-align:center"><a href="${SITE_URL}" target="_blank" rel="noopener">${t('by')}</a></p>`;
   $('#erase').onclick = eraseAll;
+  $('#lock').onclick = () => { if (!confirm(t('lock_q'))) return; db.set('unlocked', null); localStorage.removeItem(K + 'unlocked'); location.replace(location.pathname); };
   $('#inst').onclick = async () => { if (deferredPrompt) { deferredPrompt.prompt(); deferredPrompt = null; } else $('#insth').textContent = t('install_ios'); };
 },
 info() { app.innerHTML = lang === 'en' ? INFO_EN : INFO_IT; },
@@ -308,6 +323,7 @@ const CANNED = {
       [/sad|cry|empty|down/, 'I\'m sorry you feel this way. It\'s okay to make room for sadness. Would a small gratitude note or a mood entry help?', 'gratitude'],
       [/angry|anger|furious/, 'Anger shows that something matters to you. Let\'s give your body a moment with coherent breathing.', 'breathe'],
       [/stress|work|too much|overwhelm/, 'It sounds like you are carrying a lot. One step at a time: 5-4-3-2-1 grounding brings you back to now.', 'ground'],
+      [/thought|guilt|fail|always|never|wrong/, 'Sometimes our thoughts get very harsh with us. You could try reframing one: situation, thought, emotion and a kinder alternative.', 'reframe'],
       [/alone|lonely|nobody/, 'Feeling alone is heavy. I\'m here to listen, and reaching out to someone you trust can help too. Want to tell me more?', null]],
 };
 const Chat = {
@@ -410,22 +426,52 @@ function go(v) {
 function applyLang() {
   document.documentElement.lang = lang; $('#langBtn').textContent = lang === 'it' ? 'EN' : 'IT';
   document.querySelectorAll('[data-t]').forEach(e => e.textContent = t(e.dataset.t));
-  $('#sos').setAttribute('aria-label', lang === 'it' ? 'Emergenza: numeri di aiuto' : 'Emergency: help numbers');
+  $('#sos').setAttribute('aria-label', t('a_sos'));
+  $('#langBtn').setAttribute('aria-label', t('a_lang') + (lang === 'it' ? ' (English)' : ' (Italiano)'));
+  $('#themeBtn').setAttribute('aria-label', t('a_theme'));
+  $('.brand').setAttribute('aria-label', t('a_home'));
+  $('.tabs').setAttribute('aria-label', t('a_nav'));
+  document.title = t('doc_title');
+  document.querySelector('meta[name=description]').setAttribute('content', t('doc_desc'));
+  document.querySelector('link[rel=manifest]').setAttribute('href', lang === 'en' ? 'manifest-en.webmanifest' : 'manifest.webmanifest');
+  if (Chat.msgs.length === 1 && Chat.msgs[0].role === 'assistant' && [T.it.ch_hi, T.en.ch_hi].includes(Chat.msgs[0].content)) Chat.msgs[0].content = t('ch_hi');
 }
 function applyTheme() { const th = db.get('theme', matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'); document.documentElement.dataset.theme = th; }
 document.addEventListener('click', e => {
   if (e.target.closest('[data-close]')) closeModal();
   const g = e.target.closest('[data-go]');
-  if (g) { e.preventDefault(); if (g.hasAttribute('data-keep')) { closeModal(); go(g.dataset.go); const back = document.createElement('button'); back.className = 'btn block'; back.textContent = '←'; back.onclick = () => { go('home'); showConsent(); }; app.prepend(back); return; } closeModal(); go(g.dataset.go); }
+  if (g) { e.preventDefault(); if (g.hasAttribute('data-keep')) { closeModal(); go(g.dataset.go); const back = document.createElement('button'); back.className = 'btn block'; back.textContent = t('back'); back.onclick = () => { go('home'); showConsent(); }; app.prepend(back); return; } closeModal(); go(g.dataset.go); }
 });
 $('#sos').onclick = showCrisis;
-$('#langBtn').onclick = () => { lang = lang === 'it' ? 'en' : 'it'; db.set('lang', lang); applyLang(); go(currentView); if (!db.get('consent')) showConsent(); };
+$('#langBtn').onclick = () => { lang = lang === 'it' ? 'en' : 'it'; db.set('lang', lang); applyLang(); go(currentView); if (!db.get('consent') && isUnlocked()) showConsent(); };
 $('#themeBtn').onclick = () => { const n = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'; db.set('theme', n); applyTheme(); };
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && !$('#modal').hidden && db.get('consent')) closeModal(); });
 addEventListener('hashchange', () => { const v = location.hash.slice(1); if (v !== currentView) go(v); });
 let deferredPrompt = null; addEventListener('beforeinstallprompt', e => { e.preventDefault(); deferredPrompt = e; });
 
-applyTheme(); applyLang(); go(location.hash.slice(1) || 'home');
-if (!db.get('consent')) showConsent();
+/* ---------- activation gate (deterrente lato client, non sicurezza reale) ---------- */
+async function sha256(txt) { const b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(txt)); return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2, '0')).join(''); }
+const isUnlocked = () => { const u = db.get('unlocked', null); return !!(u && CODE_HASHES.includes(u.h)); };
+function showGate() {
+  let g = $('#gate'); if (!g) { g = document.createElement('div'); g.id = 'gate'; g.className = 'gate'; document.body.appendChild(g); }
+  document.body.classList.add('locked');
+  g.innerHTML = `<div class="gate-in" role="dialog" aria-modal="true" aria-labelledby="gt">
+  <div class="row" style="justify-content:space-between"><div class="row"><span class="logo"></span><div><b>Quiete</b><div class="mu sm">by BJ Beyond</div></div></div><button class="chip" id="glang" aria-label="${t('a_lang')}">${lang === 'it' ? 'EN' : 'IT'}</button></div>
+  <h1 id="gt">${t('gate_title')}</h1><p class="mu">${t('gate_d')}</p>
+  <form id="gf" autocomplete="off"><input type="text" id="gcode" placeholder="${t('gate_ph')}" aria-label="${t('gate_title')}" autocapitalize="characters" spellcheck="false" style="text-transform:uppercase;letter-spacing:2px;text-align:center;font-size:18px">
+  <p class="sm" id="gerr" role="alert" style="color:var(--danger);min-height:1.4em"></p>
+  <button class="btn block" id="gbtn">${t('gate_btn')}</button></form>
+  <p class="sm mu" style="text-align:center"><a href="${SITE_URL}" target="_blank" rel="noopener">${t('gate_help')}</a></p>
+  <div class="card crisis" style="margin-top:18px"><p class="sm">${t('gate_sos')}</p>
+  <a class="tel" href="tel:112"><span>${t('cr_112')}</span><b>112</b></a>
+  <a class="tel" href="tel:0223272327"><span>${t('cr_ta')}</span><b>02 2327 2327</b></a>
+  <a class="tel" href="tel:0677208977"><span>${t('cr_sam')}</span><b>06 77208977</b></a></div></div>`;
+  $('#glang').onclick = () => { lang = lang === 'it' ? 'en' : 'it'; db.set('lang', lang); applyLang(); showGate(); };
+  $('#gf').onsubmit = async e => { e.preventDefault(); const code = $('#gcode').value.replace(/\s+/g, '').toUpperCase(); const h = await sha256(code);
+    if (CODE_HASHES.includes(h)) { db.set('unlocked', { h, at: Date.now() }); g.remove(); document.body.classList.remove('locked'); go(location.hash.slice(1) || 'home'); if (!db.get('consent')) showConsent(); }
+    else { $('#gerr').textContent = t('gate_bad'); vibrate([30, 40, 30]); } };
+}
+applyTheme(); applyLang();
+if (isUnlocked()) { go(location.hash.slice(1) || 'home'); if (!db.get('consent')) showConsent(); } else showGate();
 if ('serviceWorker' in navigator && location.protocol !== 'file:') navigator.serviceWorker.register('sw.js').catch(() => {});
 window.__quiete = { isCrisis, SOUNDS_APP_URL };
