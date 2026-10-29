@@ -1,4 +1,5 @@
 import {EMBEDDING_MODEL} from './domain.js';
+import {downloadDirectory,savedDownload} from './model-download-storage.js';
 
 export const CPU_MODEL='onnx-community/Qwen2.5-0.5B-Instruct';
 export const GPU_MODEL='Llama-3.2-1B-Instruct-q4f16_1-MLC';
@@ -16,6 +17,8 @@ export async function createModelCache({storage=globalThis.caches,opfs=globalThi
     get available(){return accessible;},
     async match(request){
       const url=typeof request==='string'?request:request.url;
+      const streamed=await savedDownload(await downloadDirectory(opfs),url);
+      if(streamed){accessible=true;return streamed;}
       for(const name of CACHE_NAMES){
         try{if(storage){const exists=await storage.has(name);accessible=true;if(exists){const response=await (await storage.open(name)).match(url);if(response)return response;}}}catch{}
       }

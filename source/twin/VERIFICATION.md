@@ -23,3 +23,9 @@ English is now the fresh-install default regardless of browser language. Saved l
 ## iPhone compatibility update - 1.0.1
 
 The original deployed version was exercised on a desktop browser with fictional data: vault creation, encrypted entry saving, local model loading, indexing and a grounded Qwen response succeeded. This is not an iPhone hardware test. The compatibility update uses Transformers.js 4.3.2, CPU-only non-Asyncify ONNX WASM, Qwen q8, sequential shell caching, a timed GPU probe and explicit model loading after unlock on iOS. Three additional device-selection/timeout checks bring the automatic suite to 19 tests. Real Safari/iPhone model inference remains unverified until tested on the affected device.
+
+## Resumable model download update — 1.0.4
+
+Model setup now streams missing public files to OPFS in a worker, before initializing ONNX sessions. The recovery page can finish the download without opening the vault or starting AI. HTTP Range requests resume partial files, persisted byte counts are shown, and only completed files with matching recorded sizes are visible to inference. Existing Cache Storage and legacy OPFS models remain readable. The app update does not clear the vault or models.
+
+Local production build and 45 automatic tests passed, including real temporary-file tests for interrupted downloads, range resumption, changed remote versions, servers ignoring Range, incomplete responses, multi-range streaming and quota failures. The public Qwen endpoint returned HTTP 206 for a byte-range request and reported a total size of 512,096,557 bytes. No physical iPhone was tested; completion and inference on the affected Safari installation still require device verification.

@@ -2,7 +2,7 @@ import {createModelCache,inspectModelCache,CPU_MODEL,modelFiles} from './model-c
 import {EMBEDDING_MODEL} from './domain.js';
 import {applyAppUpdate} from './app-update.js';
 const VERSION=__TWIN_VERSION__;
-let language='en',checking=false,updating=false,state=null,lastStatus='';
+let language='en',checking=false,updating=false,state=null,lastStatus='',downloading=false,downloadWorker=null,pauseDownload=null;
 try{if(localStorage.getItem('twin-lang')==='it')language='it';}catch{}
 const $=id=>document.getElementById(id);
 const tr=(en,it)=>language==='it'?it:en;
@@ -38,7 +38,7 @@ async function check(){
 $('language').addEventListener('change',()=>{language=$('language').value;try{localStorage.setItem('twin-lang',language);}catch{}draw();});
 $('recheck').addEventListener('click',check);
 $('update').addEventListener('click',async()=>{
- if(updating)return;updating=true;$('update').disabled=true;$('status').classList.remove('error');
+ if(updating||downloading)return;updating=true;$('update').disabled=true;$('status').classList.remove('error');
  try{
   await applyAppUpdate({baseURL:new URL('./',location.href),version:VERSION,onProgress:stage=>{lastStatus=stage;draw();}});
   $('open').hidden=false;
@@ -47,4 +47,51 @@ $('update').addEventListener('click',async()=>{
   $('status').textContent=lastStatus;$('status').classList.add('error');
  }finally{updating=false;$('update').disabled=false;}
 });
+
+function downloadError(code){
+ if(code==='MODEL_STORAGE_FULL'||/quota/i.test(code))return tr('Safari has insufficient storage. Free device storage and retry; do not clear Twin’s site data. Saved parts are kept.','Safari non ha spazio sufficiente. Libera spazio sul dispositivo e riprova; non cancellare i dati del sito Twin. Le parti salvate vengono mantenute.');
+ if(code==='MODEL_STORAGE_UNAVAILABLE')return tr('Safari cannot write model files. Use a normal, non-private Safari tab.','Safari non può salvare i modelli. Usa una scheda Safari normale, non privata.');
+ if(code==='MODEL_DOWNLOAD_BUSY')return tr('Another Twin tab is saving this file. Close the other Twin tabs, then retry here.','Un’altra scheda Twin sta salvando questo file. Chiudi le altre schede Twin e riprova qui.');
+ if(code==='MODEL_DOWNLOAD_PAUSED')return tr('Paused. Saved bytes are kept. Tap Finish AI download to resume.','In pausa. I byte salvati vengono mantenuti. Premi Completa download AI per riprendere.');
+ return tr('Download interrupted. Saved bytes are kept. Check Wi-Fi and tap Finish AI download to resume.','Download interrotto. I byte salvati vengono mantenuti. Controlla il Wi-Fi e premi Completa download AI per riprendere.')+` (${code})`;
+}
+$('download').addEventListener('click',async()=>{
+ if(downloading||updating||checking)return;
+ downloading=true;$('download').disabled=true;$('update').disabled=true;$('recheck').disabled=true;
+ $('download-status').classList.remove('error');$('download-progress').hidden=false;$('download-progress').removeAttribute('value');
+ let wakeLock;
+ try{
+  try{wakeLock=await navigator.wakeLock?.request('screen');}catch{}
+  await navigator.storage?.persist?.().catch(()=>false);
+  // Confirm the new shell before opening Twin with its new storage reader.
+  await applyAppUpdate({baseURL:new URL('./',location.href),version:VERSION,onProgress:stage=>{$('download-status').textContent=tr(...stages[stage]);}});
+  $('pause').hidden=false;
+  await new Promise((resolve,reject)=>{
+   downloadWorker=new Worker(new URL('./model-download-worker.js',import.meta.url),{type:'module'});
+   pauseDownload=()=>{downloadWorker?.terminate();reject(new Error('MODEL_DOWNLOAD_PAUSED'));};
+   downloadWorker.onmessage=({data})=>{
+    if(data.type==='error'){reject(new Error(data.error));return;}
+    if(data.type==='result'){data.result.cached?resolve():reject(new Error('MODEL_DOWNLOAD_INCOMPLETE'));return;}
+    const bar=$('download-progress');
+    if(data.progress==null)bar.removeAttribute('value');else bar.value=data.progress;
+    const size=data.total?`${(data.loaded/1e6).toFixed(1)} / ${(data.total/1e6).toFixed(1)} MB`:tr('Connecting…','Connessione…');
+    $('download-status').textContent=`${data.phase==='saved'?tr('Saved','Salvato'):tr('Saving','Salvataggio')} · ${size}`;
+   };
+   downloadWorker.onerror=()=>reject(new Error('MODEL_DOWNLOAD_WORKER_FAILED'));
+   downloadWorker.onmessageerror=()=>reject(new Error('MODEL_DOWNLOAD_WORKER_FAILED'));
+   downloadWorker.postMessage({action:'prepare'});
+  });
+  await check();
+  $('download-status').textContent=tr('All 8 files are saved. You can now open Twin. Starting AI is a separate step.','Tutti gli 8 file sono salvati. Ora puoi aprire Twin. L’avvio dell’AI è un passaggio separato.');
+  $('download-progress').value=1;$('open').hidden=false;
+ }catch(error){
+  $('download-status').classList.add('error');$('download-status').textContent=downloadError(String(error.message||error));
+  await check();
+ }finally{
+  downloadWorker?.terminate();downloadWorker=null;pauseDownload=null;downloading=false;
+  $('pause').hidden=true;$('download').disabled=false;$('update').disabled=false;$('recheck').disabled=false;
+  try{await wakeLock?.release();}catch{}
+ }
+});
+$('pause').addEventListener('click',()=>pauseDownload?.());
 draw();check();
