@@ -9,6 +9,36 @@ env.cacheKey='twin-models';
 env.useWasmCache=false;
 env.backends.onnx.wasm.numThreads=1; // GitHub Pages has no COOP/COEP / SharedArrayBuffer.
 env.backends.onnx.wasm.proxy=false;
+// Prefer OPFS for model files on iOS/Safari (Cache Storage is frequently purged).
+async function setupOpfsCache(){
+  try{
+    if(!navigator.storage?.getDirectory) return;
+    const root = await navigator.storage.getDirectory();
+    const dir = await root.getDirectoryHandle('twin-models', {create:true});
+    env.useBrowserCache = false;
+    env.useCustomCache = true;
+    env.customCache = {
+      async match(request){
+        const url = typeof request === 'string' ? request : request.url;
+        const name = btoa(url).replace(/[/+=]/g,'_').slice(0,180);
+        try{
+          const fh = await dir.getFileHandle(name);
+          const file = await fh.getFile();
+          return new Response(file, {headers:{'content-type':'application/octet-stream'}});
+        }catch{ return undefined; }
+      },
+      async put(request, response){
+        const url = typeof request === 'string' ? request : request.url;
+        const name = btoa(url).replace(/[/+=]/g,'_').slice(0,180);
+        const fh = await dir.getFileHandle(name, {create:true});
+        const writable = await fh.createWritable();
+        await response.clone().body.pipeTo(writable);
+      }
+    };
+  }catch{}
+}
+const opfsReady = setupOpfsCache();
+
 let currentId;
 const progress=event=>{
   const pct=typeof event.progress==='number'?Math.min(1,event.progress/100):null;
@@ -36,6 +66,7 @@ async function initEngine(mode){
 self.onmessage=async({data})=>{
   const {id,action,args}=data;currentId=id;
   try{
+    await opfsReady;
     let result;
     if(action==='configure'){
       // Both Transformer tasks run on CPU. Explicitly use the non-Asyncify WASM build.
