@@ -1,5 +1,5 @@
 // Quiete — by BJ Beyond. Tutto resta sul dispositivo.
-export const SOUNDS_APP_URL = 'https://bjbeyond.it'; // TODO: sostituire con il link reale dell'app suoni e frequenze di BJ Beyond
+export const SOUNDS_APP_URL = 'https://bjbeyond.it/frequency/'; // Frequency Studio di BJ Beyond
 const SITE_URL = 'https://bjbeyond.it';
 const MODELS = ['Llama-3.2-1B-Instruct-q4f16_1-MLC', 'Qwen2.5-0.5B-Instruct-q4f16_1-MLC'];
 const WEBLLM_URL = 'https://esm.run/@mlc-ai/web-llm@0.2.86';
@@ -20,8 +20,8 @@ hello:['Buonanotte','Buongiorno','Buon pomeriggio','Buonasera'],sub:'Un piccolo 
 feel_q:'Mi sento…',feelings:{ansioso:'Ansioso/a',stressato:'Stressato/a',triste:'Triste',arrabbiato:'Arrabbiato/a',insonne:'Non riesco a dormire',sopraffatto:'Sopraffatto/a',solo:'Solo/a',calmo:'Abbastanza bene'},
 suggest:'Ti propongo',start:'Inizia',
 t_breathe:'Respirazione guidata',t_breathe_d:'4-7-8, quadrata, coerente',t_ground:'Grounding 5-4-3-2-1',t_ground_d:'Torna nel presente',t_pmr:'Rilassamento muscolare',t_pmr_d:'Progressivo, 8 minuti',t_reframe:'Riformula un pensiero',t_reframe_d:'Stile CBT',t_grat:'Nota di gratitudine',t_grat_d:'Una cosa buona di oggi',t_mood:'Diario dell\'umore',t_mood_d:'Come stai oggi?',t_chat:'Parla con Quiete',t_chat_d:'Compagna IA locale',t_sound:'Suoni ambient',t_sound_d:'Rumore e drone morbido',
-promo_t:'Suoni e frequenze di BJ Beyond',promo_d:'Per andare più a fondo: l\'app di suoni e frequenze di BJ Beyond, pensata per accompagnare respiro, sonno e concentrazione.',promo_b:'Apri l\'app suoni',
-promo_ctx:'Vuoi continuare con un suono? Prova l\'app di suoni e frequenze di BJ Beyond →',
+promo_t:'Frequency Studio di BJ Beyond',promo_d:'Per andare più a fondo: Frequency Studio, l\'app di suoni e frequenze di BJ Beyond, pensata per accompagnare respiro, sonno e concentrazione.',promo_b:'Apri Frequency Studio',
+promo_ctx:'Vuoi continuare con un suono? Prova Frequency Studio di BJ Beyond →',
 by:'Di BJ Beyond, scrittore',
 // consent
 c_title:'Prima di iniziare',c_intro:'Quiete è uno spazio di calma con tecniche di rilassamento e una compagna basata sull\'intelligenza artificiale. Leggi con attenzione:',
@@ -46,7 +46,7 @@ r_title:'Riformula un pensiero',r_d:'Un esercizio ispirato alla terapia cognitiv
 // gratitude
 gr_title:'Nota di gratitudine',gr_q:'Una cosa, anche piccola, per cui oggi sei grato/a',gr_save:'Salva',gr_list:'Le tue note',
 // sound
-s_title:'Suoni ambient',s_d:'Un piccolo generatore integrato. Per un\'esperienza completa usa l\'app di BJ Beyond.',s_brown:'Rumore marrone',s_pink:'Rumore rosa',s_drone:'Drone morbido',s_vol:'Volume',s_stop:'Ferma tutto',
+s_title:'Suoni ambient',s_d:'Un piccolo generatore integrato. Per un\'esperienza completa usa Frequency Studio di BJ Beyond.',s_brown:'Rumore marrone',s_pink:'Rumore rosa',s_drone:'Drone morbido',s_vol:'Volume',s_stop:'Ferma tutto',
 // chat
 ch_title:'Parla con Quiete',ch_ai:'Stai parlando con un\'intelligenza artificiale, non con una persona. Può sbagliare e non è un terapeuta.',
 ch_consent:'Per rispondere, Quiete scarica un piccolo modello IA (circa 0,7–0,9 GB) che resta nel tuo browser. Dopo il download funziona anche offline e nessun messaggio lascia il dispositivo. Consigliata una rete Wi-Fi.',
@@ -64,8 +64,8 @@ hello:['Good night','Good morning','Good afternoon','Good evening'],sub:'A small
 feel_q:'I feel…',feelings:{ansioso:'Anxious',stressato:'Stressed',triste:'Sad',arrabbiato:'Angry',insonne:'Can\'t sleep',sopraffatto:'Overwhelmed',solo:'Lonely',calmo:'Fairly ok'},
 suggest:'Try this',start:'Start',
 t_breathe:'Guided breathing',t_breathe_d:'4-7-8, box, coherent',t_ground:'5-4-3-2-1 grounding',t_ground_d:'Come back to now',t_pmr:'Muscle relaxation',t_pmr_d:'Progressive, 8 min',t_reframe:'Reframe a thought',t_reframe_d:'CBT-style',t_grat:'Gratitude note',t_grat_d:'One good thing today',t_mood:'Mood diary',t_mood_d:'How are you today?',t_chat:'Talk to Quiete',t_chat_d:'Local AI companion',t_sound:'Ambient sounds',t_sound_d:'Noise and soft drone',
-promo_t:'BJ Beyond sounds & frequencies',promo_d:'Go deeper with the BJ Beyond sounds and frequencies app, made for breathing, sleep and focus.',promo_b:'Open the sounds app',
-promo_ctx:'Want to continue with sound? Try the BJ Beyond sounds & frequencies app →',
+promo_t:'BJ Beyond Frequency Studio',promo_d:'Go deeper with Frequency Studio, the BJ Beyond sounds and frequencies app, made for breathing, sleep and focus.',promo_b:'Open Frequency Studio',
+promo_ctx:'Want to continue with sound? Try BJ Beyond Frequency Studio →',
 by:'By BJ Beyond, writer',
 c_title:'Before you start',c_intro:'Quiete is a calm space with relaxation techniques and an AI-based companion. Please read:',
 c_items:['It is not a medical device and gives no diagnosis or treatment.','It does not replace psychologists, therapists or doctors.','You are talking to an artificial intelligence (EU AI Act transparency). AI can make mistakes: always use your own judgement.','For adults 18+, or minors with a parent or guardian.','Local privacy: the AI model runs in your browser. No data leaves your device; everything is stored here only and you can erase it anytime.','If you are in danger, call 112 now.'],
@@ -81,7 +81,7 @@ p_steps:['Hands and forearms: make fists','Arms: bend elbows, tense biceps','Sho
 m_title:'Mood diary',m_q:'How do you feel, 1 to 5?',m_note:'A note (optional)',m_save:'Save',m_saved:'Saved on device.',m_chart:'Last 14 days',m_empty:'No entries yet.',m_faces:['😞','🙁','😐','🙂','😊'],
 r_title:'Reframe a thought',r_d:'An exercise inspired by cognitive behavioural therapy (it is not therapy).',r_sit:'Situation: what happened?',r_th:'Automatic thought: what did you tell yourself?',r_em:'Emotion and intensity (0-100)',r_alt:'Alternative, more balanced thought',r_hint:'Useful questions: evidence for and against? What would I tell a friend? Is there another reading?',r_save:'Save',r_list:'Your reframes',
 gr_title:'Gratitude note',gr_q:'One thing, even small, you are grateful for today',gr_save:'Save',gr_list:'Your notes',
-s_title:'Ambient sounds',s_d:'A small built-in generator. For the full experience use the BJ Beyond app.',s_brown:'Brown noise',s_pink:'Pink noise',s_drone:'Soft drone',s_vol:'Volume',s_stop:'Stop all',
+s_title:'Ambient sounds',s_d:'A small built-in generator. For the full experience use BJ Beyond Frequency Studio.',s_brown:'Brown noise',s_pink:'Pink noise',s_drone:'Soft drone',s_vol:'Volume',s_stop:'Stop all',
 ch_title:'Talk to Quiete',ch_ai:'You are talking to an artificial intelligence, not a person. It can be wrong and is not a therapist.',
 ch_consent:'To reply, Quiete downloads a small AI model (about 0.7–0.9 GB) that stays in your browser. After download it works offline and no message leaves your device. Wi-Fi recommended.',
 ch_load:'Download and enable local AI',ch_simple:'Continue without AI',ch_nogpu:'Your browser does not support WebGPU, so local AI is unavailable. You can use simple mode: I suggest techniques based on what you write. AI needs recent Chrome/Edge on desktop or Android, or Safari 26+.',
@@ -377,7 +377,7 @@ const INFO_IT = `<h1>Informazioni e limiti</h1>
 <div class="card"><h3>Privacy</h3><p>Nessun account, nessun server, nessun tracciamento. Il modello IA viene scaricato una volta (circa 0,7–0,9 GB, dai server pubblici di Hugging Face / MLC) e poi gira interamente nel tuo browser. Diario, note e conversazioni sono salvati solo su questo dispositivo (localStorage/IndexedDB). Puoi eliminare tutto con "Cancella tutto" nella sezione Altro.</p></div>
 <div class="card"><h3>Età</h3><p>Destinata a maggiorenni. I minori possono usarla solo con un genitore o tutore.</p></div>
 <div class="card crisis"><h3>Se sei in difficoltà</h3><a class="tel" href="tel:112"><span>Emergenza</span><b>112</b></a><a class="tel" href="tel:0223272327"><span>Telefono Amico</span><b>02 2327 2327</b></a><a class="tel" href="tel:0677208977"><span>Samaritans Onlus</span><b>06 77208977</b></a><p class="sm">Rivolgiti anche al tuo medico o a uno psicologo.</p></div>
-<div class="card"><h3>Chi l'ha creata</h3><p>Un progetto di <a href="${SITE_URL}" target="_blank" rel="noopener">BJ Beyond, scrittore</a>. Per suoni e frequenze: <a href="${SOUNDS_APP_URL}" target="_blank" rel="noopener">l'app di suoni e frequenze di BJ Beyond</a>.</p><p class="sm mu">Le tecniche proposte sono pratiche di rilassamento diffuse e a scopo informativo. Interrompi se provi disagio.</p></div>`;
+<div class="card"><h3>Chi l'ha creata</h3><p>Un progetto di <a href="${SITE_URL}" target="_blank" rel="noopener">BJ Beyond, scrittore</a>. Per suoni e frequenze: <a href="${SOUNDS_APP_URL}" target="_blank" rel="noopener">Frequency Studio, l'app di suoni e frequenze di BJ Beyond</a>.</p><p class="sm mu">Le tecniche proposte sono pratiche di rilassamento diffuse e a scopo informativo. Interrompi se provi disagio.</p></div>`;
 const INFO_EN = `<h1>About & limits</h1>
 <div class="card"><h3>What Quiete is</h3><p>Quiete, by BJ Beyond, is a wellbeing app to slow down: guided breathing, grounding, muscle relaxation, mood diary, reframing exercises and an AI-based conversational companion.</p></div>
 <div class="card"><h3>What it is NOT</h3><ul class="check"><li>Not a medical device.</li><li>No diagnosis, treatment, therapy or medication advice.</li><li>Not a replacement for psychologists, therapists, psychiatrists or doctors.</li><li>Not an emergency service and not monitored by humans.</li></ul></div>
@@ -385,7 +385,7 @@ const INFO_EN = `<h1>About & limits</h1>
 <div class="card"><h3>Privacy</h3><p>No account, no server, no tracking. The model is downloaded once (about 0.7–0.9 GB from public Hugging Face / MLC servers) and then runs in your browser. Data stays on this device only. Use "Erase everything" in More.</p></div>
 <div class="card"><h3>Age</h3><p>For adults 18+; minors only with a parent or guardian.</p></div>
 <div class="card crisis"><h3>If you are struggling</h3><a class="tel" href="tel:112"><span>Emergency</span><b>112</b></a><a class="tel" href="tel:0223272327"><span>Telefono Amico</span><b>02 2327 2327</b></a><a class="tel" href="tel:0677208977"><span>Samaritans Onlus</span><b>06 77208977</b></a><p class="sm">Please also contact your doctor or a psychologist.</p></div>
-<div class="card"><h3>Made by</h3><p>A project by <a href="${SITE_URL}" target="_blank" rel="noopener">BJ Beyond, writer</a>. Sounds & frequencies: <a href="${SOUNDS_APP_URL}" target="_blank" rel="noopener">BJ Beyond sounds app</a>.</p></div>`;
+<div class="card"><h3>Made by</h3><p>A project by <a href="${SITE_URL}" target="_blank" rel="noopener">BJ Beyond, writer</a>. Sounds & frequencies: <a href="${SOUNDS_APP_URL}" target="_blank" rel="noopener">BJ Beyond Frequency Studio</a>.</p></div>`;
 
 /* ---------- erase ---------- */
 async function eraseAll() {
