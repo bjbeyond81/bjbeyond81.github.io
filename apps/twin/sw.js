@@ -1,9 +1,9 @@
 /* The shell and local WASM are precached; model weights use runtime caches. */
 const ROOT = new URL('./', self.location.href);
 const PREFIX = 'twin-shell-' + encodeURIComponent(ROOT.pathname) + '-';
-const CACHE = PREFIX + 'b518c05710f2ad9b';
-const APP_VERSION = '1.0.4';
-const FILES = ["./assets/ai-worker-CEYulvFq.js","./assets/lib-5hXa96YL.js","./assets/main-jR35dbQy.js","./assets/main-nmsIXr-x.css","./assets/model-cache-CEOzfi0Y.js","./assets/model-download-worker-DzyadDIG.js","./assets/update-MlzLKnyf.js","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/maskable-512.png","./icons/twin.svg","./index.html","./licenses/LLAMA-3.2-LICENSE.txt","./licenses/LLAMA-3.2-USE-POLICY.md","./licenses/THIRD-PARTY.txt","./manifest.webmanifest","./ort/ort-wasm-simd-threaded.mjs","./ort/ort-wasm-simd-threaded.wasm","./privacy-it.html","./privacy.html","./terms-it.html","./terms.html","./update.html"];
+const CACHE = PREFIX + 'f98631cd86c1d447';
+const APP_VERSION = '1.0.5';
+const FILES = ["./assets/ai-worker-B7QadlIV.js","./assets/lib-5hXa96YL.js","./assets/main-BPIInqBJ.js","./assets/main-nmsIXr-x.css","./assets/model-cache-DgTcCeCp.js","./assets/model-download-worker-CQTWwfYi.js","./assets/update-CJ2bMD41.js","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/maskable-512.png","./icons/twin.svg","./index.html","./licenses/LLAMA-3.2-LICENSE.txt","./licenses/LLAMA-3.2-USE-POLICY.md","./licenses/SMOLLM2-APACHE-2.0.txt","./licenses/THIRD-PARTY.txt","./manifest.webmanifest","./ort/ort-wasm-simd-threaded.mjs","./ort/ort-wasm-simd-threaded.wasm","./privacy-it.html","./privacy.html","./terms-it.html","./terms.html","./update.html"];
 self.addEventListener('install', event => event.waitUntil((async()=>{
   const cache = await caches.open(CACHE); // Sequential caching avoids holding several large WASM responses at once on iOS.
   for(const file of FILES)await cache.add(file);
