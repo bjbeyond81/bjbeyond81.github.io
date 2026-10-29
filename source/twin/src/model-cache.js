@@ -8,14 +8,16 @@ const requiredFiles=['config.json','tokenizer.json','tokenizer_config.json','onn
 export const modelFiles=model=>requiredFiles.map(file=>`https://huggingface.co/${model}/resolve/main/${file}`);
 
 export async function createModelCache({storage=globalThis.caches,opfs=globalThis.navigator?.storage}={}){
-  let directory;
+  let directory,accessible=false;
   try{directory=await (await opfs?.getDirectory?.())?.getDirectoryHandle('twin-models');}catch{}
+  if(directory)accessible=true;
   const legacyName=url=>btoa(url).replace(/[/+=]/g,'_').slice(0,180);
   return {
+    get available(){return accessible;},
     async match(request){
       const url=typeof request==='string'?request:request.url;
       for(const name of CACHE_NAMES){
-        try{if(await storage?.has(name)){const response=await (await storage.open(name)).match(url);if(response)return response;}}catch{}
+        try{if(storage){const exists=await storage.has(name);accessible=true;if(exists){const response=await (await storage.open(name)).match(url);if(response)return response;}}}catch{}
       }
       // Read existing OPFS files without duplicating hundreds of MB.
       if(directory)try{
@@ -38,5 +40,5 @@ export async function inspectModelCache(cache,mode='cpu',gpuCached=false){
   let found=0;
   for(const file of files)if(await cache.match(file))found++;
   const complete=found===files.length&&(mode==='cpu'||gpuCached);
-  return {cached:complete,status:complete?'complete':found?'partial':'missing',found,total:files.length};
+  return {cached:complete,status:complete?'complete':found?'partial':cache.available===false?'unavailable':'missing',found,total:files.length};
 }

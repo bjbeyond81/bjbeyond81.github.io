@@ -42,6 +42,6 @@ test('files from earlier partial downloads are reused when setup finishes',async
 });
 test('missing or denied browser storage does not become a false cached state',async()=>{
  const cache=await createModelCache({storage:null,opfs:{getDirectory:async()=>{throw Error('denied');}}});
- assert.equal((await inspectModelCache(cache)).status,'missing');
+ assert.equal((await inspectModelCache(cache)).status,'unavailable');
  await assert.rejects(cache.put(files[0],new Response('data')),/MODEL_CACHE_UNAVAILABLE/);
 });
