@@ -4,12 +4,26 @@ let embedder, generator, engine;
 // Never enable a hosted inference API. Downloads are only public model assets.
 env.allowLocalModels=false;
 env.useBrowserCache=true;
+env.cacheKey='twin-models';
 // The service worker already caches local WASM. Avoid a second blob/cache copy.
 env.useWasmCache=false;
 env.backends.onnx.wasm.numThreads=1; // GitHub Pages has no COOP/COEP / SharedArrayBuffer.
 env.backends.onnx.wasm.proxy=false;
 let currentId;
-const progress=event=>postMessage({id:currentId,type:'progress',progress:typeof event.progress==='number'?Math.min(1,event.progress/100):null,text:event.text||[event.status,event.file].filter(Boolean).join(' ')});
+const progress=event=>{
+  const pct=typeof event.progress==='number'?Math.min(1,event.progress/100):null;
+  const file=event.file||'';
+  const status=event.status||'';
+  let text;
+  if(status==='progress'&&pct!=null){
+    text=pct>=0.99?`Pronto: ${file}`:`Caricamento ${file} ${Math.round(pct*100)}%`;
+  }else if(status==='done'){
+    text=`In cache: ${file}`;
+  }else{
+    text=event.text||[status,file].filter(Boolean).join(' ');
+  }
+  postMessage({id:currentId,type:'progress',progress:pct,text});
+};
 async function initEmbedding(){return embedder ||= await pipeline('feature-extraction',EMBEDDING_MODEL,{device:'wasm',dtype:'q8',progress_callback:progress});}
 async function initEngine(mode){
   if(mode==='gpu'){
