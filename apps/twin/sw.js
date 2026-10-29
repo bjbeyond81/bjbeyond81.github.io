@@ -1,9 +1,10 @@
-/* The shell and local WASM are precached; model weights use runtime caches. */
+/* Precache the small app shell. Heavy AI runtimes are cached on first use. */
 const ROOT = new URL('./', self.location.href);
 const PREFIX = 'twin-shell-' + encodeURIComponent(ROOT.pathname) + '-';
-const CACHE = PREFIX + '294aeb968619d92d';
+const CACHE = PREFIX + '7ed89ed8383f95da';
 const APP_VERSION = '2.0.0';
-const FILES = ["./assets/ai-worker-B7QadlIV.js","./assets/lib-5hXa96YL.js","./assets/main-2TdJ1Gew.css","./assets/main-XXM8ufGF.js","./assets/model-cache-DH4xQamO.js","./assets/model-download-worker-CQTWwfYi.js","./assets/transcription-worker-XwbBm39m.js","./assets/update-BQgmGjVJ.js","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/maskable-512.png","./icons/twin.svg","./index.html","./licenses/LLAMA-3.2-LICENSE.txt","./licenses/LLAMA-3.2-USE-POLICY.md","./licenses/SMOLLM2-APACHE-2.0.txt","./licenses/THIRD-PARTY.txt","./licenses/WHISPER-MIT.txt","./manifest.webmanifest","./ort/ort-wasm-simd-threaded.mjs","./ort/ort-wasm-simd-threaded.wasm","./privacy-it.html","./privacy.html","./terms-it.html","./terms.html","./update.html"];
+const FILES = ["./assets/main-2TdJ1Gew.css","./assets/main-xMl0k7R_.js","./assets/model-cache-B0HG4o_i.js","./assets/model-download-worker-BWYMM6_X.js","./assets/update-Df1PMN5_.js","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/maskable-512.png","./icons/twin.svg","./index.html","./licenses/LLAMA-3.2-LICENSE.txt","./licenses/LLAMA-3.2-USE-POLICY.md","./licenses/SMOLLM2-APACHE-2.0.txt","./licenses/THIRD-PARTY.txt","./licenses/WHISPER-MIT.txt","./manifest.webmanifest","./privacy-it.html","./privacy.html","./terms-it.html","./terms.html","./update.html"];
+const AI_ASSET=/\/(?:assets\/(?:ai-worker|transcription-worker|lib)-|ort\/)/;
 self.addEventListener('install', event => event.waitUntil((async()=>{
   const cache = await caches.open(CACHE); // Sequential caching avoids holding several large WASM responses at once on iOS.
   for(const file of FILES)await cache.add(file);
@@ -39,7 +40,12 @@ self.addEventListener('fetch', event => {
         if(previous)return previous;
       }
     }
-    try { return await fetch(event.request); }
+    try {
+      const response=await fetch(event.request);
+      // Keep the initial install small, but preserve AI assets for later offline use.
+      if(response.ok&&AI_ASSET.test(url.pathname))event.waitUntil(caches.open(CACHE).then(cache=>cache.put(event.request,response.clone())));
+      return response;
+    }
     catch(error) { if(event.request.mode==='navigate') return (await cache.match(new URL('index.html',ROOT))) || Response.error(); throw error; }
   })());
 });
