@@ -1,8 +1,0 @@
-{
-  "version": "1.0.0",
-  "sourceCommit": "db4d8cf35a1310a9c211e79cf192dfe5ce8b43d4",
-  "language": "en",
-  "ai": "local-only",
-  "formattedUnlockCodes": true,
-  "purpose": "device-testing"
-}
