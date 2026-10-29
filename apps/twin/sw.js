@@ -1,8 +1,8 @@
 /* The shell and local WASM are precached; model weights use runtime caches. */
 const ROOT = new URL('./', self.location.href);
 const PREFIX = 'twin-shell-' + encodeURIComponent(ROOT.pathname) + '-';
-const CACHE = PREFIX + '69ebb8059d09dfc7';
-const FILES = ["./assets/ai-worker-BMjvbQLb.js","./assets/index-CMTTwbWe.js","./assets/index-nmsIXr-x.css","./assets/lib-DWfG8IM1.js","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/maskable-512.png","./icons/twin.svg","./index.html","./licenses/LLAMA-3.2-LICENSE.txt","./licenses/LLAMA-3.2-USE-POLICY.md","./licenses/THIRD-PARTY.txt","./manifest.webmanifest","./ort/ort-wasm-simd-threaded.mjs","./ort/ort-wasm-simd-threaded.wasm","./privacy-it.html","./privacy.html","./terms-it.html","./terms.html"];
+const CACHE = PREFIX + 'd8de137cf0838507';
+const FILES = ["./assets/ai-worker-Bke5J9fK.js","./assets/index-D5ClsODh.js","./assets/index-nmsIXr-x.css","./assets/lib-DWfG8IM1.js","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/maskable-512.png","./icons/twin.svg","./index.html","./licenses/LLAMA-3.2-LICENSE.txt","./licenses/LLAMA-3.2-USE-POLICY.md","./licenses/THIRD-PARTY.txt","./manifest.webmanifest","./ort/ort-wasm-simd-threaded.mjs","./ort/ort-wasm-simd-threaded.wasm","./privacy-it.html","./privacy.html","./terms-it.html","./terms.html"];
 self.addEventListener('install', event => event.waitUntil((async()=>{
   const cache = await caches.open(CACHE); // Sequential caching avoids holding several large WASM responses at once on iOS.
   for(const file of FILES)await cache.add(file);
