@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Quiete — by BJ Beyond</title>
+<meta name="description" content="Quiete by BJ Beyond: respirazione guidata, grounding, diario dell'umore e una compagna IA locale e privata. Non è un dispositivo medico.">
+<meta name="theme-color" content="#0f1222" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f4f1ec" media="(prefers-color-scheme: light)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Quiete">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"></div>
+<header class="top">
+  <button class="brand" data-go="home" aria-label="Home"><span class="logo" aria-hidden="true"></span><span><b>Quiete</b><small>by BJ Beyond</small></span></button>
+  <div class="top-actions">
+    <button id="langBtn" class="chip" aria-label="Lingua">EN</button>
+    <button id="themeBtn" class="chip" aria-label="Tema">◐</button>
+  </div>
+</header>
+<main id="app" tabindex="-1"></main>
+<button id="sos" class="sos" aria-label="Emergenza">SOS</button>
+<nav class="tabs" aria-label="Navigazione">
+  <button data-go="home"><span>⌂</span><i data-t="nav_home"></i></button>
+  <button data-go="breathe"><span>◯</span><i data-t="nav_breathe"></i></button>
+  <button data-go="chat"><span>✦</span><i data-t="nav_chat"></i></button>
+  <button data-go="diary"><span>◔</span><i data-t="nav_diary"></i></button>
+  <button data-go="more"><span>⋯</span><i data-t="nav_more"></i></button>
+</nav>
+<footer class="foot"><span data-t="footer"></span> <a href="#" data-go="info" data-t="info_link"></a></footer>
+<div id="modal" class="modal" hidden></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>
