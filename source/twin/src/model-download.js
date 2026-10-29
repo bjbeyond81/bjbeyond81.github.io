@@ -1,4 +1,4 @@
-import {CPU_MODEL,modelFiles,createModelCache,inspectModelCache} from './model-cache.js';
+import {cpuModel,modelFiles,createModelCache,inspectModelCache} from './model-cache.js';
 import {EMBEDDING_MODEL} from './domain.js';
 import {downloadDirectory,downloadName,downloadMetadata} from './model-download-storage.js';
 
@@ -98,7 +98,7 @@ export async function downloadModelFile(url,{directory,fetcher=globalThis.fetch,
 
 export async function prepareModelFiles({mode='cpu',onProgress=()=>{},cache,opfs=globalThis.navigator?.storage,fetcher=globalThis.fetch}={}){
   cache ||= await createModelCache({opfs});
-  const files=[...modelFiles(EMBEDDING_MODEL),...(mode==='cpu'?modelFiles(CPU_MODEL):[])];
+  const files=[...modelFiles(EMBEDDING_MODEL),...(mode!=='gpu'?modelFiles(cpuModel(mode)):[])];
   let directory;
   for(const url of files){
     if(await cache.match(url))continue;

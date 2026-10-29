@@ -1,7 +1,10 @@
-import {createModelCache,inspectModelCache,CPU_MODEL,modelFiles} from './model-cache.js';
+import {createModelCache,inspectModelCache,cpuModel,modelFiles} from './model-cache.js';
+import {appleMobile} from './device.js';
 import {EMBEDDING_MODEL} from './domain.js';
 import {applyAppUpdate} from './app-update.js';
 const VERSION=__TWIN_VERSION__;
+let downloadMode=appleMobile(navigator.userAgent,navigator.platform,navigator.maxTouchPoints)?'mobile':'cpu';
+try{if(localStorage.getItem('twin-ai-quality')==='full')downloadMode='cpu';}catch{}
 let language='en',checking=false,updating=false,state=null,lastStatus='',downloading=false,downloadWorker=null,pauseDownload=null;
 try{if(localStorage.getItem('twin-lang')==='it')language='it';}catch{}
 const $=id=>document.getElementById(id);
@@ -24,9 +27,9 @@ function draw(){
 async function check(){
  if(checking)return;checking=true;$('recheck').disabled=true;
  try{
-  const cache=await createModelCache();state=await inspectModelCache(cache);
+  const cache=await createModelCache();state=await inspectModelCache(cache,downloadMode);
   state.models=[];
-  for(const [name,model] of [['Qwen 2.5 · CPU',CPU_MODEL],['MiniLM · '+tr('memory','memoria'),EMBEDDING_MODEL]]){
+  for(const [name,model] of [[downloadMode==='mobile'?'SmolLM2 · iPhone':'Qwen 2.5 · CPU',cpuModel(downloadMode)],['MiniLM · '+tr('memory','memoria'),EMBEDDING_MODEL]]){
    let found=0,bytes=0;const files=modelFiles(model);
    for(const file of files){const response=await cache.match(file);if(response){found++;bytes+=Number(response.headers.get('content-length'))||0;}}
    state.models.push([name,{found,total:files.length,bytes}]);
@@ -79,7 +82,7 @@ $('download').addEventListener('click',async()=>{
    };
    downloadWorker.onerror=()=>reject(new Error('MODEL_DOWNLOAD_WORKER_FAILED'));
    downloadWorker.onmessageerror=()=>reject(new Error('MODEL_DOWNLOAD_WORKER_FAILED'));
-   downloadWorker.postMessage({action:'prepare'});
+   downloadWorker.postMessage({action:'prepare',mode:downloadMode});
   });
   await check();
   $('download-status').textContent=tr('All 8 files are saved. You can now open Twin. Starting AI is a separate step.','Tutti gli 8 file sono salvati. Ora puoi aprire Twin. L’avvio dell’AI è un passaggio separato.');

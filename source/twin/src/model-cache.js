@@ -2,6 +2,8 @@ import {EMBEDDING_MODEL} from './domain.js';
 import {downloadDirectory,savedDownload} from './model-download-storage.js';
 
 export const CPU_MODEL='onnx-community/Qwen2.5-0.5B-Instruct';
+export const MOBILE_MODEL='HuggingFaceTB/SmolLM2-360M-Instruct';
+export const cpuModel=mode=>mode==='mobile'?MOBILE_MODEL:CPU_MODEL;
 export const GPU_MODEL='Llama-3.2-1B-Instruct-q4f16_1-MLC';
 // Reuse earlier Cache Storage names and OPFS files from existing installs.
 export const CACHE_NAMES=['twin-models','transformers-cache'];
@@ -39,9 +41,9 @@ export async function createModelCache({storage=globalThis.caches,opfs=globalThi
 }
 
 export async function inspectModelCache(cache,mode='cpu',gpuCached=false){
-  const files=[...modelFiles(EMBEDDING_MODEL),...(mode==='cpu'?modelFiles(CPU_MODEL):[])];
+  const files=[...modelFiles(EMBEDDING_MODEL),...(mode!=='gpu'?modelFiles(cpuModel(mode)):[])];
   let found=0;
   for(const file of files)if(await cache.match(file))found++;
-  const complete=found===files.length&&(mode==='cpu'||gpuCached);
+  const complete=found===files.length&&(mode!=='gpu'||gpuCached);
   return {cached:complete,status:complete?'complete':found?'partial':cache.available===false?'unavailable':'missing',found,total:files.length};
 }

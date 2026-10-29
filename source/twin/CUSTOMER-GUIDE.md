@@ -14,3 +14,5 @@
 Weekly letters are prepared when you open Twin and local AI is available. The software does not work while the app is closed. Never send your journal or password to support. Do not use Twin for emergencies, diagnosis or professional advice.
 
 The demo includes 3 notes and 3 total AI requests. Full mode needs a valid unlock code. “Two futures” needs at least 7 recorded days, entered with different dates. English is the default on a fresh installation; an explicitly saved language preference is retained.
+
+On iPhone/iPad, the default lightweight AI downloads about 365 MB plus semantic memory and runtime files. Its answers are simpler and primarily English-oriented. **Settings → Use full AI (512 MB)** selects the larger model; it requires more memory and may not work on every iPhone. If you are upgrading, use **Check app & AI files → Update Twin**, then **Finish AI download** to save the new model without opening the journal. Old downloads and your encrypted journal are retained. The password is still required when opening or unlocking Twin; the app does not store it.
