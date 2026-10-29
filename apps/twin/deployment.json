@@ -1,0 +1,8 @@
+{
+  "version": "1.0.1",
+  "sourceCommit": "ad795d45d1b070445e445af59aefd118094b420e",
+  "language": "en",
+  "ai": "local-only",
+  "iphoneMode": "cpu-q8-non-asyncify",
+  "purpose": "device-testing"
+}
