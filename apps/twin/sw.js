@@ -1,24 +1,44 @@
 /* The shell and local WASM are precached; model weights use runtime caches. */
 const ROOT = new URL('./', self.location.href);
 const PREFIX = 'twin-shell-' + encodeURIComponent(ROOT.pathname) + '-';
-const CACHE = PREFIX + '6528c65457659cab';
-const FILES = ["./assets/ai-worker-CQkSFw3l.js","./assets/index-DlvPre8E.js","./assets/index-nmsIXr-x.css","./assets/lib-5hXa96YL.js","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/maskable-512.png","./icons/twin.svg","./index.html","./licenses/LLAMA-3.2-LICENSE.txt","./licenses/LLAMA-3.2-USE-POLICY.md","./licenses/THIRD-PARTY.txt","./manifest.webmanifest","./ort/ort-wasm-simd-threaded.mjs","./ort/ort-wasm-simd-threaded.wasm","./privacy-it.html","./privacy.html","./terms-it.html","./terms.html"];
+const CACHE = PREFIX + 'b6231f91c791d02d';
+const APP_VERSION = '1.0.3';
+const FILES = ["./assets/ai-worker-CbjBAS0a.js","./assets/lib-5hXa96YL.js","./assets/main-DiUh91l9.js","./assets/main-nmsIXr-x.css","./assets/model-cache-C7th83K_.js","./assets/update-C2ROVWeQ.js","./icons/apple-touch-icon.png","./icons/icon-192.png","./icons/icon-512.png","./icons/maskable-512.png","./icons/twin.svg","./index.html","./licenses/LLAMA-3.2-LICENSE.txt","./licenses/LLAMA-3.2-USE-POLICY.md","./licenses/THIRD-PARTY.txt","./manifest.webmanifest","./ort/ort-wasm-simd-threaded.mjs","./ort/ort-wasm-simd-threaded.wasm","./privacy-it.html","./privacy.html","./terms-it.html","./terms.html","./update.html"];
 self.addEventListener('install', event => event.waitUntil((async()=>{
   const cache = await caches.open(CACHE); // Sequential caching avoids holding several large WASM responses at once on iOS.
   for(const file of FILES)await cache.add(file);
 })()));
-// Updates activate when all older tabs close. No mixed-version forced activation.
+// Keep one previous shell so another open tab can still load its hashed worker.
 self.addEventListener('activate', event => event.waitUntil((async()=>{
-  for (const name of await caches.keys()) if (name.startsWith(PREFIX) && name!==CACHE) await caches.delete(name);
+  const previous=(await caches.keys()).filter(name=>name.startsWith(PREFIX)&&name!==CACHE);
+  for (const name of previous.slice(0,-1)) await caches.delete(name);
   await self.clients.claim();
 })()));
+self.addEventListener('message', event => {
+  if(!event.source?.url)return;
+  const source=new URL(event.source.url);
+  if(source.origin!==ROOT.origin||!source.pathname.startsWith(ROOT.pathname))return;
+  if(event.data?.type==='TWIN_STATUS')event.ports?.[0]?.postMessage({version:APP_VERSION});
+  if(event.data?.type==='TWIN_APPLY_UPDATE')event.waitUntil(self.skipWaiting());
+});
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
   if (event.request.method!=='GET' || url.origin!==ROOT.origin || !url.pathname.startsWith(ROOT.pathname)) return;
   event.respondWith((async()=>{
     const cache = await caches.open(CACHE);
+    // The recovery page must remain reachable even when an older shell is active.
+    if(url.pathname===new URL('update.html',ROOT).pathname){
+      try{return await fetch(event.request,{cache:'no-store'});}
+      catch{return (await cache.match(event.request,{ignoreSearch:true}))||Response.error();}
+    }
     const hit = await cache.match(event.request, {ignoreSearch:true});
     if(hit) return hit;
+    if(url.pathname.startsWith(new URL('assets/',ROOT).pathname)){
+      for(const name of await caches.keys())if(name.startsWith(PREFIX)&&name!==CACHE){
+        const previous=await (await caches.open(name)).match(event.request,{ignoreSearch:true});
+        if(previous)return previous;
+      }
+    }
     try { return await fetch(event.request); }
     catch(error) { if(event.request.mode==='navigate') return (await cache.match(new URL('index.html',ROOT))) || Response.error(); throw error; }
   })());
