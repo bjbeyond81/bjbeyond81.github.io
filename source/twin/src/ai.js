@@ -2,10 +2,18 @@ import {probeWebGPU,appleMobile} from './device.js';
 let worker, serial=Promise.resolve(), nextId=0;
 const jobs=new Map();
 let mode='cpu', ready=false;
+
+const CACHE_FLAG='twin-models-cached';
+function hasCachedModels(){try{return localStorage.getItem(CACHE_FLAG)==='1';}catch{return false;}}
+function markCached(){try{localStorage.setItem(CACHE_FLAG,'1');}catch{}}
+
 export async function capabilities(){
   const webgpu=await probeWebGPU(navigator.gpu);
   // Use the non-Asyncify CPU path on iOS, where large GPU/WASM compilation can kill the tab.
   mode=webgpu&&!appleMobile(navigator.userAgent,navigator.platform,navigator.maxTouchPoints)?'gpu':'cpu';
+  // If models were previously downloaded, treat as ready for UI purposes
+  // (actual load will still hit the cache).
+  if(hasCachedModels())ready=true;
   return {mode,webgpu};
 }
 function start(){
@@ -22,10 +30,16 @@ function request(action,args,progress){
     return raw(action,args,progress);
   });serial=task;return task;
 }
-export async function loadAI(progress){try{await request('load',{mode},progress);ready=true;}catch(error){stop(error);throw error;}}
+export async function loadAI(progress){
+  try{
+    await request('load',{mode},progress);
+    ready=true;
+    markCached();
+  }catch(error){stop(error);throw error;}
+}
 export const isAppleMobile=()=>appleMobile(navigator.userAgent,navigator.platform,navigator.maxTouchPoints);
 export const embed=(text,progress)=>request('embedding',{text},progress);
 export const generate=(messages,progress)=>request('generate',{messages,mode},progress);
-export const aiState=()=>({mode,ready});
+export const aiState=()=>({mode,ready,cached:hasCachedModels()});
 export function useCPU(){stop();mode='cpu';}
 export function stop(reason=new Error('AI_CANCELLED')){worker?.terminate();worker=null;ready=false;for(const job of jobs.values())job.reject(reason);jobs.clear();serial=Promise.resolve();}
