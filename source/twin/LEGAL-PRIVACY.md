@@ -11,10 +11,10 @@ Fonte: [GitHub Terms — Pages](https://docs.github.com/en/site-policy/github-te
 ## Privacy: cosa è implementato
 
 - Il diario e gli embedding non vengono inviati al venditore, a Shopify o a un’API AI.
-- L’archivio è cifrato a riposo; la chiave viene derivata dalla password e non è recuperabile.
+- L’archivio e gli audio sono cifrati. La chiave non esportabile resta nello stesso browser insieme all’attivazione per l’apertura automatica: il dispositivo sbloccato può accedere al diario. I nuovi backup usano il codice come segreto; mantenerlo privato e separato dai file.
 - Nessuna pubblicità, analytics applicativa, caricamento font remoto o cookie applicativo.
-- Dettatura limitata al riconoscimento locale obbligatorio.
-- Esportazione, importazione, cambio password e cancellazione sono disponibili nell’app.
+- Registrazione locale con consenso microfono e trascrizione Whisper sul dispositivo, senza invio audio a un servizio remoto.
+- Esportazione comprensiva degli audio, ripristino e cancellazione sono disponibili. La vecchia password resta necessaria solo per convertire dati 1.x.
 - Informazioni tecniche accessibili da onboarding e footer, in IT/EN.
 
 Questo riduce la raccolta, **non significa che il GDPR non si applichi**. Per esempio, acquisti, assistenza, fatturazione e log tecnici comportano trattamenti separati. I ruoli privacy dipendono da chi determina finalità e mezzi, non soltanto da dove risiedono i dati. L’uso locale personale da parte del cliente e il trattamento commerciale del venditore vanno analizzati separatamente.
@@ -43,7 +43,7 @@ Fonti: [Commissione — FAQ articolo 50](https://digital-strategy.ec.europa.eu/e
 
 Llama 3.2 usa una licenza personalizzata che consente usi commerciali alle proprie condizioni. Sono inclusi attribuzione “Built with Llama”, notice, testo della licenza e Acceptable Use Policy. Il modello scelto è **testuale 1B**: non confondere le restrizioni relative ai modelli multimodali con questo modello. Rispettare gli usi consentiti, i diritti sui dati e le limitazioni professionali; il solo system prompt non garantisce che un modello piccolo non generi mai contenuti vietati.
 
-Qwen2.5-0.5B-Instruct e Xenova/all-MiniLM-L6-v2 indicano Apache-2.0. Le dipendenze hanno proprie licenze; `public/licenses/THIRD-PARTY.txt` raccoglie gli avvisi disponibili dei pacchetti installati. Se cambiano modelli, pesi o dipendenze, ripetere la verifica e aggiornare le attribuzioni.
+Qwen2.5-0.5B-Instruct, SmolLM2, Xenova/all-MiniLM-L6-v2 e Xenova/whisper-tiny indicano Apache-2.0. Whisper originale OpenAI è MIT; il testo è incluso in public/licenses/WHISPER-MIT.txt. Le dipendenze hanno proprie licenze; `public/licenses/THIRD-PARTY.txt` raccoglie gli avvisi disponibili dei pacchetti installati. Se cambiano modelli, pesi o dipendenze, ripetere la verifica e aggiornare le attribuzioni.
 
 Fonti: [licenza Meta](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/LICENSE), [Acceptable Use Policy](https://github.com/meta-llama/llama-models/blob/main/models/llama3_2/USE_POLICY.md), [Qwen](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct), [MiniLM](https://huggingface.co/Xenova/all-MiniLM-L6-v2).
 

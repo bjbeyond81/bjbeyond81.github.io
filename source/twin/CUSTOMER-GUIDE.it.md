@@ -1,20 +1,15 @@
-# Benvenuto in Twin / Welcome to Twin
+# Twin 2.0 - guida rapida
 
-1. Apri il link dell’app ricevuto dal venditore con un browser aggiornato. Prova la demo sul dispositivo che userai.
-2. Crea una password di almeno 12 caratteri e conservala. Non c’è recupero della password.
-3. Inserisci nome, tre obiettivi e budget mensile.
-4. In Impostazioni prepara i modelli: il primo download è grande e può richiedere diversi minuti. Usa Wi-Fi e tieni spazio libero sul dispositivo.
-5. Inserisci in Impostazioni il codice `TWIN1.…` ricevuto dopo l’acquisto. Il codice viene verificato offline.
-6. Scrivi una breve nota: spese, umore e sonno si inseriscono nei campi. Twin usa i tuoi ricordi e obiettivi per rispondere; può comunque sbagliare.
-7. Esporta regolarmente il backup cifrato. Senza backup e password, cambio telefono o cancellazione dei dati del browser possono farti perdere il diario.
-8. Dopo il download completo, prova a chiudere e riaprire l’app in modalità aereo. Per installarla su iPhone usa Safari → Condividi → Aggiungi alla schermata Home. Su Chrome usa il menu → Installa app.
+1. Apri https://bjbeyond81.github.io/apps/twin/ in un browser aggiornato e non in modalità privata. Su iPhone scegli prima se usare Safari o l’app aggiunta alla schermata Home: possono avere archivi separati. Continua a usare la stessa installazione.
+2. Incolla il codice completo `TWIN1.…` ricevuto con l’acquisto, premi Attiva Twin e imposta nome, tre obiettivi e budget mensile in euro. Il codice viene ricordato. Non serve una password nuova e non c’è un account.
+3. Se viene rilevato un vecchio diario, la vecchia password serve una sola volta per convertirlo. Il codice da solo non decifra i vecchi dati. Puoi salvare prima il vecchio backup cifrato.
+4. In Oggi scrivi oppure premi Registra nota vocale, consenti il microfono e poi Interrompi registrazione. Riascolta e premi Salva questo ricordo. La bozza audio non è ancora salvata. Limiti: 3 minuti e 4 MiB per registrazione; 20 MiB complessivi cifrati.
+5. Per la trascrizione scegli la lingua parlata e Trascrivi sul dispositivo, poi correggi e salva il testo. La prima volta si scarica un modello pubblico di circa 41 MB più file di supporto. L’audio non viene inviato a un servizio remoto. Un audio senza testo non viene interpretato dall’AI dei consigli. Nella memoria puoi trascrivere un audio già salvato e confermare con Salva modifiche.
+6. Controlla data, spese numeriche, umore e sonno. Le spese non vengono ricavate automaticamente dalle parole. Più note nella stessa giornata sommano le spese e fanno la media di umore e sonno.
+7. Apri Chiedi a Twin oppure scarica e avvia l’AI dalle Impostazioni. La modalità leggera iPhone scarica circa 365 MB più memoria semantica e runtime; quella completa circa 512 MB, la GPU circa 1 GB. Il consumo RAM può essere molto maggiore. Tieni spazio libero, Wi-Fi e l’app aperta durante la preparazione.
+8. Controlla sempre ricordi e fonti forniti alla risposta. I modelli piccoli possono inventare informazioni e sono soprattutto orientati all’inglese. Non c’è un saldo token a pagamento, ma risposte e contesto hanno limiti tecnici. I consigli non sono consulenza professionale.
+9. Schemi usa solo i giorni annotati; Due futuri richiede almeno sette date e mostra scenari aritmetici, non previsioni. Le lettere vengono preparate quando avvii l’AI o le richiedi; l’app chiusa non lavora.
+10. Esporta tutto, cifrato include testi e audio salvati. Conserva il JSON e il codice separatamente: entrambi insieme permettono il ripristino. I modelli e le bozze non sono inclusi. Ripristina un backup cifrato sostituisce tutti i dati locali; i vecchi backup richiedono ancora la vecchia password.
+11. Verifica app e file AI controlla gli otto file dell’AI principale e permette l’aggiornamento; il modello vocale è separato. Non cancellare i dati Safari per risolvere un download: fai prima un backup. Prova un riavvio offline completo.
 
-Le lettere settimanali vengono preparate quando apri Twin e l’AI è disponibile. Il software non lavora quando l’app è chiusa. Non inviare il tuo diario o la password all’assistenza. Non usare Twin per emergenze, diagnosi o consulenza professionale.
-
-## English
-
-Open the seller’s app link, test the demo on your device, create a password (12+ characters), and enter your name, goals and budget. Download the local models in Settings using Wi-Fi and enough free storage. Enter the `TWIN1.…` code supplied by the seller. The code is verified offline.
-
-Record your day and enter expenses, mood and sleep explicitly. Twin uses your memories and goals, but can make mistakes. Export encrypted backups regularly and keep the password: there is no account recovery. Close and reopen in airplane mode after all downloads complete to verify offline use. Weekly letters are generated when the app opens, never while it is closed. Do not send your journal or password to support.
-
-Su iPhone/iPad la modalità AI leggera scarica circa 365 MB, oltre alla memoria semantica e al runtime. Offre risposte più semplici ed è orientata soprattutto all’inglese. **Impostazioni → Usa AI completa (512 MB)** seleziona il modello più grande: richiede più memoria e può non funzionare su ogni iPhone. Per aggiornare: **Verifica app e file AI → Aggiorna Twin**, poi **Completa download AI**. I vecchi download e il diario cifrato vengono conservati. La password resta necessaria all’apertura e allo sblocco; non viene memorizzata dall’app.
+Twin si apre automaticamente sul browser attivato: proteggi il dispositivo con il blocco schermo. Non c’è sincronizzazione né recupero cloud. Se chiedi assistenza usa il contatto dell’ordine e comunica versione, browser ed errore; non inviare diario, audio, codice o backup. La [guida inglese](CUSTOMER-GUIDE.md) e il PDF dettagliato descrivono il percorso completo.

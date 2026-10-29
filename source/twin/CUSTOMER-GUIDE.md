@@ -1,18 +1,21 @@
-# Welcome to Twin
+# Twin 2.0 - customer guide
 
-[Guida in italiano](CUSTOMER-GUIDE.it.md)
+Twin uses one activation code and remembers it in your chosen browser. No account or new diary password is required. Use your device screen lock: anyone using that unlocked browser can open the journal.
 
-1. Open the app link supplied by the seller in an updated browser. Try the demo on the device you intend to use. Twin opens in English; select **IT** if you prefer Italian.
-2. Create a password of at least 12 characters and keep it safe. There is no password recovery.
-3. Enter your name, three personal goals and your monthly spending budget.
-4. In **Settings → Prepare Twin on this device**, download the local models. The initial download is large and may take several minutes. Use Wi-Fi and keep enough free storage.
-5. Enter the `TWIN1.…` code received after purchase in Settings. The code is verified offline.
-6. Write a short note. Enter expenses, mood and sleep in their fields. Twin uses your memories and goals to answer questions, but can still make mistakes.
-7. Export an encrypted backup regularly. Without your backup and password, changing phones or clearing browser data may cause you to lose your journal.
-8. After all downloads complete, close and reopen the app in airplane mode to verify offline use. On iPhone, install through Safari → Share → Add to Home Screen. In Chrome, use the browser menu → Install app.
+1. Open https://bjbeyond81.github.io/apps/twin/ in a normal, updated browser. On iPhone, choose whether to use Safari or an installed Home Screen app before adding real data; browser/app storage may be separate. Use the same instance consistently.
+2. Paste the complete `TWIN1.…` code supplied separately with your purchase into **Activation code**, then press **Activate Twin**. Do not share it: it also protects new backups.
+3. Enter your name, three goals and monthly spending budget in EUR; press **Create my space**. Returning to this instance opens it automatically.
+4. If an existing 1.x journal is found, use **Switch to code-only access** and enter its old password once. Save the original encrypted backup first if desired. A code cannot decrypt an old password-encrypted journal by itself.
+5. In **Today**, enter text or record audio; check the entry date, expenses, mood and sleep, then press **Save this memory**. Expenses are explicit numeric entries, not extracted from speech/text. Repeated same-day entries add expenses and average mood/sleep.
+6. For voice, press **Record voice note**, allow the microphone, speak and press **Stop recording**. Preview the clip, then save it. Limits: 3 minutes, 4 MiB per recording and 20 MiB of encrypted recording storage. Unsaved drafts are lost on closing/reloading.
+7. Optional: choose the spoken language, press **Transcribe on device**, review/correct the text and save. First use downloads about 41 MB of public speech-model weights plus support files. Audio stays local. In **Your memory**, use **Transcribe and review text** and **Save changes** for an already saved clip. Voice-only notes cannot supply their meaning to text AI until transcribed or described in text.
+8. Open **Ask Twin** to start saved AI automatically. For first setup, connect to Wi-Fi and use **Settings → Download and start AI**. iPhone/iPad use lightweight SmolLM2 by default (about 365 MB plus memory model/runtime). Full Qwen uses about 512 MB; compatible GPU mode about 1 GB. Download size is not RAM use; full modes can exceed a phone's available memory. No paid AI API or token balance is used, but each answer is short and context-limited.
+9. Ask one focused question, then inspect **Memories supplied to Twin - check the sources**. Up to three memories are supplied in lightweight mode, five otherwise. Twin can hallucinate, misread sources or give poor advice. It is not professional advice. Primarily English models can be less accurate in Italian.
+10. **Patterns** describes recorded days; missing days are unknown. Sleep/spending correlation needs at least seven variable daily samples. **Two futures** needs seven recorded dates and illustrates a uniform reduction in recorded spending; it is not a forecast or savings guarantee.
+11. **A letter from us** uses the most recent completed Sunday period. Generate it manually or while preparing AI; the app cannot work while closed. Audio-only entries need text before they can inform a letter.
+12. Export regularly through **Settings → Export everything, encrypted**. Keep the JSON file and the exact activation code separately. Saved recordings are included; model downloads and drafts are not. Verify restore using a spare browser with fictional data before relying on the process.
+13. Restore through **Restore an encrypted backup**, choose the file, enter its code and acknowledge replacement of all local data and recordings. For a v1 backup, open **Only for old password-protected backups** and enter its original password as well. Restore does not merge journals.
+14. Use **Check app & AI files** to inspect/finish main-model downloads and apply app updates. The eight-file main-AI check does not count the optional speech model. It does not inspect your diary. Do not clear site data to fix a model error; export first.
+15. After setup, test an offline restart and a real transcription. The interface badge alone does not prove every model is cached. Use normal browsing; private mode and low storage may discard data. Changing phone/browser requires backup restore; there is no cloud sync.
 
-Weekly letters are prepared when you open Twin and local AI is available. The software does not work while the app is closed. Never send your journal or password to support. Do not use Twin for emergencies, diagnosis or professional advice.
-
-The demo includes 3 notes and 3 total AI requests. Full mode needs a valid unlock code. “Two futures” needs at least 7 recorded days, entered with different dates. English is the default on a fresh installation; an explicitly saved language preference is retained.
-
-On iPhone/iPad, the default lightweight AI downloads about 365 MB plus semantic memory and runtime files. Its answers are simpler and primarily English-oriented. **Settings → Use full AI (512 MB)** selects the larger model; it requires more memory and may not work on every iPhone. If you are upgrading, use **Check app & AI files → Update Twin**, then **Finish AI download** to save the new model without opening the journal. Old downloads and your encrypted journal are retained. The password is still required when opening or unlocking Twin; the app does not store it.
+For support, use the contact supplied with your order. Share the app version, OS/browser, exact error and steps using fictional examples. Do not send diary contents, recordings, activation code or backup. Keep a personal copy of the code delivered with your order; the generic guide does not include a shared code.

@@ -1,23 +1,10 @@
-# Twin
+# Twin 2.0
 
-A private, mobile-first PWA with **English as its default language** and Italian selectable in the interface. One static build; no application server, remote database, user accounts or paid AI API. AI and embeddings run on the user’s device. **Built with Llama.**
+A local journal and reflection PWA. English is the default interface; Italian is selectable. This version uses one signed activation code, remembers access on the chosen browser and supports encrypted voice notes with optional on-device transcription. No application server, customer account, cloud journal or paid AI API is used. Built with Llama.
 
-[Detailed Italian technical documentation](README.it.md) · [Customer guide](CUSTOMER-GUIDE.md) · [Device test checklist](TEST-CHECKLIST.md)
+## Develop and verify
 
-## Try it on Windows
-
-Requires Node.js 22.12+ and npm. Extract the project, open the `twin` folder containing `package.json`, enter `cmd` in the File Explorer address bar and run:
-
-```sh
-npm ci --ignore-scripts
-npm run preview
-```
-
-Open the localhost URL printed in the terminal, normally `http://localhost:4173`, in Chrome or Edge. Keep the terminal open. A compiled `dist/` is included in the delivered archive. Opening `index.html` directly or using ordinary HTTP on a LAN address does not provide the secure context required by the app.
-
-Create your vault, record a fictional entry, then use **Settings → Prepare Twin on this device**. After downloads complete, ask Twin a question. Test locking, password entry, encrypted backup and an offline reload. The demo permits 3 notes and 3 total AI requests; a full unlock and at least 7 recorded days are needed to test the 12-month scenarios.
-
-## Development and checks
+Node.js 22.12+ is required.
 
 ```sh
 npm ci --ignore-scripts
@@ -27,97 +14,74 @@ npm test
 npm run preview
 ```
 
-Use `dev` for source changes; the service worker runs only in the production build served by `preview` or a static HTTPS host. `.npmrc` skips native ONNX/CUDA install scripts, which the browser build does not need. `package-lock.json` pins dependencies. The `sharp` override updates an unused native dependency.
+Use HTTPS or localhost. Opening HTML files directly or using ordinary HTTP on a LAN does not meet the secure-context requirements. The production service worker is enabled in the built preview and HTTPS deployment. Dependencies are pinned; browser inference does not need native ONNX/CUDA install scripts. Tests using built assets require `npm run build` first.
 
-## Publish on GitHub Pages
+The parent repository publishes `source/twin` through `.github/workflows/publish-twin.yml`: build, tests, copy `dist/` to `apps/twin`, then GitHub Pages. Do not commit generated model weights, the seller private key, owner/customer activation codes or private test data. Check hosting terms and complete seller information before commercial distribution; see LEGAL-PRIVACY.md.
 
-**Commercial use:** technical compatibility does not establish permission to use the hosting service. GitHub limits Pages use for online business and commercial SaaS. Review [GitHub’s Pages terms](https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features#pages) before hosting paid Twin there. The same `dist/` works on another static HTTPS host. See `LEGAL-PRIVACY.md` for the release considerations.
+## Access and migration
 
-1. Create a repository, for example `twin`, and place this project’s contents at its root. Include `.github`, `.npmrc` and `.gitignore`. **Never upload the separate seller private-key kit.**
-2. Use the `main` branch. In **Settings → Pages → Build and deployment → Source**, select **GitHub Actions**.
-3. Push to `main` or run “Deploy Twin to GitHub Pages”. The workflow installs dependencies, builds, tests and publishes `dist/`.
-4. Enable HTTPS where available. Open the resulting URL and run the real-device checklist before selling.
+A new customer pastes a valid `TWIN1.…` code before creating a profile. Ed25519 verification is offline. Activation and a random, non-extractable AES-256-GCM CryptoKey are saved together in IndexedDB. The next visit automatically opens the journal using that stored key. No journal password or inactivity authentication lock remains. After five background minutes, AI workers are stopped to release memory; recording stops when the app is hidden.
 
-The build uses relative paths for project subdirectories such as `/twin/`. Manifest, icons, workers and service worker registration do not require a 404 fallback. `dist/.nojekyll` is included. Alternatively, configure Pages to publish the contents of `dist/` from a branch. Free-plan, bandwidth and repository restrictions still apply. Shopify, domains and payment fees are separate from local AI and static hosting.
+This is device-convenience access: someone able to use the unlocked browser can read the journal. Encryption with a co-located key is not a separate screen lock. Use the device screen lock and a personal browser profile. Activation is per browser storage, not an account or cross-device sync.
+
+A v1 password-encrypted journal is detected and preserved. Its old password is required once to decrypt and atomically convert the data; an existing valid code is retained, otherwise a code is required. The original encrypted envelope is kept locally as a recovery copy until full erasure. Old exported backups still require their old password. The code cannot replace the cryptographic secret of a v1 backup.
+
+New backups use `twin-code-backup-v2`: PBKDF2-SHA256, 600,000 iterations, a random salt and AES-256-GCM, with the normalized activation code as the secret. They include profile, text, embeddings, chats, letters and all saved voice audio. Restore validates/decrypts before atomically replacing data and re-encrypts with a new local device key. Keep code and backup separately; anyone with both can restore the journal. Backups exclude public models and unsaved drafts.
 
 ## Features
 
-- Password onboarding, name, three goals and monthly budget.
-- Daily journal: free text, explicit expenses, mood 1–5, sleep hours and local-only dictation when supported. Multiple entries on one day sum expenses and average mood/sleep.
-- Encrypted memories and normalized 384-dimensional MiniLM embeddings. Semantic retrieval supplies up to five relevant memories to each question. Entries saved before model setup remain encrypted and visibly await indexing.
-- Ask Twin: grounded in supplied goals, budget, calculated statistics and retrieved memories. The UI shows the supplied memory and goal snapshots.
-- Patterns: recorded-day means, mood series, weekday spending and Pearson sleep/spending correlation, requiring at least seven variable daily samples. Missing days are unknown, not zero. No causal claim or significance test.
-- Two futures: cumulative spending over 12 months under a user-selected uniform reduction. Visible formula and accessible table. At least seven recorded days are required. No income, interest, inflation or recognized expense category is invented.
-- Weekly letters: one per latest completed Sunday period, when the full app opens/loads AI and entries exist for that week. Demo generation is manual and consumes an AI request. A closed app cannot run a scheduled Sunday job.
-- Encrypted export/restore, password changes, deletion, manual/automatic locking, light/dark/system themes and EN/IT controls.
+- Profile with name, three goals and a monthly EUR spending budget.
+- Entries with text, date, explicit expenses, mood 1-5 and sleep hours. Multiple entries on one day sum spending and average mood/sleep. Missing days are unknown.
+- Voice recording, preview and saved playback; optional local transcription and reviewed text editing.
+- Semantic memory using 384-dimensional MiniLM embeddings; up to three retrieved entries in lightweight mode, five in other modes. Untranscribed audio is not interpreted by the text AI.
+- Ask Twin, with visible supplied memories and goal snapshots. Small models can invent facts and sources.
+- Descriptive patterns and sleep/spending correlation with at least seven variable daily samples. Correlation does not establish a cause.
+- Two cumulative-spending scenarios after at least seven recorded dates. Formula: recorded-day mean × 365.2425 / 12 × months, with a uniform percentage reduction for the second line. No forecast, income, interest or inflation is inferred.
+- Weekly letters for the latest Sunday period, generated when AI preparation runs or the user requests one. Only up to five recent textual entries from that week are supplied; a closed app cannot schedule work.
+- Encrypted backup/restore, permanent local deletion, language and appearance settings.
 
-## Local models and offline behavior
+## Voice notes
 
-| Purpose | Engine/model |
-| --- | --- |
-| Main generation | WebLLM `Llama-3.2-1B-Instruct-q4f16_1-MLC`, WebGPU with shader-f16 |
-| iPhone/iPad | Transformers.js `HuggingFaceTB/SmolLM2-360M-Instruct`, q8 (365 MB), CPU/WASM, compact prompts |
-| CPU fallback | Transformers.js `onnx-community/Qwen2.5-0.5B-Instruct`, q8, CPU/WASM |
-| Embeddings | Transformers.js `Xenova/all-MiniLM-L6-v2`, q8, CPU/WASM |
+MediaRecorder captures audio only after microphone permission. Safari-compatible MP4/AAC is preferred when supported; other browsers may use WebM/Opus. Limits are 180 seconds, 4 MiB per clip and 20 MiB total encrypted recording storage. Stopping creates an in-memory draft. The user must press **Save this memory** to persist it. Audio-only notes are allowed; their numeric fields still contribute to patterns.
 
-WebLLM requires WebGPU; the CPU fallback uses a different engine. Inference runs in a Web Worker with one WASM thread, requiring no COOP/COEP headers. The initial Llama download is around 1 GB, not an exact size; Qwen’s q8 file is around 512 MB, plus embeddings and runtime files. Keep at least 2 GB free. Weights are downloaded separately and are not included in the project. Progress is per current file/phase, not aggregate bytes across every download.
+Transcription uses multilingual `Xenova/whisper-tiny` q8 on CPU/WASM. First use downloads about 41 MB of weights plus tokenizer/config files. Recordings never go to a remote recognition API. Audio is decoded to mono 16 kHz and processed in overlapping 20-second chunks. Main text AI is terminated before speech processing; the speech worker is terminated after completion/cancellation. Review and save the transcript. Untranscribed voice-only entries have no semantic embedding and are excluded from letter text.
 
-The service worker precaches interface files, workers, icons, legal pages and local WASM. WebLLM caches in IndexedDB and Transformers.js in Cache Storage. “App available offline” describes the interface, not proof that all models are cached. New app versions activate after older tabs close. Browser eviction, private browsing and memory pressure may remove cached models or the journal; persistence requests are not guarantees. Verify a complete offline restart on each real device.
+Speech files reuse resumable OPFS downloads and remain separate from the eight-file main-model readiness count. The speech model is requested only on first transcription; simply recording does not download it. Recording drafts and decrypted playback URLs remain temporary; saved audio blobs are AES-GCM encrypted with note/audio identifiers bound as authenticated data. Deleting a note removes its recording in the same transaction.
 
-Small models may be slow, inaccurate or unable to handle context. MiniLM is primarily English-oriented and truncates long inputs; Italian retrieval may be less accurate. Twin learns through retrieved memory and statistics, not weight fine-tuning. The supplied system prompt is preserved in `src/prompts.js`; the active language explicitly instructs the model to answer in English or Italian. A saved language selection is retained; fresh installs default to English regardless of browser language.
+## Models and offline use
 
-Dictation requires browser-enforced `processLocally=true`; there is no remote speech fallback. Install a local language pack through the browser if necessary.
+| Purpose | Model / engine | Main weight download |
+| --- | --- | --- |
+| iPhone/iPad default | SmolLM2 360M q8, WASM | about 365 MB |
+| Full CPU | Qwen2.5 0.5B q8, WASM | about 512 MB |
+| Compatible GPU | Llama 3.2 1B, WebLLM, shader-f16 | about 1 GB total model |
+| Semantic memory | all-MiniLM-L6-v2 q8 | about 24 MB |
+| Optional transcription | Whisper tiny multilingual q8, WASM | about 41 MB plus support files |
 
-## Encryption and storage
+Download sizes are not RAM requirements. Keep at least 1 GB free for lightweight mode and more for full models, retained downloads, updates and backups. iPhone selection uses compact prompts and simpler, primarily English-oriented answers. Full mode may exceed a phone's available memory. MiniLM is primarily English-oriented; Italian retrieval may be weaker. Twin learns through retrieval and calculated statistics, not training model weights.
 
-AES-256-GCM encrypts the complete vault with a fresh 96-bit IV per write and authenticated context `Twin/v1`. PBKDF2-SHA-256 derives a non-exportable key using a random 128-bit salt and 600,000 iterations. Profile, notes, embeddings, chats, letters, demo counters and license are encrypted. Only language/theme/loading preferences are stored outside the vault.
+The service worker caches interface files, workers, legal pages and local WASM. Models use OPFS, Cache Storage or engine IndexedDB. Files already present are reused; partial model files can resume when supported by the server. **Check app & AI files** can update the app and finish the main AI download without opening the journal. The speech model is prepared from its transcription control. Saved models still need loading into RAM each session.
 
-IndexedDB writes are atomic and revision-checked to prevent silent overwrites by another tab. Decrypted content and key references stay in memory only while unlocked. Locking terminates the AI worker. Automatic locking follows five minutes in the background or ten idle foreground minutes; OS timer suspension may delay it. JavaScript cannot guarantee forensic memory erasure. Compromised devices, extensions, keyboards or code can access unlocked content.
+Use a normal personal browser, not private mode. Storage can be evicted; persistence requests do not guarantee retention. Test a complete offline restart with a saved note and saved voice transcription model on each intended device. An “App available offline” badge only describes interface caching.
 
-Exports include persistent data, not model weights or the password. Restore validates and decrypts before replacing local data. Password changes use a new salt/IV; old backups still need their old password. Plaintext vault limit: 24 MiB. Import limit: 50 MB. Current semantic search, pattern explanations and future narratives are temporary views. Chats retain copies of supplied goals and memories; deleting a note does not remove its existing chat citations. Use full deletion to remove those too.
+## Storage and limits
 
-Deletion removes the local journal, license and preferences and attempts to remove AI caches on the origin. Other tabs can block cleanup. Exported backups must be deleted separately. There is no password or cloud recovery. Hosting/model servers see ordinary public asset download metadata, including IP addresses; this app does not send them diary contents or questions.
+IndexedDB schema 2 has `vault`, `meta` and `audio` stores. Writes check revisions and commit journal, attachments and device metadata atomically. Conflicting tabs receive an error instead of silently overwriting. The old database name is retained to support upgrades. The journal plaintext limit is 24 MiB, each note text is at most 6,000 characters, and an import file is limited to 120 MB. Audio backups grow through base64/encryption. Model downloads are not part of these journal quotas.
 
-## Ed25519 unlock codes
+Theme, language and AI-mode preferences are outside the encrypted vault. The activation code and non-exportable CryptoKey are stored in local IndexedDB metadata to allow automatic opening; the seller signing key never enters the browser. JavaScript cannot guarantee forensic memory erasure. Extensions, compromised code or an unlocked device can access content. There is no cloud recovery. Clearing site data without a backup loses the journal even if a code can be reissued.
 
-The project already includes a dedicated public key. The separate seller kit contains the matching private key. Keep it outside the project and never publish it or deliver it to customers.
+Deletion removes journal, activation, local key, legacy recovery and audio, then attempts model-cache cleanup. Other tabs can block cleanup; exported files must be deleted separately. Chat citations are snapshots: deleting a note does not remove old quoted text from existing chats. Full erasure removes those too.
+
+## Seller codes and Shopify delivery
+
+Keep the existing `src/license-public.js`; replacing it invalidates issued codes. The separate seller kit holds its matching private key. Issue a distinct code after verifying each order:
 
 ```sh
 node scripts/license.mjs issue --key ../twin-seller-keys/twin-private.pem --order ORDER-1001 --out code-1001.txt
 ```
 
-Adapt the path to your extracted kit. The code has no expiry and includes product, version, random ID, issue date and optional order reference. It contains no email or password. The utility does not check payment: the seller must verify the order. `--out` refuses to overwrite an existing file.
+This local utility does not check payments. Codes have no expiry and no email/password. Because codes also protect backups, do not publish a universal owner/customer code in the public PDF, app or Shopify product description. A static offline verifier cannot enforce device counts, revocation or robust anti-sharing.
 
-To replace the key pair **before issuing any customer codes**:
+Shopify delivery is separate: supply the app URL, customer guide and that buyer's code. Automatic fulfillment, Shopify changes and publication are not implemented by this release. Complete actual commercial terms and seller contacts separately; this source does not certify a store's readiness for sale.
 
-```sh
-node scripts/license.mjs keygen --out ../new-private-keys
-npm run build
-npm test
-```
-
-This updates `src/license-public.js`. Do not replace the key after issuing codes: the previous codes would stop verifying against the new public key.
-
-The demo has 3 created notes and 3 successful total AI generations, including explanations, stories and letters. Deleting a note does not restore its quota. A static offline app cannot provide tamperproof DRM, single-device activation, revocation or anti-sharing: resetting storage, restoring old backups, modifying JavaScript or sharing a valid code can bypass commercial limits. The client contains no private signing key.
-
-## Shopify delivery and release
-
-Twin is a downloadable/local web product, not an embedded Shopify app or Shopify App Store submission. No Shopify tokens are required. The zero-backend workflow is: seller verifies payment → issues code locally → delivers the app link and code. Automatic order fulfillment is not implemented and would require a separate trusted delivery system. Do not put the private key in Liquid, client JavaScript, public Actions logs or downloadable products.
-
-Before sale, complete seller details, final price/taxes, requirements, delivery times, license terms, support, updates, privacy notices and consumer rights. English legal pages are linked from the default interface; Italian versions remain available. `LEGAL-PRIVACY.md` records matters requiring review; these pages are not legal certification.
-
-`VERIFICATION.md` records completed checks and limitations. `TEST-CHECKLIST.md` covers iPhone, Android and desktop tests that must still be run on actual compatible devices. Browser end-to-end encryption, model inference and offline restarts were not verified in the HTTP-only build preview.
-
-## Project layout
-
-Application modules live in `src/`; PWA files, icons and legal pages in `public/`; the license utility and service worker template in `scripts/`; Node tests in `tests/`; deployment in `.github/workflows/pages.yml`. The Italian technical README provides a full module-by-module map.
-
-Third-party licenses are in `public/licenses/`. No automatic open-source license is granted for the application’s own code; the seller must choose their distribution terms while respecting component licenses.
-
-## iPhone compatibility update (1.0.1)
-
-Transformers.js is updated to 4.3.2. Its CPU tasks use a local non-Asyncify ONNX Runtime WASM build; WebLLM remains the GPU engine on other compatible devices. iPhone/iPad default to the CPU compatibility path, and cached models do not automatically load during password unlock. The Qwen CPU model uses q8 (around 512 MB rather than the previous q4 file around 786 MB). GPU detection is time-limited and no longer blocks rendering the journal. Shell caching is sequential and includes only the required CPU WASM pair, reducing the shell from about 60 MB to about 21 MB in this build. Errors can be expanded to technical details. These changes address known compatibility risks but do not certify operation on every iPhone.
-
-## iPhone AI memory update (1.0.5)
-
-iPhone/iPad default to lightweight SmolLM2 360M q8 (about 365 MB), using compact prompts and at most three retrieved memories per question. It gives simpler answers and is primarily English-oriented. Full Qwen q8 is still selectable in Settings, but requires considerably more runtime memory and may not run reliably on every iPhone. Existing downloaded files and encrypted data are retained. The recovery page follows the selected AI mode. This supersedes the iPhone model choice described in the 1.0.1 notes above. See `VERIFICATION.md` for runtime measurements and device-testing limits.
+See CUSTOMER-GUIDE.md for usage, VERIFICATION.md for completed tests and TEST-CHECKLIST.md for physical-device checks. Third-party notices are generated during build; model licenses remain in `public/licenses/`.
