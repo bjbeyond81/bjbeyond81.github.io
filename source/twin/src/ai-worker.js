@@ -1,6 +1,7 @@
 import {pipeline,env} from '@huggingface/transformers';
 import {EMBEDDING_MODEL} from './domain.js';
 import {CPU_MODEL,GPU_MODEL,createModelCache,inspectModelCache} from './model-cache.js';
+import {prepareModelFiles} from './model-download.js';
 let embedder,generator,engine,webllm,currentId,cacheError;
 const resourceSources=new Map();
 const send=p=>postMessage({id:currentId,type:'progress',...p});
@@ -48,6 +49,8 @@ self.onmessage=async({data})=>{
     }else if(action==='embedding'){
       const pipe=await initEmbedding();const output=await pipe(args.text,{pooling:'mean',normalize:true});result=Array.from(output.data);
     }else if(action==='load'){
+      // Save missing files before allocating ONNX sessions. Interrupted transfers resume.
+      await prepareModelFiles({mode:args.mode,onProgress:send});
       await initEmbedding();await initEngine(args.mode);
       const gpuCached=args.mode==='gpu'?await webllm.hasModelInCache(GPU_MODEL,{...webllm.prebuiltAppConfig,cacheBackend:'indexeddb'}):false;
       const cache=await inspectModelCache(await cacheReady,args.mode,gpuCached);
@@ -63,5 +66,5 @@ self.onmessage=async({data})=>{
       }
     }else throw new Error('Unknown worker action');
     postMessage({id,type:'result',result});
-  }catch(error){postMessage({id,type:'error',error:String(error.message||error)});}
+  }catch(error){postMessage({id,type:'error',error:error.name==='QuotaExceededError'?'MODEL_STORAGE_FULL':String(error.message||error)});}
 };
