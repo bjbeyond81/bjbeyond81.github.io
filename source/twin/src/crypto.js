@@ -1,8 +1,8 @@
 export const KDF_ITERATIONS = 600_000;
 const enc = new TextEncoder(), dec = new TextDecoder();
-export function to64(bytes) { let s=''; for(const b of new Uint8Array(bytes)) s+=String.fromCharCode(b); return btoa(s); }
-export function from64(s) {
-  if(typeof s!=='string' || s.length>40_000_000 || !/^[A-Za-z0-9+/]*={0,2}$/.test(s)) throw new Error('Invalid base64');
+export function to64(bytes) { const a=new Uint8Array(bytes);let s='';for(let i=0;i<a.length;i+=32768)s+=String.fromCharCode(...a.subarray(i,i+32768));return btoa(s); }
+export function from64(s,maxLength=40_000_000) {
+  if(typeof s!=='string' || s.length>maxLength || !/^[A-Za-z0-9+/]*={0,2}$/.test(s)) throw new Error('Invalid base64');
   return Uint8Array.from(atob(s),c=>c.charCodeAt(0));
 }
 export async function deriveKey(password, salt) {
