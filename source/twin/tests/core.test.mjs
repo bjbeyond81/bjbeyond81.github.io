@@ -72,3 +72,16 @@ test('backup rejects malformed source dates instead of crashing the memory rende
  const v=createVault(profile);v.chats=[{id:'q',date:'2026-10-01',question:'Q',answer:'A',sources:[{id:'a',date:'invalid',text:'source'}]}];assert.throws(()=>validateVault(v));
  v.chats=[];v.letters=[{id:'l',date:'invalid',text:'letter'}];assert.throws(()=>validateVault(v));
 });
+
+test('RAG excludes zero, negative and weak semantic matches and returns a real empty state',()=>{
+ const notes=[
+  {...note('2026-10-01',1),embedding:[1,0]},
+  {...note('2026-10-02',1),embedding:[0,1]},
+  {...note('2026-10-03',1),embedding:[-1,0]},
+  {...note('2026-10-04',1),embedding:[1,10]},
+  {...note('2026-10-05',1),embedding:[0,0]}
+ ];
+ const results=retrieve(notes,[1,0]);assert.equal(results.length,1);assert(results.every(n=>n.score>=.25));
+ assert.deepEqual(retrieve(notes.slice(1),[1,0]),[]);
+ assert.equal(retrieve(notes,[1,0],{minScore:.99}).length,1);
+});

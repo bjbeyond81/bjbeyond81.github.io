@@ -5,7 +5,10 @@ import {normalizeCode,newDeviceKey,sealDevice,unsealDevice,sealAudio,unsealAudio
 export function openDeviceAccess(repository,{verify=verifyLicense}={}){
  async function checkedCode(value){const code=normalizeCode(value);await verify(code);return code;}
  async function state(){return repository.readSnapshot();}
- async function commit(vault,key,code,revision,options,guard){const encrypted=await sealDevice(vault,key);guard();await repository.commitDevice(encrypted,key,code,revision,options);}
+ async function commit(vault,key,code,revision,options,{guard,onCommitStart,onCommitEnd}){
+  const encrypted=await sealDevice(vault,key);guard();onCommitStart?.();
+  try{await repository.commitDevice(encrypted,key,code,revision,options);}finally{onCommitEnd?.();}
+ }
  async function open(){
   const {record,deviceState}=await state();
   if(record?.format==='twin-v1')return {stage:'legacy',record,activation:deviceState?.activation||''};
@@ -18,25 +21,25 @@ export function openDeviceAccess(repository,{verify=verifyLicense}={}){
  }
  return {
   open,
-  async activate(value,{guard=()=>{}}={}){
+  async activate(value,{guard=()=>{},onCommitStart,onCommitEnd}={}){
    const code=await checkedCode(value),{record,deviceState}=await state();
    if(record?.format==='twin-device-v2'&&!deviceState?.key)throw new Error('DEVICE_KEY_MISSING');
    const key=deviceState?.key||await newDeviceKey();
    if(record?.format==='twin-device-v2'){
-    const vault=validateVault(await unsealDevice(record,key));vault.license=code;await commit(vault,key,code,record.revision,{},guard);
+    const vault=validateVault(await unsealDevice(record,key));vault.license=code;await commit(vault,key,code,record.revision,{},{guard,onCommitStart,onCommitEnd});
    }else{guard();await repository.saveDeviceState({key,activation:code},record?.revision||0);}
    return open();
   },
-  async createProfile(profile,{guard=()=>{}}={}){
+  async createProfile(profile,{guard=()=>{},onCommitStart,onCommitEnd}={}){
    const {record,deviceState}=await state();if(record)throw new Error('CONFLICT');
    const code=await checkedCode(deviceState?.activation);if(!deviceState?.key)throw new Error('DEVICE_KEY_MISSING');
-   const vault=validateVault(createVault(profile));vault.license=code;await commit(vault,deviceState.key,code,0,{},guard);return open();
+   const vault=validateVault(createVault(profile));vault.license=code;await commit(vault,deviceState.key,code,0,{},{guard,onCommitStart,onCommitEnd});return open();
   },
-  async migrate(password,value='',{guard=()=>{}}={}){
+  async migrate(password,value='',{guard=()=>{},onCommitStart,onCommitEnd}={}){
    const {record,deviceState}=await state();if(record?.format!=='twin-v1')throw new Error('CONFLICT');
    const oldKey=await deriveKey(password,from64(record.salt)),vault=validateVault(await unseal(record,oldKey));
    const code=await checkedCode(value||deviceState?.activation||vault.license);vault.license=code;const key=deviceState?.key||await newDeviceKey();
-   await commit(vault,key,code,record.revision,{legacyRecovery:record},guard);return open();
+   await commit(vault,key,code,record.revision,{legacyRecovery:record},{guard,onCommitStart,onCommitEnd});return open();
   },
   async backup(vault,key,activation){
    const code=await checkedCode(activation),audios=[],seen=new Set();
@@ -47,7 +50,7 @@ export function openDeviceAccess(repository,{verify=verifyLicense}={}){
    if(vault.notes.some(n=>n.audio&&!seen.has(n.audio.id)))throw new Error('CONFLICT');
    return sealCodeBackup({product:'twin',version:2,vault:validateVault(structuredClone(vault)),audios},code);
   },
-  async restore(envelope,value,legacyPassword='',{guard=()=>{}}={}){
+  async restore(envelope,value,legacyPassword='',{guard=()=>{},onCommitStart,onCommitEnd}={}){
    const original=await repository.readRecord();
    let data;
    if(envelope?.format==='twin-code-backup-v2'){
@@ -62,7 +65,7 @@ export function openDeviceAccess(repository,{verify=verifyLicense}={}){
     putAudio.push(await sealAudio(new Blob([bytes],{type:item.mimeType}),key,{id:item.id,noteId:item.noteId,duration:item.duration}));
    }
    if(vault.notes.some(n=>n.audio&&!seen.has(n.audio.id)))throw new Error('INVALID_BACKUP');
-   vault.license=code;await commit(vault,key,code,original?.revision||0,{putAudio,replaceAudio:true},guard);return open();
+   vault.license=code;await commit(vault,key,code,original?.revision||0,{putAudio,replaceAudio:true},{guard,onCommitStart,onCommitEnd});return open();
   }
  };
 }

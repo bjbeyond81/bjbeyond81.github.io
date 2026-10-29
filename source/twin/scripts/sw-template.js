@@ -1,9 +1,10 @@
-/* The shell and local WASM are precached; model weights use runtime caches. */
+/* Precache the small app shell. Heavy AI runtimes are cached on first use. */
 const ROOT = new URL('./', self.location.href);
 const PREFIX = 'twin-shell-' + encodeURIComponent(ROOT.pathname) + '-';
 const CACHE = PREFIX + '__VERSION__';
 const APP_VERSION = '__APP_VERSION__';
 const FILES = __PRECACHE__;
+const AI_ASSET=/\/(?:assets\/(?:ai-worker|transcription-worker|lib)-|ort\/)/;
 self.addEventListener('install', event => event.waitUntil((async()=>{
   const cache = await caches.open(CACHE); // Sequential caching avoids holding several large WASM responses at once on iOS.
   for(const file of FILES)await cache.add(file);
@@ -39,7 +40,12 @@ self.addEventListener('fetch', event => {
         if(previous)return previous;
       }
     }
-    try { return await fetch(event.request); }
+    try {
+      const response=await fetch(event.request);
+      // Keep the initial install small, but preserve AI assets for later offline use.
+      if(response.ok&&AI_ASSET.test(url.pathname))event.waitUntil(caches.open(CACHE).then(cache=>cache.put(event.request,response.clone())));
+      return response;
+    }
     catch(error) { if(event.request.mode==='navigate') return (await cache.match(new URL('index.html',ROOT))) || Response.error(); throw error; }
   })());
 });

@@ -49,7 +49,7 @@ export function projection(stat,reduction){
   return {assumption:'mean of recorded days; missing days are unknown; no interest, income or inflation',observedDays:stat.observedDays,reduction,monthlyBaseline:monthly,baseline:Array.from({length:13},(_,i)=>monthly*i),changed:Array.from({length:13},(_,i)=>monthly*(1-reduction/100)*i),difference:monthly*12*reduction/100};
 }
 export function cosine(a,b){if(a.length!==b.length)return -1;let dot=0,aa=0,bb=0;for(let i=0;i<a.length;i++){dot+=a[i]*b[i];aa+=a[i]**2;bb+=b[i]**2;}return aa&&bb?dot/Math.sqrt(aa*bb):-1;}
-export function retrieve(notes,embedding){return notes.filter(n=>n.embedding?.length===embedding.length&&n.embeddingModel===EMBEDDING_MODEL).map(n=>({...n,score:cosine(n.embedding,embedding)})).sort((a,b)=>b.score-a.score).slice(0,5);}
+export function retrieve(notes,embedding,{minScore=.25,limit=5}={}){return notes.filter(n=>n.embedding?.length===embedding.length&&n.embeddingModel===EMBEDDING_MODEL).map(n=>({...n,score:cosine(n.embedding,embedding)})).filter(n=>n.score>=minScore).sort((a,b)=>b.score-a.score).slice(0,limit);}
 export function weeklyDue(letters,now=new Date()){
   // Latest Sunday, noon avoids daylight-saving date arithmetic errors.
   const sun=new Date(now.getFullYear(),now.getMonth(),now.getDate()-now.getDay(),12);

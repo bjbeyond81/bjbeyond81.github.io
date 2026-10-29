@@ -8,9 +8,11 @@ export async function downloadMetadata(directory,url){
   if(!directory)return null;
   try{return JSON.parse(await (await (await directory.getFileHandle(downloadName(url)+'.json')).getFile()).text());}catch{return null;}
 }
-export async function savedDownload(directory,url){
+export async function savedDownload(directory,url,integrity){
   const meta=await downloadMetadata(directory,url);
   if(!meta?.complete||meta.url!==url||!Number.isSafeInteger(meta.size)||meta.size<=0)return undefined;
+  const expected=integrity?.sha256||integrity?.gitBlob;
+  if(expected&&meta.integrity!==expected)return undefined;
   try{
     const file=await (await directory.getFileHandle(downloadName(url)+'.data')).getFile();
     if(file.size===meta.size)return new Response(file,{headers:{'content-length':String(file.size),'content-type':meta.type||'application/octet-stream'}});

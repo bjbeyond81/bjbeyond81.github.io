@@ -64,3 +64,11 @@ test('audio authentication binds recordings to their note and erase removes acti
  await repo.writeRecord(await sealDevice(state.vault,state.key),state.record.revision,{putAudio:[item]});await repo.eraseRecord();
  assert.equal(await repo.readRecord(),undefined);assert.equal(await repo.readDeviceState(),undefined);assert.equal((await repo.allAudio()).length,0);await repo.close();
 });
+
+test('commit hooks cover the entire non-cancellable database write',async()=>{
+ const repo=repository();await create(repo);const original=repo.commitDevice;
+ let entered,release,starts=0,ends=0;const started=new Promise(resolve=>entered=resolve),gate=new Promise(resolve=>release=resolve);
+ repo.commitDevice=async(...args)=>{entered();await gate;return original(...args);};
+ const pending=access(repo).activate(CODE,{onCommitStart(){starts++;},onCommitEnd(){ends++;}});
+ await started;assert.equal(starts,1);assert.equal(ends,0);release();await pending;assert.equal(ends,1);await repo.close();
+});

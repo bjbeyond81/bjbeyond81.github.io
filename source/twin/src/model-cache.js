@@ -1,5 +1,6 @@
 import {EMBEDDING_MODEL} from './domain.js';
 import {downloadDirectory,savedDownload} from './model-download-storage.js';
+import {expectedModelIntegrity} from './model-integrity.js';
 
 export const CPU_MODEL='onnx-community/Qwen2.5-0.5B-Instruct';
 export const MOBILE_MODEL='HuggingFaceTB/SmolLM2-360M-Instruct';
@@ -10,7 +11,7 @@ export const CACHE_NAMES=['twin-models','transformers-cache'];
 const requiredFiles=['config.json','tokenizer.json','tokenizer_config.json','onnx/model_quantized.onnx'];
 export const modelFiles=model=>requiredFiles.map(file=>`https://huggingface.co/${model}/resolve/main/${file}`);
 
-export async function createModelCache({storage=globalThis.caches,opfs=globalThis.navigator?.storage}={}){
+export async function createModelCache({storage=globalThis.caches,opfs=globalThis.navigator?.storage,integrity=expectedModelIntegrity}={}){
   let directory,accessible=false;
   try{directory=await (await opfs?.getDirectory?.())?.getDirectoryHandle('twin-models');}catch{}
   if(directory)accessible=true;
@@ -19,7 +20,7 @@ export async function createModelCache({storage=globalThis.caches,opfs=globalThi
     get available(){return accessible;},
     async match(request){
       const url=typeof request==='string'?request:request.url;
-      const streamed=await savedDownload(await downloadDirectory(opfs),url);
+      const streamed=await savedDownload(await downloadDirectory(opfs),url,integrity(url));
       if(streamed){accessible=true;return streamed;}
       for(const name of CACHE_NAMES){
         try{if(storage){const exists=await storage.has(name);accessible=true;if(exists){const response=await (await storage.open(name)).match(url);if(response)return response;}}}catch{}

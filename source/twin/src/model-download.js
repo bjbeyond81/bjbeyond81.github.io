@@ -1,6 +1,10 @@
 import {cpuModel,modelFiles,createModelCache,inspectModelCache} from './model-cache.js';
 import {EMBEDDING_MODEL} from './domain.js';
 import {downloadDirectory,downloadName,downloadMetadata} from './model-download-storage.js';
+import {expectedModelIntegrity} from './model-integrity.js';
+import {sha256} from '@noble/hashes/sha2.js';
+import {sha1} from '@noble/hashes/legacy.js';
+import {bytesToHex} from '@noble/hashes/utils.js';
 
 const RANGE_BYTES=8*1024*1024;
 const fail=code=>new Error(code);
@@ -12,9 +16,25 @@ async function writeMetadata(directory,url,meta){
     handle.flush();
   }finally{handle.close();}
 }
+export async function verifyModelFile(file,integrity){
+  if(!integrity)return true;
+  if(integrity.size!=null&&file.size!==integrity.size)return false;
+  const hash=integrity.sha256?sha256.create():integrity.gitBlob?sha1.create():null;
+  if(!hash)throw fail('MODEL_INTEGRITY_MISSING');
+  if(integrity.gitBlob)hash.update(new TextEncoder().encode(`blob ${file.size}\0`));
+  const reader=file.stream().getReader();
+  try{while(true){const {done,value}=await reader.read();if(done)break;hash.update(value);}}finally{reader.releaseLock();}
+  return bytesToHex(hash.digest())===(integrity.sha256||integrity.gitBlob);
+}
+async function verifyOrReset(entry,directory,url,integrity){
+  if(await verifyModelFile(await entry.getFile(),integrity))return;
+  const handle=await entry.createSyncAccessHandle();try{handle.truncate(0);handle.flush();}finally{handle.close();}
+  await writeMetadata(directory,url,{url,size:0,total:0,complete:false});
+  throw fail('MODEL_INTEGRITY_FAILED');
+}
 
 // Runs in a dedicated worker. Never buffer or clone the full model in JavaScript.
-export async function downloadModelFile(url,{directory,fetcher=globalThis.fetch,onProgress=()=>{},timeoutMs=45_000}={}){
+export async function downloadModelFile(url,{directory,fetcher=globalThis.fetch,onProgress=()=>{},timeoutMs=45_000,integrity=expectedModelIntegrity(url)}={}){
   if(!directory)throw fail('MODEL_STORAGE_UNAVAILABLE');
   const entry=await directory.getFileHandle(downloadName(url)+'.data',{create:true});
   let handle;
@@ -24,13 +44,14 @@ export async function downloadModelFile(url,{directory,fetcher=globalThis.fetch,
   if(meta?.url!==url||!meta.total||!meta.etag||offset>meta.total){handle.truncate(0);offset=0;meta=null;}
   const file=url.split('/resolve/main/')[1];
   const report=()=>onProgress({phase:'download',file,loaded:offset,total:meta?.total||null,progress:meta?.total?offset/meta.total:null});
+  const complete=async()=>{
+    handle.close();handle=null;await verifyOrReset(entry,directory,url,integrity);
+    await writeMetadata(directory,url,{...meta,total:offset,size:offset,complete:true,integrity:integrity?.sha256||integrity?.gitBlob});
+    onProgress({phase:'saved',file,loaded:offset,total:offset,progress:1});
+  };
   try{
     // A tab may have closed after the last flush but before writing the marker.
-    if(meta?.total&&offset===meta.total){
-      handle.close();handle=null;
-      await writeMetadata(directory,url,{...meta,size:offset,complete:true});
-      onProgress({phase:'saved',file,loaded:offset,total:offset,progress:1});return;
-    }
+    if(meta?.total&&offset===meta.total){await complete();return;}
     // Clear an old completion marker before changing any bytes.
     await writeMetadata(directory,url,{...meta,url,complete:false});
     report();
@@ -78,10 +99,8 @@ export async function downloadModelFile(url,{directory,fetcher=globalThis.fetch,
         if(!offset)throw fail('MODEL_DOWNLOAD_EMPTY');
         handle.flush();report();
         if(response.status===200||offset===meta.total){
-          // Do not expose a complete model until all bytes are durably written.
-          handle.close();handle=null;
-          await writeMetadata(directory,url,{...meta,total:offset,size:offset,complete:true});
-          onProgress({phase:'saved',file,loaded:offset,total:offset,progress:1});return;
+          // Verify the complete file, including bytes restored by a resumed download.
+          await complete();return;
         }
       }finally{
         clearTimeout(timer);controller.abort();try{await reader?.cancel();}catch{}
@@ -96,15 +115,15 @@ export async function downloadModelFile(url,{directory,fetcher=globalThis.fetch,
   }finally{if(handle){try{handle.flush();}catch{}handle.close();}}
 }
 
-export async function prepareModelFiles({mode='cpu',onProgress=()=>{},cache,opfs=globalThis.navigator?.storage,fetcher=globalThis.fetch}={}){
-  cache ||= await createModelCache({opfs});
+export async function prepareModelFiles({mode='cpu',onProgress=()=>{},cache,opfs=globalThis.navigator?.storage,fetcher=globalThis.fetch,integrity=expectedModelIntegrity}={}){
+  cache ||= await createModelCache({opfs,integrity});
   const files=[...modelFiles(EMBEDDING_MODEL),...(mode!=='gpu'?modelFiles(cpuModel(mode)):[])];
   let directory;
   for(const url of files){
     if(await cache.match(url))continue;
     directory ||= await downloadDirectory(opfs,true);
-    await downloadModelFile(url,{directory,fetcher,onProgress});
+    await downloadModelFile(url,{directory,fetcher,onProgress,integrity:integrity(url)});
   }
   // Reopen the directory: it may not have existed when the first cache was created.
-  return inspectModelCache(await createModelCache({opfs}),mode);
+  return inspectModelCache(await createModelCache({opfs,integrity}),mode);
 }

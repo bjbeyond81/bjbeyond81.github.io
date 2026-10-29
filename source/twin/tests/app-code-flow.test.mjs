@@ -28,7 +28,7 @@ async function app(t,repo){
   start(){this.state='recording';}
   stop(){if(this.state==='inactive')return;this.state='inactive';this.ondataavailable({data:new Blob(['fictional voice'],{type:'audio/mp4'})});this.onstop();}
  }
- Object.assign(w,{__TWIN_VERSION__:'2.0.0',Chart:class{destroy(){}},createVault,validateVault,stats,projection,retrieve,weeklyDue,dayKey,parseDay,money,EMBEDDING_MODEL,messages,sealDevice,sealAudio,unsealAudio,...repo,
+ Object.assign(w,{__TWIN_VERSION__:'2.0.0',indexedDB:globalThis.indexedDB,Chart:class{destroy(){}},createVault,validateVault,stats,projection,retrieve,weeklyDue,dayKey,parseDay,money,EMBEDDING_MODEL,messages,sealDevice,sealAudio,unsealAudio,...repo,
   openDeviceAccess:r=>openDeviceAccess(r,{verify:code=>verifyLicense(code,publicRaw)}),createVoiceRecorder:options=>createVoiceRecorder({...options,mediaDevices:{getUserMedia:async()=>({getTracks:()=>[{stop(){}}]})},Recorder:FakeRecorder}),decodeVoice:async()=>new Float32Array(16000).fill(.1),transcribeVoice:async()=> 'I took a walk and felt calmer.',stopTranscription(){}});
  const source=readFileSync(new URL('../src/app.js',import.meta.url),'utf8').replace(/^import .*;\n/gm,'').replaceAll('import.meta.env.PROD','false').replaceAll('import.meta.env.BASE_URL',"'./'");
  const context=dom.getInternalVMContext();runInContext(source.replace(/boot\(\);\s*$/,'globalThis.__boot=boot();'),context);await w.__boot;
@@ -57,4 +57,33 @@ test('voice recording can be saved alone, then reviewed transcription is saved a
  await a.submit('form[data-form=note]',{text:'',date:dayKey(),spend:'0',sleep:'7'});assert.equal(a.read('vault.notes.length'),1);assert.equal((await repo.allAudio()).length,1);
  await a.click('[data-page=memories]');await a.click('[data-transcribe-note]');assert.match(a.doc.querySelector('form[data-form=edit-note] textarea').value,/took a walk/);
  await a.submit('form[data-form=edit-note]',{text:'I walked outdoors and felt calmer.'});assert.equal(a.read('vault.notes[0].text'),'I walked outdoors and felt calmer.');assert(a.stops()>0);
+});
+
+test('cancel during IndexedDB commit waits and leaves UI, revision and stored vault coherent',async t=>{
+ const repo=openVaultRepository('ui-commit-'+crypto.randomUUID());t.after(()=>repo.close());const a=await app(t,repo);
+ await a.submit('form[data-form=activate]',{code:CODE});await a.submit('form[data-form=onboard]',{name:'Commit',goal1:'Save',goal2:'Sleep',goal3:'Walk',budget:'400'});
+ const original=a.window.writeRecord;let entered,release;const started=new Promise(resolve=>entered=resolve),gate=new Promise(resolve=>release=resolve);
+ a.window.writeRecord=async(...args)=>{entered();await gate;return original(...args);};
+ a.read("page='settings';render()");const form=a.doc.querySelector('form[data-form=profile]');form.elements.namedItem('name').value='Committed profile';
+ const pending=a.window.onSubmit({target:form,preventDefault(){}});await started;const epoch=a.read('activeEpoch');
+ a.doc.querySelector('[data-action=cancel]').click();await new Promise(setImmediate);
+ assert.equal(a.read('committing'),true);assert.equal(a.read('busy'),true);assert.equal(a.read('activeEpoch'),epoch);assert.equal(a.read('vault.profile.name'),'Commit');
+ assert.match(a.doc.querySelector('#toast').textContent,/almost complete/);
+ release();await pending;await new Promise(setImmediate);
+ assert.equal(a.read('committing'),false);assert.equal(a.read('vault.profile.name'),'Committed profile');assert.equal(a.read('record.revision===revision'),true);
+ assert.equal((await repo.readRecord()).revision,a.read('revision'));
+});
+test('large memory and chat archives render fifty rows at a time with accessible continuation',async t=>{
+ const repo=openVaultRepository('ui-pages-'+crypto.randomUUID());t.after(()=>repo.close());const a=await app(t,repo);
+ await a.submit('form[data-form=activate]',{code:CODE});await a.submit('form[data-form=onboard]',{name:'Pages',goal1:'Save',goal2:'Sleep',goal3:'Walk',budget:'400'});
+ a.read(`vault.notes=Array.from({length:125},(_,i)=>({id:'n'+i,date:'2026-10-01',text:'Memory '+i,spend:0,mood:3,sleep:7,embedding:null,embeddingModel:EMBEDDING_MODEL}));vault.chats=Array.from({length:120},(_,i)=>({id:'c'+i,date:'2026-10-01',question:'Question '+i,answer:'Answer '+i,sources:[],goals:[]}));page='memories';memoryLimit=LIST_PAGE;render()`);
+ assert.equal(a.doc.querySelectorAll('.memory').length,50);await a.click('[data-action=more-notes]');assert.equal(a.doc.querySelectorAll('.memory').length,100);await a.click('[data-action=more-notes]');assert.equal(a.doc.querySelectorAll('.memory').length,125);assert.equal(a.doc.querySelector('[data-action=more-notes]'),null);
+ a.read("page='ask';chatLimit=LIST_PAGE;render()");assert.equal(a.doc.querySelectorAll('.chat-bubble').length,50);await a.click('[data-action=more-chats]');assert.equal(a.doc.querySelectorAll('.chat-bubble').length,100);
+ a.read("page='memories';searchHits=[];render()");assert.match(a.doc.querySelector('.empty').textContent,/No sufficiently relevant memories/);
+});
+test('erasing Twin also removes the persisted AI quality preference',async t=>{
+ const repo=openVaultRepository('ui-reset-'+crypto.randomUUID());t.after(()=>repo.close());const a=await app(t,repo);
+ await a.submit('form[data-form=activate]',{code:CODE});await a.submit('form[data-form=onboard]',{name:'Reset',goal1:'Save',goal2:'Sleep',goal3:'Walk',budget:'400'});
+ a.window.localStorage.setItem('twin-ai-quality','full');a.read("page='settings';render()");await a.submit('form[data-form=erase]',{confirmation:'DELETE'});
+ assert.equal(a.window.localStorage.getItem('twin-ai-quality'),null,`${a.read('accessStage')}: ${a.read('errorDetail')}`);assert.equal(a.read('accessStage'),'activation');
 });

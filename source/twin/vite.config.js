@@ -23,9 +23,11 @@ export default defineConfig({
     },
     closeBundle() {
       const files=walk('dist').filter(p=>p!=='sw.js');
-      const digest=createHash('sha256'); for(const file of files.sort()) digest.update(readFileSync(join('dist',file)));
+      const digest=createHash('sha256'); for(const file of files.slice().sort()) digest.update(readFileSync(join('dist',file)));
+      const heavyAI=file=>file.startsWith('ort/')||/^assets\/(?:ai-worker|transcription-worker|lib)-/.test(file);
+      const shell=files.filter(file=>!heavyAI(file));
       const template=readFileSync('scripts/sw-template.js','utf8');
-      writeFileSync('dist/sw.js',template.replace('__VERSION__',digest.digest('hex').slice(0,16)).replace('__APP_VERSION__',JSON.parse(readFileSync('package.json','utf8')).version).replace('__PRECACHE__',JSON.stringify(files.map(p=>'./'+p))));
+      writeFileSync('dist/sw.js',template.replace('__VERSION__',digest.digest('hex').slice(0,16)).replace('__APP_VERSION__',JSON.parse(readFileSync('package.json','utf8')).version).replace('__PRECACHE__',JSON.stringify(shell.map(p=>'./'+p))));
       writeFileSync('dist/.nojekyll','');
     }
   }]
