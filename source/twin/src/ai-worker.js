@@ -1,6 +1,6 @@
 import {pipeline,env} from '@huggingface/transformers';
 import {EMBEDDING_MODEL} from './domain.js';
-import {CPU_MODEL,GPU_MODEL,createModelCache,inspectModelCache} from './model-cache.js';
+import {cpuModel,GPU_MODEL,createModelCache,inspectModelCache} from './model-cache.js';
 import {prepareModelFiles} from './model-download.js';
 let embedder,generator,engine,webllm,currentId,cacheError;
 const resourceSources=new Map();
@@ -33,7 +33,7 @@ async function initEngine(mode){
     webllm ||= await import('@mlc-ai/web-llm');
     engine ||= await webllm.CreateMLCEngine(GPU_MODEL,{appConfig:{...webllm.prebuiltAppConfig,cacheBackend:'indexeddb'},initProgressCallback:r=>send({progress:r.progress,text:r.text})},{context_window_size:4096});
   }else{
-    generator ||= await pipeline('text-generation',CPU_MODEL,{device:'wasm',dtype:'q8',progress_callback:progress});
+    generator ||= await pipeline('text-generation',cpuModel(mode),{device:'wasm',dtype:'q8',session_options:{enableCpuMemArena:false,enableMemPattern:false,graphOptimizationLevel:'basic'},progress_callback:progress});
   }
 }
 self.onmessage=async({data})=>{
@@ -61,7 +61,7 @@ self.onmessage=async({data})=>{
         const output=await engine.chat.completions.create({messages:args.messages,max_tokens:300,temperature:0.35});result=output.choices[0].message.content;
         await engine.resetChat();
       }else{
-        const output=await generator(args.messages,{max_new_tokens:160,do_sample:false});
+        const output=await generator(args.messages,{max_new_tokens:160,do_sample:false,repetition_penalty:1.15,no_repeat_ngram_size:4});
         const generated=output[0].generated_text;result=Array.isArray(generated)?generated.at(-1).content:generated;
       }
     }else throw new Error('Unknown worker action');

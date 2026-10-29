@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createModelCache,inspectModelCache,modelFiles,CPU_MODEL} from '../src/model-cache.js';
+import {createModelCache,inspectModelCache,modelFiles,CPU_MODEL,MOBILE_MODEL} from '../src/model-cache.js';
 import {EMBEDDING_MODEL} from '../src/domain.js';
 const files=[...modelFiles(EMBEDDING_MODEL),...modelFiles(CPU_MODEL)];
 function storage(entries={}){
@@ -44,4 +44,11 @@ test('missing or denied browser storage does not become a false cached state',as
  const cache=await createModelCache({storage:null,opfs:{getDirectory:async()=>{throw Error('denied');}}});
  assert.equal((await inspectModelCache(cache)).status,'unavailable');
  await assert.rejects(cache.put(files[0],new Response('data')),/MODEL_CACHE_UNAVAILABLE/);
+});
+test('mobile readiness checks its own weights while preserving earlier Qwen files',async()=>{
+ const shared=storage({'twin-models':files}),cache=await createModelCache({storage:shared,opfs:null});
+ assert.equal((await inspectModelCache(cache,'cpu')).cached,true);
+ const before=await inspectModelCache(cache,'mobile');assert.equal(before.cached,false);assert.equal(before.found,4);
+ for(const file of modelFiles(MOBILE_MODEL))await cache.put(file,new Response('mobile model data'));
+ assert.equal((await inspectModelCache(cache,'mobile')).cached,true);assert.equal((await inspectModelCache(cache,'cpu')).cached,true);
 });

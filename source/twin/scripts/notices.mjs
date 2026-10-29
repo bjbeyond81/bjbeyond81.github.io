@@ -2,7 +2,7 @@ import {readdirSync,readFileSync,writeFileSync,mkdirSync,existsSync} from 'node:
 import {resolve,join} from 'node:path';
 export function collectNotices(){
  const dest=resolve('public/licenses');mkdirSync(dest,{recursive:true});
- const sections=['Twin — third-party software notices\n\nBuilt with Llama\nLlama 3.2 is licensed under the Llama 3.2 Community License, Copyright © Meta Platforms, Inc. All Rights Reserved.\nSee LLAMA-3.2-LICENSE.txt and LLAMA-3.2-USE-POLICY.md.\n\nModel sources (weights downloaded by the user; not in this archive):\nhttps://huggingface.co/mlc-ai/Llama-3.2-1B-Instruct-q4f16_1-MLC\nhttps://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct (Apache-2.0)\nhttps://huggingface.co/Xenova/all-MiniLM-L6-v2 (Apache-2.0)\n\nThe following notices include installed build dependencies for completeness.'];
+ const sections=['Twin — third-party software notices\n\nBuilt with Llama\nLlama 3.2 is licensed under the Llama 3.2 Community License, Copyright © Meta Platforms, Inc. All Rights Reserved.\nSee LLAMA-3.2-LICENSE.txt and LLAMA-3.2-USE-POLICY.md.\n\nModel sources (weights downloaded by the user; not in this archive):\nhttps://huggingface.co/mlc-ai/Llama-3.2-1B-Instruct-q4f16_1-MLC\nhttps://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct (Apache-2.0)\nhttps://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct (Apache-2.0; Hugging Face; iPhone lightweight mode)\nhttps://huggingface.co/Xenova/all-MiniLM-L6-v2 (Apache-2.0)\n\nThe following notices include installed build dependencies for completeness.'];
  function scan(dir){
   if(!existsSync(dir))return;
   for(const e of readdirSync(dir,{withFileTypes:true})){if(!e.isDirectory()||e.name.startsWith('.'))continue;const p=join(dir,e.name);if(e.name.startsWith('@')){scan(p);continue;}

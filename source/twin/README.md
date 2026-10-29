@@ -56,6 +56,7 @@ The build uses relative paths for project subdirectories such as `/twin/`. Manif
 | Purpose | Engine/model |
 | --- | --- |
 | Main generation | WebLLM `Llama-3.2-1B-Instruct-q4f16_1-MLC`, WebGPU with shader-f16 |
+| iPhone/iPad | Transformers.js `HuggingFaceTB/SmolLM2-360M-Instruct`, q8 (365 MB), CPU/WASM, compact prompts |
 | CPU fallback | Transformers.js `onnx-community/Qwen2.5-0.5B-Instruct`, q8, CPU/WASM |
 | Embeddings | Transformers.js `Xenova/all-MiniLM-L6-v2`, q8, CPU/WASM |
 
@@ -116,3 +117,7 @@ Third-party licenses are in `public/licenses/`. No automatic open-source license
 ## iPhone compatibility update (1.0.1)
 
 Transformers.js is updated to 4.3.2. Its CPU tasks use a local non-Asyncify ONNX Runtime WASM build; WebLLM remains the GPU engine on other compatible devices. iPhone/iPad default to the CPU compatibility path, and cached models do not automatically load during password unlock. The Qwen CPU model uses q8 (around 512 MB rather than the previous q4 file around 786 MB). GPU detection is time-limited and no longer blocks rendering the journal. Shell caching is sequential and includes only the required CPU WASM pair, reducing the shell from about 60 MB to about 21 MB in this build. Errors can be expanded to technical details. These changes address known compatibility risks but do not certify operation on every iPhone.
+
+## iPhone AI memory update (1.0.5)
+
+iPhone/iPad default to lightweight SmolLM2 360M q8 (about 365 MB), using compact prompts and at most three retrieved memories per question. It gives simpler answers and is primarily English-oriented. Full Qwen q8 is still selectable in Settings, but requires considerably more runtime memory and may not run reliably on every iPhone. Existing downloaded files and encrypted data are retained. The recovery page follows the selected AI mode. This supersedes the iPhone model choice described in the 1.0.1 notes above. See `VERIFICATION.md` for runtime measurements and device-testing limits.

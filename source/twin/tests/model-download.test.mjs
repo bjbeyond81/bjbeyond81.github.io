@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {mkdtempSync,mkdirSync,existsSync,openSync,closeSync,readFileSync,statSync,writeSync,ftruncateSync,fsyncSync,rmSync} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
-import {createModelCache,inspectModelCache,modelFiles,CPU_MODEL} from '../src/model-cache.js';
+import {createModelCache,inspectModelCache,modelFiles,CPU_MODEL,MOBILE_MODEL} from '../src/model-cache.js';
 import {EMBEDDING_MODEL} from '../src/domain.js';
 import {downloadModelFile,prepareModelFiles} from '../src/model-download.js';
 import {downloadDirectory} from '../src/model-download-storage.js';
@@ -91,4 +91,11 @@ test('quota failures cannot leave a completion marker',async t=>{
  const directory={async getFileHandle(name,options){const h=await real.getFileHandle(name,options);if(!name.endsWith('.data'))return h;return {async createSyncAccessHandle(){const sync=await h.createSyncAccessHandle();sync.write=()=>{throw new DOMException('disk full','QuotaExceededError');};return sync;}};}};
  await assert.rejects(downloadModelFile(url,{directory,fetcher:async()=>response('file')}),/MODEL_STORAGE_FULL/);
  assert.equal(await (await createModelCache({storage:null,opfs})).match(url),undefined);
+});
+test('mobile setup reuses MiniLM and fetches only the selected lightweight model',async t=>{
+ const opfs=filesystem(t),requested=[],cache={match:async file=>modelFiles(EMBEDDING_MODEL).includes(file)?new Response('saved embeddings'):undefined};
+ await prepareModelFiles({mode:'mobile',cache,opfs,fetcher:async file=>{requested.push(file);return response('mobile file');}});
+ assert.deepEqual(requested,modelFiles(MOBILE_MODEL));
+ const persisted=await createModelCache({storage:null,opfs}),combined={match:async file=>(await cache.match(file))||(await persisted.match(file))};
+ assert.equal((await inspectModelCache(combined,'mobile')).cached,true);
 });
