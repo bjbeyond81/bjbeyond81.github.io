@@ -1,0 +1,44 @@
+name: Build and publish Twin
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'source/twin/**'
+      - '.github/workflows/publish-twin.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: publish-twin
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: source/twin/package-lock.json
+      - name: Install browser build dependencies
+        working-directory: source/twin
+        run: npm ci --ignore-scripts
+      - name: Build static app
+        working-directory: source/twin
+        run: npm run build
+      - name: Verify encryption, licensing, statistics and offline logic
+        working-directory: source/twin
+        run: npm test
+      - name: Publish only the Twin application directory
+        run: |
+          mkdir -p apps/twin
+          rsync -a --delete source/twin/dist/ apps/twin/
+          node -e "require('fs').writeFileSync('apps/twin/build-info.json', JSON.stringify({sourceCommit:process.env.GITHUB_SHA,ai:'local-only',language:'en'}))"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add apps/twin
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Publish Twin static build"
+          git pull --rebase origin main
+          git push origin HEAD:main
