@@ -58,6 +58,7 @@ test('Ed25519 accepts a signed license, rejects modified payload, wrong product 
  const {privateKey,publicKey}=generateKeyPairSync('ed25519');const pub=publicKey.export({format:'jwk'}).x;
  const issue=p=>{const data=Buffer.from(JSON.stringify(p)).toString('base64url');const content='TWIN1.'+data;return content+'.'+sign(null,Buffer.from(content),privateKey).toString('base64url');};
  const p={version:1,product:'twin',id:'test-order',issuedAt:Date.now()};const code=issue(p);assert.equal((await verifyLicense(code,pub)).id,'test-order');
+ const wrapped=code.match(/.{1,67}/g).join('\n');assert.equal((await verifyLicense(wrapped,pub)).id,'test-order');
  const parts=code.split('.');parts[1]=Buffer.from(JSON.stringify({...p,id:'changed'})).toString('base64url');await assert.rejects(()=>verifyLicense(parts.join('.'),pub));
  await assert.rejects(()=>verifyLicense(issue({...p,product:'other'}),pub));
  await assert.rejects(()=>verifyLicense(issue({...p,expiresAt:1}),pub));

@@ -3,7 +3,8 @@ const decode=s=>Uint8Array.from(atob(s.replace(/-/g,'+').replace(/_/g,'/')),c=>c
 export async function verifyLicense(code,publicKey=PUBLIC_KEY,now=Date.now()){
   if(!publicKey)throw new Error('LICENSE_NOT_CONFIGURED');
   if(typeof code!=='string'||code.length>4096)throw new Error('LICENSE_INVALID');
-  const parts=code.trim().split('.');
+  // PDF readers may insert line breaks while copying the printed code.
+  const parts=code.replace(/\s+/g,'').split('.');
   if(parts.length!==3||parts[0]!=='TWIN1'||parts.slice(1).some(s=>!/^[A-Za-z0-9_-]+$/.test(s)))throw new Error('LICENSE_INVALID');
   const payloadBytes=decode(parts[1]), signature=decode(parts[2]);
   const key=await crypto.subtle.importKey('raw',decode(publicKey),{name:'Ed25519'},false,['verify']);
