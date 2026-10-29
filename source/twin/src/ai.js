@@ -1,20 +1,20 @@
 import {probeWebGPU,appleMobile} from './device.js';
-let worker, serial=Promise.resolve(), nextId=0;
+import {createModelCache,inspectModelCache} from './model-cache.js';
+let worker,serial=Promise.resolve(),nextId=0,capabilityTask,loading,lifecycle=0;
 const jobs=new Map();
-let mode='cpu', ready=false;
-
-const CACHE_FLAG='twin-models-cached';
-function hasCachedModels(){try{return localStorage.getItem(CACHE_FLAG)==='1';}catch{return false;}}
-function markCached(){try{localStorage.setItem(CACHE_FLAG,'1');}catch{}}
-
-export async function capabilities(){
-  const webgpu=await probeWebGPU(navigator.gpu);
-  // Use the non-Asyncify CPU path on iOS, where large GPU/WASM compilation can kill the tab.
-  mode=webgpu&&!appleMobile(navigator.userAgent,navigator.platform,navigator.maxTouchPoints)?'gpu':'cpu';
-  // If models were previously downloaded, treat as ready for UI purposes
-  // (actual load will still hit the cache).
-  if(hasCachedModels())ready=true;
-  return {mode,webgpu};
+let mode='cpu',ready=false,cacheState={cached:false,status:'checking'};
+const preference=()=>{try{return localStorage.getItem('twin-ai-mode');}catch{return null;}};
+export function capabilities(){
+  return capabilityTask ||= (async()=>{
+    const webgpu=await probeWebGPU(navigator.gpu);
+    mode=webgpu&&!isAppleMobile()&&preference()!=='cpu'?'gpu':'cpu';
+    await refreshCache();return {mode,webgpu};
+  })();
+}
+export async function refreshCache(){
+  try{cacheState=mode==='gpu'?await request('cache-status',{mode}):await inspectModelCache(await createModelCache(),mode);}
+  catch{cacheState={cached:false,status:'unavailable'};}
+  return cacheState;
 }
 function start(){
   if(worker)return;
@@ -25,21 +25,30 @@ function start(){
 }
 function raw(action,args,progress){start();return new Promise((resolve,reject)=>{const id=++nextId;jobs.set(id,{resolve,reject,progress});worker.postMessage({id,action,args});});}
 function request(action,args,progress){
+  const epoch=lifecycle;
   const task=serial.catch(()=>{}).then(async()=>{
+    if(epoch!==lifecycle)throw new Error('AI_CANCELLED');
     await raw('configure',{wasmPath:new URL(import.meta.env.BASE_URL+'ort/',location.href).href});
+    if(epoch!==lifecycle)throw new Error('AI_CANCELLED');
     return raw(action,args,progress);
   });serial=task;return task;
 }
 export async function loadAI(progress){
-  try{
-    await request('load',{mode},progress);
-    ready=true;
-    markCached();
-  }catch(error){stop(error);throw error;}
+  const epoch=lifecycle;
+  await capabilities();
+  if(epoch!==lifecycle)throw new Error('AI_CANCELLED');
+  if(ready)return;
+  if(loading)return loading;
+  const task=(async()=>{
+    try{const result=await request('load',{mode},progress);ready=true;cacheState=result.cache;}
+    catch(error){if(epoch===lifecycle)stop(error);throw error;}
+  })();
+  loading=task;
+  try{await task;}finally{if(loading===task)loading=null;}
 }
 export const isAppleMobile=()=>appleMobile(navigator.userAgent,navigator.platform,navigator.maxTouchPoints);
 export const embed=(text,progress)=>request('embedding',{text},progress);
 export const generate=(messages,progress)=>request('generate',{messages,mode},progress);
-export const aiState=()=>({mode,ready,cached:hasCachedModels()});
-export function useCPU(){stop();mode='cpu';}
-export function stop(reason=new Error('AI_CANCELLED')){worker?.terminate();worker=null;ready=false;for(const job of jobs.values())job.reject(reason);jobs.clear();serial=Promise.resolve();}
+export const aiState=()=>({mode,ready,...cacheState});
+export function useCPU(){stop();mode='cpu';try{localStorage.setItem('twin-ai-mode','cpu');}catch{}return refreshCache();}
+export function stop(reason=new Error('AI_CANCELLED')){lifecycle++;worker?.terminate();worker=null;ready=false;loading=null;for(const job of jobs.values())job.reject(reason);jobs.clear();serial=Promise.resolve();}
