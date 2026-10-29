@@ -56,10 +56,10 @@ The build uses relative paths for project subdirectories such as `/twin/`. Manif
 | Purpose | Engine/model |
 | --- | --- |
 | Main generation | WebLLM `Llama-3.2-1B-Instruct-q4f16_1-MLC`, WebGPU with shader-f16 |
-| CPU fallback | Transformers.js `onnx-community/Qwen2.5-0.5B-Instruct`, q4, CPU/WASM |
+| CPU fallback | Transformers.js `onnx-community/Qwen2.5-0.5B-Instruct`, q8, CPU/WASM |
 | Embeddings | Transformers.js `Xenova/all-MiniLM-L6-v2`, q8, CPU/WASM |
 
-WebLLM requires WebGPU; the CPU fallback uses a different engine. Inference runs in a Web Worker with one WASM thread, requiring no COOP/COEP headers. The initial Llama download is around 1 GB, not an exact size; Qwen’s q4 file is around 786 MB, plus embeddings and runtime files. Keep at least 2 GB free. Weights are downloaded separately and are not included in the project. Progress is per current file/phase, not aggregate bytes across every download.
+WebLLM requires WebGPU; the CPU fallback uses a different engine. Inference runs in a Web Worker with one WASM thread, requiring no COOP/COEP headers. The initial Llama download is around 1 GB, not an exact size; Qwen’s q8 file is around 512 MB, plus embeddings and runtime files. Keep at least 2 GB free. Weights are downloaded separately and are not included in the project. Progress is per current file/phase, not aggregate bytes across every download.
 
 The service worker precaches interface files, workers, icons, legal pages and local WASM. WebLLM caches in IndexedDB and Transformers.js in Cache Storage. “App available offline” describes the interface, not proof that all models are cached. New app versions activate after older tabs close. Browser eviction, private browsing and memory pressure may remove cached models or the journal; persistence requests are not guarantees. Verify a complete offline restart on each real device.
 
@@ -112,3 +112,7 @@ Before sale, complete seller details, final price/taxes, requirements, delivery 
 Application modules live in `src/`; PWA files, icons and legal pages in `public/`; the license utility and service worker template in `scripts/`; Node tests in `tests/`; deployment in `.github/workflows/pages.yml`. The Italian technical README provides a full module-by-module map.
 
 Third-party licenses are in `public/licenses/`. No automatic open-source license is granted for the application’s own code; the seller must choose their distribution terms while respecting component licenses.
+
+## iPhone compatibility update (1.0.1)
+
+Transformers.js is updated to 4.3.2. Its CPU tasks use a local non-Asyncify ONNX Runtime WASM build; WebLLM remains the GPU engine on other compatible devices. iPhone/iPad default to the CPU compatibility path, and cached models do not automatically load during password unlock. The Qwen CPU model uses q8 (around 512 MB rather than the previous q4 file around 786 MB). GPU detection is time-limited and no longer blocks rendering the journal. Shell caching is sequential and includes only the required CPU WASM pair, reducing the shell from about 60 MB to about 21 MB in this build. Errors can be expanded to technical details. These changes address known compatibility risks but do not certify operation on every iPhone.

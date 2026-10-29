@@ -54,12 +54,12 @@ Alternativa senza Actions: pubblica **solo il contenuto di `dist/`** con un bran
 | Scopo | Motore e modello |
 | --- | --- |
 | Generazione principale | WebLLM `Llama-3.2-1B-Instruct-q4f16_1-MLC`, WebGPU con shader-f16 |
-| Fallback senza WebGPU/f16 | Transformers.js `onnx-community/Qwen2.5-0.5B-Instruct`, quantizzazione q4, CPU/WASM |
+| Fallback senza WebGPU/f16 | Transformers.js `onnx-community/Qwen2.5-0.5B-Instruct`, quantizzazione q8, CPU/WASM |
 | Embedding | Transformers.js `Xenova/all-MiniLM-L6-v2`, q8, CPU/WASM |
 
 WebLLM **richiede WebGPU**: il fallback CPU usa un motore diverso, pur mantenendo il modello Qwen richiesto. Le inferenze sono in un Web Worker, con WASM a un thread: non sono necessari COOP/COEP o SharedArrayBuffer, non configurabili normalmente su Pages.
 
-Il download Llama è nell’ordine di 1 GB; non è una misura esatta e non coincide con la VRAM (il catalogo riporta circa 879 MB per il modello). Il file Qwen q4 è circa 786 MB; embedding e runtime si aggiungono. Sono consigliati almeno 2 GB liberi. L’app non include i pesi nel repository. I runtime WASM sono inclusi nella build, senza CDN a runtime. La barra di download riporta il progresso del file/fase corrente, **non una percentuale aggregata in byte di tutti i download**.
+Il download Llama è nell’ordine di 1 GB; non è una misura esatta e non coincide con la VRAM (il catalogo riporta circa 879 MB per il modello). Il file Qwen q8 è circa 512 MB; embedding e runtime si aggiungono. Sono consigliati almeno 2 GB liberi. L’app non include i pesi nel repository. I runtime WASM sono inclusi nella build, senza CDN a runtime. La barra di download riporta il progresso del file/fase corrente, **non una percentuale aggregata in byte di tutti i download**.
 
 I modelli piccoli possono essere lenti, produrre risposte errate o rifiutare il contesto. MiniLM è principalmente orientato all’inglese e tronca testi oltre la propria lunghezza massima; l’italiano e le note lunghe possono avere recupero meno preciso. Nessun fine-tuning viene svolto: Twin “impara” attraverso memoria RAG e statistiche, non modificando i pesi. Il system prompt richiesto si trova in `src/prompts.js`.
 

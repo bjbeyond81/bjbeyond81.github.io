@@ -4,7 +4,8 @@ const PREFIX = 'twin-shell-' + encodeURIComponent(ROOT.pathname) + '-';
 const CACHE = PREFIX + '__VERSION__';
 const FILES = __PRECACHE__;
 self.addEventListener('install', event => event.waitUntil((async()=>{
-  const cache = await caches.open(CACHE); await cache.addAll(FILES);
+  const cache = await caches.open(CACHE); // Sequential caching avoids holding several large WASM responses at once on iOS.
+  for(const file of FILES)await cache.add(file);
 })()));
 // Updates activate when all older tabs close. No mixed-version forced activation.
 self.addEventListener('activate', event => event.waitUntil((async()=>{

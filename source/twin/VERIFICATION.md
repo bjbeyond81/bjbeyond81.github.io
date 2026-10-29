@@ -19,3 +19,7 @@ Usare `TEST-CHECKLIST.md` su HTTPS/localhost e sui dispositivi reali prima di di
 ## English default update
 
 English is now the fresh-install default regardless of browser language. Saved language selections are retained. The HTML title/description, PWA manifest, customer guide, primary README and complete primary legal pages are in English. Italian remains selectable, with separate Italian legal pages. The updated build and all 16 existing tests passed; static checks confirm English defaults and precached legal language variants.
+
+## iPhone compatibility update - 1.0.1
+
+The original deployed version was exercised on a desktop browser with fictional data: vault creation, encrypted entry saving, local model loading, indexing and a grounded Qwen response succeeded. This is not an iPhone hardware test. The compatibility update uses Transformers.js 4.3.2, CPU-only non-Asyncify ONNX WASM, Qwen q8, sequential shell caching, a timed GPU probe and explicit model loading after unlock on iOS. Three additional device-selection/timeout checks bring the automatic suite to 19 tests. Real Safari/iPhone model inference remains unverified until tested on the affected device.
