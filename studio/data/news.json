@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09T23:08:08Z",
+  "updated": "2026-11-09T23:10:28Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
     {
@@ -66,6 +66,13 @@
       "topic": "AI"
     },
     {
+      "title": "Everything we know so far about the Nvidia spy scandal targeting CEO Jensen Huang",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
       "title": "Apple’s $50 Intelligence Usage Packs extend access to some AI features",
       "source": "The Verge",
       "url": "https://www.theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro",
@@ -83,13 +90,6 @@
       "title": "Instagram’s Effect Builder makes new filters from AI prompts",
       "source": "The Verge",
       "url": "https://www.theverge.com/tech/1030061/instagram-ai-effect-builder-filters",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "The future of AI hinges on… Jensen Huang’s sex life?",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1029990/jensen-huang-the-spy-who-loved-me",
       "date": "2026-11-09",
       "topic": "AI"
     },

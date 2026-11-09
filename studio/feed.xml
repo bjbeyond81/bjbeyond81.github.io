@@ -6,7 +6,7 @@
 <atom:link href="https://bjbeyond81.github.io/studio/feed.xml" rel="self" type="application/rss+xml"/>
 <description>Every essay and public experiment by BJ Beyond, collected in one index.</description>
 <language>en</language>
-<lastBuildDate>Mon, 09 Nov 2026 23:08:08 +0000</lastBuildDate>
+<lastBuildDate>Mon, 09 Nov 2026 23:10:28 +0000</lastBuildDate>
 <generator>studio/scripts/build_feed.py</generator>
 <item><title>Pressing Enter Doesn’t Make You a Creator</title><link>https://hackernoon.com/pressing-enter-doesnt-make-you-a-creator</link><guid isPermaLink="true">https://hackernoon.com/pressing-enter-doesnt-make-you-a-creator</guid><pubDate>Sun, 08 Nov 2026 12:00:00 +0000</pubDate><description>AI can generate almost anything. But somewhere along the way, we started confusing the ability to produce with the ability to create.</description><category>HackerNoon</category></item>
 <item><title>Your AI Output Looks Finished. Are You?</title><link>https://medium.com/@bj_beyond/your-ai-output-looks-finished-are-you-cf344e73a569</link><guid isPermaLink="true">https://medium.com/@bj_beyond/your-ai-output-looks-finished-are-you-cf344e73a569</guid><pubDate>Sun, 08 Nov 2026 12:00:00 +0000</pubDate><description>On creativity, shortcuts, and the judgment nobody can do for us.</description><category>Medium</category></item>
