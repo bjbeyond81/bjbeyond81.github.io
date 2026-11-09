@@ -1,0 +1,133 @@
+{
+  "_comment": "Config for scripts/build_feed.py. Edit here, not in the script. Nothing in this file is article copy: titles, dates and deks are read from each platform at build time.",
+  "author": {
+    "hackernoon_handle": "bj_beyond",
+    "hackernoon_profile": "https://hackernoon.com/u/bj_beyond",
+    "medium_feed": "https://medium.com/feed/@bj_beyond",
+    "medium_profile": "https://medium.com/@bj_beyond",
+    "substack_feed": "https://bjbeyond.substack.com/feed",
+    "substack_home": "https://bjbeyond.substack.com",
+    "site_sitemap": "https://bjbeyond.it/sitemap.xml",
+    "site_article_prefixes": [
+      "/writing/",
+      "/art/",
+      "/it/"
+    ]
+  },
+  "merge": {
+    "_comment": "Same piece published in more than one place: URL -> URL of the entry it belongs to. Medium/HackerNoon pairs with the same slug are merged automatically.",
+    "https://bjbeyond.it/writing/claude-opus-5-vs-pangram/": "https://hackernoon.com/i-asked-claude-opus-5-to-beat-pangrams-ai-detector-it-failed-with-a-perfect-score",
+    "https://bjbeyond.it/phoenix-experiment/": "https://hackernoon.com/the-phoenix-experiment-what-the-recovered-x-archive-actually-shows",
+    "https://bjbeyond.it/it/cosa-puo-dimostrare-un-rilevatore-di-testo-ai/": "https://bjbeyond.it/writing/what-an-ai-detector-can-prove-and-what-it-cant/"
+  },
+  "extra_links": {
+    "_comment": "Pages that carry no publish date of their own but belong to an entry.",
+    "https://bjbeyond.it/phoenix-experiment/": {
+      "platform": "bjbeyond.it",
+      "label": "Record on bjbeyond.it"
+    }
+  },
+  "exclude_title_patterns": [
+    "(?i)phoenix.*part\\s*(3|iii)\\b"
+  ],
+  "news": {
+    "_terms_check": "Before adding any new source, read that publisher's RSS/feed terms of use and confirm they allow listing headlines with a link back (title, source, date, link only). Note the check in the commit message. Aggregators are not allowed; permanent exclusions are in blocklist.json.",
+    "_comment": "Publishers' own official RSS/Atom feeds only (no aggregators such as Google News). Stored per item: title, source name, date, link. Nothing else from the feed is kept: no descriptions, snippets or images. 'detection' feeds contribute only items whose title or summary matches detection_keywords; 'ai' feeds are general AI coverage used to fill the list. The summary is read only to filter and is never stored. For general 'ai' feeds an item is tagged 'AI detection' when the title matches detection_keywords or the summary matches strict_keywords.",
+    "max_items": 30,
+    "max_age_days": 45,
+    "feeds": [
+      {
+        "name": "IEEE Spectrum",
+        "url": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss",
+        "mode": "ai"
+      },
+      {
+        "name": "WIRED",
+        "url": "https://www.wired.com/feed/tag/ai/latest/rss",
+        "mode": "ai"
+      },
+      {
+        "name": "MIT Technology Review",
+        "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+        "mode": "ai"
+      },
+      {
+        "name": "Ars Technica",
+        "url": "https://arstechnica.com/ai/feed/",
+        "mode": "ai"
+      },
+      {
+        "name": "The Verge",
+        "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+        "mode": "ai"
+      },
+      {
+        "name": "The Guardian",
+        "url": "https://www.theguardian.com/technology/artificialintelligenceai/rss",
+        "mode": "ai"
+      },
+      {
+        "name": "TechCrunch",
+        "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+        "mode": "ai"
+      },
+      {
+        "name": "Inside Higher Ed",
+        "url": "https://www.insidehighered.com/rss.xml",
+        "mode": "detection"
+      },
+      {
+        "name": "EdSurge",
+        "url": "https://www.edsurge.com/articles_rss",
+        "mode": "detection"
+      },
+      {
+        "name": "Nieman Lab",
+        "url": "https://www.niemanlab.org/feed/",
+        "mode": "detection"
+      },
+      {
+        "name": "Retraction Watch",
+        "url": "https://retractionwatch.com/feed/",
+        "mode": "detection"
+      },
+      {
+        "name": "404 Media",
+        "url": "https://www.404media.co/rss/",
+        "mode": "detection"
+      },
+      {
+        "name": "Engadget",
+        "url": "https://www.engadget.com/rss.xml",
+        "mode": "detection"
+      },
+      {
+        "name": "The Register",
+        "url": "https://www.theregister.com/software/ai_ml/headlines.atom",
+        "mode": "detection"
+      },
+      {
+        "name": "Fast Company",
+        "url": "https://www.fastcompany.com/technology/rss",
+        "mode": "detection"
+      },
+      {
+        "name": "GPTZero",
+        "url": "https://gptzero.me/news/rss/",
+        "mode": "detection"
+      }
+    ],
+    "detection_keywords": "(?i)(\\bai[- ]?(text |content |writing )?detect\\w*|\\bdetectors?\\b|watermark\\w*|provenance|pangram|gptzero|turnitin|copyleaks|originality\\.ai|academic (integrity|misconduct)|plagiari\\w+|ai[- ]generated (text|writing|essays?|papers?|content|books?|articles?)|written (with|by) (ai|chatgpt|claude)|ai[- ]written|synthid|c2pa|content credentials|authorship|deepfake detect\\w*|false positives?|ai allegations?|accused of (using )?ai|human[- ]written)",
+    "block_title_patterns": [
+      "(?i)\\b(best|top)\\s+\\d+\\b",
+      "(?i)\\bbest (free )?ai (content |text )?detectors?\\b",
+      "(?i)\\bcoupon|promo code|discount\\b",
+      "(?i)\\bhumaniz(e|er)\\b",
+      "(?i)\\bundetectable\\b",
+      "(?i)\\bbypass\\b",
+      "(?i)\\bdeals?\\b"
+    ],
+    "max_per_source": 4,
+    "strict_keywords": "(?i)(\\bai[- ]?(text |content |writing )?detect(or|ors|ion)\\b|\\bai detectors?\\b|watermark\\w*|pangram|gptzero|turnitin|copyleaks|originality\\.ai|academic (integrity|misconduct)|plagiari\\w+|ai[- ]generated (text|writing|essays?|papers?|books?|articles?)|written (with|by) (ai|chatgpt|claude)|ai[- ]written|synthid|c2pa|content credentials|ai allegations?|accused of (using )?ai|human[- ]written)"
+  }
+}

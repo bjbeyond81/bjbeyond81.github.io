@@ -1,0 +1,216 @@
+{
+  "updated": "2026-11-09T23:08:08Z",
+  "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
+  "items": [
+    {
+      "title": "Authors Can Defend Against AI Allegations With ‘Paper Trail’ Tools. Is It Enough?",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/authors-can-defend-against-ai-allegations-with-paper-trail-tools/",
+      "date": "2026-11-09",
+      "topic": "AI detection"
+    },
+    {
+      "title": "AI Agents Are Testing the Limits of Zero-Trust Security",
+      "source": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/zero-trust-agentic-ai-architecture",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "Jensen Huang Hired a PR Firm Known for Handling Sex Scandals Last Year",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/nvidia-ceo-jensen-huang-hired-a-pr-firm-known-for-handling-sex-scandals-last-year/",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "Bikers and Bug-Lovers Join Forces to Fight a New Google Data Center",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/bug-activists-and-biker-gang-members-are-teaming-up-to-protest-data-centers/",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "The backlash about data centers might really just be about electricity",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/11/09/1148194/the-backlash-about-data-centers-might-really-just-be-about-electricity/",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "Nancy Pelosi’s replacement is ready to regulate AI",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/11/09/1148182/nancy-pelosis-replacement-is-ready-to-regulate-ai/",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "Innovating with AI in the special chemicals industry",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/11/09/1147654/innovating-with-ai-in-the-special-chemicals-industry/",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "Claude Code is accidentally exposing secrets all over GitHub",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github/",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "Nvidia CEO's affair becomes a national security problem",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/tech-policy/2026/11/ceo-jensen-huang-admits-affair-as-nvidia-probes-possible-chinese-espionage/",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "Apple’s $50 Intelligence Usage Packs extend access to some AI features",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "Anthropic launches new Claude Fable and Mythos 5.2 models",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "Instagram’s Effect Builder makes new filters from AI prompts",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1030061/instagram-ai-effect-builder-filters",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "The future of AI hinges on… Jensen Huang’s sex life?",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1029990/jensen-huang-the-spy-who-loved-me",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "Jensen Huang’s image has been shattered. Could he be pushed out at Nvidia?",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/09/jensen-huang-image-nvidia",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "The AI poster boy, the ‘Chinese spy’ and Trump: how an affair may have harmed US security",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/09/nvidia-affair-huang-trump-national-security",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "Cyber-attack on French supermarket freezers has geopolitical context",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/09/cyber-attack-french-supermarket-freezers-iran-europe",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "Silicon Valley and Trump rally behind Nvidia CEO after his affair with alleged Chinese spy",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/09/nvidia-jensen-huang-affair-trump-musk",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "A short seller flagged Nvidia CEO’s ties to a suspected Chinese spy six months before the scandal",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/09/a-short-seller-flagged-nvidia-ceos-ties-to-a-suspected-chinese-spy-six-months-before-the-scandal/",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "The race is on to sue Nvidia",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/09/the-race-is-on-to-sue-nvidia/",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "Jensen Huang pulls out of ElevenLabs Summit amid Nvidia controversy",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/09/jensen-huang-pulls-out-of-elevenlabs-summit-amid-nvidia-controversy/",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "Anthropic releases new Mythos and Fable models amid RSI concerns",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "I Used NYT Cooking’s New AI-Powered Recipe Modifier, and It’s Actually Pretty Good",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/nyt-cooking-new-ai-powered-recipe-modifier-is-pretty-good/",
+      "date": "2026-11-08",
+      "topic": "AI"
+    },
+    {
+      "title": "AI Text Watermarking May Not Be Able to Meet the E.U.’s New Rules",
+      "source": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/ai-watermark-openai-textgrain-europe",
+      "date": "2026-11-05",
+      "topic": "AI detection"
+    },
+    {
+      "title": "Computing journal retracts 13 papers, including four from past EIC",
+      "source": "Retraction Watch",
+      "url": "https://retractionwatch.com/2026/11/02/computing-journal-retracts-13-papers-including-four-from-past-eic/",
+      "date": "2026-11-02",
+      "topic": "AI detection"
+    },
+    {
+      "title": "Guarding the Gates of Knowledge",
+      "source": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/ai-slop-trust-science",
+      "date": "2026-11-01",
+      "topic": "AI detection"
+    },
+    {
+      "title": "GPTZero records 0 false positives on essays by ESL students or students with disabilities",
+      "source": "GPTZero",
+      "url": "https://gptzero.me/news/gptzero-no-bias-against-esl-writers/",
+      "date": "2026-10-20",
+      "topic": "AI detection"
+    },
+    {
+      "title": "Presidents Say the Same Things: Analysis of 81st United Nations General Assembly Speeches",
+      "source": "GPTZero",
+      "url": "https://gptzero.me/news/presidents-say-the-same-things-analysis-of-81st-united-nations-general-assembly-speeches/",
+      "date": "2026-10-18",
+      "topic": "AI detection"
+    },
+    {
+      "title": "Introducing GPTZero 4o",
+      "source": "GPTZero",
+      "url": "https://gptzero.me/news/introducing-gptzero-4o/",
+      "date": "2026-10-18",
+      "topic": "AI detection"
+    },
+    {
+      "title": "GPTZero Investigation: One in Five Words at the UN General Assembly are AI-Generated",
+      "source": "GPTZero",
+      "url": "https://gptzero.me/news/words-from-the-machine-is-ai-ghostwriting-the-united-nations-general-assembly/",
+      "date": "2026-10-18",
+      "topic": "AI detection"
+    },
+    {
+      "title": "COSMIC shuts the door on AI code as GNOME debates letting bug reports in",
+      "source": "The Register",
+      "url": "https://www.theregister.com/software/2026/10/07/cosmic-shuts-the-door-on-ai-code-as-gnome-debates-letting-bug-reports-in/5301141",
+      "date": "2026-10-07",
+      "topic": "AI detection"
+    }
+  ]
+}

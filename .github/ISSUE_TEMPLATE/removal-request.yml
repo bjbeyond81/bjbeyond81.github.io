@@ -1,0 +1,39 @@
+name: Removal request (BJ Beyond Journal news)
+description: Ask for a headline, a URL or a whole source to be removed from the external news section of the BJ Beyond Journal.
+title: "Removal request: "
+labels: ["removal-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The BJ Beyond Journal (https://bjbeyond81.github.io/studio/) lists external headlines with title, source name, date and a link to the original only. It is non-commercial and has no ads or tracking.
+        Use this form to have items removed. Removed sources and URLs are added to `studio/data/blocklist.json` and disappear from the page and from `news.xml` at the next build.
+        This issue is public: do not include private information you don't want published. If you prefer not to open a public issue, email bj_beyond@tutamail.com instead.
+  - type: input
+    id: source
+    attributes:
+      label: Publisher / source name
+      description: As shown on the Journal, e.g. "IEEE Spectrum".
+    validations:
+      required: true
+  - type: textarea
+    id: urls
+    attributes:
+      label: URL(s) to remove
+      description: One per line. Leave empty and say so under "Reason" to remove the whole source.
+      render: text
+    validations:
+      required: false
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact (optional)
+      description: Only if you want a reply outside this issue. It will be visible publicly.
+    validations:
+      required: false

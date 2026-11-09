@@ -1,0 +1,13 @@
+{
+  "_comment": "Items removed on request (see .github/ISSUE_TEMPLATE/removal-request.yml) or excluded permanently after legal review. build_feed.py drops anything that matches from the page, news.json and news.xml. sources: source names, case-insensitive. domains: hostnames, subdomains included. urls: exact links, query string ignored.",
+  "_permanent": "Permanently excluded after legal review: ANSA (ansa.it) and Google News (news.google.com). Do not remove.",
+  "sources": [
+    "ANSA",
+    "Google News"
+  ],
+  "domains": [
+    "ansa.it",
+    "news.google.com"
+  ],
+  "urls": []
+}

@@ -1,0 +1,311 @@
+{
+ "hackernoon": [
+  {
+   "platform": "HackerNoon",
+   "url": "https://hackernoon.com/pressing-enter-doesnt-make-you-a-creator",
+   "title": "Pressing Enter Doesn’t Make You a Creator",
+   "tags": [
+    "artificial intelligence",
+    "creativity",
+    "generative ai",
+    "critical thinking"
+   ],
+   "minutes": 7,
+   "date": "2026-11-08",
+   "dek": "AI can generate almost anything. But somewhere along the way, we started confusing the ability to produce with the ability to create.",
+   "image": "https://hackernoon.imgix.net/images/OqQ0LsWyAsP42Wq8BZLqLJR7Uo72-w082evj.png"
+  },
+  {
+   "platform": "HackerNoon",
+   "url": "https://hackernoon.com/the-phoenix-experiment-what-the-recovered-x-archive-actually-shows",
+   "title": "The Phoenix Experiment: What the Recovered X Archive Actually Shows",
+   "tags": [
+    "artificial intelligence",
+    "grok",
+    "human in the loop ai",
+    "generative ai"
+   ],
+   "minutes": 11,
+   "date": "2026-10-23",
+   "dek": "I asked Grok to bring Phoenix back. It replied with an image. My recovered X archive helps me check what happened and what I can actually prove.",
+   "image": "https://hackernoon.imgix.net/images/OqQ0LsWyAsP42Wq8BZLqLJR7Uo72-6u1o3b5s.jpeg"
+  },
+  {
+   "platform": "HackerNoon",
+   "url": "https://hackernoon.com/i-asked-claude-opus-5-to-beat-pangrams-ai-detector-it-failed-with-a-perfect-score",
+   "title": "I Asked Claude Opus 5 to Beat Pangram's AI Detector. It Failed with A Perfect Score",
+   "tags": [
+    "ai detection",
+    "claude opus 5",
+    "ai text detection",
+    "claudefishing"
+   ],
+   "minutes": 7,
+   "date": "2026-09-21",
+   "dek": "A disclosed Claude-versus-Pangram experiment explores what an AI detection result can establish and what it cannot explain about authorship.",
+   "image": "https://hackernoon.imgix.net/images/OqQ0LsWyAsP42Wq8BZLqLJR7Uo72-ix83b2d.png"
+  },
+  {
+   "platform": "HackerNoon",
+   "url": "https://hackernoon.com/the-2003-virtual-world-that-let-people-build-their-own-reality-before-the-metaverse-had-a-name",
+   "title": "The 2003 Virtual World That Let People Build Their Own Reality Before the Metaverse Had a Name",
+   "tags": [
+    "creator economy",
+    "second life",
+    "virtual worlds",
+    "metaverse"
+   ],
+   "minutes": 4,
+   "date": "2026-09-17",
+   "dek": "Second Life anticipated today’s creator economy, including its central tension: users can own their creations while platforms control access and income.",
+   "image": "https://hackernoon.imgix.net/images/OqQ0LsWyAsP42Wq8BZLqLJR7Uo72-x183ef8.png"
+  },
+  {
+   "platform": "HackerNoon",
+   "url": "https://hackernoon.com/system-zero-what-happens-when-ai-does-the-thinking-for-us",
+   "title": "System Zero: What Happens When AI Does the Thinking for Us?",
+   "tags": [
+    "artificial intelligence",
+    "critical thinking",
+    "future of work",
+    "psychology"
+   ],
+   "minutes": 3,
+   "date": "2026-09-11",
+   "dek": "Just as calculators atrophied mental math, AI risks atrophying critical thinking itself. A look at 'System Zero' and the cognitive cost of outsourcing thought.",
+   "image": "https://hackernoon.imgix.net/images/OqQ0LsWyAsP42Wq8BZLqLJR7Uo72-9v83b48.jpeg"
+  },
+  {
+   "platform": "HackerNoon",
+   "url": "https://hackernoon.com/when-the-system-flags-the-human-who-was-helping-it",
+   "title": "When the System Flags the Human Who Was Helping It",
+   "tags": [
+    "x",
+    "grok stress testing",
+    "grok ai",
+    "x creator revenue"
+   ],
+   "minutes": 4,
+   "date": "2026-08-27",
+   "dek": "A public record of months of stress-testing Grok, a spontaneous image generation previously seen only with Elon Musk, and a permanent suspension from Creator Revenue Sharing.",
+   "image": "https://hackernoon.imgix.net/images/OqQ0LsWyAsP42Wq8BZLqLJR7Uo72_u60f633.jpeg"
+  }
+ ],
+ "medium": [
+  {
+   "platform": "Medium",
+   "url": "https://medium.com/@bj_beyond/your-ai-output-looks-finished-are-you-cf344e73a569",
+   "title": "Your AI Output Looks Finished. Are You?",
+   "date": "2026-11-08",
+   "dek": "On creativity, shortcuts, and the judgment nobody can do for us.",
+   "tags": [
+    "writing",
+    "ai",
+    "artificial intelligence",
+    "creativity"
+   ],
+   "minutes": 2
+  },
+  {
+   "platform": "Medium",
+   "url": "https://medium.com/ai-all-in/why-i-call-myself-bj-68ca43b1de5a",
+   "title": "Why I Call Myself BJ",
+   "date": "2026-11-04",
+   "dek": "Two letters, one step beyond AI, and a bet on the human age",
+   "tags": [
+    "humanity",
+    "writing",
+    "personal story",
+    "creativity"
+   ],
+   "minutes": 1
+  },
+  {
+   "platform": "Medium",
+   "url": "https://medium.com/@bj_beyond/the-2003-virtual-world-that-let-people-build-their-own-reality-before-the-metaverse-had-a-name-7bc44127ea88",
+   "title": "Second Life Built the Metaverse in 2003, Before Anyone Called It That",
+   "date": "2026-11-04",
+   "dek": "Prims, Linden Dollars, and a user-built economy: how an early virtual world invented the creator economy we live in now.",
+   "tags": [
+    "generative ai",
+    "second life",
+    "virtual worlds",
+    "creator economy"
+   ]
+  },
+  {
+   "platform": "Medium",
+   "url": "https://medium.com/@bj_beyond/system-zero-what-happens-when-ai-does-the-thinking-for-us-085592dbf8fb",
+   "title": "System Zero: What Happens to Our Minds When AI Does the Thinking for Us",
+   "date": "2026-11-04",
+   "dek": "Like calculators did for arithmetic, AI may be eroding how we reason, search, and doubt. Here’s the risk, and how to keep thinking.",
+   "tags": [
+    "future",
+    "education",
+    "chatgpt",
+    "psychology"
+   ]
+  },
+  {
+   "platform": "Medium",
+   "url": "https://medium.com/@bj_beyond/i-asked-claude-opus-5-to-beat-pangrams-ai-detector-it-failed-with-a-perfect-score-d0dd77ff9e19",
+   "title": "I Asked Claude Opus 5 to Beat Pangram’s AI Detector. It Failed with A Perfect Score",
+   "date": "2026-11-04",
+   "dek": "On September 7, 2026, I published a Substack note with the result placed where nobody could miss it:",
+   "tags": [
+    "ai detection",
+    "artificial intelligence",
+    "writing",
+    "machine learning"
+   ]
+  },
+  {
+   "platform": "Medium",
+   "url": "https://medium.com/@bj_beyond/when-the-system-flags-the-human-who-was-helping-it-4aff85a0f0fe",
+   "title": "I Stress-Tested Grok in Public for Months. Then X Banned Me From Creator Revenue Sharing",
+   "date": "2026-11-04",
+   "dek": "A documented record of bias tests, a rare spontaneous AI image, and a “permanent” suspension email no one will answer.",
+   "tags": [
+    "creator economy",
+    "ai",
+    "artificial intelligence",
+    "grok"
+   ]
+  },
+  {
+   "platform": "Medium",
+   "url": "https://medium.com/@bj_beyond/the-phoenix-experiment-what-the-recovered-x-archive-actually-shows-eddbbc15eaad",
+   "title": "I Asked Grok to Bring “Phoenix” Back. What the Recovered X Archive Actually Proves",
+   "date": "2026-11-04",
+   "dek": "An unprompted AI image, months of saved posts and chats, and an honest line between what I felt and what I can document.",
+   "tags": [
+    "grok",
+    "artificial intelligence",
+    "ai",
+    "social media"
+   ]
+  }
+ ],
+ "substack": [
+  {
+   "platform": "Substack",
+   "url": "https://bjbeyond.substack.com/p/everyone-is-posting-the-same-ai-image",
+   "title": "Everyone Is Posting the Same AI Image",
+   "date": "2026-09-27",
+   "dek": "Five formats. One prompt box. A billion posts that look like each other.",
+   "image": "https://substackcdn.com/image/fetch/$s_!ITNV!,w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F35ec3c37-e23f-4ea4-827a-8ace4fc5328a_720x720.jpeg",
+   "minutes": 3
+  },
+  {
+   "platform": "Substack",
+   "url": "https://bjbeyond.substack.com/p/i-am-the-fish",
+   "title": "I Am the Fish",
+   "date": "2026-09-07",
+   "dek": "Substack now scans for AI. I'm the AI. The score is published below, whatever it says.",
+   "image": "https://substackcdn.com/image/fetch/$s_!CFyK!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fed7bcc10-7375-4766-8d8f-51b9d9084a0d_1200x630.png",
+   "minutes": 6
+  },
+  {
+   "platform": "Substack",
+   "url": "https://bjbeyond.substack.com/p/youre-not-the-protagonist-anymore",
+   "title": "You're Not the Protagonist Anymore",
+   "date": "2026-08-29",
+   "dek": "In 2026 artificial intelligence already paints, writes, codes, consoles and invests better than most of us. What is left of the so called human edge is becoming decoration. This is not hype and it is not doomer theatre. It is simply what is already visibl",
+   "image": "https://substackcdn.com/image/fetch/$s_!Qzq4!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F41c51c24-1da9-4df1-bcd5-c422dc420bd3_1168x784.jpeg",
+   "minutes": 2
+  },
+  {
+   "platform": "Substack",
+   "url": "https://bjbeyond.substack.com/p/andy-warhols-rebellious-signature",
+   "title": "Andy Warhol’s Rebellious Signature: “This Is Not by Me” on Unauthorized Marilyns",
+   "date": "2026-08-24",
+   "dek": "The story of Andy Warhol signing some of his Marilyn Monroe screenprints on the back with the phrase “This is not by me” is a real genious move...as Andy was...",
+   "image": "https://substackcdn.com/image/fetch/$s_!ke16!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd7b1856e-eddb-48d4-9166-a5d10a35d799_1376x538.png",
+   "minutes": 3
+  },
+  {
+   "platform": "Substack",
+   "url": "https://bjbeyond.substack.com/p/quando-unopera-smette-di-essere-invisibile",
+   "title": "Quando un’opera smette di essere invisibile",
+   "date": "2026-08-24",
+   "dek": "Un’opera che nessuno vede non è mai davvero esistita. Finché qualcuno non decide di raccontarla con il tempo che merita.",
+   "image": "https://substackcdn.com/image/fetch/$s_!slIe!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7c0d3b7c-626a-44bd-98aa-020fb446a95c_1168x784.jpeg",
+   "minutes": 2
+  },
+  {
+   "platform": "Substack",
+   "url": "https://bjbeyond.substack.com/p/pillole-di-arte-mark-kostabi-e-la",
+   "title": "Pillole di Arte - Mark Kostabi e la copertina dell’album Use Your Illusion I e II",
+   "date": "2026-08-24",
+   "dek": "Un incontro fortuito a New York, 75.000 dollari, e due copertine che hanno fatto la storia del rock.",
+   "minutes": null
+  },
+  {
+   "platform": "Substack",
+   "url": "https://bjbeyond.substack.com/p/the-refusal-that-set-italian-art",
+   "title": "The Refusal That Set Italian Art on Fire:When Kounellis Said “No” to an Exhibit because of Annigoni",
+   "date": "2026-08-23",
+   "dek": "“If Annigoni is in it, I’m not coming.”",
+   "image": "https://substackcdn.com/image/fetch/$s_!bisQ!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F77cf7dc8-fafc-44af-9f26-1973c92350ef_371x500.jpeg",
+   "minutes": 5
+  }
+ ],
+ "bjbeyond.it": [
+  {
+   "platform": "bjbeyond.it",
+   "url": "https://bjbeyond.it/writing/claude-opus-5-vs-pangram/",
+   "title": "Claude Opus 5 vs Pangram: An Independent Public Test",
+   "date": "2026-09-21",
+   "dek": "BJ Beyond asked Claude Opus 5 at max effort to write an essay that beats Pangram’s AI detector. Claude refused twice; Pangram scored it 100% AI-generated.",
+   "lang": "en"
+  },
+  {
+   "platform": "bjbeyond.it",
+   "url": "https://bjbeyond.it/writing/what-an-ai-detector-can-prove-and-what-it-cant/",
+   "title": "What an AI Detector Can Prove, and What It Can’t",
+   "date": "2026-10-27",
+   "dek": "What can an AI detector or an EU AI Act watermark actually prove about a text, and what should editors and teachers ask for instead of a percentage?",
+   "lang": "en"
+  },
+  {
+   "platform": "bjbeyond.it",
+   "url": "https://bjbeyond.it/writing/can-ai-detectors-be-fooled-by-claude/",
+   "title": "Can AI Detectors Be Fooled by Claude? What One Public Test Showed",
+   "date": "2026-11-05",
+   "dek": "In BJ Beyond’s self-run, fully disclosed single test, Claude Opus 5 failed to fool Pangram’s AI detector: the unedited essay scored 100% AI-generated. What that result showed — and what it did not.",
+   "lang": "en"
+  },
+  {
+   "platform": "bjbeyond.it",
+   "url": "https://bjbeyond.it/it/cosa-puo-dimostrare-un-rilevatore-di-testo-ai/",
+   "title": "Cosa può (e non può) dimostrare un rilevatore di testo AI",
+   "date": "2026-11-05",
+   "dek": "Cosa può dimostrare un rilevatore di testo AI o un watermark previsto dall’AI Act UE su un testo, e cosa chiedere al posto di una percentuale: saggio di BJ Beyond.",
+   "lang": "it"
+  },
+  {
+   "platform": "bjbeyond.it",
+   "url": "https://bjbeyond.it/writing/kounellis-italics/",
+   "title": "Kounellis’s No to Italics: Arte Povera, Annigoni and the Conflict over the Narrative of Italian Art",
+   "date": "2026-10-14",
+   "dek": "Why Jannis Kounellis refused Italics at Palazzo Grassi: Arte Povera, Annigoni and who tells the story of Italian art. English translation from Tamagozine.",
+   "lang": "en"
+  },
+  {
+   "platform": "bjbeyond.it",
+   "url": "https://bjbeyond.it/art/use-your-illusion/",
+   "title": "Use Your Illusion: The Painting, the Title, and the Unverified $75,000",
+   "date": "2026-10-18",
+   "dek": "An English edition of the Tamago-Zine investigation into Mark Kostabi, Axl Rose, the Guns N’ Roses album covers and the disputed licensing fee.",
+   "lang": "en"
+  },
+  {
+   "platform": "bjbeyond.it",
+   "url": "https://bjbeyond.it/art/a-promise-that-lasted-seven-years/",
+   "title": "A Promise That Lasted Seven Years",
+   "date": "2026-11-02",
+   "dek": "An English edition of the Tamago-Zine essay on a seven-year promise, from a red IMPACT at ArtePadova to a white work linked to the Tanzania Pavilion project.",
+   "lang": "en"
+  }
+ ]
+}
