@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#050b1f">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src blob: data:; connect-src 'none'">
+<script>
+/* =====================================================================
+   UNLOCK CODE — SHA-256 hash (hex) of the shared code, UPPERCASE, no spaces.
+   To rotate the code, replace this value. Generate with:
+     printf '%s' 'NUOVOCODICE' | sha256sum
+   Current placeholder code: NATALE2026
+   ===================================================================== */
+window.UNLOCK_HASH = '84ea8a2f9329276aad29bd0a4e1b0bef763168a356cb007dc1aa0ccc4dde4089';
+</script>
+<title>Christmas Liquid Glass · BJ Beyond</title>
+<style>
+  :root { --ui-bg: rgba(255,255,255,.12); --ui-border: rgba(255,255,255,.28); --txt: #eef6ff; --gold: #f3cf8a; }
+  html, body { margin:0; padding:0; height:100%; overflow:hidden; background:#050b1f; color:var(--txt);
+    font: 500 14px/1.3 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+    -webkit-user-select:none; user-select:none; -webkit-touch-callout:none; -webkit-tap-highlight-color:transparent;
+    overscroll-behavior:none; touch-action:none; }
+  body { position:fixed; inset:0; }
+  #c { position:fixed; inset:0; width:100vw; height:100vh; height:100dvh; display:block; touch-action:none; }
+  .glass { background:var(--ui-bg); border:1px solid var(--ui-border); border-radius:22px;
+    -webkit-backdrop-filter: blur(18px) saturate(160%); backdrop-filter: blur(18px) saturate(160%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 8px 30px rgba(0,0,0,.35); }
+  #ui { position:fixed; left:0; right:0; bottom:0; padding: 0 max(12px, env(safe-area-inset-right)) calc(14px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
+    display:flex; flex-direction:column; gap:10px; align-items:center; transition: opacity .35s, transform .35s; }
+  #ui.hidden { opacity:0; transform: translateY(30px); pointer-events:none; }
+  #top { position:fixed; top:0; left:0; right:0; padding: calc(10px + env(safe-area-inset-top)) 16px 0; text-align:center; transition: opacity .35s; pointer-events:none; }
+  #top.hidden { opacity:0; }
+  #top .t { font-weight:650; letter-spacing:.02em; font-size:15px; text-shadow:0 1px 8px rgba(0,0,0,.5); }
+  #top .s { opacity:.7; font-size:12px; margin-top:2px; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; padding:8px; max-width:560px; }
+  button, select { appearance:none; -webkit-appearance:none; font:inherit; color:var(--txt); background:rgba(255,255,255,.10);
+    border:1px solid rgba(255,255,255,.22); border-radius:16px; padding:10px 14px; min-height:42px; cursor:pointer; }
+  button:active { transform: scale(.96); background: rgba(255,255,255,.22); }
+  button.primary { background: linear-gradient(180deg, rgba(243,207,138,.45), rgba(243,207,138,.22)); border-color: rgba(243,207,138,.6); font-weight:650; }
+  button.on { background: rgba(140,220,255,.30); border-color: rgba(140,220,255,.6); }
+  .hint { font-size:12px; opacity:.8; text-align:center; text-shadow:0 1px 6px rgba(0,0,0,.6); }
+  #presets button { padding:8px 12px; min-height:36px; font-size:13px; }
+  #presets button.sel { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold) inset; }
+  #show { position:fixed; right: max(12px, env(safe-area-inset-right)); bottom: calc(12px + env(safe-area-inset-bottom)); opacity:0; pointer-events:none;
+    width:44px; height:44px; padding:0; border-radius:22px; transition: opacity .35s; font-size:18px; }
+  #show.visible { opacity:.35; pointer-events:auto; }
+  #sheet { position:fixed; inset:0; background:rgba(2,6,18,.82); display:none; flex-direction:column; align-items:center; justify-content:center; gap:12px;
+    padding: calc(16px + env(safe-area-inset-top)) 16px calc(16px + env(safe-area-inset-bottom)); z-index:10; -webkit-user-select:auto; user-select:auto; -webkit-touch-callout:default; touch-action:auto; }
+  #sheet.open { display:flex; }
+  #sheet img { max-width:100%; max-height:68vh; max-height:68dvh; border-radius:18px; box-shadow:0 10px 40px rgba(0,0,0,.6); -webkit-touch-callout:default; -webkit-user-select:auto; user-select:auto; pointer-events:auto; }
+  #sheet a { color: var(--txt); text-decoration:none; }
+  #lock { position:fixed; inset:0; z-index:20; display:flex; align-items:center; justify-content:center; padding: calc(20px + env(safe-area-inset-top)) 20px calc(20px + env(safe-area-inset-bottom));
+    background: rgba(3,8,24,.35); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); touch-action:auto; }
+  #lock.gone { display:none; }
+  #lock form { width:min(340px, 100%); padding:22px; display:flex; flex-direction:column; gap:12px; text-align:center; }
+  #lock input { font:inherit; font-size:17px; color:var(--txt); background:rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.28); border-radius:14px; padding:12px; text-align:center; letter-spacing:.12em; text-transform:uppercase; -webkit-user-select:text; user-select:text; outline:none; }
+  #lock .err { color:#ffb4a8; font-size:13px; min-height:16px; }
+  #toast { position:fixed; left:50%; top: calc(64px + env(safe-area-inset-top)); transform:translateX(-50%); padding:8px 14px; opacity:0; transition:opacity .3s; pointer-events:none; z-index:11; font-size:13px; }
+  #toast.show { opacity:1; }
+</style>
+</head>
+<body>
+<canvas id="c" aria-label="Christmas Liquid Glass wallpaper — Santa, reindeer and Christmas trees"></canvas>
+
+<div id="top"><div class="t">Christmas Liquid Glass</div><div class="s">BJ Beyond · Buon Natale</div></div>
+
+<div id="ui">
+  <div class="glass row" id="presets"></div>
+  <div class="glass row">
+    <button id="rand" title="Randomize">🎲 Random</button>
+    <button id="tilt" title="Device tilt">📱 Tilt</button>
+    <select id="size" aria-label="Export size">
+      <option value="1290x2796">1290×2796 (Pro Max / Plus)</option>
+      <option value="1179x2556">1179×2556 (Pro / 15–16)</option>
+      <option value="1320x2868">1320×2868 (16 Pro Max)</option>
+      <option value="1206x2622">1206×2622 (16 Pro)</option>
+    </select>
+    <button id="save" class="primary">⬇︎ Salva / Save</button>
+    <button id="hide" title="Hide UI">◐ Nascondi</button>
+  </div>
+  <div class="hint">Salva in Foto → Imposta come sfondo · Save to Photos → Use as Wallpaper</div>
+</div>
+<button id="show" class="glass" aria-label="Show controls">◑</button>
+
+<div id="sheet">
+  <img id="shot" alt="Wallpaper">
+  <div class="hint" style="font-size:13px">Tieni premuto l'immagine → <b>Salva in Foto</b> → Imposta come sfondo<br>Long-press the image → <b>Save to Photos</b> → Use as Wallpaper</div>
+  <div class="row" style="padding:0">
+    <button id="share" class="primary">Condividi / Share</button>
+    <a id="dl" download="bj-beyond-christmas-liquid-glass.png"><button type="button">Scarica / Download</button></a>
+    <button id="close">Chiudi / Close</button>
+  </div>
+</div>
+<div id="lock">
+  <form class="glass" id="lockform" autocomplete="off">
+    <div style="font-weight:650;font-size:17px">Christmas Liquid Glass</div>
+    <div class="hint" style="opacity:.85">Inserisci il codice di sblocco<br>Enter your unlock code</div>
+    <input id="code" type="text" inputmode="text" autocapitalize="characters" autocorrect="off" spellcheck="false" aria-label="Unlock code" placeholder="CODICE / CODE">
+    <button class="primary" type="submit">Sblocca / Unlock</button>
+    <div class="err" id="lockerr"></div>
+  </form>
+</div>
+<div id="toast" class="glass"></div>
+
+<script>
+(() => {
+'use strict';
+const $ = (id) => document.getElementById(id);
+const canvas = $('c');
+const params = new URLSearchParams(location.search);
+
+// ---------- presets (Christmas scenes) ----------
+// glass shapes: 0 = star, 1 = Christmas tree, 2 = bauble
+const PRESETS = [
+  { name: 'Notte di Babbo Natale', scene: 0, shape: 0, gc: [0, -0.06], gs: 0.15, tint: [1.0, .82, .45], ice: [.70, .86, 1.0], gold: [1.0, .80, .42] },
+  { name: 'Bosco innevato',        scene: 1, shape: 1, gc: [0,  0.04], gs: 0.17, tint: [.55, 1.0, .75], ice: [.62, .95, .92], gold: [1.0, .84, .50] },
+  { name: 'Albero di Natale',      scene: 2, shape: 2, gc: [0.13, 0.20], gs: 0.085, tint: [.80, .90, 1.0], ice: [.80, .90, 1.0], gold: [1.0, .78, .38] },
+  { name: 'Regali & Luci',         scene: 3, shape: 2, gc: [0, -0.06], gs: 0.13, tint: [1.0, .55, .55], ice: [.85, .90, 1.0], gold: [1.0, .76, .36] },
+];
+const TINTS = [[1.0,.82,.45],[.55,1.0,.75],[.80,.90,1.0],[1.0,.55,.55]];
+const state = {
+  preset: 0, scene: 0, shape: 0, gc: [0,0], gs: .15, tint: [1,1,1], ice: [1,1,1], gold: [1,1,1], seed: 0.37,
+  touch: [0,0], touchT: [0,0], tilt: [0,0], tiltT: [0,0],
+  t0: performance.now(), time: 0, frames: 0, uiHidden: false, tiltOn: false,
+};
+function applyPreset(i) {
+  const p = PRESETS[i];
+  Object.assign(state, { preset: i, scene: p.scene, shape: p.shape, gc: p.gc.slice(), gs: p.gs, tint: p.tint.slice(), ice: p.ice.slice(), gold: p.gold.slice(), seed: 0.37 + i * 0.11 });
+  document.querySelectorAll('#presets button').forEach((b, j) => b.classList.toggle('sel', j === i));
+}
+function randomize() {
+  applyPreset(Math.floor(Math.random() * PRESETS.length));
+  state.seed = Math.random();
+  if (state.scene !== 2) { // keep the hanging bauble on the tree scene
+    const sh = Math.floor(Math.random() * 3);
+    state.shape = sh;
+    state.gs = sh === 2 ? .13 : sh === 1 ? .17 : .15;
+  }
+  state.tint = TINTS[Math.floor(Math.random() * TINTS.length)].slice();
+  document.querySelectorAll('#presets button').forEach(b => b.classList.remove('sel'));
+}
+
+// ---------- procedural Christmas scene painter (Canvas2D, y-up "p-space": y in [-.5,.5], x in [-hw,hw]) ----------
+function rngFrom(seed) { let s = (Math.floor(seed * 2147483646) % 2147483646) + 1; return () => (s = s * 16807 % 2147483647) / 2147483647; }
+function glowSprite(col) {
+  const g = document.createElement('canvas'); g.width = g.height = 64; const x = g.getContext('2d');
+  const rg = x.createRadialGradient(32, 32, 0, 32, 32, 32);
+  rg.addColorStop(0, `rgba(${col},1)`); rg.addColorStop(.18, `rgba(${col},.55)`); rg.addColorStop(.5, `rgba(${col},.14)`); rg.addColorStop(1, `rgba(${col},0)`);
+  x.fillStyle = rg; x.fillRect(0, 0, 64, 64); return g;
+}
+const LIGHT_COLS = ['255,200,110', '255,90,80', '120,230,140', '255,240,210', '120,180,255', '255,170,60'];
+const SPRITES = LIGHT_COLS.map(glowSprite);
+
+class Scene {
+  constructor() { this.st = document.createElement('canvas'); this.dy = document.createElement('canvas'); this.key = ''; this.lights = []; this.glows = []; }
+  frame(w, h, t) {
+    const key = w + 'x' + h + '|' + state.scene + '|' + state.seed.toFixed(5);
+    if (key !== this.key) {
+      this.key = key; this.st.width = this.dy.width = w; this.st.height = this.dy.height = h;
+      this.lights = []; this.glows = [];
+      const c = this.st.getContext('2d');
+      c.setTransform(1, 0, 0, 1, 0, 0); c.clearRect(0, 0, w, h);
+      c.setTransform(h, 0, 0, -h, w / 2, h / 2);
+      this.hw = w / (2 * h);
+      paintStatic(c, this, this.hw, rngFrom(state.seed), state.scene);
+    }
+    const d = this.dy.getContext('2d');
+    d.setTransform(1, 0, 0, 1, 0, 0); d.globalCompositeOperation = 'source-over'; d.globalAlpha = 1;
+    d.drawImage(this.st, 0, 0);
+    d.setTransform(h, 0, 0, -h, w / 2, h / 2);
+    paintDynamic(d, this, this.hw, t, state.scene);
+    return this.dy;
+  }
+}
+
+// --- drawing helpers (all in p-space) ---
+function vgrad(c, y0, y1, stops) { const g = c.createLinearGradient(0, y0, 0, y1); stops.forEach(([o, col]) => g.addColorStop(o, col)); return g; }
+function sky(c, hw, stops) { c.fillStyle = vgrad(c, .5, -.5, stops); c.fillRect(-hw - .1, -.6, 2 * hw + .2, 1.2); }
+function stars(c, rnd, hw, n, ymin) {
+  for (let i = 0; i < n; i++) {
+    const x = (rnd() * 2 - 1) * hw, y = ymin + rnd() * (.5 - ymin), r = .0008 + rnd() * rnd() * .0028;
+    c.fillStyle = `rgba(235,240,255,${.35 + rnd() * .6})`; c.beginPath(); c.arc(x, y, r, 0, 6.2832); c.fill();
+  }
+}
+function moon(c, x, y, r) {
+  let g = c.createRadialGradient(x, y, r * .8, x, y, r * 4); g.addColorStop(0, 'rgba(255,244,214,.35)'); g.addColorStop(.35, 'rgba(200,210,255,.10)'); g.addColorStop(1, 'rgba(160,180,255,0)');
+  c.fillStyle = g; c.beginPath(); c.arc(x, y, r * 4, 0, 6.2832); c.fill();
+  g = c.createRadialGradient(x - r * .3, y + r * .3, r * .1, x, y, r); g.addColorStop(0, '#fffaf0'); g.addColorStop(1, '#efe4c4');
+  c.fillStyle = g; c.beginPath(); c.arc(x, y, r, 0, 6.2832); c.fill();
+  c.fillStyle = 'rgba(190,175,140,.22)';
+  [[.3, .2, .18], [-.35, -.1, .14], [.05, -.42, .1], [-.1, .45, .08], [.45, -.3, .07]].forEach(([a, b, s]) => { c.beginPath(); c.arc(x + a * r, y + b * r, s * r, 0, 6.2832); c.fill(); });
+}
+function hill(c, hw, y0, amp, f, ph, top, bot, rim) {
+  c.beginPath(); c.moveTo(-hw - .1, -.6);
+  const pts = [];
+  for (let x = -hw - .1; x <= hw + .1; x += .01) { const y = y0 + amp * Math.sin(x * f + ph) + amp * .45 * Math.sin(x * f * 2.3 + ph * 1.7); pts.push([x, y]); c.lineTo(x, y); }
+  c.lineTo(hw + .1, -.6); c.closePath();
+  c.fillStyle = vgrad(c, y0 + amp, -.55, [[0, top], [1, bot]]); c.fill();
+  if (rim) { c.beginPath(); pts.forEach(([x, y], i) => i ? c.lineTo(x, y) : c.moveTo(x, y)); c.strokeStyle = rim; c.lineWidth = .003; c.stroke(); }
+  return (x) => y0 + amp * Math.sin(x * f + ph) + amp * .45 * Math.sin(x * f * 2.3 + ph * 1.7);
+}
+function pine(c, x, y, hgt, col, snow, opts = {}) {
+  const tiers = 4;
+  c.fillStyle = opts.trunk || '#2a1a12'; c.fillRect(x - hgt * .03, y, hgt * .06, hgt * .14);
+  for (let i = 0; i < tiers; i++) {
+    const b = y + hgt * (.1 + i * .2), top = b + hgt * (.42 - i * .04), hwid = hgt * .33 * (1 - i * .2);
+    c.beginPath(); c.moveTo(x, top);
+    c.quadraticCurveTo(x - hwid * .4, b + (top - b) * .45, x - hwid, b);
+    for (let k = 0; k < 4; k++) { const x0 = x - hwid + (k + .5) * hwid / 2; c.quadraticCurveTo(x0, b - hgt * .025, x - hwid + (k + 1) * hwid / 2, b); }
+    c.quadraticCurveTo(x + hwid * .4, b + (top - b) * .45, x, top); c.closePath();
+    c.fillStyle = col; c.fill();
+    if (snow) {
+      const sy = top - (top - b) * .5, sw = hwid * .55;
+      c.beginPath(); c.moveTo(x, top); c.lineTo(x - sw, sy);
+      for (let k = 0; k < 5; k++) c.lineTo(x - sw + (k + .5) * sw * 2 / 5, sy + (k % 2 ? .006 : -.012) * hgt * 4);
+      c.lineTo(x + sw, sy); c.closePath(); c.fillStyle = snow; c.fill();
+    }
+  }
+}
+function starPath(c, x, y, r, rot = 0, inner = .45) {
+  c.beginPath();
+  for (let i = 0; i < 10; i++) { const a = Math.PI / 2 + rot + i * Math.PI / 5, rr = i % 2 ? r * inner : r; c.lineTo(x + Math.cos(a) * rr, y + Math.sin(a) * rr); }
+  c.closePath();
+}
+function house(c, S, x, y, wd, ht, wall, roof, lights) {
+  c.fillStyle = wall; c.fillRect(x - wd / 2, y, wd, ht);
+  c.fillStyle = '#3b2a26'; c.fillRect(x + wd * .18, y + ht + wd * .12, wd * .12, wd * .3); // chimney
+  c.beginPath(); c.moveTo(x - wd * .62, y + ht); c.lineTo(x, y + ht + wd * .5); c.lineTo(x + wd * .62, y + ht); c.closePath(); c.fillStyle = '#eef4ff'; c.fill();
+  c.beginPath(); c.moveTo(x - wd * .56, y + ht - .002); c.lineTo(x, y + ht + wd * .44); c.lineTo(x + wd * .56, y + ht - .002); c.closePath(); c.fillStyle = roof; c.fill();
+  // snow cap on roof
+  c.beginPath(); c.moveTo(x - wd * .64, y + ht + .002); c.lineTo(x, y + ht + wd * .52); c.lineTo(x + wd * .64, y + ht + .002);
+  c.lineTo(x + wd * .52, y + ht + wd * .06); c.lineTo(x, y + ht + wd * .4); c.lineTo(x - wd * .52, y + ht + wd * .06); c.closePath(); c.fillStyle = 'rgba(240,246,255,.95)'; c.fill();
+  // windows
+  const ww = wd * .2, wh = ht * .32, wy = y + ht * .45;
+  [[-.25], [.25]].forEach(([o]) => {
+    const wx = x + o * wd;
+    const g = c.createRadialGradient(wx, wy, 0, wx, wy, wd * .6); g.addColorStop(0, 'rgba(255,190,90,.35)'); g.addColorStop(1, 'rgba(255,190,90,0)');
+    c.fillStyle = g; c.fillRect(wx - wd * .6, wy - wd * .6, wd * 1.2, wd * 1.2);
+    c.fillStyle = '#ffd27a'; c.fillRect(wx - ww / 2, wy - wh / 2, ww, wh);
+    c.fillStyle = 'rgba(120,60,20,.7)'; c.fillRect(wx - ww * .05, wy - wh / 2, ww * .1, wh); c.fillRect(wx - ww / 2, wy - wh * .05, ww, wh * .1);
+  });
+  c.fillStyle = '#5a2c22'; c.fillRect(x - wd * .07, y, wd * .14, ht * .45);
+  // string lights along the eaves
+  if (lights) for (let k = 0; k <= 8; k++) { const u = k / 8; const px = x - wd * .56 + u * wd * 1.12; const py = y + ht + (u < .5 ? u : 1 - u) * 2 * wd * .44 - .004; S.lights.push({ x: px, y: py, r: .0028, ci: k % 4, ph: k * 1.7 + x * 40 }); }
+}
+function reindeer(c, x, y, s, dir, fly, phase, col, nose) {
+  c.save(); c.translate(x, y); c.scale(dir * s, s);
+  c.fillStyle = col; c.strokeStyle = col; c.lineCap = 'round'; c.lineJoin = 'round';
+  // legs
+  c.lineWidth = .07;
+  const legs = [[-.34, 0], [-.24, 1], [.24, 2], [.34, 3]];
+  legs.forEach(([hx, i]) => {
+    c.beginPath(); c.moveTo(hx, -.08);
+    if (fly) {
+      const sw = Math.sin(phase + i * 1.1) * .08;
+      if (hx > 0) { c.lineTo(hx + .14 + sw, -.24); c.lineTo(hx + .05 + sw, -.36); } else { c.lineTo(hx - .16 + sw, -.24); c.lineTo(hx - .34 + sw, -.3); }
+    } else { c.lineTo(hx + (i % 2 ? .02 : -.02), -.33); c.lineTo(hx, -.56); }
+    c.stroke();
+  });
+  c.beginPath(); c.ellipse(0, 0, .46, .2, 0, 0, 6.2832); c.fill();           // body
+  c.beginPath(); c.moveTo(.28, .06); c.lineTo(.44, .38); c.lineTo(.56, .36); c.lineTo(.44, -.04); c.closePath(); c.fill(); // neck
+  c.beginPath(); c.ellipse(.6, .42, .15, .08, -.35, 0, 6.2832); c.fill();   // head
+  c.beginPath(); c.moveTo(.48, .5); c.lineTo(.4, .58); c.lineTo(.52, .53); c.closePath(); c.fill(); // ear
+  c.beginPath(); c.ellipse(-.46, .1, .07, .05, .6, 0, 6.2832); c.fill(); // tail
+  // antlers
+  c.lineWidth = .035; c.strokeStyle = '#d9c3a0';
+  c.beginPath();
+  c.moveTo(.52, .48); c.lineTo(.45, .74); c.lineTo(.33, .86);
+  c.moveTo(.47, .66); c.lineTo(.58, .78);
+  c.moveTo(.43, .77); c.lineTo(.48, .92);
+  c.moveTo(.56, .48); c.lineTo(.62, .72); c.lineTo(.56, .88);
+  c.moveTo(.61, .66); c.lineTo(.72, .74);
+  c.stroke();
+  if (nose) { c.fillStyle = '#ff3b30'; c.beginPath(); c.arc(.74, .36, .045, 0, 6.2832); c.fill(); }
+  c.restore();
+}
+function sleighTeam(c, x, y, s, t, rudolphGlow) {
+  c.save(); c.translate(x, y); c.scale(s, s); c.lineCap = 'round'; c.lineJoin = 'round';
+  // reindeer team ahead (to the right), rising slightly
+  const team = [];
+  for (let i = 0; i < 4; i++) team.push([1.0 + i * .62, .12 + i * .07]);
+  c.strokeStyle = 'rgba(230,190,110,.9)'; c.lineWidth = .02;
+  c.beginPath(); c.moveTo(.3, .22); team.forEach(([tx, ty]) => c.lineTo(tx + .2, ty + .02)); c.stroke();
+  team.forEach(([tx, ty], i) => reindeer(c, tx, ty, .55, 1, true, t * 6 + i * .9, '#7a4f33', i === 3));
+  if (rudolphGlow) { const [tx, ty] = team[3]; c.globalCompositeOperation = 'lighter'; c.globalAlpha = .9; c.drawImage(SPRITES[1], tx + .41 - .12, ty + .2 - .12, .24, .24); c.globalAlpha = 1; c.globalCompositeOperation = 'source-over'; }
+  // sack
+  c.fillStyle = '#8a5a3a'; c.beginPath(); c.ellipse(-.46, .24, .17, .19, .3, 0, 6.2832); c.fill();
+  c.fillStyle = '#c0392b'; c.beginPath(); c.arc(-.5, .44, .06, 0, 6.2832); c.fill();
+  c.fillStyle = '#2e8b57'; c.beginPath(); c.arc(-.38, .42, .055, 0, 6.2832); c.fill();
+  // Santa
+  c.fillStyle = '#c8202b'; c.beginPath(); c.arc(-.14, .2, .21, 0, 6.2832); c.fill();
+  c.fillStyle = '#1b1210'; c.fillRect(-.34, .14, .4, .05);
+  c.fillStyle = '#f2c9a0'; c.beginPath(); c.arc(-.05, .45, .095, 0, 6.2832); c.fill();
+  c.fillStyle = '#f7f7f2'; c.beginPath(); c.ellipse(.01, .38, .085, .1, -.3, 0, 6.2832); c.fill();
+  c.fillStyle = '#c8202b'; c.beginPath(); c.moveTo(-.15, .5); c.lineTo(.06, .53); c.quadraticCurveTo(-.08, .68, -.24, .66); c.closePath(); c.fill();
+  c.fillStyle = '#f7f7f2'; c.fillRect(-.16, .49, .23, .05); c.beginPath(); c.arc(-.25, .65, .04, 0, 6.2832); c.fill();
+  c.strokeStyle = '#c8202b'; c.lineWidth = .08; c.beginPath(); c.moveTo(-.05, .25); c.lineTo(.26, .24); c.stroke();
+  // sleigh body
+  c.beginPath(); c.moveTo(-.68, .32); c.quadraticCurveTo(-.74, .4, -.66, .43); c.quadraticCurveTo(-.6, .4, -.62, .3);
+  c.lineTo(-.55, -.18); c.lineTo(.32, -.18); c.quadraticCurveTo(.5, -.16, .46, .06); c.quadraticCurveTo(.56, .12, .5, .16); c.quadraticCurveTo(.4, .14, .4, .04); c.lineTo(.22, .04); c.lineTo(.1, .16); c.lineTo(-.4, .16); c.closePath();
+  c.fillStyle = '#b3141f'; c.fill(); c.strokeStyle = '#e6b450'; c.lineWidth = .025; c.stroke();
+  // runners
+  c.strokeStyle = '#e6b450'; c.lineWidth = .03; c.beginPath();
+  c.moveTo(-.62, -.34); c.lineTo(.48, -.34); c.quadraticCurveTo(.66, -.34, .62, -.2); c.quadraticCurveTo(.58, -.12, .54, -.2);
+  c.moveTo(-.4, -.34); c.lineTo(-.4, -.18); c.moveTo(.2, -.34); c.lineTo(.2, -.18); c.stroke();
+  c.restore();
+}
+function bauble(c, x, y, r, col, hi, str) {
+  if (str) { c.strokeStyle = 'rgba(230,200,140,.7)'; c.lineWidth = .0012; c.beginPath(); c.moveTo(x, y + r); c.lineTo(x, str); c.stroke(); }
+  const g = c.createRadialGradient(x - r * .35, y + r * .35, r * .05, x, y, r);
+  g.addColorStop(0, hi); g.addColorStop(.35, col); g.addColorStop(1, 'rgba(0,0,0,.85)');
+  c.fillStyle = g; c.beginPath(); c.arc(x, y, r, 0, 6.2832); c.fill();
+  c.fillStyle = '#d9b25a'; c.fillRect(x - r * .25, y + r * .85, r * .5, r * .3);
+  c.fillStyle = 'rgba(255,255,255,.85)'; c.beginPath(); c.ellipse(x - r * .38, y + r * .4, r * .16, r * .09, .7, 0, 6.2832); c.fill();
+}
+const BAUBLES = [['#c4182b', '#ff8a8a'], ['#d9a63a', '#fff0b8'], ['#b9c4d6', '#ffffff'], ['#2456b8', '#a8c8ff'], ['#7a1fa8', '#e0a8ff']];
+function present(c, x, y, w, h, box, rib) {
+  c.fillStyle = box; c.fillRect(x - w / 2, y, w, h);
+  c.fillStyle = 'rgba(0,0,0,.18)'; c.fillRect(x + w * .2, y, w * .3, h);
+  c.fillStyle = rib; c.fillRect(x - w * .07, y, w * .14, h); c.fillRect(x - w / 2, y + h * .55, w, h * .14);
+  c.fillStyle = 'rgba(255,255,255,.25)'; c.fillRect(x - w / 2, y + h - .003, w, .003);
+  c.strokeStyle = rib; c.lineWidth = Math.min(w, h) * .1;
+  c.beginPath(); c.ellipse(x - w * .13, y + h + w * .07, w * .14, w * .07, .5, 0, 6.2832); c.stroke();
+  c.beginPath(); c.ellipse(x + w * .13, y + h + w * .07, w * .14, w * .07, -.5, 0, 6.2832); c.stroke();
+}
+const PRESENT_COLS = [['#c0182a', '#f2c45a'], ['#1f7a45', '#f0f0f0'], ['#e8b84a', '#b3141f'], ['#2a4fa8', '#e6c46a'], ['#f2f2f2', '#c0182a'], ['#7a1f5a', '#e6c46a']];
+function decoratedTree(c, S, rnd, x, base, height, halfW) {
+  c.fillStyle = '#3a2416'; c.fillRect(x - height * .035, base - height * .06, height * .07, height * .1);
+  const tiers = 5;
+  for (let i = 0; i < tiers; i++) {
+    const apex = base + height * (.36 + i * .16), b = apex - height * .36, hwid = halfW * (1 - i * .17);
+    const g = c.createLinearGradient(x - hwid, 0, x + hwid, 0); g.addColorStop(0, '#062a18'); g.addColorStop(.45, '#14703f'); g.addColorStop(1, '#05261a');
+    c.beginPath(); c.moveTo(x, apex); c.quadraticCurveTo(x - hwid * .35, b + (apex - b) * .4, x - hwid, b);
+    for (let k = 0; k < 6; k++) c.quadraticCurveTo(x - hwid + (k + .5) * hwid / 3, b - .012, x - hwid + (k + 1) * hwid / 3, b);
+    c.quadraticCurveTo(x + hwid * .35, b + (apex - b) * .4, x, apex); c.closePath(); c.fillStyle = g; c.fill();
+    c.fillStyle = 'rgba(235,245,255,.55)';
+    for (let k = 0; k < 6; k++) { c.beginPath(); c.ellipse(x - hwid + (k + .5) * hwid / 3, b + .002, hwid / 7, .004, 0, 0, 6.2832); c.fill(); }
+  }
+  const hwAt = (y) => halfW * Math.max(0, (base + height - y) / height) * .92;
+  // garlands + lights
+  for (let k = 0; k < 5; k++) {
+    const yk = base + height * (.1 + k * .17), wk = hwAt(yk) * .9;
+    const p0 = [x - wk, yk + .02], p1 = [x, yk - .035], p2 = [x + wk, yk + .02];
+    c.strokeStyle = 'rgba(230,185,80,.85)'; c.lineWidth = .003; c.beginPath(); c.moveTo(...p0); c.quadraticCurveTo(...p1, ...p2); c.stroke();
+    const n = Math.max(4, Math.round(wk * 70));
+    for (let j = 0; j <= n; j++) { const u = j / n, a = (1 - u) * (1 - u), bb = 2 * u * (1 - u), cc = u * u;
+      S.lights.push({ x: a * p0[0] + bb * p1[0] + cc * p2[0], y: a * p0[1] + bb * p1[1] + cc * p2[1], r: .0032, ci: (j + k) % 6, ph: rnd() * 6.28 }); }
+  }
+  // baubles
+  for (let i = 0; i < 26; i++) {
+    const by = base + .02 + rnd() * height * .8, lim = hwAt(by) * .85, bx = x + (rnd() * 2 - 1) * lim;
+    const [col, hi] = BAUBLES[Math.floor(rnd() * BAUBLES.length)];
+    bauble(c, bx, by, .008 + rnd() * .008, col, hi);
+  }
+  // star on top
+  const sy = base + height + .012;
+  S.glows.push({ x, y: sy, r: .09, ci: 0, ph: 0 });
+  c.fillStyle = '#ffd56a'; starPath(c, x, sy, .03); c.fill(); c.strokeStyle = '#fff2c0'; c.lineWidth = .002; c.stroke();
+}
+function stringLights(c, S, hw, y, sag, ph) {
+  const p0 = [-hw - .03, y], p2 = [hw + .03, y + .01], p1 = [0, y - sag * 2];
+  c.strokeStyle = '#18321f'; c.lineWidth = .0025; c.beginPath(); c.moveTo(...p0); c.quadraticCurveTo(...p1, ...p2); c.stroke();
+  const n = Math.round(hw * 55);
+  for (let j = 0; j <= n; j++) { const u = j / n, a = (1 - u) * (1 - u), b = 2 * u * (1 - u), cc = u * u;
+    const lx = a * p0[0] + b * p1[0] + cc * p2[0], ly = a * p0[1] + b * p1[1] + cc * p2[1];
+    c.fillStyle = '#2a3a2a'; c.fillRect(lx - .0025, ly - .003, .005, .005);
+    S.lights.push({ x: lx, y: ly - .008, r: .0055, ci: (j + ph) % 6, ph: j * 2.1 + ph, bulb: true }); }
+}
+function candyCane(c, x, y, s) {
+  c.lineCap = 'round'; c.lineWidth = s * .16;
+  const path = () => { c.beginPath(); c.moveTo(x, y - s); c.lineTo(x, y); c.arc(x - s * .22, y, s * .22, 0, Math.PI, false); };
+  c.strokeStyle = '#f5f5f5'; path(); c.stroke();
+  c.setLineDash([s * .12, s * .12]); c.strokeStyle = '#d0182a'; path(); c.stroke(); c.setLineDash([]);
+}
+
+function paintStatic(c, S, hw, rnd, scene) {
+  if (scene === 0) { // Notte di Babbo Natale
+    sky(c, hw, [[0, '#050b26'], [.55, '#13245a'], [.85, '#2c3474'], [1, '#4a3d78']]);
+    stars(c, rnd, hw, 260, -.15);
+    moon(c, hw * .25, .27, .1);
+    hill(c, hw, -.14, .025, 9, 1.3, '#26386f', '#1a2650');
+    for (let i = 0; i < 14; i++) pine(c, -hw + (i + rnd() * .5) * hw * 2 / 13, -.16 + rnd() * .02, .07 + rnd() * .05, '#142446', 'rgba(200,215,250,.55)');
+    const g = hill(c, hw, -.24, .018, 6, 2.1, '#dfe9fb', '#9fb3d8', 'rgba(255,255,255,.8)');
+    const n = Math.max(4, Math.round(hw * 2 / .11));
+    for (let i = 0; i < n; i++) {
+      const x = -hw + (i + .5) * hw * 2 / n + (rnd() - .5) * .02, wd = .055 + rnd() * .03;
+      if (i % 3 === 1) { pine(c, x, g(x) - .015, .1 + rnd() * .04, '#0f3d2a', 'rgba(240,248,255,.85)'); for (let k = 0; k < 10; k++) S.lights.push({ x: x + (rnd() - .5) * .05, y: g(x) + .02 + rnd() * .07, r: .0025, ci: k % 6, ph: rnd() * 6 }); continue; }
+      house(c, S, x, g(x) - .02, wd, .045 + rnd() * .025, ['#6b3b2e', '#7d5a3a', '#4f3a5a', '#8a4b36'][i % 4], ['#5a1d22', '#2b3a5a', '#3b2a2a'][i % 3], true);
+    }
+    hill(c, hw, -.36, .02, 4, .4, '#f1f6ff', '#b9c9e6', 'rgba(255,255,255,.9)');
+    for (let i = 0; i < 3; i++) pine(c, (i - 1) * hw * .9 + (rnd() - .5) * .03, -.4, .16 + rnd() * .05, '#0b3324', 'rgba(245,250,255,.9)');
+  } else if (scene === 1) { // Bosco innevato
+    sky(c, hw, [[0, '#031226'], [.5, '#0a2a4a'], [.8, '#14476a'], [1, '#3a6f8a']]);
+    stars(c, rnd, hw, 220, -.05);
+    // aurora curtains
+    c.globalCompositeOperation = 'lighter';
+    for (let i = 0; i < 70; i++) { const x = -hw + i / 70 * hw * 2, y0 = .18 + .06 * Math.sin(i * .25 + rnd() * .3), hh = .08 + .07 * rnd();
+      const ag = c.createLinearGradient(0, y0, 0, y0 + hh); ag.addColorStop(0, 'rgba(60,255,150,.0)'); ag.addColorStop(.2, 'rgba(60,255,150,.10)'); ag.addColorStop(1, 'rgba(80,160,255,0)');
+      c.fillStyle = ag; c.fillRect(x, y0, hw * 2 / 70 + .002, hh); }
+    c.globalCompositeOperation = 'source-over';
+    // crescent moon
+    c.fillStyle = '#fff6dc'; c.beginPath(); c.arc(-hw * .55, .38, .035, 0, 6.2832); c.fill();
+    c.fillStyle = '#071c38'; c.beginPath(); c.arc(-hw * .55 + .014, .388, .031, 0, 6.2832); c.fill();
+    const layers = [[-.04, .06, '#1d4a6a', 'rgba(190,220,245,.45)', 22], [-.13, .09, '#123a52', 'rgba(215,235,250,.6)', 16], [-.22, .13, '#0a2a36', 'rgba(235,245,255,.8)', 11]];
+    layers.forEach(([y, hgt, col, snow, n], li) => {
+      hill(c, hw, y - .01, .012, 7 + li, li * 2, li === 0 ? '#3e6b8e' : li === 1 ? '#6f93b5' : '#a9c2dc', '#5e7fa3');
+      for (let i = 0; i < n; i++) pine(c, -hw + (i + rnd() * .6) * hw * 2 / (n - 1) - .02, y - .015 + rnd() * .01, hgt * (.8 + rnd() * .5), col, snow);
+      c.fillStyle = `rgba(160,200,230,${.10 - li * .03})`; c.fillRect(-hw - .1, y - .05, 2 * hw + .2, .05);
+    });
+    // cabin with warm light
+    const cx = hw * .62; house(c, S, cx, -.255, .07, .05, '#5a3a26', '#3a1f18', true);
+    const g = hill(c, hw, -.3, .02, 3.5, 1.0, '#f2f7ff', '#b7c9e3', 'rgba(255,255,255,.9)');
+    reindeer(c, -hw * .45, g(-hw * .45) + .035, .075, 1, false, 0, '#5c3d28', false);
+    reindeer(c, -hw * .05, g(-hw * .05) + .03, .062, -1, false, 0, '#6b472e', false);
+    reindeer(c, hw * .22, g(hw * .22) + .022, .045, 1, false, 0, '#7a5234', false);
+    pine(c, -hw * .95, -.46, .26, '#08281c', 'rgba(245,250,255,.9)');
+    pine(c, hw * .98, -.44, .22, '#08281c', 'rgba(245,250,255,.9)');
+  } else if (scene === 2) { // Albero di Natale
+    sky(c, hw, [[0, '#060a24'], [.6, '#16224f'], [1, '#2b2a5c']]);
+    stars(c, rnd, hw, 160, 0);
+    moon(c, -hw * .6, .4, .035);
+    hill(c, hw, -.2, .015, 8, .8, '#2a3c70', '#1c2a55');
+    for (let i = 0; i < 12; i++) pine(c, -hw + (i + rnd() * .5) * hw * 2 / 11, -.215, .06 + rnd() * .04, '#14264a', 'rgba(200,215,250,.5)');
+    hill(c, hw, -.3, .012, 3, 1.5, '#eef4ff', '#aebfe0', 'rgba(255,255,255,.9)');
+    // warm glow behind the tree
+    const g = c.createRadialGradient(0, -.05, .02, 0, -.05, .35); g.addColorStop(0, 'rgba(255,190,100,.22)'); g.addColorStop(1, 'rgba(255,190,100,0)');
+    c.fillStyle = g; c.fillRect(-hw - .1, -.5, 2 * hw + .2, 1);
+    decoratedTree(c, S, rnd, 0, -.32, .6, Math.min(.21, hw * .92));
+    const pw = Math.min(.07, hw * .3);
+    [[-.13, .05, .045], [-.05, .06, .035], [.04, .05, .05], [.13, .045, .04], [-.085, .04, .025], [.09, .035, .025]].forEach(([dx, w, h], i) => {
+      const [b, r] = PRESENT_COLS[i % PRESENT_COLS.length]; present(c, dx * hw / .23, -.38 + (i > 3 ? 0 : 0), w * pw / .07, h, b, r); });
+  } else { // Regali & Luci
+    sky(c, hw, [[0, '#0a0a22'], [.6, '#1a1636'], [1, '#2a1a2a']]);
+    c.globalCompositeOperation = 'lighter';
+    for (let i = 0; i < 40; i++) { const x = (rnd() * 2 - 1) * hw, y = rnd() - .5, r = .02 + rnd() * .05, col = ['255,180,90', '255,80,70', '110,220,140', '255,230,190'][i % 4];
+      const g = c.createRadialGradient(x, y, 0, x, y, r); g.addColorStop(0, `rgba(${col},.12)`); g.addColorStop(.7, `rgba(${col},.05)`); g.addColorStop(1, `rgba(${col},0)`); c.fillStyle = g; c.beginPath(); c.arc(x, y, r, 0, 6.2832); c.fill(); }
+    c.globalCompositeOperation = 'source-over';
+    stringLights(c, S, hw, .44, .04, 0); stringLights(c, S, hw, .33, .05, 2); stringLights(c, S, hw, .21, .045, 4);
+    // hanging ornaments
+    [[-.7, .1, .03, 0], [-.3, .16, .022, 1], [.35, .12, .026, 2], [.75, .06, .03, 3], [.05, .24, .018, 4]].forEach(([fx, y, r, k]) => { const [col, hi] = BAUBLES[k]; bauble(c, fx * hw, y, r, col, hi, .5); });
+    candyCane(c, -hw * .5, .0, .05); candyCane(c, hw * .55, -.02, .045);
+    c.fillStyle = '#ffd56a'; starPath(c, hw * .1, .02, .022, .2); c.fill(); S.glows.push({ x: hw * .1, y: .02, r: .05, ci: 0, ph: 1 });
+    hill(c, hw, -.34, .012, 3, .3, '#e9f0ff', '#a9b9d9', 'rgba(255,255,255,.9)');
+    const sc = hw / .23;
+    [[-.17, -.40, .09, .085], [-.06, -.41, .08, .11], [.07, -.40, .1, .08], [.18, -.41, .07, .1], [-.12, -.315, .06, .05], [.04, -.32, .065, .06], [.15, -.31, .05, .045], [-.02, -.26, .045, .04]]
+      .forEach(([x, y, w, h], i) => { const [b, r] = PRESENT_COLS[i % PRESENT_COLS.length]; present(c, x * sc, y, w * Math.min(1.2, sc), h, b, r); });
+  }
+  // a soft glowing ground light at the bottom for every scene
+  const gg = c.createLinearGradient(0, -.5, 0, -.3); gg.addColorStop(0, 'rgba(255,200,130,.10)'); gg.addColorStop(1, 'rgba(255,200,130,0)'); c.fillStyle = gg; c.fillRect(-hw - .1, -.5, 2 * hw + .2, .2);
+}
+
+function paintDynamic(c, S, hw, t, scene) {
+  // Santa's sleigh crossing the sky (scenes 0 and 1)
+  if (scene === 0 || scene === 1) {
+    const period = scene === 0 ? 16 : 22, s = scene === 0 ? .04 : .022;
+    const u = ((t / period) + .35) % 1, span = hw * 2 + s * 5;
+    const x = -hw - s * 3.2 + u * span, y = (scene === 0 ? .2 : .3) + u * .12 + .01 * Math.sin(t * 1.3);
+    sleighTeam(c, x, y, s, t, true);
+    // sparkle trail
+    c.globalCompositeOperation = 'lighter';
+    for (let i = 1; i < 14; i++) { const tx = x - s * .7 - i * s * .5, ty = y - i * .004 + .005 * Math.sin(i + t * 3), a = (1 - i / 14) * (.5 + .5 * Math.sin(t * 9 + i));
+      c.globalAlpha = a * .8; const r = s * (.35 - i * .015); c.drawImage(SPRITES[0], tx - r, ty - r, r * 2, r * 2); }
+    c.globalAlpha = 1; c.globalCompositeOperation = 'source-over';
+  }
+  c.globalCompositeOperation = 'lighter';
+  for (const L of S.lights) {
+    const tw = .55 + .45 * Math.sin(t * 2.2 + L.ph) * Math.sin(t * .7 + L.ph * 1.3);
+    const r = L.r * (L.bulb ? 3.2 : 4.5);
+    c.globalAlpha = tw; c.drawImage(SPRITES[L.ci], L.x - r, L.y - r, r * 2, r * 2);
+    c.globalAlpha = Math.min(1, tw + .3); const r2 = L.r * .9; c.drawImage(SPRITES[L.ci], L.x - r2, L.y - r2, r2 * 2, r2 * 2);
+  }
+  for (const G of S.glows) { const a = .7 + .3 * Math.sin(t * 1.5 + G.ph); c.globalAlpha = a; const r = G.r * (.9 + .1 * Math.sin(t * 2 + G.ph)); c.drawImage(SPRITES[G.ci], G.x - r, G.y - r, r * 2, r * 2); }
+  c.globalAlpha = 1; c.globalCompositeOperation = 'source-over';
+}
+
+const scenePainter = new Scene();
+
+// ---------- WebGL renderer: scene texture + snow + liquid glass ----------
+const VS = `attribute vec2 a; void main(){ gl_Position = vec4(a,0.,1.); }`;
+const FS = `
+precision highp float;
+uniform sampler2D TEX;
+uniform vec2 R; uniform float T; uniform vec2 M; uniform vec2 TL; uniform float SEED; uniform float SHAPE;
+uniform vec2 GC; uniform float GS; uniform vec3 TINT, ICE, GOLD; uniform float GRAIN;
+
+float h21(vec2 p){ p = fract(p*vec2(123.34,456.21) + SEED*17.13); p += dot(p, p+45.32); return fract(p.x*p.y); }
+vec2 h22(vec2 p){ float n = h21(p); return vec2(n, h21(p+n+3.1)); }
+float noise(vec2 p){ vec2 i=floor(p), f=fract(p); f=f*f*(3.-2.*f);
+  return mix(mix(h21(i),h21(i+vec2(1,0)),f.x), mix(h21(i+vec2(0,1)),h21(i+1.),f.x), f.y); }
+float fbm(vec2 p){ float a=.5, s=0.; for(int i=0;i<3;i++){ s+=a*noise(p); p=p*2.03+7.1; a*=.5; } return s; }
+float smin(float a, float b, float k){ float h=clamp(.5+.5*(b-a)/k,0.,1.); return mix(b,a,h)-k*h*(1.-h); }
+mat2 rot(float a){ float c=cos(a), s=sin(a); return mat2(c,-s,s,c); }
+
+float snow(vec2 p, float depth, float dens){
+  float sc = mix(4., 16., depth);
+  float v = mix(.11, .035, depth);
+  vec2 q = (p + TL*(1.-depth)*.04) * sc;
+  q.y += T * v * sc;
+  q.x += sin(q.y*.35 + T*.4 + depth*9.)*.35;
+  vec2 id = floor(q), f = fract(q) - .5;
+  vec2 rn = h22(id + depth*31.7);
+  if (rn.x > dens) return 0.;
+  vec2 o = (h22(id + 11.3) - .5) * .6;
+  o.x += .16*sin(T*1.1 + rn.y*6.283);
+  float rad = mix(.06, .13, rn.y);
+  float soft = mix(.25, .75, 1.-depth);
+  float d = length(f - o);
+  return smoothstep(rad, rad*soft*.6, d) * mix(1., .5, depth) * (.6 + .4*rn.y);
+}
+
+vec3 tex(vec2 p){ vec2 uv = vec2(p.x * R.y / R.x + .5, p.y + .5); return texture2D(TEX, clamp(uv, .001, .999)).rgb; }
+vec3 scene(vec2 p){
+  vec3 c = tex(p);
+  float s = snow(p, 1.0, .45) + snow(p, .7, .3) + snow(p, .45, .2);
+  return c + vec3(.88,.94,1.) * s * .85;
+}
+
+float sdStar5(vec2 p, float r, float rf){
+  const vec2 k1 = vec2(0.809016994375, -0.587785252292);
+  const vec2 k2 = vec2(-k1.x, k1.y);
+  p.x = abs(p.x);
+  p -= 2.0*max(dot(k1,p),0.0)*k1;
+  p -= 2.0*max(dot(k2,p),0.0)*k2;
+  p.x = abs(p.x);
+  p.y -= r;
+  vec2 ba = rf*vec2(-k1.y,k1.x) - vec2(0,1);
+  float h = clamp(dot(p,ba)/dot(ba,ba), 0.0, r);
+  return length(p-ba*h) * sign(p.y*ba.x-p.x*ba.y);
+}
+float tier(vec2 q, float apex, float hw, float ht){
+  q.y -= apex;
+  float d1 = (ht*abs(q.x) + hw*q.y) / length(vec2(ht, hw));
+  float d2 = -(q.y + ht);
+  return max(d1, d2);
+}
+float sdBox(vec2 p, vec2 b){ vec2 d = abs(p)-b; return length(max(d,0.)) + min(max(d.x,d.y),0.); }
+
+// bauble pendulum
+vec2 pivot(){ return vec2(GC.x, .56); }
+float swingA(){ return .06*sin(T*.7) + .03*sin(T*1.3) - M.x*.25 - TL.x*.12; }
+vec2 center(){
+  if (SHAPE > 1.5) { vec2 pv = pivot(); return pv + rot(swingA()) * vec2(0., -(pv.y - GC.y)); }
+  return GC + M*.05 + vec2(TL.x, -TL.y)*.02;
+}
+
+float glassSDF(vec2 p){
+  vec2 c = center();
+  float t = T*.3;
+  vec2 q = p - c;
+  float breathe = 1. + .03*sin(T*.8);
+  float d;
+  if (SHAPE < .5) {
+    q = rot(.12*sin(t*.9) + M.x*.2) * q;
+    d = sdStar5(q / breathe, GS, .5) * breathe - GS*.12;
+  } else if (SHAPE < 1.5) {
+    q.x -= q.y * .08 * sin(t*1.2) + M.x*.2*q.y;
+    float s = GS / breathe; q /= breathe;
+    d = tier(q, s*.95, s*.42, s*.62);
+    d = smin(d, tier(q, s*.55, s*.58, s*.7), .02);
+    d = smin(d, tier(q, s*.12, s*.74, s*.78), .02);
+    d = smin(d, sdBox(q - vec2(0., -s*.78), vec2(s*.12, s*.14)), .015);
+    d = d * breathe - .008;
+  } else {
+    q = rot(-swingA()) * q;
+    d = length(q) - GS * breathe;
+  }
+  d += (fbm(p*4.0 + vec2(t, -t*.7)) - .5) * (abs(SHAPE - 1.) < .5 ? .01 : .022);
+  return d;
+}
+
+void main(){
+  vec2 frag = gl_FragCoord.xy;
+  vec2 p = (frag - .5*R) / R.y;
+  float px = 1.5 / R.y;
+  float d = glassSDF(p);
+  vec2 c = center();
+
+  vec3 base = scene(p);
+  float sh = glassSDF(p + vec2(0., .02));
+  base *= 1. - .3*smoothstep(.07, -.02, sh) * smoothstep(-.01, .02, d);
+
+  // bauble string + cap
+  vec3 col = base;
+  if (SHAPE > 1.5) {
+    vec2 dir = normalize(pivot() - c);
+    vec2 capC = c + dir * GS * 1.06;
+    vec2 a = capC, b = pivot(); vec2 pa = p - a, ba = b - a; float hh = clamp(dot(pa,ba)/dot(ba,ba), 0., 1.);
+    float ds = length(pa - ba*hh);
+    col = mix(col, GOLD*.9, smoothstep(px*1.2, 0., ds - px*.4) * .9);
+  }
+
+  if (d < .02) {
+    float e = .003;
+    vec2 g = vec2(glassSDF(p+vec2(e,0)) - glassSDF(p-vec2(e,0)), glassSDF(p+vec2(0,e)) - glassSDF(p-vec2(0,e)));
+    vec2 n2 = normalize(g + 1e-6);
+    float s = max(-d, 0.);
+    float bev = 1. - smoothstep(0., .05, s);
+    float h = pow(bev, 1.6);
+    vec3 N = normalize(vec3(n2 * h * 1.35, 1.));
+    vec2 off = (-n2 * h * .06 - (p - c) * .14) * (abs(SHAPE - 1.) < .5 ? .55 : 1.);
+    vec2 tl = TL * .008;
+    vec3 refr;
+    refr.r = scene(p + off*1.12 + tl).r;
+    refr.g = scene(p + off).g;
+    refr.b = scene(p + off*0.88 - tl).b;
+    refr = mix(refr, refr * TINT * 1.1 + TINT*.03, .35);
+    vec3 L = normalize(vec3(.55*cos(T*.23) + TL.x*.8, .6 + .25*sin(T*.31) - TL.y*.8, .75));
+    float spec = pow(max(dot(reflect(-L, N), vec3(0,0,1)), 0.), 70.);
+    float spec2 = pow(max(dot(reflect(-L*vec3(-1.,-1.,1.), N), vec3(0,0,1)), 0.), 30.) * .35;
+    float fres = pow(1. - N.z, 2.2);
+    float ang = atan(n2.y, n2.x);
+    vec3 rimCol = mix(ICE, GOLD, .5 + .5*sin(ang + T*.3));
+    vec3 g3 = refr + rimCol * fres * .85 + vec3(1.,.97,.92) * spec * 1.3 + GOLD * spec2;
+    float streak = smoothstep(.03, .0, abs(dot(p - c, normalize(vec2(.8,.6))) - GS*1.6*sin(T*.37))) * (1.-h) * .12;
+    g3 += vec3(.9,.97,1.) * streak;
+    float rim = smoothstep(px*2.5, 0., abs(d + px)) * .55;
+    g3 += mix(vec3(1.), ICE, .4) * rim * (.5 + .5*max(dot(n2, normalize(L.xy)), 0.));
+    float inside = smoothstep(px, -px, d);
+    col = mix(col, g3, inside);
+    col += ICE * .05 * smoothstep(.02, .0, d) * (1.-inside);
+  }
+  if (SHAPE > 1.5) { // metallic cap on top of the bauble
+    vec2 dir = normalize(pivot() - c);
+    vec2 capC = c + dir * GS * 1.0;
+    vec2 qc = rot(-swingA()) * (p - capC);
+    float dc = sdBox(qc, vec2(GS*.2, GS*.09)) - .003;
+    float shade = .75 + .35*sin(qc.x / (GS*.2) * 3.0 + 1.);
+    col = mix(col, GOLD * shade, smoothstep(px, -px, dc));
+  }
+
+  col += vec3(.92,.96,1.) * snow(p, .12, .14) * .75;   // foreground snow
+  vec2 vq = frag / R - .5;
+  col *= 1. - .35*dot(vq, vq);
+  col += (h21(frag + fract(T)*100.) - .5) * GRAIN;
+  gl_FragColor = vec4(clamp(col, 0., 1.), 1.);
+}`;
+
+function makeGL() {
+  if (params.get('mode') === '2d') return null;
+  const gl = canvas.getContext('webgl', { antialias:false, alpha:false, preserveDrawingBuffer:true, premultipliedAlpha:false, powerPreference:'high-performance' });
+  if (!gl) return null;
+  const sh = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s);
+    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) { console.warn(gl.getShaderInfoLog(s)); return null; } return s; };
+  const vs = sh(gl.VERTEX_SHADER, VS), fs = sh(gl.FRAGMENT_SHADER, FS);
+  if (!vs || !fs) return null;
+  const pr = gl.createProgram(); gl.attachShader(pr, vs); gl.attachShader(pr, fs); gl.linkProgram(pr);
+  if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) { console.warn(gl.getProgramInfoLog(pr)); return null; }
+  gl.useProgram(pr);
+  const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 3,-1, -1,3]), gl.STATIC_DRAW);
+  const loc = gl.getAttribLocation(pr, 'a'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+  const tx = gl.createTexture(); gl.bindTexture(gl.TEXTURE_2D, tx);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+  gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+  const U = {}; ['TEX','R','T','M','TL','SEED','SHAPE','GC','GS','TINT','ICE','GOLD','GRAIN'].forEach(n => U[n] = gl.getUniformLocation(pr, n));
+  return {
+    kind: 'webgl',
+    draw(w, h, t, grain) {
+      const sc = scenePainter.frame(w, h, t);
+      gl.bindTexture(gl.TEXTURE_2D, tx);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, sc);
+      gl.viewport(0, 0, w, h);
+      gl.uniform1i(U.TEX, 0);
+      gl.uniform2f(U.R, w, h); gl.uniform1f(U.T, t);
+      gl.uniform2f(U.M, state.touch[0], state.touch[1]); gl.uniform2f(U.TL, state.tilt[0], state.tilt[1]);
+      gl.uniform1f(U.SEED, state.seed); gl.uniform1f(U.SHAPE, state.shape);
+      gl.uniform2f(U.GC, state.gc[0], state.gc[1]); gl.uniform1f(U.GS, state.gs);
+      gl.uniform3fv(U.TINT, state.tint); gl.uniform3fv(U.ICE, state.ice); gl.uniform3fv(U.GOLD, state.gold);
+      gl.uniform1f(U.GRAIN, grain);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+    },
+  };
+}
+
+// ---------- Canvas2D fallback (same scene, simpler glass) ----------
+function make2D() {
+  const ctx = canvas.getContext('2d');
+  const flakes = []; const rnd = rngFrom(.123);
+  for (let i = 0; i < 220; i++) flakes.push({ x: rnd(), y: rnd(), z: rnd(), ph: rnd() * 6.28 });
+  function shapePath(cx, cy, r) {
+    ctx.beginPath();
+    if (state.shape === 0) { for (let i = 0; i < 10; i++) { const a = -Math.PI / 2 + i * Math.PI / 5, rr = i % 2 ? r * .5 : r; ctx.lineTo(cx + Math.cos(a) * rr, cy + Math.sin(a) * rr); } }
+    else if (state.shape === 1) { [[.95, .42, .62], [.55, .58, .7], [.12, .74, .78]].forEach(([ap, w, ht]) => { ctx.moveTo(cx, cy - ap * r); ctx.lineTo(cx - w * r, cy - (ap - ht) * r); ctx.lineTo(cx + w * r, cy - (ap - ht) * r); ctx.closePath(); }); ctx.rect(cx - .12 * r, cy + .64 * r, .24 * r, .28 * r); }
+    else ctx.arc(cx, cy, r, 0, 6.2832);
+  }
+  function drawSnow(w, h, t, zmin, zmax) {
+    for (const f of flakes) {
+      if (f.z < zmin || f.z >= zmax) continue;
+      const y = ((f.y + t * (.03 + .09 * (1 - f.z))) % 1) * h * 1.05 - h * .025;
+      const x = (((f.x + .02 * Math.sin(t * .7 + f.ph) + state.tilt[0] * (1 - f.z) * .03) % 1) + 1) % 1 * w;
+      ctx.fillStyle = `rgba(235,244,255,${.35 + .5 * (1 - f.z)})`; ctx.beginPath(); ctx.arc(x, y, h * (.0015 + .005 * (1 - f.z)), 0, 6.2832); ctx.fill();
+    }
+  }
+  return {
+    kind: 'canvas2d',
+    draw(w, h, t) {
+      const sc = scenePainter.frame(w, h, t);
+      ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.drawImage(sc, 0, 0);
+      drawSnow(w, h, t, .3, 1.01);
+      const cx = w / 2 + (state.gc[0] + state.touch[0] * .05) * h, cy = h / 2 - (state.gc[1] + state.touch[1] * .05) * h, r = state.gs * h;
+      ctx.save(); shapePath(cx, cy, r); ctx.clip();
+      ctx.drawImage(sc, cx - r, cy - r, r * 2, r * 2, cx - r * 1.2, cy - r * 1.2, r * 2.4, r * 2.4);
+      const lg = ctx.createRadialGradient(cx - r * .35, cy - r * .45, r * .05, cx, cy, r * 1.3);
+      lg.addColorStop(0, 'rgba(255,255,255,.5)'); lg.addColorStop(.4, 'rgba(200,230,255,.1)'); lg.addColorStop(1, 'rgba(255,210,140,.35)');
+      ctx.fillStyle = lg; ctx.fillRect(cx - r * 2, cy - r * 2, r * 4, r * 4); ctx.restore();
+      shapePath(cx, cy, r); ctx.lineWidth = Math.max(1, h * .002); ctx.strokeStyle = 'rgba(220,240,255,.8)'; ctx.stroke();
+      drawSnow(w, h, t, 0, .3);
+    },
+  };
+}
+
+let R = makeGL();
+if (!R) R = make2D();
+document.documentElement.dataset.renderer = R.kind;
+
+// ---------- sizing ----------
+let scale = Math.min(window.devicePixelRatio || 1, 2);
+if (R.kind === 'canvas2d') scale = Math.min(scale, 1.5);
+let exporting = false;
+function resize() {
+  if (exporting) return;
+  const w = Math.max(1, Math.round(canvas.clientWidth * scale));
+  const h = Math.max(1, Math.round(canvas.clientHeight * scale));
+  if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
+}
+window.addEventListener('resize', resize);
+
+let slowFrames = 0, lastTs = 0;
+function frame(ts) {
+  const dt = lastTs ? ts - lastTs : 16; lastTs = ts;
+  if (dt > 40 && !exporting && document.visibilityState === 'visible') { if (++slowFrames > 30 && scale > 1) { scale = Math.max(1, scale - .25); slowFrames = 0; resize(); } }
+  else slowFrames = Math.max(0, slowFrames - 1);
+  const k = Math.min(1, dt / 120);
+  state.touch[0] += (state.touchT[0] - state.touch[0]) * k * 1.4;
+  state.touch[1] += (state.touchT[1] - state.touch[1]) * k * 1.4;
+  state.tilt[0] += (state.tiltT[0] - state.tilt[0]) * k;
+  state.tilt[1] += (state.tiltT[1] - state.tilt[1]) * k;
+  state.time = (performance.now() - state.t0) / 1000;
+  if (!exporting) { resize(); R.draw(canvas.width, canvas.height, state.time, .01); state.frames++; }
+  requestAnimationFrame(frame);
+}
+
+// ---------- interaction ----------
+let down = null;
+canvas.addEventListener('pointerdown', (e) => { down = { x:e.clientX, y:e.clientY, t:performance.now(), moved:false }; canvas.setPointerCapture?.(e.pointerId); setTouch(e); });
+canvas.addEventListener('pointermove', (e) => { if (!down) return; if (Math.hypot(e.clientX-down.x, e.clientY-down.y) > 8) down.moved = true; setTouch(e); });
+const up = () => { if (down && !down.moved && performance.now() - down.t < 300) toggleUI(); down = null; state.touchT = [0,0]; };
+canvas.addEventListener('pointerup', up); canvas.addEventListener('pointercancel', up);
+function setTouch(e) {
+  const h = canvas.clientHeight, w = canvas.clientWidth;
+  const x = (e.clientX - w/2) / h, y = -(e.clientY - h/2) / h;
+  state.touchT = [Math.max(-1.5, Math.min(1.5, (x - state.gc[0])*2.2)), Math.max(-1.5, Math.min(1.5, (y - state.gc[1])*2.2))];
+}
+document.addEventListener('touchmove', (e) => { if (!$('sheet').classList.contains('open')) e.preventDefault(); }, { passive:false });
+document.addEventListener('gesturestart', (e) => e.preventDefault());
+
+function toggleUI(force) {
+  state.uiHidden = force !== undefined ? force : !state.uiHidden;
+  $('ui').classList.toggle('hidden', state.uiHidden);
+  $('top').classList.toggle('hidden', state.uiHidden);
+  $('show').classList.toggle('visible', state.uiHidden);
+}
+$('hide').onclick = () => toggleUI(true);
+$('show').onclick = () => toggleUI(false);
+
+function onOrient(e) {
+  if (e.gamma == null) return;
+  state.tiltT = [Math.max(-1, Math.min(1, e.gamma/40)), Math.max(-1, Math.min(1, (e.beta-50)/40))];
+}
+$('tilt').onclick = async () => {
+  if (state.tiltOn) { window.removeEventListener('deviceorientation', onOrient); state.tiltOn = false; state.tiltT = [0,0]; $('tilt').classList.remove('on'); return; }
+  try {
+    if (typeof DeviceOrientationEvent !== 'undefined' && typeof DeviceOrientationEvent.requestPermission === 'function') {
+      const r = await DeviceOrientationEvent.requestPermission();
+      if (r !== 'granted') { toast('Permesso negato / Permission denied'); return; }
+    } else if (typeof DeviceOrientationEvent === 'undefined') { toast('Tilt non disponibile / not available'); return; }
+    window.addEventListener('deviceorientation', onOrient);
+    state.tiltOn = true; $('tilt').classList.add('on');
+  } catch (err) { toast('Tilt non disponibile / not available'); }
+};
+
+PRESETS.forEach((p, i) => { const b = document.createElement('button'); b.textContent = p.name; b.onclick = () => applyPreset(i); $('presets').appendChild(b); });
+$('rand').onclick = randomize;
+
+let toastTimer;
+function toast(msg) { const t = $('toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove('show'), 2200); }
+
+// ---------- export ----------
+function renderExport(w, h) {
+  return new Promise((resolve, reject) => {
+    exporting = true;
+    const pw = canvas.width, ph = canvas.height;
+    try {
+      canvas.width = w; canvas.height = h;
+      R.draw(w, h, state.time, .006);
+      canvas.toBlob((blob) => {
+        canvas.width = pw; canvas.height = ph; exporting = false;
+        blob ? resolve(blob) : reject(new Error('toBlob failed'));
+      }, 'image/png');
+    } catch (e) { canvas.width = pw; canvas.height = ph; exporting = false; reject(e); }
+  });
+}
+let lastFile = null, lastURL = null;
+async function shareFile(file) {
+  if (navigator.canShare && navigator.canShare({ files:[file] })) { await navigator.share({ files:[file], title:'Christmas Liquid Glass' }); return true; }
+  return false;
+}
+$('save').onclick = async () => {
+  const [w, h] = $('size').value.split('x').map(Number);
+  try {
+    const blob = await renderExport(w, h);
+    lastFile = new File([blob], `bj-beyond-christmas-liquid-glass-${w}x${h}.png`, { type:'image/png' });
+    if (lastURL) URL.revokeObjectURL(lastURL);
+    lastURL = URL.createObjectURL(blob);
+    $('shot').src = lastURL; $('dl').href = lastURL; $('dl').download = lastFile.name;
+    $('share').style.display = (navigator.canShare && navigator.canShare({ files:[lastFile] })) ? '' : 'none';
+    try { if (await shareFile(lastFile)) return; } catch (e) { if (e && e.name === 'AbortError') return; }
+    $('sheet').classList.add('open');
+  } catch (e) { console.warn(e); toast('Errore export / Export failed'); }
+};
+$('share').onclick = async () => { try { await shareFile(lastFile); } catch (e) {} };
+$('close').onclick = () => $('sheet').classList.remove('open');
+
+// ---------- unlock gate (one shared code, SHA-256 compared client-side) ----------
+const LS_KEY = 'bjb-xmas-lg-unlock';
+function sha256hex(str) {
+  // pure-JS SHA-256 so it also works where crypto.subtle is unavailable (http / file)
+  const K = [], H = []; let n = 2, c = 0;
+  const frac = (x) => ((x - Math.floor(x)) * 4294967296) >>> 0;
+  while (c < 64) { let prime = true; for (let d = 2; d*d <= n; d++) if (n % d === 0) { prime = false; break; }
+    if (prime) { if (c < 8) H[c] = frac(Math.sqrt(n)); K[c++] = frac(Math.cbrt(n)); } n++; }
+  const bytes = Array.from(new TextEncoder().encode(str)); const bl = bytes.length * 8;
+  bytes.push(0x80); while (bytes.length % 64 !== 56) bytes.push(0);
+  for (let i = 7; i >= 0; i--) bytes.push(i > 3 ? 0 : (bl >>> (i*8)) & 255);
+  const ror = (x, r) => (x >>> r) | (x << (32 - r)); const W = new Array(64);
+  for (let o = 0; o < bytes.length; o += 64) {
+    for (let i = 0; i < 16; i++) W[i] = (bytes[o+i*4]<<24)|(bytes[o+i*4+1]<<16)|(bytes[o+i*4+2]<<8)|bytes[o+i*4+3];
+    for (let i = 16; i < 64; i++) { const a = W[i-15], b = W[i-2];
+      W[i] = (W[i-16] + (ror(a,7)^ror(a,18)^(a>>>3)) + W[i-7] + (ror(b,17)^ror(b,19)^(b>>>10))) | 0; }
+    let [a,b,cc,d,e,f,g,h] = H;
+    for (let i = 0; i < 64; i++) {
+      const t1 = (h + (ror(e,6)^ror(e,11)^ror(e,25)) + ((e&f)^(~e&g)) + K[i] + W[i]) | 0;
+      const t2 = ((ror(a,2)^ror(a,13)^ror(a,22)) + ((a&b)^(a&cc)^(b&cc))) | 0;
+      h = g; g = f; f = e; e = (d + t1) | 0; d = cc; cc = b; b = a; a = (t1 + t2) | 0;
+    }
+    H[0]=(H[0]+a)|0; H[1]=(H[1]+b)|0; H[2]=(H[2]+cc)|0; H[3]=(H[3]+d)|0; H[4]=(H[4]+e)|0; H[5]=(H[5]+f)|0; H[6]=(H[6]+g)|0; H[7]=(H[7]+h)|0;
+  }
+  return H.map(x => (x >>> 0).toString(16).padStart(8, '0')).join('');
+}
+const EXPECTED = String(window.UNLOCK_HASH || '').trim().toLowerCase();
+function isUnlocked() { try { return localStorage.getItem(LS_KEY) === EXPECTED; } catch (e) { return false; } }
+function setLocked(locked) { $('lock').classList.toggle('gone', !locked); $('ui').style.visibility = locked ? 'hidden' : ''; }
+setLocked(!isUnlocked());
+$('lockform').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const code = $('code').value.replace(/\s+/g, '').toUpperCase();
+  if (code && sha256hex(code) === EXPECTED) {
+    try { localStorage.setItem(LS_KEY, EXPECTED); } catch (err) {}
+    setLocked(false); $('code').blur();
+  } else { $('lockerr').textContent = 'Codice non valido / Invalid code'; $('code').select(); }
+});
+$('save').addEventListener('click', (e) => { if (!isUnlocked() && !$('lock').classList.contains('gone')) e.stopImmediatePropagation(); }, true);
+
+// test hook (local only, no network)
+window.__lg = { state, sha256hex, get renderer(){ return R.kind; }, get frames(){ return state.frames; }, applyPreset, randomize,
+  setTime(s) { state.t0 = performance.now() - s * 1000; },
+  async exportDataURL(w, h) { const b = await renderExport(w, h); return await new Promise(r => { const fr = new FileReader(); fr.onload = () => r(fr.result); fr.readAsDataURL(b); }); } };
+
+applyPreset(Math.min(PRESETS.length-1, Math.max(0, parseInt(params.get('preset') || '0', 10) || 0)));
+resize();
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
