@@ -1,11 +1,81 @@
 {
-  "updated": "2026-11-09T23:10:28Z",
+  "updated": "2026-11-10T09:12:19Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
     {
-      "title": "Authors Can Defend Against AI Allegations With ‘Paper Trail’ Tools. Is It Enough?",
+      "title": "Security Flaws Across UK Government Sites Exposed ‘God-Tier’ Information",
       "source": "WIRED",
-      "url": "https://www.wired.com/story/authors-can-defend-against-ai-allegations-with-paper-trail-tools/",
+      "url": "https://www.wired.com/story/security-flaws-across-uk-government-sites-exposed-god-tier-information/",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "A New AI Tool From Google DeepMind Proved the Signal Protocol Is Secure",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol/",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "Jensen Huang’s Troubles Leave the AI Industry Reeling",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/jensen-huangs-troubles-leaves-the-ai-industry-reeling/",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "Australia to introduce mandatory reporting after OpenAI hack to combat artificial intelligence ‘going rogue’",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/10/australia-manadatory-reporting-openai-medicare-hack",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "Mandatory AI safety and security protections announced after OpenAI breach of Medicare – video",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/australia-news/video/2026/nov/10/mandatory-ai-safety-and-security-protections-announced-after-openai-breach-of-medicare-video",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "Trump backs embattled Hegseth and Jensen Huang and says FBI looking into spy allegations – video",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/video/2026/nov/09/trump-hegseth-jensen-huang",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "Qantas to cut 850 Australian jobs and outsource work to India under AI-driven overhaul",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/nov/10/qantas-850-job-cuts-outsource-work-to-india-ai-overhaul",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "Otter AI can now follow conversations across 30+ languages",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/09/otter-ai-can-now-follow-conversations-across-30-languages/",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "Anthropic reportedly plans to move forward with IPO plans",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/09/anthropic-reportedly-plans-to-move-forward-with-ipo-plans/",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "Jensen Huang reportedly engaged a PR firm with a history of handling high-profile sex scandals a year ago",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/09/jensen-huang-reportedly-engaged-a-pr-firm-with-a-history-of-handling-high-profile-sex-scandals-a-year-ago/",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "A year after plagiarism allegations and author’s retraction request, Elsevier is still investigating",
+      "source": "Retraction Watch",
+      "url": "https://retractionwatch.com/2026/11/09/forest-policy-economics-land-use-policy-plagiarism-allegations-retraction-request-elsevier/",
       "date": "2026-11-09",
       "topic": "AI detection"
     },
@@ -20,13 +90,6 @@
       "title": "Jensen Huang Hired a PR Firm Known for Handling Sex Scandals Last Year",
       "source": "WIRED",
       "url": "https://www.wired.com/story/nvidia-ceo-jensen-huang-hired-a-pr-firm-known-for-handling-sex-scandals-last-year/",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "Bikers and Bug-Lovers Join Forces to Fight a New Google Data Center",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/bug-activists-and-biker-gang-members-are-teaming-up-to-protest-data-centers/",
       "date": "2026-11-09",
       "topic": "AI"
     },
@@ -66,94 +129,31 @@
       "topic": "AI"
     },
     {
+      "title": "David Ellison says AI could be the ‘biggest creative unlock in modern history’",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/entertainment/1030510/paramount-skydance-david-ellison-ai",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "What could China get from Jensen Huang?",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1030328/what-could-china-get-from-jensen-huang",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
+      "title": "Here’s what Trump said he knew about Jensen Huang",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1030446/trump-jensen-huang-press-conference",
+      "date": "2026-11-09",
+      "topic": "AI"
+    },
+    {
       "title": "Everything we know so far about the Nvidia spy scandal targeting CEO Jensen Huang",
       "source": "The Verge",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
       "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "Apple’s $50 Intelligence Usage Packs extend access to some AI features",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1030084/apple-intelligence-usage-packs-ai-features-creator-studio-logic-pro",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "Anthropic launches new Claude Fable and Mythos 5.2 models",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1030005/anthropic-claude-fable-mythos-5-2",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "Instagram’s Effect Builder makes new filters from AI prompts",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1030061/instagram-ai-effect-builder-filters",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "Jensen Huang’s image has been shattered. Could he be pushed out at Nvidia?",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/09/jensen-huang-image-nvidia",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "The AI poster boy, the ‘Chinese spy’ and Trump: how an affair may have harmed US security",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/09/nvidia-affair-huang-trump-national-security",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "Cyber-attack on French supermarket freezers has geopolitical context",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/09/cyber-attack-french-supermarket-freezers-iran-europe",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "Silicon Valley and Trump rally behind Nvidia CEO after his affair with alleged Chinese spy",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/09/nvidia-jensen-huang-affair-trump-musk",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "A short seller flagged Nvidia CEO’s ties to a suspected Chinese spy six months before the scandal",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/09/a-short-seller-flagged-nvidia-ceos-ties-to-a-suspected-chinese-spy-six-months-before-the-scandal/",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "The race is on to sue Nvidia",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/09/the-race-is-on-to-sue-nvidia/",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "Jensen Huang pulls out of ElevenLabs Summit amid Nvidia controversy",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/09/jensen-huang-pulls-out-of-elevenlabs-summit-amid-nvidia-controversy/",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "Anthropic releases new Mythos and Fable models amid RSI concerns",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "I Used NYT Cooking’s New AI-Powered Recipe Modifier, and It’s Actually Pretty Good",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/nyt-cooking-new-ai-powered-recipe-modifier-is-pretty-good/",
-      "date": "2026-11-08",
       "topic": "AI"
     },
     {
