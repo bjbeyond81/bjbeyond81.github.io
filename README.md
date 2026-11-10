@@ -1,5 +1,5 @@
-# Casting Room
+# BJ Beyond Journal
 
-Open in Safari: https://bjbeyond81.github.io/
+Source of the BJ Beyond Journal: https://bjbeyond81.github.io/studio/
 
-Pick 3 cinematic looks. Copy an Etsy note. Photos stay on the phone.
+Essays and public experiments by BJ Beyond, rebuilt daily from the platforms' public feeds by `studio/scripts/build_feed.py` (workflow: `.github/workflows/journal-feed.yml`).

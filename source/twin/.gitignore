@@ -1,8 +1,0 @@
-node_modules/
-dist/
-*.pem
-seller-keys/
-.env*
-.DS_Store
-
-public/ort/
