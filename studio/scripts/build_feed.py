@@ -408,6 +408,9 @@ def apply_annotations(entries: list[dict]) -> None:
             urls.add(aliases.get(u, u))
         meta = next((notes[u] for u in urls if u in notes), None)
         if not meta:
+            # Drop a note whose annotation was removed or moved to another URL.
+            e.pop("note", None)
+            e.pop("note_links", None)
             continue
         if meta.get("note"):
             e["note"] = meta["note"]

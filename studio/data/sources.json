@@ -29,8 +29,8 @@
   },
   "annotations": {
     "_comment": "Durable verified notes attached by article URL. Applied at merge and at --render, so a refetch does not drop them. Not used for titles, dates or deks, which are still read from the platforms.",
-    "https://hackernoon.com/the-phoenix-experiment-what-the-recovered-x-archive-actually-shows": {
-      "note": "Published October 23, 2026 on HackerNoon · Featured as a HackerNoon top story on November 10, 2026",
+    "https://hackernoon.com/i-typed-my-name-to-grok-it-sent-me-a-phoenix-i-never-asked-for": {
+      "note": "Published November 10, 2026 on HackerNoon · Featured as a HackerNoon top story on November 10, 2026",
       "links": [
         {
           "platform": "X",

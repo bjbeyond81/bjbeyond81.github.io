@@ -25,6 +25,19 @@
       ],
       "platforms": [
         "HackerNoon"
+      ],
+      "note": "Published November 10, 2026 on HackerNoon · Featured as a HackerNoon top story on November 10, 2026",
+      "note_links": [
+        {
+          "platform": "X",
+          "url": "https://x.com/hackernoon/status/2120123014830264481",
+          "label": "HackerNoon on X"
+        },
+        {
+          "platform": "X",
+          "url": "https://x.com/BJ_Beyond/status/2120132812825084257",
+          "label": "BJ Beyond on X"
+        }
       ]
     },
     {
@@ -194,19 +207,6 @@
         "HackerNoon",
         "bjbeyond.it",
         "Medium"
-      ],
-      "note": "Published October 23, 2026 on HackerNoon · Featured as a HackerNoon top story on November 10, 2026",
-      "note_links": [
-        {
-          "platform": "X",
-          "url": "https://x.com/hackernoon/status/2120123014830264481",
-          "label": "HackerNoon on X"
-        },
-        {
-          "platform": "X",
-          "url": "https://x.com/BJ_Beyond/status/2120132812825084257",
-          "label": "BJ Beyond on X"
-        }
       ]
     },
     {
