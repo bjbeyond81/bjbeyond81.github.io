@@ -387,6 +387,34 @@ def primary_link(e: dict) -> dict:
     return next((l for l in e["links"] if l["platform"] == "BJ Beyond Journal"), e["links"][0])
 
 
+
+def annotation_map() -> dict:
+    raw = CFG.get("annotations") or {}
+    return {clean_url(k).rstrip("/"): v for k, v in raw.items() if not str(k).startswith("_")}
+
+
+def apply_annotations(entries: list[dict]) -> None:
+    """Attach durable notes from sources.json. Does not change title, date or dek."""
+    notes = annotation_map()
+    if not notes:
+        return
+    aliases = {clean_url(k).rstrip("/"): clean_url(v).rstrip("/")
+               for k, v in CFG.get("merge", {}).items() if not k.startswith("_")}
+    for e in entries:
+        urls = set()
+        for l in e.get("links", []):
+            u = clean_url(l["url"]).rstrip("/")
+            urls.add(u)
+            urls.add(aliases.get(u, u))
+        meta = next((notes[u] for u in urls if u in notes), None)
+        if not meta:
+            continue
+        if meta.get("note"):
+            e["note"] = meta["note"]
+        if meta.get("links"):
+            e["note_links"] = meta["links"]
+
+
 def render_platforms(e: dict) -> str:
     parts = []
     for l in e["links"]:
@@ -406,12 +434,23 @@ def render_meta(e: dict) -> str:
     return '<p class="label meta tabular">' + '<span class="sep" aria-hidden="true"></span>'.join(bits) + "</p>"
 
 
+def render_note(e: dict) -> str:
+    if not e.get("note"):
+        return ""
+    links = ""
+    if e.get("note_links"):
+        parts = [f'<a class="pf" href="{esc(l["url"])}"{link_attrs(l["url"])}>{esc(l.get("label") or l.get("platform") or "Link")}</a>' for l in e["note_links"]]
+        links = ' <span class="pfs">' + "".join(parts) + "</span>"
+    return f'<p class="label note">{esc(e["note"])}{links}</p>'
+
+
 def render_featured(e: dict) -> str:
     pl = primary_link(e)
     cover = local_cover(e)
     img = (f'<a class="feat-img" href="{esc(pl["url"])}"{link_attrs(pl["url"])} tabindex="-1" aria-hidden="true">'
            f'<img src="{esc(cover)}" alt="" width="1200" height="675" loading="eager" decoding="async"></a>') if cover else ""
     dek = f'<p class="lede">{esc(e["dek"])}</p>' if e.get("dek") else ""
+    note = render_note(e)
     return f'''<article class="feat" data-platforms="{esc(' '.join(e['platforms']))}">
   {img}
   <div class="feat-body">
@@ -419,6 +458,7 @@ def render_featured(e: dict) -> str:
     {render_meta(e)}
     <h2 class="feat-title"><a href="{esc(pl["url"])}"{link_attrs(pl["url"])}>{esc(e["title"])}</a></h2>
     {dek}
+    {note}
     <div class="row-foot">{render_platforms(e)}</div>
   </div>
 </article>'''
@@ -429,6 +469,7 @@ def render_list(entries: list[dict]) -> str:
     for n, e in enumerate(entries, 1):
         pl = primary_link(e)
         dek = f'<p class="dek">{esc(e["dek"])}</p>' if e.get("dek") else ""
+        note = render_note(e)
         tags = ('<p class="label tags">' + "".join(f"<span>{esc(t)}</span>" for t in e["tags"]) + "</p>") if e.get("tags") else ""
         rows.append(f'''<li class="row" data-platforms="{esc(' '.join(e['platforms']))}">
   <div class="row-side">
@@ -438,6 +479,7 @@ def render_list(entries: list[dict]) -> str:
   <div class="row-main">
     <h3 class="row-title"><a href="{esc(pl["url"])}"{link_attrs(pl["url"])}>{esc(e["title"])}</a></h3>
     {dek}
+    {note}
     <div class="row-foot">{render_platforms(e)}{tags}</div>
   </div>
 </li>''')
@@ -528,6 +570,7 @@ def local_cover(e: dict) -> str | None:
 
 def render(articles: dict, news: dict) -> None:
     entries = articles["articles"]
+    apply_annotations(entries)
     bl = load_blocklist()   # re-applied at render time, so a --render after editing the blocklist is enough
     news = dict(news, items=[i for i in news.get("items", []) if not blocked(i, bl)])
     doc = INDEX.read_text("utf-8")
@@ -578,7 +621,8 @@ def render_rss(articles: dict, news: dict) -> None:
     for e in articles["articles"]:
         orig = next((l["url"] for l in e["links"] if l["url"].startswith("http")), SITE_URL)
         cats = "".join(f"<category>{xesc(p)}</category>" for p in e["platforms"])
-        desc = f"<description>{xesc(e['dek'])}</description>" if e.get("dek") else ""
+        desc_bits = [x for x in (e.get("dek"), e.get("note")) if x]
+        desc = f"<description>{xesc(' '.join(desc_bits))}</description>" if desc_bits else ""
         date = f"<pubDate>{rfc822(e['date'], articles['updated'])}</pubDate>" if e.get("date") else ""
         items.append(f"<item><title>{xesc(e['title'])}</title><link>{xesc(orig)}</link>"
                      f"<guid isPermaLink=\"true\">{xesc(orig)}</guid>{date}{desc}{cats}</item>")
@@ -605,7 +649,10 @@ def load(name: str) -> dict:
 
 def main() -> None:
     if "--render" in sys.argv:
-        render(load("articles.json"), load("news.json"))
+        articles = load("articles.json")
+        news = load("news.json")
+        render(articles, news)
+        (DATA / "articles.json").write_text(json.dumps(articles, ensure_ascii=False, indent=2) + "\n", "utf-8")
         return
     prev_raw = load("raw.json")
     raw_by_source = {}
@@ -623,6 +670,7 @@ def main() -> None:
     raw = [i for v in raw_by_source.values() for i in v]
     now = dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     entries = merge(raw)
+    apply_annotations(entries)
     articles = {"updated": now, "count": len(entries), "articles": entries}
     (DATA / "raw.json").write_text(json.dumps(raw_by_source, ensure_ascii=False, indent=1) + "\n", "utf-8")
     (DATA / "articles.json").write_text(json.dumps(articles, ensure_ascii=False, indent=2) + "\n", "utf-8")
