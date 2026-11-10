@@ -36,6 +36,9 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add studio/data/articles.json studio/data/news.json studio/data/raw.json studio/feed.xml studio/news.xml studio/index.html
+          # The featured cover is downloaded into studio/assets/covers/ by build_feed.py,
+          # which also removes the previous one. -A stages both, so the page never points at a missing file.
+          git add -A studio/assets/covers
           if git diff --cached --quiet; then echo "No changes."; echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
           git commit -m "Journal: refresh articles and AI news feed"
           git push
