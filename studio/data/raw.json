@@ -2,6 +2,21 @@
  "hackernoon": [
   {
    "platform": "HackerNoon",
+   "url": "https://hackernoon.com/i-typed-my-name-to-grok-it-sent-me-a-phoenix-i-never-asked-for",
+   "title": "I Typed My Name to Grok. It Sent Me a Phoenix I Never Asked For.",
+   "tags": [
+    "grok ai",
+    "ai hallucinations",
+    "ai bias",
+    "elon musk grok"
+   ],
+   "minutes": 9,
+   "date": "2026-11-10",
+   "dek": "I typed my name to Grok on X and got a phoenix image I never asked for. Nine months of public logs show how one-word prompts trigger images.",
+   "image": "https://hackernoon.imgix.net/images/OqQ0LsWyAsP42Wq8BZLqLJR7Uo72-cba2b1y.png"
+  },
+  {
+   "platform": "HackerNoon",
    "url": "https://hackernoon.com/pressing-enter-doesnt-make-you-a-creator",
    "title": "Pressing Enter Doesn’t Make You a Creator",
    "tags": [

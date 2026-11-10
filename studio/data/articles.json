@@ -1,7 +1,32 @@
 {
-  "updated": "2026-11-10T09:12:19Z",
-  "count": 20,
+  "updated": "2026-11-10T13:27:31Z",
+  "count": 21,
   "articles": [
+    {
+      "id": "i-typed-my-name-to-grok-it-sent-me-a-phoenix-i-never-asked-for",
+      "title": "I Typed My Name to Grok. It Sent Me a Phoenix I Never Asked For.",
+      "date": "2026-11-10",
+      "dek": "I typed my name to Grok on X and got a phoenix image I never asked for. Nine months of public logs show how one-word prompts trigger images.",
+      "minutes": 9,
+      "tags": [
+        "grok ai",
+        "ai hallucinations",
+        "ai bias",
+        "elon musk grok"
+      ],
+      "image": "https://hackernoon.imgix.net/images/OqQ0LsWyAsP42Wq8BZLqLJR7Uo72-cba2b1y.png",
+      "lang": "en",
+      "links": [
+        {
+          "platform": "HackerNoon",
+          "url": "https://hackernoon.com/i-typed-my-name-to-grok-it-sent-me-a-phoenix-i-never-asked-for",
+          "date": "2026-11-10"
+        }
+      ],
+      "platforms": [
+        "HackerNoon"
+      ]
+    },
     {
       "id": "pressing-enter-doesnt-make-you-a-creator",
       "title": "Pressing Enter Doesn’t Make You a Creator",

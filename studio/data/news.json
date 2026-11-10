@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-10T09:12:19Z",
+  "updated": "2026-11-10T13:27:31Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "Tear Down Those Guardrails! Meet the Renegades Freeing Chatbots From Corporate Enslavers",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/tear-down-those-guardrails-meet-the-renegades-freeing-chatbots-from-corporate-enslavers/",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "The AI Safety Debate Has Lost the Plot. We Asked 10 Experts What the Real Nightmares Are",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/the-ai-safety-debate-has-lost-the-plot-we-asked-10-experts-what-the-real-nightmares-are/",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
     {
       "title": "Security Flaws Across UK Government Sites Exposed ‘God-Tier’ Information",
       "source": "WIRED",
@@ -17,9 +31,23 @@
       "topic": "AI"
     },
     {
-      "title": "Jensen Huang’s Troubles Leave the AI Industry Reeling",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/jensen-huangs-troubles-leaves-the-ai-industry-reeling/",
+      "title": "Ukraine’s fiber-optic drones get squeezed by AI data center demand",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/gadgets/2026/11/ukraines-fiber-optic-drones-get-squeezed-by-ai-data-center-demand/",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "‘Without storyboards, I feel like I’m in Grand Central station in my underwear’: film’s fightback against AI",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/film/2026/nov/10/storyboard-artists-ai",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "ChatGPT’s Teen Mode could deprive teenagers of a fundamental need | Robin Kirman",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/10/chatgpt-teen-mode-cognitive-skills",
       "date": "2026-11-10",
       "topic": "AI"
     },
@@ -38,16 +66,9 @@
       "topic": "AI"
     },
     {
-      "title": "Trump backs embattled Hegseth and Jensen Huang and says FBI looking into spy allegations – video",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/us-news/video/2026/nov/09/trump-hegseth-jensen-huang",
-      "date": "2026-11-10",
-      "topic": "AI"
-    },
-    {
-      "title": "Qantas to cut 850 Australian jobs and outsource work to India under AI-driven overhaul",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/business/2026/nov/10/qantas-850-job-cuts-outsource-work-to-india-ai-overhaul",
+      "title": "Cyberattacks threaten to make open-source AI a little less open, Hugging Face exec warns",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/10/cyberattacks-threaten-to-make-open-source-ai-a-little-less-open-hugging-face-exec-warns/",
       "date": "2026-11-10",
       "topic": "AI"
     },
@@ -83,13 +104,6 @@
       "title": "AI Agents Are Testing the Limits of Zero-Trust Security",
       "source": "IEEE Spectrum",
       "url": "https://spectrum.ieee.org/zero-trust-agentic-ai-architecture",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "Jensen Huang Hired a PR Firm Known for Handling Sex Scandals Last Year",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/nvidia-ceo-jensen-huang-hired-a-pr-firm-known-for-handling-sex-scandals-last-year/",
       "date": "2026-11-09",
       "topic": "AI"
     },
@@ -139,20 +153,6 @@
       "title": "What could China get from Jensen Huang?",
       "source": "The Verge",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1030328/what-could-china-get-from-jensen-huang",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "Here’s what Trump said he knew about Jensen Huang",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1030446/trump-jensen-huang-press-conference",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "Everything we know so far about the Nvidia spy scandal targeting CEO Jensen Huang",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
       "date": "2026-11-09",
       "topic": "AI"
     },
