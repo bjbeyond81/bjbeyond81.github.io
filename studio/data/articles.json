@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T13:27:31Z",
+  "updated": "2026-11-10T19:52:06Z",
   "count": 21,
   "articles": [
     {
@@ -21,10 +21,16 @@
           "platform": "HackerNoon",
           "url": "https://hackernoon.com/i-typed-my-name-to-grok-it-sent-me-a-phoenix-i-never-asked-for",
           "date": "2026-11-10"
+        },
+        {
+          "platform": "Medium",
+          "url": "https://medium.com/@bj_beyond/i-typed-my-name-to-grok-it-sent-me-a-phoenix-i-never-asked-for-2c6bf5c1e7e3",
+          "date": "2026-11-10"
         }
       ],
       "platforms": [
-        "HackerNoon"
+        "HackerNoon",
+        "Medium"
       ],
       "note": "Published November 10, 2026 on HackerNoon · Featured as a HackerNoon top story on November 10, 2026",
       "note_links": [

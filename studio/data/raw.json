@@ -109,6 +109,20 @@
  "medium": [
   {
    "platform": "Medium",
+   "url": "https://medium.com/@bj_beyond/i-typed-my-name-to-grok-it-sent-me-a-phoenix-i-never-asked-for-2c6bf5c1e7e3",
+   "title": "I Typed My Name to Grok. It Sent Me a Phoenix I Never Asked For.",
+   "date": "2026-11-10",
+   "dek": "Cover background: the image Grok attached to its reply to “@grok bj beyond”, posted by @grok on 7 November 2026 ( source ). Text overlay mine.",
+   "tags": [
+    "technology",
+    "experiment",
+    "artificial intelligence",
+    "ai"
+   ],
+   "minutes": 10
+  },
+  {
+   "platform": "Medium",
    "url": "https://medium.com/@bj_beyond/your-ai-output-looks-finished-are-you-cf344e73a569",
    "title": "Your AI Output Looks Finished. Are You?",
    "date": "2026-11-08",

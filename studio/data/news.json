@@ -1,7 +1,14 @@
 {
-  "updated": "2026-11-10T13:27:31Z",
+  "updated": "2026-11-10T19:52:06Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "This New Linux-Based Desktop Operating System Is Built for AI Nerds",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/kora-new-linux-based-desktop-operating-system-is-built-for-ai-nerds/",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
     {
       "title": "Tear Down Those Guardrails! Meet the Renegades Freeing Chatbots From Corporate Enslavers",
       "source": "WIRED",
@@ -24,9 +31,9 @@
       "topic": "AI"
     },
     {
-      "title": "A New AI Tool From Google DeepMind Proved the Signal Protocol Is Secure",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/a-new-ai-tool-from-google-deepmind-formally-verified-the-signal-protocol/",
+      "title": "DeepMind reveals Gemini Robotics 2.5 and open safety benchmark \"ASIMOV-jailbreak\"",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak/",
       "date": "2026-11-10",
       "topic": "AI"
     },
@@ -38,7 +45,49 @@
       "topic": "AI"
     },
     {
-      "title": "‘Without storyboards, I feel like I’m in Grand Central station in my underwear’: film’s fightback against AI",
+      "title": "The US is winning the AI race. Jensen Huang could have blown it",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1031063/jensen-huang-ai-race-us-china-spy",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "ChatGPT is getting verified AI ‘Business Agents’",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1030552/openai-chatgpt-business-agents-hub",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "The indie game community is in disarray over AI and Big Walk",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/games/1030994/big-walk-independent-games-festival-igf-ai",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "Anthropic has its own AI-powered office suite now",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1030709/anthropic-has-its-own-ai-powered-office-suite-now",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "Anthropic targets valuation of up to $1.4tn in stock market flotation",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/10/anthropic-valuation-stock-market-flotation-ipo-wall-street-ai",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "Nvidia shaken by scandal amid wider political new order for big tech",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/global/2026/nov/10/nvidias-silicon-valley-political-power",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "Even Martin Scorsese uses AI for storyboards. Can the art survive?",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/film/2026/nov/10/storyboard-artists-ai",
       "date": "2026-11-10",
@@ -52,44 +101,30 @@
       "topic": "AI"
     },
     {
-      "title": "Australia to introduce mandatory reporting after OpenAI hack to combat artificial intelligence ‘going rogue’",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/10/australia-manadatory-reporting-openai-medicare-hack",
-      "date": "2026-11-10",
-      "topic": "AI"
-    },
-    {
-      "title": "Mandatory AI safety and security protections announced after OpenAI breach of Medicare – video",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/australia-news/video/2026/nov/10/mandatory-ai-safety-and-security-protections-announced-after-openai-breach-of-medicare-video",
-      "date": "2026-11-10",
-      "topic": "AI"
-    },
-    {
-      "title": "Cyberattacks threaten to make open-source AI a little less open, Hugging Face exec warns",
+      "title": "Oura to acquire AI-native primary care startup Counsel Health for $625M",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/10/cyberattacks-threaten-to-make-open-source-ai-a-little-less-open-hugging-face-exec-warns/",
+      "url": "https://techcrunch.com/2026/11/10/oura-to-acquire-ai-native-primary-care-startup-counsel-health-for-625m/",
       "date": "2026-11-10",
       "topic": "AI"
     },
     {
-      "title": "Otter AI can now follow conversations across 30+ languages",
+      "title": "PSI is trying to make a business out of AI-driven scientific discovery",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/09/otter-ai-can-now-follow-conversations-across-30-languages/",
+      "url": "https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/",
       "date": "2026-11-10",
       "topic": "AI"
     },
     {
-      "title": "Anthropic reportedly plans to move forward with IPO plans",
+      "title": "OpenAI rolls out new business profiles, making ChatGPT just a little bit more like Google",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/09/anthropic-reportedly-plans-to-move-forward-with-ipo-plans/",
+      "url": "https://techcrunch.com/2026/11/10/openai-rolls-out-new-business-profiles-making-chatgpt-just-a-little-bit-more-like-google/",
       "date": "2026-11-10",
       "topic": "AI"
     },
     {
-      "title": "Jensen Huang reportedly engaged a PR firm with a history of handling high-profile sex scandals a year ago",
+      "title": "Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/09/jensen-huang-reportedly-engaged-a-pr-firm-with-a-history-of-handling-high-profile-sex-scandals-a-year-ago/",
+      "url": "https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/",
       "date": "2026-11-10",
       "topic": "AI"
     },
@@ -118,41 +153,6 @@
       "title": "Nancy Pelosi’s replacement is ready to regulate AI",
       "source": "MIT Technology Review",
       "url": "https://www.technologyreview.com/2026/11/09/1148182/nancy-pelosis-replacement-is-ready-to-regulate-ai/",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "Innovating with AI in the special chemicals industry",
-      "source": "MIT Technology Review",
-      "url": "https://www.technologyreview.com/2026/11/09/1147654/innovating-with-ai-in-the-special-chemicals-industry/",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "Claude Code is accidentally exposing secrets all over GitHub",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/ai/2026/11/claude-code-settings-files-expose-thousands-of-secrets-on-github/",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "Nvidia CEO's affair becomes a national security problem",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/tech-policy/2026/11/ceo-jensen-huang-admits-affair-as-nvidia-probes-possible-chinese-espionage/",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "David Ellison says AI could be the ‘biggest creative unlock in modern history’",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/entertainment/1030510/paramount-skydance-david-ellison-ai",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "What could China get from Jensen Huang?",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1030328/what-could-china-get-from-jensen-huang",
       "date": "2026-11-09",
       "topic": "AI"
     },
