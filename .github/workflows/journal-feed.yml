@@ -1,7 +1,8 @@
 name: Journal feed
 # Rebuilds the BJ Beyond Journal (studio/) from the platforms' public feeds:
 # studio/data/articles.json, studio/data/news.json, studio/data/raw.json,
-# studio/feed.xml, studio/news.xml and the pre-rendered blocks in studio/index.html.
+# studio/feed.xml, studio/news.xml, studio/sitemap.xml and the pre-rendered blocks in studio/index.html.
+# sitemap.xml lists the Journal homepage and each hosted article page, never external headlines.
 # Commits only when something changed. Pages deploys from main (branch deploy), so
 # the commit itself publishes the update.
 on:
@@ -35,7 +36,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add studio/data/articles.json studio/data/news.json studio/data/raw.json studio/feed.xml studio/news.xml studio/index.html
+          git add studio/data/articles.json studio/data/news.json studio/data/raw.json studio/feed.xml studio/news.xml studio/sitemap.xml studio/index.html
           # The featured cover is downloaded into studio/assets/covers/ by build_feed.py,
           # which also removes the previous one. -A stages both, so the page never points at a missing file.
           git add -A studio/assets/covers
