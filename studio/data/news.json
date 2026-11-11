@@ -1,7 +1,63 @@
 {
-  "updated": "2026-11-10T20:27:53Z",
+  "updated": "2026-11-11T12:42:55Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "How to use GPTZero Writing Report and Writing Replay",
+      "source": "GPTZero",
+      "url": "https://gptzero.me/news/gptzero-writing-report/",
+      "date": "2026-11-11",
+      "topic": "AI detection"
+    },
+    {
+      "title": "A 13-Year-Old Asked AI About Suicide on Her School Laptop. It Didn’t Get Flagged for Weeks",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/teen-girl-asked-gemini-about-suicide-for-months-until-it-was-flagged/",
+      "date": "2026-11-11",
+      "topic": "AI"
+    },
+    {
+      "title": "AI datacentres plan on-site power stations on huge scale despite climate risks, research reveals",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/nov/11/ai-datacentres-on-site-gas-fired-power-stations",
+      "date": "2026-11-11",
+      "topic": "AI"
+    },
+    {
+      "title": "AI has made it ‘close to impossible’ to assess university coursework, regulator says",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/education/2026/nov/11/ai-close-to-impossible-assess-university-coursework-regulator",
+      "date": "2026-11-11",
+      "topic": "AI"
+    },
+    {
+      "title": "Australians are not streaming Australian music. Why the hell not?! | First Dog on the Moon",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/picture/2026/nov/11/australians-are-not-streaming-australian-music-why-the-hell-not",
+      "date": "2026-11-11",
+      "topic": "AI"
+    },
+    {
+      "title": "From the archive: Weizenbaum’s nightmares: how the inventor of the first chatbot turned against AI – podcast",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/news/audio/2026/nov/11/from-the-archive-weizenbaums-nightmares-how-the-inventor-of-the-first-chatbot-turned-against-ai-podcast",
+      "date": "2026-11-11",
+      "topic": "AI"
+    },
+    {
+      "title": "Nvidia’s crisis has corporate governance experts reaching for the popcorn",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/10/nvidias-crisis-has-corporate-governance-experts-reaching-for-the-popcorn/",
+      "date": "2026-11-11",
+      "topic": "AI"
+    },
+    {
+      "title": "What is the 'Dead Internet Theory' and should humanity be worried?",
+      "source": "Engadget",
+      "url": "https://www.engadget.com/2307790/what-is-dead-internet-theory/",
+      "date": "2026-11-10",
+      "topic": "AI detection"
+    },
     {
       "title": "This New Linux-Based Desktop Operating System Is Built for AI Nerds",
       "source": "WIRED",
@@ -24,9 +80,23 @@
       "topic": "AI"
     },
     {
-      "title": "Security Flaws Across UK Government Sites Exposed ‘God-Tier’ Information",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/security-flaws-across-uk-government-sites-exposed-god-tier-information/",
+      "title": "Ring cameras go mobile as Amazon debuts AI-powered security drone and robot",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/ai/2026/11/ring-cameras-go-mobile-as-amazon-debuts-ai-powered-security-drone-and-robot/",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "Grok Build coding agent leaks oodles of confidential info, some belonging to SpaceXSI",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/security/2026/11/grok-build-coding-agent-leaks-oodles-of-confidential-info-some-belonging-to-spacexsi/",
+      "date": "2026-11-10",
+      "topic": "AI"
+    },
+    {
+      "title": "What happens to mathematics when AI becomes an oracle?",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/science/2026/11/what-happens-to-mathematics-when-ai-becames-an-oracle/",
       "date": "2026-11-10",
       "topic": "AI"
     },
@@ -34,13 +104,6 @@
       "title": "DeepMind reveals Gemini Robotics 2.5 and open safety benchmark \"ASIMOV-jailbreak\"",
       "source": "Ars Technica",
       "url": "https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak/",
-      "date": "2026-11-10",
-      "topic": "AI"
-    },
-    {
-      "title": "Ukraine’s fiber-optic drones get squeezed by AI data center demand",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/gadgets/2026/11/ukraines-fiber-optic-drones-get-squeezed-by-ai-data-center-demand/",
       "date": "2026-11-10",
       "topic": "AI"
     },
@@ -73,30 +136,16 @@
       "topic": "AI"
     },
     {
-      "title": "Anthropic targets valuation of up to $1.4tn in stock market flotation",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/10/anthropic-valuation-stock-market-flotation-ipo-wall-street-ai",
+      "title": "OpenAI acquires Odessia, travel startup created by Sonder founder",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/",
       "date": "2026-11-10",
       "topic": "AI"
     },
     {
-      "title": "Nvidia shaken by scandal amid wider political new order for big tech",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/global/2026/nov/10/nvidias-silicon-valley-political-power",
-      "date": "2026-11-10",
-      "topic": "AI"
-    },
-    {
-      "title": "Even Martin Scorsese uses AI for storyboards. Can the art survive?",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/film/2026/nov/10/storyboard-artists-ai",
-      "date": "2026-11-10",
-      "topic": "AI"
-    },
-    {
-      "title": "ChatGPT’s Teen Mode could deprive teenagers of a fundamental need | Robin Kirman",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/10/chatgpt-teen-mode-cognitive-skills",
+      "title": "OpenAI, Anthropic face new oversight as New York’s AI safety law takes effect",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/",
       "date": "2026-11-10",
       "topic": "AI"
     },
@@ -108,53 +157,11 @@
       "topic": "AI"
     },
     {
-      "title": "Oura to acquire AI-native primary care startup Counsel Health for $625M",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/10/oura-to-acquire-ai-native-primary-care-startup-counsel-health-for-625m/",
-      "date": "2026-11-10",
-      "topic": "AI"
-    },
-    {
-      "title": "PSI is trying to make a business out of AI-driven scientific discovery",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/10/psi-is-trying-to-make-a-business-out-of-ai-driven-scientific-discovery/",
-      "date": "2026-11-10",
-      "topic": "AI"
-    },
-    {
-      "title": "OpenAI rolls out new business profiles, making ChatGPT just a little bit more like Google",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/10/openai-rolls-out-new-business-profiles-making-chatgpt-just-a-little-bit-more-like-google/",
-      "date": "2026-11-10",
-      "topic": "AI"
-    },
-    {
       "title": "A year after plagiarism allegations and author’s retraction request, Elsevier is still investigating",
       "source": "Retraction Watch",
       "url": "https://retractionwatch.com/2026/11/09/forest-policy-economics-land-use-policy-plagiarism-allegations-retraction-request-elsevier/",
       "date": "2026-11-09",
       "topic": "AI detection"
-    },
-    {
-      "title": "AI Agents Are Testing the Limits of Zero-Trust Security",
-      "source": "IEEE Spectrum",
-      "url": "https://spectrum.ieee.org/zero-trust-agentic-ai-architecture",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "The backlash about data centers might really just be about electricity",
-      "source": "MIT Technology Review",
-      "url": "https://www.technologyreview.com/2026/11/09/1148194/the-backlash-about-data-centers-might-really-just-be-about-electricity/",
-      "date": "2026-11-09",
-      "topic": "AI"
-    },
-    {
-      "title": "Nancy Pelosi’s replacement is ready to regulate AI",
-      "source": "MIT Technology Review",
-      "url": "https://www.technologyreview.com/2026/11/09/1148182/nancy-pelosis-replacement-is-ready-to-regulate-ai/",
-      "date": "2026-11-09",
-      "topic": "AI"
     },
     {
       "title": "AI Text Watermarking May Not Be Able to Meet the E.U.’s New Rules",
@@ -195,13 +202,6 @@
       "title": "Introducing GPTZero 4o",
       "source": "GPTZero",
       "url": "https://gptzero.me/news/introducing-gptzero-4o/",
-      "date": "2026-10-18",
-      "topic": "AI detection"
-    },
-    {
-      "title": "GPTZero Investigation: One in Five Words at the UN General Assembly are AI-Generated",
-      "source": "GPTZero",
-      "url": "https://gptzero.me/news/words-from-the-machine-is-ai-ghostwriting-the-united-nations-general-assembly/",
       "date": "2026-10-18",
       "topic": "AI detection"
     },
