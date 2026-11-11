@@ -3,7 +3,7 @@
 <channel>
 <title>BJ Beyond Journal</title>
 <link>https://bjbeyond81.github.io/studio/</link>
-<atom:link href="https://bjbeyond81.github.io/studio/feed.xml" rel="self" type="application/rss+xml"/>
+<atom:link href="https://bjbeyond.it/journal/feed.xml" rel="self" type="application/rss+xml"/>
 <description>Every essay and public experiment by BJ Beyond, collected in one index.</description>
 <language>en</language>
 <lastBuildDate>Tue, 10 Nov 2026 20:27:53 +0000</lastBuildDate>

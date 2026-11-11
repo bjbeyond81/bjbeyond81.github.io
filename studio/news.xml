@@ -3,7 +3,7 @@
 <channel>
 <title>BJ Beyond Journal: AI &amp; AI text detection news</title>
 <link>https://bjbeyond81.github.io/studio/#news</link>
-<atom:link href="https://bjbeyond81.github.io/studio/news.xml" rel="self" type="application/rss+xml"/>
+<atom:link href="https://bjbeyond.it/journal/news.xml" rel="self" type="application/rss+xml"/>
 <description>External headlines about AI and AI-text detection from publishers' official RSS feeds. Title, source and link only; headlines belong to their publishers. Removal requests: https://github.com/bjbeyond81/bjbeyond81.github.io/issues/new?template=removal-request.yml</description>
 <language>en</language>
 <lastBuildDate>Tue, 10 Nov 2026 20:27:53 +0000</lastBuildDate>
