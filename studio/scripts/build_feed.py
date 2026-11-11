@@ -37,6 +37,10 @@ ROOT = Path(__file__).resolve().parents[1]          # studio/
 DATA = ROOT / "data"
 INDEX = ROOT / "index.html"
 SITE_URL = "https://bjbeyond81.github.io/studio/"
+# Public subscription URLs. Cloudflare counts requests on these; the files
+# written below stay the uncounted github.io mirrors.
+ARTICLES_FEED_URL = "https://bjbeyond.it/journal/feed.xml"
+NEWS_FEED_URL = "https://bjbeyond.it/journal/news.xml"
 UA = "Mozilla/5.0 (compatible; BJBeyondJournal/1.0; +https://bjbeyond81.github.io/studio/)"
 ROME = dt.timezone(dt.timedelta(hours=1))  # date-only output; DST shift never moves a 18:00 UTC post across midnight
 PLATFORM_ORDER = ["HackerNoon", "bjbeyond.it", "Substack", "Medium", "BJ Beyond Journal"]
@@ -629,7 +633,7 @@ def render_rss(articles: dict, news: dict) -> None:
         date = f"<pubDate>{rfc822(e['date'], articles['updated'])}</pubDate>" if e.get("date") else ""
         items.append(f"<item><title>{xesc(e['title'])}</title><link>{xesc(orig)}</link>"
                      f"<guid isPermaLink=\"true\">{xesc(orig)}</guid>{date}{desc}{cats}</item>")
-    write_rss(ROOT / "feed.xml", "BJ Beyond Journal", SITE_URL, SITE_URL + "feed.xml",
+    write_rss(ROOT / "feed.xml", "BJ Beyond Journal", SITE_URL, ARTICLES_FEED_URL,
               "Every essay and public experiment by BJ Beyond, collected in one index.", articles["updated"], items)
     items = []
     for i in news["items"]:
@@ -639,7 +643,7 @@ def render_rss(articles: dict, news: dict) -> None:
         desc = f"<description>{xesc(i['source'])}</description>" if i.get("source") else ""
         items.append(f"<item><title>{xesc(i['title'])}</title>"
                      f"<link>{xesc(i['url'])}</link><guid isPermaLink=\"true\">{xesc(i['url'])}</guid>{date}{desc}{cat}</item>")
-    write_rss(ROOT / "news.xml", "BJ Beyond Journal: AI & AI text detection news", SITE_URL + "#news", SITE_URL + "news.xml",
+    write_rss(ROOT / "news.xml", "BJ Beyond Journal: AI & AI text detection news", SITE_URL + "#news", NEWS_FEED_URL,
               "External headlines about AI and AI-text detection from publishers' official RSS feeds. Title, source and link only; headlines belong to their publishers. Removal requests: https://github.com/bjbeyond81/bjbeyond81.github.io/issues/new?template=removal-request.yml",
               news["updated"], items)
 
