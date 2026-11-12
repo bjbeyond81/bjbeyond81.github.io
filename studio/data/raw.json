@@ -109,6 +109,17 @@
  "medium": [
   {
    "platform": "Medium",
+   "url": "https://medium.com/@bj_beyond/help-me-complete-this-test-post-grok-reborn-and-send-the-reply-227c576b4d91",
+   "title": "Help Me Complete This Test: Post “@grok reborn” and Send the Reply",
+   "date": "2026-11-12",
+   "dek": "I need a few more data points to finish documenting a small, repeatable behavior I have been tracking since August.",
+   "tags": [
+    "ai"
+   ],
+   "minutes": 2
+  },
+  {
+   "platform": "Medium",
    "url": "https://medium.com/@bj_beyond/i-typed-my-name-to-grok-it-sent-me-a-phoenix-i-never-asked-for-2c6bf5c1e7e3",
    "title": "I Typed My Name to Grok. It Sent Me a Phoenix I Never Asked For.",
    "date": "2026-11-10",

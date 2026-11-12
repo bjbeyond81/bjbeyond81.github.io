@@ -1,7 +1,28 @@
 {
-  "updated": "2026-11-12T13:45:15Z",
-  "count": 21,
+  "updated": "2026-11-12T20:48:30Z",
+  "count": 22,
   "articles": [
+    {
+      "id": "help-me-complete-this-test-post-grok-reborn-and-send-the-reply",
+      "title": "Help Me Complete This Test: Post “@grok reborn” and Send the Reply",
+      "date": "2026-11-12",
+      "dek": "I need a few more data points to finish documenting a small, repeatable behavior I have been tracking since August.",
+      "minutes": 2,
+      "tags": [
+        "ai"
+      ],
+      "lang": "en",
+      "links": [
+        {
+          "platform": "Medium",
+          "url": "https://medium.com/@bj_beyond/help-me-complete-this-test-post-grok-reborn-and-send-the-reply-227c576b4d91",
+          "date": "2026-11-12"
+        }
+      ],
+      "platforms": [
+        "Medium"
+      ]
+    },
     {
       "id": "i-typed-my-name-to-grok-it-sent-me-a-phoenix-i-never-asked-for",
       "title": "I Typed My Name to Grok. It Sent Me a Phoenix I Never Asked For.",

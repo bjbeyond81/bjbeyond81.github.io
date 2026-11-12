@@ -1,74 +1,144 @@
 {
-  "updated": "2026-11-12T13:45:15Z",
+  "updated": "2026-11-12T20:48:30Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
     {
-      "title": "Zimbabwean author Simbarashe Kundizeza cleared of using AI to write prize-winning story",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/books/2026/nov/12/zimbabwean-author-simbarashe-kundizeza-cleared-ai-caine-prize-winning-story",
-      "date": "2026-11-12",
-      "topic": "AI detection"
-    },
-    {
-      "title": "Alex Karp Said He’s a ‘Progressive.’ OK! Here’s Some Other Stuff He’s Said Recently",
+      "title": "Jensen Huang Didn’t Name His Own Replacement as One of Tech’s Most Powerful Women",
       "source": "WIRED",
-      "url": "https://www.wired.com/story/alex-karp-said-hes-a-progressive-ok-heres-some-other-stuff-hes-said-recently/",
+      "url": "https://www.wired.com/story/jensen-huang-colette-kress-replacement-powerful-women-in-tech/",
       "date": "2026-11-12",
       "topic": "AI"
     },
     {
-      "title": "Google Wanted Spirit Airlines Data. Flight Attendants Found a Way to Opt Out",
+      "title": "Jensen Huang’s $470 Billion Affair",
       "source": "WIRED",
-      "url": "https://www.wired.com/story/google-wanted-spirit-airlines-data-flight-attendants-found-a-way-to-opt-out/",
+      "url": "https://www.wired.com/story/uncanny-valley-podcast-jensen-huangs-dollar470-billion-affair/",
       "date": "2026-11-12",
       "topic": "AI"
     },
     {
-      "title": "AI helped UK defy expectations – but will economy’s resilience fizzle out?",
+      "title": "Google DeepMind Staff Tap the UK Government to Escalate Their Unionization Fight",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/google-deepmind-staff-escalate-their-union-fight/",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "Jensen Huang Basically Lit More Than $1 Trillion on Fire in Less Than a Month",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/jensen-huang-tanked-a-trillion-dollars-in-less-than-a-month/",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "Ars Live: What drone attacks on data centers mean for modern life in the cloud",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/gadgets/2026/11/ars-live-can-the-cloud-survive-drone-strikes-on-data-centers/",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "Google rolls out Gemini 4 Hydrogen, finally replacing 3.8 Flash",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "Google faces calls for AI moratoriums in schools after Gemini pilot backlash",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "Google pushes privacy angle as Gemini-powered smartglasses debut starting at $395",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/google/2026/11/google-pushes-privacy-angle-as-gemini-powered-smartglasses-debut-starting-at-395/",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "No, AI agents did not discover a previously unknown Maya site",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032125/ai-agents-maya-site-archeology-discovery",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "Oh, Palantir is ‘progressive’ now, is it?",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032126/alex-baby-you-were-recorded-on-video",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "The Jensen Huang scandal is hardly over",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032069/jensen-huang-resignation-affair-chips-smuggling",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "AI chatbots are recommending fake retail websites, study finds",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032020/gemini-chatgpt-perplexity-shopping-test-risky-fake-websites-citations",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "Jensen Huang was a busted flush at Nvidia – he had to go | Nils Pratley",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/business/2026/nov/12/ai-uk-economy-john-healey",
+      "url": "https://www.theguardian.com/technology/nils-pratley-on-finance/2026/nov/12/jensen-huang-was-a-busted-flush-at-nvidia-he-had-to-go",
       "date": "2026-11-12",
       "topic": "AI"
     },
     {
-      "title": "Billions lost and markets roiled by one man’s indiscretion. Isn’t it now clear that these tech bros are too powerful? | Aditya Chakrabortty",
+      "title": "Jensen Huang built an AI kingdom. Now he’s gone, will Nvidia’s ramparts be breached?",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/12/billions-lost-markets-roiled-one-man-indiscretion-tech-bro-jensen-huang-affair-nvidia",
+      "url": "https://www.theguardian.com/technology/2026/nov/12/jensen-huang-built-an-ai-kingdom-now-hes-gone-will-nvidias-ramparts-be-breached",
       "date": "2026-11-12",
       "topic": "AI"
     },
     {
-      "title": "NHS England deletes ‘misleading’ claim 137 trusts benefiting from Palantir AI tools",
+      "title": "From washing dishes at Denny’s to rockstar of AI: the rise and fall of Nvidia’s Jensen Huang",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/12/nhs-england-deletes-misleading-claim-137-trusts-benefiting-from-palantir-ai-tools",
+      "url": "https://www.theguardian.com/technology/2026/nov/12/rise-and-fall-of-nvidia-ceo-jensen-huang-profile",
       "date": "2026-11-12",
       "topic": "AI"
     },
     {
-      "title": "Nine Korean startups vie for a spot in Disrupt 2027’s Startup Battlefield 200 competition",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/12/nine-korean-startups-vie-for-a-spot-in-disrupt-2027s-startup-battlefield-200-competition/",
+      "title": "US public workers are fighting to protect their jobs from AI – and some are winning",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/12/us-workers-governments-unions-ai",
       "date": "2026-11-12",
       "topic": "AI"
     },
     {
-      "title": "Who could replace Jensen Huang? A highly unscientific list of possible successors",
+      "title": "Jensen Huang was having a third affair, Reuters reports",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/11/who-could-replace-jensen-huang-a-highly-unscientific-list-of-possible-successors/",
+      "url": "https://techcrunch.com/2026/11/12/jensen-huang-was-having-a-third-affair-reuters-reports/",
       "date": "2026-11-12",
       "topic": "AI"
     },
     {
-      "title": "The unfolding Jensen Huang scandal: a timeline",
+      "title": "Google’s latest Search upgrade promises better answers to your most complicated questions",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+      "url": "https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/",
       "date": "2026-11-12",
       "topic": "AI"
     },
     {
-      "title": "Nvidia’s stock drops as board reportedly preps to oust CEO Jensen Huang",
+      "title": "Nectar launches an AI agent to automate creator discovery and outreach for brands",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/",
+      "url": "https://techcrunch.com/2026/11/12/nectar-launches-an-ai-agent-to-automate-creator-discovery-and-outreach-for-brands/",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "Jensen Huang’s exit puts Nvidia’s support for open source in question",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/12/jensen-huangs-exit-puts-nvidias-support-for-open-source-in-question/",
       "date": "2026-11-12",
       "topic": "AI"
     },
@@ -87,81 +157,11 @@
       "topic": "AI"
     },
     {
-      "title": "I Saw the Future of Robotics in a Virtual Duck That Chases My Cat",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/i-trained-a-microduck-to-be-my-cats-butler/",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "A Startup Wants to Fight AI Bioweapons With AI",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/startup-fights-ai-bioweapons-with-ai/",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "Taiwan’s chipmaking giant TSMC to invest $1B in Anthropic, OpenAI",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "Big Walk used AI to fix a bug. Now the indie gaming world is having a reckoning.",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/gaming/2026/11/big-walk-used-ai-to-fix-a-bug-now-the-indie-gaming-world-is-having-a-reckoning/",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "Google DeepMind just mathematically verified key parts of Signal",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/ai/2026/11/signals-encryption-just-passed-an-ai-powered-mathematical-checkup/",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "Nvidia is reportedly preparing to fire Jensen Huang",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1031652/jensen-huang-rumor",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "United won’t let your AI agent book your flight",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "Google’s Tabletop AI experiment lets you build custom collaboration apps",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1031526/google-tabletop-ai-experiment-waitlist-availability",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "Google’s AlphaGenome 2 zooms in on the cellular roots of disease",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1031524/google-deepmind-alphagenome-2-genetic-ai-model",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
       "title": "GPTZero vs Pangram: AI Detector Accuracy Comparison",
       "source": "GPTZero",
       "url": "https://gptzero.me/news/gptzero-vs-pangram/",
       "date": "2026-11-10",
       "topic": "AI detection"
-    },
-    {
-      "title": "Ring cameras go mobile as Amazon debuts AI-powered security drone and robot",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/ai/2026/11/ring-cameras-go-mobile-as-amazon-debuts-ai-powered-security-drone-and-robot/",
-      "date": "2026-11-10",
-      "topic": "AI"
     },
     {
       "title": "A year after plagiarism allegations and author’s retraction request, Elsevier is still investigating",
