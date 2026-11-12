@@ -1,7 +1,77 @@
 {
-  "updated": "2026-11-11T20:11:38Z",
+  "updated": "2026-11-12T13:45:15Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "Zimbabwean author Simbarashe Kundizeza cleared of using AI to write prize-winning story",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/books/2026/nov/12/zimbabwean-author-simbarashe-kundizeza-cleared-ai-caine-prize-winning-story",
+      "date": "2026-11-12",
+      "topic": "AI detection"
+    },
+    {
+      "title": "Alex Karp Said He’s a ‘Progressive.’ OK! Here’s Some Other Stuff He’s Said Recently",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/alex-karp-said-hes-a-progressive-ok-heres-some-other-stuff-hes-said-recently/",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "Google Wanted Spirit Airlines Data. Flight Attendants Found a Way to Opt Out",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/google-wanted-spirit-airlines-data-flight-attendants-found-a-way-to-opt-out/",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "AI helped UK defy expectations – but will economy’s resilience fizzle out?",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/nov/12/ai-uk-economy-john-healey",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "Billions lost and markets roiled by one man’s indiscretion. Isn’t it now clear that these tech bros are too powerful? | Aditya Chakrabortty",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/12/billions-lost-markets-roiled-one-man-indiscretion-tech-bro-jensen-huang-affair-nvidia",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "NHS England deletes ‘misleading’ claim 137 trusts benefiting from Palantir AI tools",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/12/nhs-england-deletes-misleading-claim-137-trusts-benefiting-from-palantir-ai-tools",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "Nine Korean startups vie for a spot in Disrupt 2027’s Startup Battlefield 200 competition",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/12/nine-korean-startups-vie-for-a-spot-in-disrupt-2027s-startup-battlefield-200-competition/",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "Who could replace Jensen Huang? A highly unscientific list of possible successors",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/11/who-could-replace-jensen-huang-a-highly-unscientific-list-of-possible-successors/",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "The unfolding Jensen Huang scandal: a timeline",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
+    {
+      "title": "Nvidia’s stock drops as board reportedly preps to oust CEO Jensen Huang",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/11/nvidias-stock-drops-as-board-reportedly-preps-to-oust-ceo-jensen-huang/",
+      "date": "2026-11-12",
+      "topic": "AI"
+    },
     {
       "title": "When Does It Actually Make Sense to Put AI Into Products?",
       "source": "IEEE Spectrum",
@@ -31,20 +101,6 @@
       "topic": "AI"
     },
     {
-      "title": "The AO3 Shutdown Is Pitting Fanfic Readers Against Authors",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/the-ao3-shutdown-is-pitting-fanfic-readers-against-authors/",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "China’s Nvidia Honeypot Isn’t Surprising. Jensen Huang Fell for It Anyway",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/chinas-nvidia-honeypot-isnt-surprising-jensen-huang-fell-for-it-anyway/",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
       "title": "Taiwan’s chipmaking giant TSMC to invest $1B in Anthropic, OpenAI",
       "source": "Ars Technica",
       "url": "https://arstechnica.com/ai/2026/11/taiwans-chipmaking-giant-tsmc-to-invest-1b-in-anthropic-openai/",
@@ -66,6 +122,20 @@
       "topic": "AI"
     },
     {
+      "title": "Nvidia is reportedly preparing to fire Jensen Huang",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1031652/jensen-huang-rumor",
+      "date": "2026-11-11",
+      "topic": "AI"
+    },
+    {
+      "title": "United won’t let your AI agent book your flight",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1031623/united-unauthorized-ai-agents",
+      "date": "2026-11-11",
+      "topic": "AI"
+    },
+    {
       "title": "Google’s Tabletop AI experiment lets you build custom collaboration apps",
       "source": "The Verge",
       "url": "https://www.theverge.com/tech/1031526/google-tabletop-ai-experiment-waitlist-availability",
@@ -80,69 +150,6 @@
       "topic": "AI"
     },
     {
-      "title": "Adobe’s AI experiments let you walk around in photos and interview your characters",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1031505/adobe-max-2026-sneaks-experiments-ai",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "Hacked fridges and other dangers lurking in the ‘internet of shit’ | Letters",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/11/hacked-fridges-and-other-dangers-lurking-in-the-internet-of-shit",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "AI datacentres plan on-site power stations on huge scale despite climate risks, research reveals",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/world/2026/nov/11/ai-datacentres-on-site-gas-fired-power-stations",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "AI has made it ‘close to impossible’ to assess university coursework, regulator says",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/education/2026/nov/11/ai-close-to-impossible-assess-university-coursework-regulator",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "Australians are not streaming Australian music. Why the hell not?! | First Dog on the Moon",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/picture/2026/nov/11/australians-are-not-streaming-australian-music-why-the-hell-not",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "How backlash and red tape continue to slow data centers post-Blue Wave",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/podcast/how-backlash-and-red-tape-continue-to-slow-data-centers-post-blue-wave/",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "CoreWeave turns to customer prepayments, shorter contracts to fund AI growth",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/11/coreweave-turns-to-customer-prepayments-shorter-contracts-to-fund-ai-growth/",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "With $720M round, Britain’s Fractile gets a leg up in the race for AI chips",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
-      "title": "Congress to call Jensen Huang in to answer for alleged Chinese spy affair",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/11/congress-to-call-jensen-huang-in-to-answer-for-alleged-chinese-spy-affair/",
-      "date": "2026-11-11",
-      "topic": "AI"
-    },
-    {
       "title": "GPTZero vs Pangram: AI Detector Accuracy Comparison",
       "source": "GPTZero",
       "url": "https://gptzero.me/news/gptzero-vs-pangram/",
@@ -153,13 +160,6 @@
       "title": "Ring cameras go mobile as Amazon debuts AI-powered security drone and robot",
       "source": "Ars Technica",
       "url": "https://arstechnica.com/ai/2026/11/ring-cameras-go-mobile-as-amazon-debuts-ai-powered-security-drone-and-robot/",
-      "date": "2026-11-10",
-      "topic": "AI"
-    },
-    {
-      "title": "The US is winning the AI race. Jensen Huang could have blown it",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1031063/jensen-huang-ai-race-us-china-spy",
       "date": "2026-11-10",
       "topic": "AI"
     },
