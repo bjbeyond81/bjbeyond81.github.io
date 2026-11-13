@@ -1,11 +1,60 @@
 {
-  "updated": "2026-11-13T13:05:51Z",
+  "updated": "2026-11-13T20:29:18Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "How it feels to battle with a flood of AI-generated complaints | Letters",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/13/how-it-feels-to-battle-with-a-flood-of-ai-generated-complaints",
+      "date": "2026-11-13",
+      "topic": "AI detection"
+    },
+    {
+      "title": "How Microcredentials Help Engineers Build Trustworthy AI",
+      "source": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/microcredentials-trustworthy-ai",
+      "date": "2026-11-13",
+      "topic": "AI"
+    },
+    {
+      "title": "Microsoft 365 Crawls Back to Life After a 24-Hour Outage",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/microsoft-365-crawls-back-to-life-after-a-24-hour-outage/",
+      "date": "2026-11-13",
+      "topic": "AI"
+    },
+    {
+      "title": "Jensen Huang and the End of the Founder Fairy Tale",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/jensen-huang-and-the-end-of-the-founder-fairy-tale/",
+      "date": "2026-11-13",
+      "topic": "AI"
+    },
     {
       "title": "This Startup Is Betting on AI Microdramas to Get More Black Stories in Hollywood",
       "source": "WIRED",
       "url": "https://www.wired.com/story/black-roles-are-disappearing-in-hollywood-this-startup-is-using-ai-microdramas-to-fight-back/",
+      "date": "2026-11-13",
+      "topic": "AI"
+    },
+    {
+      "title": "OpenAI board member worries an AI \"takeover\" of society could be months away",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/features/2026/11/ai-is-the-most-likely-reason-youll-die-openai-board-member-warns/",
+      "date": "2026-11-13",
+      "topic": "AI"
+    },
+    {
+      "title": "What’s really at stake in the Jensen Huang saga",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/podcast/1032866/jensen-huang-nvidia-china-trump-vergecast",
+      "date": "2026-11-13",
+      "topic": "AI"
+    },
+    {
+      "title": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
       "date": "2026-11-13",
       "topic": "AI"
     },
@@ -17,37 +66,51 @@
       "topic": "AI"
     },
     {
-      "title": "The datacenter industry is using propaganda to fight opposition | Samuel Woolley, Dean Jackson and Maia Woluchem",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/13/datacenter-industry-propaganda",
-      "date": "2026-11-13",
-      "topic": "AI"
-    },
-    {
-      "title": "Nvidia scandal: Howard Lutnick under pressure over alleged lack of action",
+      "title": "Nvidia scandal: US treasury chief blames Lutnick’s commerce department over alleged lack of action",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/technology/2026/nov/13/nvidia-scandal-sparks-us-national-security-concerns-china",
       "date": "2026-11-13",
       "topic": "AI"
     },
     {
-      "title": "Have we finally found a valid use case for AI? Meet Pino the autonomous virtual kiwi | First Dog on the Moon",
+      "title": "Why the Nvidia scandal is far from over - The Latest",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/picture/2026/nov/13/have-we-finally-found-a-valid-use-case-for-ai-meet-pino-the-autonomous-virtual-kiwi",
+      "url": "https://www.theguardian.com/news/video/2026/nov/13/why-the-nvidia-scandal-is-far-from-over-the-latest",
       "date": "2026-11-13",
       "topic": "AI"
     },
     {
-      "title": "Israel’s VCs see opportunity for challengers in Nvidia’s turmoil",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/13/israels-vcs-see-opportunity-for-challengers-in-nvidias-turmoil/",
+      "title": "The Guardian view on M John Harrison’s Booker win: a new frontier for science fiction | Editorial",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/13/the-guardian-view-on-m-john-harrisons-booker-win-a-new-frontier-for-science-fiction",
       "date": "2026-11-13",
       "topic": "AI"
     },
     {
-      "title": "Jensen Huang didn’t show confidence in his successor, report says",
+      "title": "AI agent startup LangChain hits $3B valuation",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/13/jensen-huang-didnt-show-confidence-in-his-successor-report-says/",
+      "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
+      "date": "2026-11-13",
+      "topic": "AI"
+    },
+    {
+      "title": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh oh, Jensen!",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
+      "date": "2026-11-13",
+      "topic": "AI"
+    },
+    {
+      "title": "ChatGPT’s new Wallet lets AI agents shop and check out for you",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+      "date": "2026-11-13",
+      "topic": "AI"
+    },
+    {
+      "title": "The unfolding Jensen Huang scandal: a timeline",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/13/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
       "date": "2026-11-13",
       "topic": "AI"
     },
@@ -55,20 +118,6 @@
       "title": "Silicon Valley Is Still Defending Jensen Huang",
       "source": "WIRED",
       "url": "https://www.wired.com/story/silicon-valley-is-still-defending-jensen-huang/",
-      "date": "2026-11-12",
-      "topic": "AI"
-    },
-    {
-      "title": "Jensen Huang Is Out. Will Nvidia’s Rivals Cash In?",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/uncanny-valley-podcast-jensen-huang-is-out-will-nvidias-rivals-cash-in/",
-      "date": "2026-11-12",
-      "topic": "AI"
-    },
-    {
-      "title": "Jensen Huang Didn’t Name His Own Replacement as One of Tech’s Most Powerful Women",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/jensen-huang-colette-kress-replacement-powerful-women-in-tech/",
       "date": "2026-11-12",
       "topic": "AI"
     },
@@ -101,51 +150,9 @@
       "topic": "AI"
     },
     {
-      "title": "Google faces calls for AI moratoriums in schools after Gemini pilot backlash",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/",
-      "date": "2026-11-12",
-      "topic": "AI"
-    },
-    {
       "title": "Google’s new Gemini model is better at understanding complicated questions",
       "source": "The Verge",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
-      "date": "2026-11-12",
-      "topic": "AI"
-    },
-    {
-      "title": "No, AI agents did not discover a previously unknown Maya site",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1032125/ai-agents-maya-site-archeology-discovery",
-      "date": "2026-11-12",
-      "topic": "AI"
-    },
-    {
-      "title": "Oh, Palantir is ‘progressive’ now, is it?",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1032126/alex-baby-you-were-recorded-on-video",
-      "date": "2026-11-12",
-      "topic": "AI"
-    },
-    {
-      "title": "Jensen Huang was a busted flush at Nvidia – he had to go | Nils Pratley",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/nils-pratley-on-finance/2026/nov/12/jensen-huang-was-a-busted-flush-at-nvidia-he-had-to-go",
-      "date": "2026-11-12",
-      "topic": "AI"
-    },
-    {
-      "title": "Democrats launch Nvidia investigation, write scathing letter on Huang’s ‘scheme’ with Trump",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/12/democrats-launch-nvidia-investigation-write-scathing-letter-on-huangs-scheme-with-trump/",
-      "date": "2026-11-12",
-      "topic": "AI"
-    },
-    {
-      "title": "Muse can now place calls to US businesses — if you pay",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/",
       "date": "2026-11-12",
       "topic": "AI"
     },
@@ -168,13 +175,6 @@
       "source": "Retraction Watch",
       "url": "https://retractionwatch.com/2026/11/09/forest-policy-economics-land-use-policy-plagiarism-allegations-retraction-request-elsevier/",
       "date": "2026-11-09",
-      "topic": "AI detection"
-    },
-    {
-      "title": "AI Text Watermarking May Not Be Able to Meet the E.U.’s New Rules",
-      "source": "IEEE Spectrum",
-      "url": "https://spectrum.ieee.org/ai-watermark-openai-textgrain-europe",
-      "date": "2026-11-05",
       "topic": "AI detection"
     },
     {
