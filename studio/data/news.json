@@ -1,11 +1,25 @@
 {
-  "updated": "2026-11-14T12:10:21Z",
+  "updated": "2026-11-14T18:44:09Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "Beware the New AI-Fueled Ransomware Boom",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/beware-the-new-ai-fueled-ransomware-boom/",
+      "date": "2026-11-14",
+      "topic": "AI"
+    },
     {
       "title": "No Pilots. Few Air Traffic Controllers. What Could Go Wrong?",
       "source": "WIRED",
       "url": "https://www.wired.com/story/no-pilots-few-air-traffic-controllers-what-could-go-wrong/",
+      "date": "2026-11-14",
+      "topic": "AI"
+    },
+    {
+      "title": "The OpenAI board member who fired Sam Altman says we still can’t trust AI CEOs",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview",
       "date": "2026-11-14",
       "topic": "AI"
     },
@@ -31,11 +45,18 @@
       "topic": "AI"
     },
     {
-      "title": "How it feels to battle with a flood of AI-generated complaints | Letters",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/13/how-it-feels-to-battle-with-a-flood-of-ai-generated-complaints",
-      "date": "2026-11-13",
-      "topic": "AI detection"
+      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+      "date": "2026-11-14",
+      "topic": "AI"
+    },
+    {
+      "title": "Asian governments react to Nvidia CEO Jensen Huang’s exit",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/",
+      "date": "2026-11-14",
+      "topic": "AI"
     },
     {
       "title": "How Microcredentials Help Engineers Build Trustworthy AI",
@@ -55,13 +76,6 @@
       "title": "Jensen Huang and the End of the Founder Fairy Tale",
       "source": "WIRED",
       "url": "https://www.wired.com/story/jensen-huang-and-the-end-of-the-founder-fairy-tale/",
-      "date": "2026-11-13",
-      "topic": "AI"
-    },
-    {
-      "title": "This Startup Is Betting on AI Microdramas to Get More Black Stories in Hollywood",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/black-roles-are-disappearing-in-hollywood-this-startup-is-using-ai-microdramas-to-fight-back/",
       "date": "2026-11-13",
       "topic": "AI"
     },
@@ -94,16 +108,16 @@
       "topic": "AI"
     },
     {
-      "title": "What’s really at stake in the Jensen Huang saga",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/podcast/1032866/jensen-huang-nvidia-china-trump-vergecast",
+      "title": "What the choice between Chuck Schumer and Chris Van Hollen for Senate leader is all about | Bernie Sanders",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/13/chuck-schumer-chris-van-hollen-senate-leader",
       "date": "2026-11-13",
       "topic": "AI"
     },
     {
-      "title": "What the choice between Chuck Schumer and Chris Van Hollen for Senate leader is all about | Bernie Sanders",
+      "title": "Nvidia scandal: US treasury chief blames Lutnick’s commerce department over alleged lack of action",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/13/chuck-schumer-chris-van-hollen-senate-leader",
+      "url": "https://www.theguardian.com/technology/2026/nov/13/nvidia-scandal-sparks-us-national-security-concerns-china",
       "date": "2026-11-13",
       "topic": "AI"
     },
@@ -118,20 +132,6 @@
       "title": "AI agent startup LangChain hits $3B valuation",
       "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
-      "date": "2026-11-13",
-      "topic": "AI"
-    },
-    {
-      "title": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh-oh, Jensen!",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
-      "date": "2026-11-13",
-      "topic": "AI"
-    },
-    {
-      "title": "ChatGPT’s new Wallet lets AI agents shop and check out for you",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
       "date": "2026-11-13",
       "topic": "AI"
     },
