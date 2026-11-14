@@ -1,7 +1,35 @@
 {
-  "updated": "2026-11-13T20:29:18Z",
+  "updated": "2026-11-14T12:10:21Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "No Pilots. Few Air Traffic Controllers. What Could Go Wrong?",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/no-pilots-few-air-traffic-controllers-what-could-go-wrong/",
+      "date": "2026-11-14",
+      "topic": "AI"
+    },
+    {
+      "title": "Jensen Huang and the decline of the visionary showman founder CEO",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo",
+      "date": "2026-11-14",
+      "topic": "AI"
+    },
+    {
+      "title": "‘The social contract is broken’: young people on feeling shut out of careers",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/nov/14/young-people-shut-out-of-work-ai",
+      "date": "2026-11-14",
+      "topic": "AI"
+    },
+    {
+      "title": "‘It’s like the wild west’: how AI has rocked the literary world",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/books/ng-interactive/2026/nov/14/its-like-the-wild-west-how-ai-has-rocked-the-literary-world",
+      "date": "2026-11-14",
+      "topic": "AI"
+    },
     {
       "title": "How it feels to battle with a flood of AI-generated complaints | Letters",
       "source": "The Guardian",
@@ -38,9 +66,30 @@
       "topic": "AI"
     },
     {
+      "title": "FAA expands AI advice to manage air traffic congestion across entire US airspace",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/features/2026/11/faa-expands-ai-advice-to-manage-air-traffic-congestion-across-entire-us-airspace/",
+      "date": "2026-11-13",
+      "topic": "AI"
+    },
+    {
       "title": "OpenAI board member worries an AI \"takeover\" of society could be months away",
       "source": "Ars Technica",
-      "url": "https://arstechnica.com/features/2026/11/ai-is-the-most-likely-reason-youll-die-openai-board-member-warns/",
+      "url": "https://arstechnica.com/ai/2026/11/ai-is-the-most-likely-reason-youll-die-openai-board-member-warns/",
+      "date": "2026-11-13",
+      "topic": "AI"
+    },
+    {
+      "title": "Amazon has a plan to index the world’s online shopping data",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search",
+      "date": "2026-11-13",
+      "topic": "AI"
+    },
+    {
+      "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
       "date": "2026-11-13",
       "topic": "AI"
     },
@@ -52,37 +101,16 @@
       "topic": "AI"
     },
     {
-      "title": "Claude’s Duet agent is a little neurotic and surprisingly helpful",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1032518/claude-duet-ai-agent-hands-on",
-      "date": "2026-11-13",
-      "topic": "AI"
-    },
-    {
-      "title": "Let’s talk about Jensen Huang’s many affairs!",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1032339/lets-talk-about-the-nvidia-shitshow",
-      "date": "2026-11-13",
-      "topic": "AI"
-    },
-    {
-      "title": "Nvidia scandal: US treasury chief blames Lutnick’s commerce department over alleged lack of action",
+      "title": "What the choice between Chuck Schumer and Chris Van Hollen for Senate leader is all about | Bernie Sanders",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/13/nvidia-scandal-sparks-us-national-security-concerns-china",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/13/chuck-schumer-chris-van-hollen-senate-leader",
       "date": "2026-11-13",
       "topic": "AI"
     },
     {
-      "title": "Why the Nvidia scandal is far from over - The Latest",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/news/video/2026/nov/13/why-the-nvidia-scandal-is-far-from-over-the-latest",
-      "date": "2026-11-13",
-      "topic": "AI"
-    },
-    {
-      "title": "The Guardian view on M John Harrison’s Booker win: a new frontier for science fiction | Editorial",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/13/the-guardian-view-on-m-john-harrisons-booker-win-a-new-frontier-for-science-fiction",
+      "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
       "date": "2026-11-13",
       "topic": "AI"
     },
@@ -94,7 +122,7 @@
       "topic": "AI"
     },
     {
-      "title": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh oh, Jensen!",
+      "title": "Export-banned Nvidia chips are behind China’s most powerful AI models — uh-oh, Jensen!",
       "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/11/13/export-banned-nvidia-chips-are-behind-chinas-most-powerful-ai-models-uh-oh-jensen/",
       "date": "2026-11-13",
@@ -108,30 +136,9 @@
       "topic": "AI"
     },
     {
-      "title": "The unfolding Jensen Huang scandal: a timeline",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/13/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
-      "date": "2026-11-13",
-      "topic": "AI"
-    },
-    {
-      "title": "Silicon Valley Is Still Defending Jensen Huang",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/silicon-valley-is-still-defending-jensen-huang/",
-      "date": "2026-11-12",
-      "topic": "AI"
-    },
-    {
       "title": "Nvidia privately confirmed it could track chips to fight smuggling, even as industry publicly questioned feasibility",
       "source": "MIT Technology Review",
       "url": "https://www.technologyreview.com/2026/11/12/1148483/nvidia-chip-tracking/",
-      "date": "2026-11-12",
-      "topic": "AI"
-    },
-    {
-      "title": "FAA expands AI advice to manage air traffic congestion across entire US airspace",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/ai/2026/11/faa-expands-ai-advice-to-manage-air-traffic-congestion-across-entire-us-airspace/",
       "date": "2026-11-12",
       "topic": "AI"
     },
@@ -146,13 +153,6 @@
       "title": "Google rolls out Gemini 4 Hydrogen, finally replacing 3.8 Flash",
       "source": "Ars Technica",
       "url": "https://arstechnica.com/google/2026/11/google-rolls-out-gemini-4-hydrogen-finally-replacing-3-8-flash/",
-      "date": "2026-11-12",
-      "topic": "AI"
-    },
-    {
-      "title": "Google’s new Gemini model is better at understanding complicated questions",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1032505/google-search-ai-mode-gemini-4-hydrogen",
       "date": "2026-11-12",
       "topic": "AI"
     },
