@@ -1,7 +1,42 @@
 {
-  "updated": "2026-11-14T18:44:09Z",
+  "updated": "2026-11-15T12:43:27Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "AI DJs Completely Kill My Groove",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/ai-djs-completely-kill-my-groove/",
+      "date": "2026-11-15",
+      "topic": "AI"
+    },
+    {
+      "title": "This AI Tamagotchi Turns Everyday Objects Into Needy Virtual Pets",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/this-ai-tamagotchi-oats-turns-everyday-objects-into-needy-virtual-pets/",
+      "date": "2026-11-15",
+      "topic": "AI"
+    },
+    {
+      "title": "160 questions, only one wrong: top scorer in South Korea tax exam admits AI cheating",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/15/ai-cheating-south-korea-college-entrance-exam",
+      "date": "2026-11-15",
+      "topic": "AI"
+    },
+    {
+      "title": "‘Jensen Huang lost his mind’: how AI’s smartest man fell for the world’s oldest trick",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/14/jensen-huang-affair-nvidia-nightmare",
+      "date": "2026-11-15",
+      "topic": "AI"
+    },
+    {
+      "title": "Where was Nvidia’s security team?",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/",
+      "date": "2026-11-15",
+      "topic": "AI"
+    },
     {
       "title": "Beware the New AI-Fueled Ransomware Boom",
       "source": "WIRED",
@@ -31,6 +66,13 @@
       "topic": "AI"
     },
     {
+      "title": "Art ‘must not be sacrificed on the altar of corporate profit’, Liberal senator says as AI policy debate rages",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/australia-news/2026/nov/15/art-over-profit-ai-policy-debate-andrew-mclachlan",
+      "date": "2026-11-14",
+      "topic": "AI"
+    },
+    {
       "title": "‘The social contract is broken’: young people on feeling shut out of careers",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/business/2026/nov/14/young-people-shut-out-of-work-ai",
@@ -38,9 +80,9 @@
       "topic": "AI"
     },
     {
-      "title": "‘It’s like the wild west’: how AI has rocked the literary world",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/books/ng-interactive/2026/nov/14/its-like-the-wild-west-how-ai-has-rocked-the-literary-world",
+      "title": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
       "date": "2026-11-14",
       "topic": "AI"
     },
@@ -62,20 +104,6 @@
       "title": "How Microcredentials Help Engineers Build Trustworthy AI",
       "source": "IEEE Spectrum",
       "url": "https://spectrum.ieee.org/microcredentials-trustworthy-ai",
-      "date": "2026-11-13",
-      "topic": "AI"
-    },
-    {
-      "title": "Microsoft 365 Crawls Back to Life After a 24-Hour Outage",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/microsoft-365-crawls-back-to-life-after-a-24-hour-outage/",
-      "date": "2026-11-13",
-      "topic": "AI"
-    },
-    {
-      "title": "Jensen Huang and the End of the Founder Fairy Tale",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/jensen-huang-and-the-end-of-the-founder-fairy-tale/",
       "date": "2026-11-13",
       "topic": "AI"
     },
@@ -104,34 +132,6 @@
       "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
       "source": "The Verge",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
-      "date": "2026-11-13",
-      "topic": "AI"
-    },
-    {
-      "title": "What the choice between Chuck Schumer and Chris Van Hollen for Senate leader is all about | Bernie Sanders",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/13/chuck-schumer-chris-van-hollen-senate-leader",
-      "date": "2026-11-13",
-      "topic": "AI"
-    },
-    {
-      "title": "Nvidia scandal: US treasury chief blames Lutnick’s commerce department over alleged lack of action",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/13/nvidia-scandal-sparks-us-national-security-concerns-china",
-      "date": "2026-11-13",
-      "topic": "AI"
-    },
-    {
-      "title": "Jensen Huang’s departure blasts big hole in AI startup funding, VCs and founders say",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/",
-      "date": "2026-11-13",
-      "topic": "AI"
-    },
-    {
-      "title": "AI agent startup LangChain hits $3B valuation",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/",
       "date": "2026-11-13",
       "topic": "AI"
     },
