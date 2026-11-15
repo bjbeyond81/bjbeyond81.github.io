@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T12:43:27Z",
+  "updated": "2026-11-15T19:22:35Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
     {
@@ -17,9 +17,30 @@
       "topic": "AI"
     },
     {
+      "title": "An overview of Jensen Huang’s messy days",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation",
+      "date": "2026-11-15",
+      "topic": "AI"
+    },
+    {
       "title": "160 questions, only one wrong: top scorer in South Korea tax exam admits AI cheating",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/technology/2026/nov/15/ai-cheating-south-korea-college-entrance-exam",
+      "date": "2026-11-15",
+      "topic": "AI"
+    },
+    {
+      "title": "The Guardian view on civil service reform: AI cannot conjure a capable state on its own | Editorial",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/15/the-guardian-view-on-civil-service-reform-ai-cannot-conjure-a-capable-state-on-its-own",
+      "date": "2026-11-15",
+      "topic": "AI"
+    },
+    {
+      "title": "Is the AI job apocalypse finally here? The evidence suggests otherwise | John Quiggin",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/16/is-the-ai-job-apocalypse-finally-here-the-evidence-suggests-otherwise",
       "date": "2026-11-15",
       "topic": "AI"
     },
@@ -62,20 +83,6 @@
       "title": "Jensen Huang and the decline of the visionary showman founder CEO",
       "source": "The Verge",
       "url": "https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo",
-      "date": "2026-11-14",
-      "topic": "AI"
-    },
-    {
-      "title": "Art ‘must not be sacrificed on the altar of corporate profit’, Liberal senator says as AI policy debate rages",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/australia-news/2026/nov/15/art-over-profit-ai-policy-debate-andrew-mclachlan",
-      "date": "2026-11-14",
-      "topic": "AI"
-    },
-    {
-      "title": "‘The social contract is broken’: young people on feeling shut out of careers",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/business/2026/nov/14/young-people-shut-out-of-work-ai",
       "date": "2026-11-14",
       "topic": "AI"
     },
@@ -125,13 +132,6 @@
       "title": "Amazon has a plan to index the world’s online shopping data",
       "source": "The Verge",
       "url": "https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search",
-      "date": "2026-11-13",
-      "topic": "AI"
-    },
-    {
-      "title": "ChatGPT Wallet lets OpenAI’s Dots agents make purchases for you",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1033425/openai-chatgpt-wallet",
       "date": "2026-11-13",
       "topic": "AI"
     },
