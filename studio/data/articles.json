@@ -1,7 +1,27 @@
 {
-  "updated": "2026-11-15T19:22:35Z",
-  "count": 22,
+  "updated": "2026-11-16T13:37:46Z",
+  "count": 23,
   "articles": [
+    {
+      "id": "the-art-of-prompting-why-ai-often-gets-it-wrong",
+      "title": "The Art of Prompting: Why AI Often Gets It Wrong",
+      "date": "2026-11-16",
+      "dek": "A polished answer is not the same as a useful one. The gap is usually in the question, not the model.",
+      "tags": [
+        "writing prompts"
+      ],
+      "lang": "en",
+      "links": [
+        {
+          "platform": "Medium",
+          "url": "https://medium.com/@bj_beyond/the-art-of-prompting-why-ai-often-gets-it-wrong-6e24d3f1b5f2",
+          "date": "2026-11-16"
+        }
+      ],
+      "platforms": [
+        "Medium"
+      ]
+    },
     {
       "id": "help-me-complete-this-test-post-grok-reborn-and-send-the-reply",
       "title": "Help Me Complete This Test: Post “@grok reborn” and Send the Reply",

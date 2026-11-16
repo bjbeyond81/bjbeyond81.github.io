@@ -1,7 +1,77 @@
 {
-  "updated": "2026-11-15T19:22:35Z",
+  "updated": "2026-11-16T13:37:46Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "28 Zero-Day Findings in Under Two Days. Is Robotics Security Keeping Pace?",
+      "source": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/zero-day-robotics-vulnerabilities-vicone-security",
+      "date": "2026-11-16",
+      "topic": "AI"
+    },
+    {
+      "title": "Nvidia Was Already in Trouble Before the Jensen Huang Mess",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/nvidia-was-already-in-trouble-before-the-jensen-huang-mess/",
+      "date": "2026-11-16",
+      "topic": "AI"
+    },
+    {
+      "title": "The Nvidia scandal isn’t slowing down",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1031740/jensen-huang-nvidia-scandal-isnt-slowing-down",
+      "date": "2026-11-16",
+      "topic": "AI"
+    },
+    {
+      "title": "Reports of AI-related child sexual abuse material rise 8,400% in two years, data shows",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/16/ai-related-child-sexual-abuse-material-rise-exploitation-deepfakes",
+      "date": "2026-11-16",
+      "topic": "AI"
+    },
+    {
+      "title": "Elon Musk joins 165,000 others calling for Nvidia to bring back Jensen Huang in open letter",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/16/elon-musk-tech-execs-open-letter-jensen-huang-return-nvidia-ceo",
+      "date": "2026-11-16",
+      "topic": "AI"
+    },
+    {
+      "title": "Albanese treads tightrope in upcoming Trump meeting, wanting Indo-Pacific engagement and end to Iran and Ukraine wars",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/australia-news/2026/nov/16/albanese-treads-tightrope-in-upcoming-trump-meeting-wanting-indo-pacific-engagement-and-end-to-iran-and-ukraine-wars",
+      "date": "2026-11-16",
+      "topic": "AI"
+    },
+    {
+      "title": "UK exposed to polycrisis of threats amid government ‘complacency’",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/society/2026/nov/16/uk-exposed-to-polycrisis-of-threats-amid-government-complacency",
+      "date": "2026-11-16",
+      "topic": "AI"
+    },
+    {
+      "title": "Freshworks alums raise $53M to take on Salesforce, HubSpot with AI-native CRM",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/16/freshworks-alums-raise-53m-to-take-on-salesforce-hubspot-with-ai-native-crm/",
+      "date": "2026-11-16",
+      "topic": "AI"
+    },
+    {
+      "title": "Apple launches new app to study how people use AI for health",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/",
+      "date": "2026-11-16",
+      "topic": "AI"
+    },
+    {
+      "title": "Indian chip startup Bharat Semi lands $24M seed round as it eyes global AI sensor market",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/15/indian-chip-startup-bharat-semi-lands-24m-seed-round-as-it-eyes-global-ai-sensor-market/",
+      "date": "2026-11-16",
+      "topic": "AI"
+    },
     {
       "title": "AI DJs Completely Kill My Groove",
       "source": "WIRED",
@@ -17,44 +87,30 @@
       "topic": "AI"
     },
     {
-      "title": "An overview of Jensen Huang’s messy days",
+      "title": "Apple’s new study looks to improve the effectiveness of AI health tools",
       "source": "The Verge",
-      "url": "https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation",
+      "url": "https://www.theverge.com/tech/1033355/apples-new-study-looks-to-improve-the-effectiveness-of-ai-health-tools",
       "date": "2026-11-15",
       "topic": "AI"
     },
     {
-      "title": "160 questions, only one wrong: top scorer in South Korea tax exam admits AI cheating",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/15/ai-cheating-south-korea-college-entrance-exam",
+      "title": "Jensen Huang might be plotting a return and more of the latest Nvidia drama",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed",
       "date": "2026-11-15",
       "topic": "AI"
     },
     {
-      "title": "The Guardian view on civil service reform: AI cannot conjure a capable state on its own | Editorial",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/15/the-guardian-view-on-civil-service-reform-ai-cannot-conjure-a-capable-state-on-its-own",
+      "title": "Congress wants to tighten export rules on AI chips after Nvidia spy scandal",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1033984/congress-export-rules-ai-chips-china",
       "date": "2026-11-15",
       "topic": "AI"
     },
     {
-      "title": "Is the AI job apocalypse finally here? The evidence suggests otherwise | John Quiggin",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/16/is-the-ai-job-apocalypse-finally-here-the-evidence-suggests-otherwise",
-      "date": "2026-11-15",
-      "topic": "AI"
-    },
-    {
-      "title": "‘Jensen Huang lost his mind’: how AI’s smartest man fell for the world’s oldest trick",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/14/jensen-huang-affair-nvidia-nightmare",
-      "date": "2026-11-15",
-      "topic": "AI"
-    },
-    {
-      "title": "Where was Nvidia’s security team?",
+      "title": "Is bad news for Jensen Huang also bad news for the AI industry?",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/",
+      "url": "https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/",
       "date": "2026-11-15",
       "topic": "AI"
     },
@@ -62,48 +118,6 @@
       "title": "Beware the New AI-Fueled Ransomware Boom",
       "source": "WIRED",
       "url": "https://www.wired.com/story/beware-the-new-ai-fueled-ransomware-boom/",
-      "date": "2026-11-14",
-      "topic": "AI"
-    },
-    {
-      "title": "No Pilots. Few Air Traffic Controllers. What Could Go Wrong?",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/no-pilots-few-air-traffic-controllers-what-could-go-wrong/",
-      "date": "2026-11-14",
-      "topic": "AI"
-    },
-    {
-      "title": "The OpenAI board member who fired Sam Altman says we still can’t trust AI CEOs",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview",
-      "date": "2026-11-14",
-      "topic": "AI"
-    },
-    {
-      "title": "Jensen Huang and the decline of the visionary showman founder CEO",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1033781/nvidia-jensen-huang-last-visionary-showman-founder-ceo",
-      "date": "2026-11-14",
-      "topic": "AI"
-    },
-    {
-      "title": "Elon Musk, other tech execs sign petition calling on Nvidia to reinstate Jensen Huang",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/",
-      "date": "2026-11-14",
-      "topic": "AI"
-    },
-    {
-      "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
-      "date": "2026-11-14",
-      "topic": "AI"
-    },
-    {
-      "title": "Asian governments react to Nvidia CEO Jensen Huang’s exit",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/",
       "date": "2026-11-14",
       "topic": "AI"
     },
@@ -125,13 +139,6 @@
       "title": "OpenAI board member worries an AI \"takeover\" of society could be months away",
       "source": "Ars Technica",
       "url": "https://arstechnica.com/ai/2026/11/ai-is-the-most-likely-reason-youll-die-openai-board-member-warns/",
-      "date": "2026-11-13",
-      "topic": "AI"
-    },
-    {
-      "title": "Amazon has a plan to index the world’s online shopping data",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1033697/amazon-world-product-graph-ai-search",
       "date": "2026-11-13",
       "topic": "AI"
     },
@@ -182,13 +189,6 @@
       "source": "GPTZero",
       "url": "https://gptzero.me/news/gptzero-writing-report/",
       "date": "2026-11-03",
-      "topic": "AI detection"
-    },
-    {
-      "title": "Computing journal retracts 13 papers, including four from past EIC",
-      "source": "Retraction Watch",
-      "url": "https://retractionwatch.com/2026/11/02/computing-journal-retracts-13-papers-including-four-from-past-eic/",
-      "date": "2026-11-02",
       "topic": "AI detection"
     },
     {
