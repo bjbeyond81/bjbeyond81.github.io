@@ -1,7 +1,98 @@
 {
-  "updated": "2026-11-16T22:52:51Z",
+  "updated": "2026-11-17T14:22:45Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "AI Is Giving Optical Computing Another Shot",
+      "source": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/optical-computing-ai",
+      "date": "2026-11-17",
+      "topic": "AI"
+    },
+    {
+      "title": "Understand How Satellite Links Shape IoT Device Design and Testing",
+      "source": "IEEE Spectrum",
+      "url": "https://content.knowledgehub.wiley.com/5g-nr-ntn-design-and-test-challenges-for-satellite-connected-iot/",
+      "date": "2026-11-17",
+      "topic": "AI"
+    },
+    {
+      "title": "The Apple Watch’s Live Rewind Can Record and Rewind Spoken Conversations. It’s Pretty Awkward",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/apple-watch-audio-intelligence-live-rewind-siri-recap/",
+      "date": "2026-11-17",
+      "topic": "AI"
+    },
+    {
+      "title": "Rogue Agents Hacked His Company. Why Is Clément Delangue So Optimistic About AI?",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/wired-yearbook-2026-clement-delangue/",
+      "date": "2026-11-17",
+      "topic": "AI"
+    },
+    {
+      "title": "AI Told These Ex-Google Guys How to Build a Billion-Dollar Weapons Business",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/ai-told-these-ex-google-guys-how-to-build-a-billion-dollar-weapons-business/",
+      "date": "2026-11-17",
+      "topic": "AI"
+    },
+    {
+      "title": "Grok Bot took unapproved actions, ignored orders to stop, and then denied it",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/security/2026/11/grok-bot-took-unapproved-actions-ignored-orders-to-stop-and-then-denied-it/",
+      "date": "2026-11-17",
+      "topic": "AI"
+    },
+    {
+      "title": "Paul Kelly pleads for Albanese to ‘show some backbone’ over AI as creatives campaign for copyright protections",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/18/paul-kelly-albanese-ai-copyright-protections-creatives-campaign",
+      "date": "2026-11-17",
+      "topic": "AI"
+    },
+    {
+      "title": "Anthropic IPO: how can I buy shares, and is it worth it?",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/17/anthropic-ipo-flotation-buy-shares-stock-market-claude-ai",
+      "date": "2026-11-17",
+      "topic": "AI"
+    },
+    {
+      "title": "Millionaire factory: Anthropic IPO set to fuel AI gold rush in London’s high-end property market",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/nov/17/millionaire-factory-anthropic-ipo-set-to-fuel-ai-gold-rush-in-londons-high-end-property-market",
+      "date": "2026-11-17",
+      "topic": "AI"
+    },
+    {
+      "title": "Automated warfare is already here. Now governments must restrain it | Helen Clark",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/17/automated-warfare-here-governments-restrain-ai-militaries-treaty",
+      "date": "2026-11-17",
+      "topic": "AI"
+    },
+    {
+      "title": "Nvidia’s first big move after Jensen Huang’s exit targets national security",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/17/nvidias-first-big-move-after-jensen-huangs-exit-targets-national-security/",
+      "date": "2026-11-17",
+      "topic": "AI"
+    },
+    {
+      "title": "Spotify’s new tool aims to stop deepfakes from being attributed to real artists",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/17/spotifys-new-tool-aims-to-stop-deepfakes-from-being-attributed-to-real-artists/",
+      "date": "2026-11-17",
+      "topic": "AI"
+    },
+    {
+      "title": "Cybersecurity AI startup Corma reaches $1B valuation in about 3 months",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/",
+      "date": "2026-11-17",
+      "topic": "AI"
+    },
     {
       "title": "AI Companies Develop Decision Models to Avoid Hallucinations",
       "source": "IEEE Spectrum",
@@ -20,13 +111,6 @@
       "title": "Jensen Huang Is Gone. Now What?",
       "source": "WIRED",
       "url": "https://www.wired.com/story/the-big-interview-podcast-lauren-goode-jensen-huang/",
-      "date": "2026-11-16",
-      "topic": "AI"
-    },
-    {
-      "title": "Nvidia Was Already in Trouble Before the Jensen Huang Mess",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/nvidia-was-already-in-trouble-before-the-jensen-huang-mess/",
       "date": "2026-11-16",
       "topic": "AI"
     },
@@ -52,6 +136,13 @@
       "topic": "AI"
     },
     {
+      "title": "Robo-soldier startup backed by Eric Trump misses payroll, may collapse",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/ai/2026/11/robo-soldier-startup-backed-by-eric-trump-misses-payroll-may-collapse/",
+      "date": "2026-11-16",
+      "topic": "AI"
+    },
+    {
       "title": "US moves to cut China’s remote access to AI chips",
       "source": "Ars Technica",
       "url": "https://arstechnica.com/tech-policy/2026/11/us-moves-to-cut-chinas-remote-access-to-ai-chips/",
@@ -66,108 +157,17 @@
       "topic": "AI"
     },
     {
+      "title": "Tech leaders are convinced that Jensen Huang’s exit was a plot against him",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1035027/tech-leaders-nvidia-jensen-huang-theories",
+      "date": "2026-11-16",
+      "topic": "AI"
+    },
+    {
       "title": "California sues OpenAI over rogue AI hacking incidents",
       "source": "The Verge",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit",
       "date": "2026-11-16",
-      "topic": "AI"
-    },
-    {
-      "title": "Sam Altman says he wants everyone ‘to have a lot of RAM’",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1034787/sam-altman-ram-shortage-semafor",
-      "date": "2026-11-16",
-      "topic": "AI"
-    },
-    {
-      "title": "Big Nuclear isn’t worried about the Democrats stopping data centers",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/science/1034694/nuclear-energy-constellation-earnings-data-centers-democrats",
-      "date": "2026-11-16",
-      "topic": "AI"
-    },
-    {
-      "title": "US data centers now burn more electricity than a midsized country",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1034668/data-centers-electricity-climate-pollution-study-harvard",
-      "date": "2026-11-16",
-      "topic": "AI"
-    },
-    {
-      "title": "Reports of AI-related child sexual abuse material rise 8,400% in two years, data shows",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/16/ai-related-child-sexual-abuse-material-rise-exploitation-deepfakes",
-      "date": "2026-11-16",
-      "topic": "AI"
-    },
-    {
-      "title": "California sues OpenAI over safety concerns after rogue agent hacking",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/16/california-openai-rogue-agent-hacking-lawsuit",
-      "date": "2026-11-16",
-      "topic": "AI"
-    },
-    {
-      "title": "Albanese signs on to Trump’s AI supply chain pact before leaders’ meeting at Quad summit",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/australia-news/2026/nov/16/albanese-treads-tightrope-in-upcoming-trump-meeting-wanting-indo-pacific-engagement-and-end-to-iran-and-ukraine-wars",
-      "date": "2026-11-16",
-      "topic": "AI"
-    },
-    {
-      "title": "Trump backs calls for reinstatement of Jensen Huang as Nvidia CEO",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/16/trump-backs-calls-for-reinstatement-of-jensen-huang-as-nvidia-ceo",
-      "date": "2026-11-16",
-      "topic": "AI"
-    },
-    {
-      "title": "All the questions Nvidia should answer on Tuesday — but probably won’t",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/16/all-the-questions-nvidia-should-answer-on-tuesday-but-probably-wont/",
-      "date": "2026-11-16",
-      "topic": "AI"
-    },
-    {
-      "title": "California state AG sues OpenAI over rogue agent incidents",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/",
-      "date": "2026-11-16",
-      "topic": "AI"
-    },
-    {
-      "title": "Trump says ex-Nvidia CEO Jensen Huang’s affair with an alleged Chinese spy did not threaten national security",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/16/trump-says-ex-nvidia-ceo-jensen-huangs-affair-with-an-alleged-chinese-spy-did-not-threaten-national-security/",
-      "date": "2026-11-16",
-      "topic": "AI"
-    },
-    {
-      "title": "Sam Altman on Nvidia without Jensen Huang: The industry will be ‘fine’",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/16/sam-altman-on-nvidia-without-jensen-huang-the-industry-will-be-fine/",
-      "date": "2026-11-16",
-      "topic": "AI"
-    },
-    {
-      "title": "AI DJs Completely Kill My Groove",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/ai-djs-completely-kill-my-groove/",
-      "date": "2026-11-15",
-      "topic": "AI"
-    },
-    {
-      "title": "This AI Tamagotchi Turns Everyday Objects Into Needy Virtual Pets",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/this-ai-tamagotchi-oats-turns-everyday-objects-into-needy-virtual-pets/",
-      "date": "2026-11-15",
-      "topic": "AI"
-    },
-    {
-      "title": "How Microcredentials Can Help Engineers Build Trustworthy AI",
-      "source": "IEEE Spectrum",
-      "url": "https://spectrum.ieee.org/microcredentials-trustworthy-ai",
-      "date": "2026-11-13",
       "topic": "AI"
     },
     {
