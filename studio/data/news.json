@@ -1,7 +1,91 @@
 {
-  "updated": "2026-11-18T21:25:44Z",
+  "updated": "2026-11-19T14:25:20Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "Why a Computer Scientist Thinks Superintelligence Won’t Happen",
+      "source": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/ai-superintelligence-debate",
+      "date": "2026-11-19",
+      "topic": "AI"
+    },
+    {
+      "title": "Anthropic’s Record-Breaking IPO Highlights the AI Giant’s Worst Enemy—Itself",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/anthropics-record-breaking-ipo-highlights-the-ai-giants-worst-enemy-itself/",
+      "date": "2026-11-19",
+      "topic": "AI"
+    },
+    {
+      "title": "I let Apple’s always-listening AI summarize my life for two weeks",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1037100/apple-siri-recap-audio-intelligence-hands-on",
+      "date": "2026-11-19",
+      "topic": "AI"
+    },
+    {
+      "title": "Canva adds an AI ‘off’ button",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1037126/canva-ai-features-off-button",
+      "date": "2026-11-19",
+      "topic": "AI"
+    },
+    {
+      "title": "Anthropic shares expected to jump when trading begins after raising $81bn in record IPO – business live",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/live/2026/nov/19/anthropic-float-stock-market-nasdaq-raises-81bn-record-ipo-latest-news-updates",
+      "date": "2026-11-19",
+      "topic": "AI"
+    },
+    {
+      "title": "Australian music industry rejects ‘divide and conquer’ proposal to give musicians exemption from AI scraping",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/australia-news/2026/nov/20/australian-music-industry-rejects-proposal-to-give-musicians-exemption-ai-scraping",
+      "date": "2026-11-19",
+      "topic": "AI"
+    },
+    {
+      "title": "‘Communities are really angry’: how datacentre opposition has gone from marginal to mainstream in five months",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/australia-news/2026/nov/20/communities-are-really-angry-how-datacentre-opposition-has-gone-from-marginal-to-mainstream-in-five-months",
+      "date": "2026-11-19",
+      "topic": "AI"
+    },
+    {
+      "title": "Anthropic to begin public trading at $1.5tn valuation after largest ever IPO",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/19/anthropic-public-trading-ipo",
+      "date": "2026-11-19",
+      "topic": "AI"
+    },
+    {
+      "title": "Superhuman pushes its Go assistant everywhere",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/19/superhuman-pushes-its-go-assistant-everywhere/",
+      "date": "2026-11-19",
+      "topic": "AI"
+    },
+    {
+      "title": "Microsoft CEO Satya Nadella explains why he asked 60K employees to quit",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/",
+      "date": "2026-11-19",
+      "topic": "AI"
+    },
+    {
+      "title": "Amidst fears of AI cyberattacks, Satya Nadella says lots of critical infrastructure is ‘unpatchable’",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/",
+      "date": "2026-11-19",
+      "topic": "AI"
+    },
+    {
+      "title": "Elon Musk says ousting Jensen Huang is like ‘kicking Michael Jordan off your team’",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/18/elon-musk-says-ousting-jensen-huang-is-like-kicking-michael-jordan-off-your-team/",
+      "date": "2026-11-19",
+      "topic": "AI"
+    },
     {
       "title": "Startup Makes Headway Towards Formalizing All of Math With AI",
       "source": "IEEE Spectrum",
@@ -17,30 +101,23 @@
       "topic": "AI"
     },
     {
+      "title": "Does Nvidia Got This? Interim CEO Colette Kress Says It’s Got This",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/guys-really-we-got-this/",
+      "date": "2026-11-18",
+      "topic": "AI"
+    },
+    {
+      "title": "Even His Own Officials Don’t Think Trump’s China Trip Will Lead to Progress on AI",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/administration-officials-dont-think-much-ai-progress-will-come-of-trumps-china-visit/",
+      "date": "2026-11-18",
+      "topic": "AI"
+    },
+    {
       "title": "America’s AI Chip War Is Heating Up in the Dumbest Possible Ways",
       "source": "WIRED",
       "url": "https://www.wired.com/story/the-ai-chip-war-meets-the-jensen-huang-affair/",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "Inside Nvidia’s First Post-Jensen All-Hands: Pay Raises and More Equity",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/inside-nvidias-first-all-hands-without-jensen-huang-as-ceo/",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "Artex Is Criminals’ New Favorite ‘Point-and-Shoot’ AI Hacking Tool",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/artex-ai-hacking-tools/",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "‘Just Ridiculous’: A Famed Philosopher Takes on AI Consciousness",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/just-ridiculous-a-famed-philosopher-takes-on-ai-consciousness/",
       "date": "2026-11-18",
       "topic": "AI"
     },
@@ -80,79 +157,9 @@
       "topic": "AI"
     },
     {
-      "title": "Trump’s latest land grab is an AI hub in the Philippines",
+      "title": "The nation’s largest school districts consider ditching Google Search",
       "source": "The Verge",
-      "url": "https://www.theverge.com/policy/1036749/trump-ai-chip-data-center-us-philippines-pax-silica",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "What’s next for Nvidia? Whatever doesn’t rock the mind-bogglingly profitable boat",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1035924/nvidia-visualized-revenue-profit-earnings-after-huang",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "Tech lawsuits defined 2026 — and lawmakers want more",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/policy/1036935/congress-forced-arbitration-deepfakes-defiance-act",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "What is Nvidia without AI’s sugar daddy in charge?",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1036776/nvidia-earnings-kress-jensen-huang-petition",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "US senators urge White House AI chief to fix vulnerabilities after mass outages",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/us-news/2026/nov/18/jay-clayton-ai-tech-outages-infrastructure",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "Why Palantir’s health tech is not the right fit for the NHS | Letter",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/18/why-palantirs-health-tech-is-not-the-right-fit-for-the-nhs",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "‘Zero’ evidence that recent cascade of tech outages are linked, says Rubio",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/us-news/2026/nov/18/zero-evidence-recent-tech-outages-linked-marco-rubio",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "Aria awards: how do Australian artists feel about their music being used to train AI? – video",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/music/video/2026/nov/18/aria-awards-how-do-australian-artists-feel-about-their-music-being-used-to-train-ai-video",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "Sam Altman says his life is so weird that he’s unfazed by Andrew Garfield portraying him in upcoming movie",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/18/sam-altman-says-his-life-is-so-weird-that-hes-unfazed-by-andrew-garfield-portraying-him-in-upcoming-movie/",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "Snapchat now lets developers build AR Lenses with AI assistants like Claude Code and Cursor",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/18/snapchat-now-lets-developers-build-ar-lenses-with-ai-coding-assistants-like-claude-code-and-cursor/",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "Google’s AI feature in Search gets its own incognito mode",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/18/googles-ai-feature-in-search-gets-its-own-incognito-mode/",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1037151/school-districts-ditching-google",
       "date": "2026-11-18",
       "topic": "AI"
     },
@@ -203,13 +210,6 @@
       "source": "GPTZero",
       "url": "https://gptzero.me/news/presidents-say-the-same-things-analysis-of-81st-united-nations-general-assembly-speeches/",
       "date": "2026-10-18",
-      "topic": "AI detection"
-    },
-    {
-      "title": "COSMIC shuts the door on AI code as GNOME debates letting bug reports in",
-      "source": "The Register",
-      "url": "https://www.theregister.com/software/2026/10/07/cosmic-shuts-the-door-on-ai-code-as-gnome-debates-letting-bug-reports-in/5301141",
-      "date": "2026-10-07",
       "topic": "AI detection"
     }
   ]
