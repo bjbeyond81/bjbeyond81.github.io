@@ -10,11 +10,14 @@ Writes:
   studio/data/articles.json  BJ Beyond's own articles, cross-posts merged
   studio/data/news.json      external headlines (title, source, date, link only)
   studio/index.html          the blocks between <!-- build:NAME --> markers
+  studio/sitemap.xml         Journal homepage plus each hosted article page
 
 Rules this script keeps:
   * Titles, dates and deks are read from the platforms. Nothing is written by hand.
     A field that cannot be read is left out, never guessed.
   * News items carry title, source, date and link. No article text is copied.
+  * The sitemap lists this site's own pages: the Journal index and each page
+    under studio/articles/. External headlines are never written into it.
   * If a source fails, the entries it produced last time are kept, so one
     flaky feed never empties the page.
 """
@@ -216,6 +219,14 @@ def from_site() -> list[dict]:
                 "lang": (post.get("inLanguage") or ("it" if path.startswith("/it/") else "en"))[:2]}
         out.append(item)
     return out
+
+
+def hosted_article_paths() -> list[str]:
+    """Site-relative paths of Journal article pages, each ending in a slash."""
+    base = ROOT / "articles"
+    if not base.is_dir():
+        return []
+    return [f"articles/{page.parent.name}/" for page in sorted(base.glob("*/index.html")) if page.is_file()]
 
 
 def local_journal() -> dict[str, str]:
@@ -591,6 +602,7 @@ def render(articles: dict, news: dict) -> None:
     doc = replace_block(doc, "jsonld", f'<script type="application/ld+json">\n{render_jsonld(entries)}\n</script>')
     INDEX.write_text(doc, "utf-8")
     render_rss(articles, news)
+    render_sitemap(articles)
 
 
 # ---------------------------------------------------------------- RSS
@@ -621,6 +633,44 @@ def write_rss(path: Path, title: str, link: str, self_url: str, desc: str, updat
 </channel>
 </rss>
 ''', "utf-8")
+
+
+def render_sitemap(articles: dict | None = None) -> None:
+    """Homepage plus each page under studio/articles/.
+
+    News items and off-site copies (HackerNoon, Medium, Substack, bjbeyond.it)
+    are not pages of this site, so they stay out of the sitemap.
+    """
+    dates: dict[str, str] = {}
+    for entry in (articles or {}).get("articles", []):
+        date = (entry.get("date") or "")[:10]
+        if len(date) != 10:
+            continue
+        for link in entry.get("links", []):
+            if link.get("platform") != "BJ Beyond Journal":
+                continue
+            url = (link.get("url") or "").strip()
+            if not url or url.startswith(("http://", "https://")):
+                continue
+            dates[url.lstrip("/")] = date
+
+    blocks = [
+        "  <url>\n"
+        f"    <loc>{xesc(SITE_URL)}</loc>\n"
+        "    <changefreq>daily</changefreq>\n"
+        "  </url>"
+    ]
+    for path in hosted_article_paths():
+        lastmod = f"\n    <lastmod>{xesc(dates[path])}</lastmod>" if path in dates else ""
+        blocks.append(f"  <url>\n    <loc>{xesc(SITE_URL + path)}</loc>{lastmod}\n  </url>")
+    (ROOT / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "\n".join(blocks)
+        + "\n</urlset>\n",
+        "utf-8",
+    )
+    log(f"sitemap: {len(blocks)} urls")
 
 
 def render_rss(articles: dict, news: dict) -> None:
