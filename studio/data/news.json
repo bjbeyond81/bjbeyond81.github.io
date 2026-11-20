@@ -1,13 +1,76 @@
 {
-  "updated": "2026-11-19T21:30:11Z",
+  "updated": "2026-11-20T13:59:37Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
     {
-      "title": "Academic integrity matters, but students shouldn’t be penalised for using AI | Letter",
+      "title": "Muse Is Unleashing a World of Pettiness on Instagram",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/muse-is-unleashing-a-world-of-pettiness-on-instagram/",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
+    {
+      "title": "Regular Tech Bros Are Worried About Honeypots",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/regular-tech-bros-are-worried-about-honeypots/",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
+    {
+      "title": "This 16-Year-Old Founded an AI Missile Startup. He’s Targeting ‘Cost per Kill’",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/henrijs-dandzbergs-polemos-missiles-ai-warfare/",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
+    {
+      "title": "Signal is blocking Gemini and Siri AI from reading your screen",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
+    {
+      "title": "Big tech is already building datacentres in Australia. Why is Labor so desperate to give them loopholes?",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/education/2026/nov/19/academic-integrity-matters-but-students-shouldnt-be-penalised-for-using-ai",
-      "date": "2026-11-19",
-      "topic": "AI detection"
+      "url": "https://www.theguardian.com/technology/commentisfree/2026/nov/20/big-tech-is-already-building-datacentres-in-australia-why-is-labor-desperate-to-give-them-loopholes",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
+    {
+      "title": "Global stock markets slump as Anthropic’s record IPO fails to stem AI sell-off",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
+    {
+      "title": "Don’t blame cyber-attacks for recent outages. The real villain is the US economy | Bruce Schneier",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/20/cyber-attacks-outages-blame-economy",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
+    {
+      "title": "AI is imposing a hidden ‘cognitive tax’ on the lowest-paid workers",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/20/ai-low-paid-workers-cognitive-tax",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
+    {
+      "title": "Apple may be developing its own AI agent that runs your Mac",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
+    {
+      "title": "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+      "date": "2026-11-20",
+      "topic": "AI"
     },
     {
       "title": "Meet Shepherd, the Meta-Agent Keeping Rogue AI In Check",
@@ -24,23 +87,9 @@
       "topic": "AI"
     },
     {
-      "title": "The Jensen Huang Blast Radius Has Hit His Favorite Restaurants",
+      "title": "What’s With All These Outages?",
       "source": "WIRED",
-      "url": "https://www.wired.com/story/jensen-huangs-favorite-restaurants-are-caught-up-in-his-scandals-too/",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "Google Built a Giant ‘Mirror Dimension’ Internet to Test Its Chrome AI Agents",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/google-built-a-giant-mirror-dimension-internet-to-test-its-chrome-ai-agents/",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "Anthropic’s Record-Breaking IPO Highlights the AI Giant’s Worst Enemy—Itself",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/anthropics-record-breaking-ipo-highlights-the-ai-giants-worst-enemy-itself/",
+      "url": "https://www.wired.com/story/uncanny-valley-podcast-whats-with-all-these-outages/",
       "date": "2026-11-19",
       "topic": "AI"
     },
@@ -52,6 +101,20 @@
       "topic": "AI"
     },
     {
+      "title": "Apple is hiring engineers to build its own AI agent",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
+      "date": "2026-11-19",
+      "topic": "AI"
+    },
+    {
+      "title": "A brief history of Nvidia’s recent stock fluctuations",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings",
+      "date": "2026-11-19",
+      "topic": "AI"
+    },
+    {
       "title": "Meta’s Muse Charm might cost $300",
       "source": "The Verge",
       "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
@@ -59,72 +122,16 @@
       "topic": "AI"
     },
     {
-      "title": "Google is putting AI chats right on the homepage",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1038059/google-search-homepage-ai-chats",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "Gemini on Mac can now use your computer",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1037902/google-gemini-macos-ai-computer-use",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "Anthropic starts trading on Wall Street",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1035384/anthropic-ipo-trading-nasdaq",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "Anthropic shares end first day of trading at $97 as Wall Street closes sharply lower – business live",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/business/live/2026/nov/19/anthropic-float-stock-market-nasdaq-raises-81bn-record-ipo-latest-news-updates",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "Who are Anthropic’s seven co-founders, now worth $180bn?",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/19/who-are-anthropic-founders",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "Anthropic keeps the AI party swinging, but the atmosphere is bubbly | Nils Pratley",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/nils-pratley-on-finance/2026/nov/19/anthropic-keeps-ai-party-swinging-but-atmosphere-bubbly",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "The unfolding Jensen Huang scandal: a timeline",
+      "title": "Meta’s new Muse Charm device may cost $300",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/19/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+      "url": "https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/",
       "date": "2026-11-19",
       "topic": "AI"
     },
     {
-      "title": "Anthropic’s IPO could deliver $156 billion to charity",
+      "title": "These tech outages are giving Y2K, AI agent style",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "Google gives Gemini the ability to use your Mac for you",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "Meta’s AI agent Muse is mixing up conversations and could be exposing private data, report says",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/",
+      "url": "https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/",
       "date": "2026-11-19",
       "topic": "AI"
     },
@@ -139,13 +146,6 @@
       "title": "Will AI Coding Eat Video Game Engines?",
       "source": "IEEE Spectrum",
       "url": "https://spectrum.ieee.org/epic-games-unreal-engine-ai",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "Does Nvidia Got This? Interim CEO Colette Kress Says It’s Got This",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/guys-really-we-got-this/",
       "date": "2026-11-18",
       "topic": "AI"
     },
