@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-20T13:59:37Z",
+  "updated": "2026-11-20T21:03:54Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "Podcast: I Spoke to an AI Fraud Kingpin",
+      "source": "404 Media",
+      "url": "https://www.404media.co/podcast-i-spoke-to-an-ai-fraud-kingpin/",
+      "date": "2026-11-20",
+      "topic": "AI detection"
+    },
+    {
+      "title": "Jensen Huang’s ‘Lying’ Alarmed Nvidia Board Ahead of His Resignation",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/jensen-huangs-lying-alarmed-nvidia-board-ahead-of-his-resignation/",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
     {
       "title": "Muse Is Unleashing a World of Pettiness on Instagram",
       "source": "WIRED",
@@ -24,6 +38,41 @@
       "topic": "AI"
     },
     {
+      "title": "The most misunderstood graph in AI just got a major update",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
+    {
+      "title": "A leaky AI supply chain is exposing secret user data at an alarming rate",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
+    {
+      "title": "Trump threatens ‘tremendous tax’ for moving AI data centers outside the US",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/policy/1038892/trump-foreign-data-centers-tax",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
+    {
+      "title": "Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
+    {
+      "title": "The week everything fell apart",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/podcast/1038419/outage-outlook-ground-stop-tech-failure-vergecast",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
+    {
       "title": "Signal is blocking Gemini and Siri AI from reading your screen",
       "source": "The Verge",
       "url": "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
@@ -38,37 +87,51 @@
       "topic": "AI"
     },
     {
-      "title": "Global stock markets slump as Anthropic’s record IPO fails to stem AI sell-off",
+      "title": "Forget rogue robots, it’s tech billionaires and AI cricket that should really terrify us | Barney Ronay",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
+      "url": "https://www.theguardian.com/sport/2026/nov/20/cricket-rogue-robots-tech-billionaires-artificial-intelligence",
       "date": "2026-11-20",
       "topic": "AI"
     },
     {
-      "title": "Don’t blame cyber-attacks for recent outages. The real villain is the US economy | Bruce Schneier",
+      "title": "Is Claude creator Anthropic really worth $1.3 trillion? - The Latest",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/20/cyber-attacks-outages-blame-economy",
+      "url": "https://www.theguardian.com/news/video/2026/nov/20/is-claude-creator-anthropic-really-worth-15-trillion-the-latest",
       "date": "2026-11-20",
       "topic": "AI"
     },
     {
-      "title": "AI is imposing a hidden ‘cognitive tax’ on the lowest-paid workers",
+      "title": "Is Anthropic really worth $1.3 trillion? - The Latest",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/20/ai-low-paid-workers-cognitive-tax",
+      "url": "https://www.theguardian.com/news/audio/2026/nov/20/anthropic-1-trillion-valuation-the-latest",
       "date": "2026-11-20",
       "topic": "AI"
     },
     {
-      "title": "Apple may be developing its own AI agent that runs your Mac",
+      "title": "Daniel Ek backs AI researcher’s fusion power startup. Here’s what they’re building.",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+      "url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
       "date": "2026-11-20",
       "topic": "AI"
     },
     {
-      "title": "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO",
+      "title": "AI claimed a solution to the 167-year-old Riemann Hypothesis — and a human did, too",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+      "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
+    {
+      "title": "Chips can survive the space environment — can their financing?",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/20/chips-can-survive-the-space-environment-can-their-financing/",
+      "date": "2026-11-20",
+      "topic": "AI"
+    },
+    {
+      "title": "The fallout from Nvidia’s Jensen Huang scandal continues",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/",
       "date": "2026-11-20",
       "topic": "AI"
     },
@@ -87,73 +150,10 @@
       "topic": "AI"
     },
     {
-      "title": "What’s With All These Outages?",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/uncanny-valley-podcast-whats-with-all-these-outages/",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
       "title": "Traumatized teens sue school, cops after Doritos bag triggers AI gun alert",
       "source": "Ars Technica",
       "url": "https://arstechnica.com/tech-policy/2026/11/traumatized-teens-sue-school-cops-after-doritos-bag-triggers-ai-gun-alert/",
       "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "Apple is hiring engineers to build its own AI agent",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1038227/apple-ai-agent-engineer-job-listing",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "A brief history of Nvidia’s recent stock fluctuations",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1038063/nvidia-stock-market-price-earnings",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "Meta’s Muse Charm might cost $300",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1038087/meta-muse-charm-ai-price",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "Meta’s new Muse Charm device may cost $300",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "These tech outages are giving Y2K, AI agent style",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "Startup Makes Headway Towards Formalizing All of Math With AI",
-      "source": "IEEE Spectrum",
-      "url": "https://spectrum.ieee.org/enormous-theorem-ai",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "Will AI Coding Eat Video Game Engines?",
-      "source": "IEEE Spectrum",
-      "url": "https://spectrum.ieee.org/epic-games-unreal-engine-ai",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "The AI Hype Index: AI is everywhere",
-      "source": "MIT Technology Review",
-      "url": "https://www.technologyreview.com/2026/11/18/1148650/ai-hype-index-ai-is-everywhere/",
-      "date": "2026-11-18",
       "topic": "AI"
     },
     {
