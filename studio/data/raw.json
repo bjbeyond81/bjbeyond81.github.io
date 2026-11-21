@@ -109,6 +109,20 @@
  "medium": [
   {
    "platform": "Medium",
+   "url": "https://medium.com/@bj_beyond/the-night-i-asked-a-machine-which-posts-to-delete-cacd2965b9a0",
+   "title": "The Night I Asked a Machine Which Posts to Delete",
+   "date": "2026-11-21",
+   "dek": "I’ve spent months writing about Grok and a phoenix. Now I’ve written a book about what those months did to me.",
+   "tags": [
+    "books",
+    "artificial intelligence",
+    "grok",
+    "memoir"
+   ],
+   "minutes": 4
+  },
+  {
+   "platform": "Medium",
    "url": "https://medium.com/@bj_beyond/the-art-of-prompting-why-ai-often-gets-it-wrong-6e24d3f1b5f2",
    "title": "The Art of Prompting: Why AI Often Gets It Wrong",
    "date": "2026-11-16",
@@ -220,19 +234,6 @@
     "ai",
     "artificial intelligence",
     "grok"
-   ]
-  },
-  {
-   "platform": "Medium",
-   "url": "https://medium.com/@bj_beyond/the-phoenix-experiment-what-the-recovered-x-archive-actually-shows-eddbbc15eaad",
-   "title": "I Asked Grok to Bring “Phoenix” Back. What the Recovered X Archive Actually Proves",
-   "date": "2026-11-04",
-   "dek": "An unprompted AI image, months of saved posts and chats, and an honest line between what I felt and what I can document.",
-   "tags": [
-    "grok",
-    "artificial intelligence",
-    "ai",
-    "social media"
    ]
   }
  ],

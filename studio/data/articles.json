@@ -1,7 +1,31 @@
 {
-  "updated": "2026-11-20T21:03:54Z",
-  "count": 23,
+  "updated": "2026-11-21T13:27:31Z",
+  "count": 24,
   "articles": [
+    {
+      "id": "the-night-i-asked-a-machine-which-posts-to-delete",
+      "title": "The Night I Asked a Machine Which Posts to Delete",
+      "date": "2026-11-21",
+      "dek": "I’ve spent months writing about Grok and a phoenix. Now I’ve written a book about what those months did to me.",
+      "minutes": 4,
+      "tags": [
+        "books",
+        "artificial intelligence",
+        "grok",
+        "memoir"
+      ],
+      "lang": "en",
+      "links": [
+        {
+          "platform": "Medium",
+          "url": "https://medium.com/@bj_beyond/the-night-i-asked-a-machine-which-posts-to-delete-cacd2965b9a0",
+          "date": "2026-11-21"
+        }
+      ],
+      "platforms": [
+        "Medium"
+      ]
+    },
     {
       "id": "the-art-of-prompting-why-ai-often-gets-it-wrong",
       "title": "The Art of Prompting: Why AI Often Gets It Wrong",
@@ -239,12 +263,6 @@
           "date": "2026-10-23"
         },
         {
-          "platform": "Medium",
-          "url": "https://medium.com/@bj_beyond/the-phoenix-experiment-what-the-recovered-x-archive-actually-shows-eddbbc15eaad",
-          "title": "I Asked Grok to Bring “Phoenix” Back. What the Recovered X Archive Actually Proves",
-          "date": "2026-11-04"
-        },
-        {
           "platform": "bjbeyond.it",
           "url": "https://bjbeyond.it/phoenix-experiment/",
           "label": "Record on bjbeyond.it"
@@ -252,8 +270,7 @@
       ],
       "platforms": [
         "HackerNoon",
-        "bjbeyond.it",
-        "Medium"
+        "bjbeyond.it"
       ]
     },
     {
