@@ -109,6 +109,19 @@
  "medium": [
   {
    "platform": "Medium",
+   "url": "https://generativeai.pub/the-bot-that-wouldnt-agree-with-me-737cd8ee73b1",
+   "title": "The Bot That Wouldn’t Agree With Me",
+   "date": "2026-11-21",
+   "dek": "Sycophancy tests measure how far a model bends. A few days with Boardy showed me that a model which refuses to bend can still go first. Continue reading on Generative AI »",
+   "tags": [
+    "language model",
+    "grok",
+    "artificial intelligence",
+    "human edge"
+   ]
+  },
+  {
+   "platform": "Medium",
    "url": "https://medium.com/@bj_beyond/the-night-i-asked-a-machine-which-posts-to-delete-cacd2965b9a0",
    "title": "The Night I Asked a Machine Which Posts to Delete",
    "date": "2026-11-21",
@@ -222,22 +235,27 @@
     "writing",
     "machine learning"
    ]
-  },
-  {
-   "platform": "Medium",
-   "url": "https://medium.com/@bj_beyond/when-the-system-flags-the-human-who-was-helping-it-4aff85a0f0fe",
-   "title": "I Stress-Tested Grok in Public for Months. Then X Banned Me From Creator Revenue Sharing",
-   "date": "2026-11-04",
-   "dek": "A documented record of bias tests, a rare spontaneous AI image, and a “permanent” suspension email no one will answer.",
-   "tags": [
-    "creator economy",
-    "ai",
-    "artificial intelligence",
-    "grok"
-   ]
   }
  ],
  "substack": [
+  {
+   "platform": "Substack",
+   "url": "https://bjbeyond.substack.com/p/i-primi-22-ricevono-ventidue",
+   "title": "I primi 22 ricevono Ventidue",
+   "date": "2026-11-21",
+   "dek": "22 visualizzazioni. Il resto viene dopo.",
+   "image": "https://substackcdn.com/image/fetch/$s_!ITNV!,w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F35ec3c37-e23f-4ea4-827a-8ace4fc5328a_720x720.jpeg",
+   "minutes": 2
+  },
+  {
+   "platform": "Substack",
+   "url": "https://bjbeyond.substack.com/p/perche-ho-scritto-ventidue",
+   "title": "Perché ho scritto Ventidue",
+   "date": "2026-11-21",
+   "dek": "Un numero piccolo, un mercoledì di aprile, e sette mesi che non avevo previsto",
+   "image": "https://substackcdn.com/image/fetch/$s_!V2YI!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff14ec5c4-e057-4df2-91ee-36c3c956a6ca_1280x720.jpeg",
+   "minutes": 3
+  },
   {
    "platform": "Substack",
    "url": "https://bjbeyond.substack.com/p/everyone-is-posting-the-same-ai-image",

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T13:27:31Z",
+  "updated": "2026-11-21T20:05:36Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
     {
@@ -17,30 +17,65 @@
       "topic": "AI"
     },
     {
-      "title": "International talks on controlling use of autonomous weapons collapse",
+      "title": "The UN fails to agree on rules regulating ‘killer robots’",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1039554/un-regulations-killer-robots",
+      "date": "2026-11-21",
+      "topic": "AI"
+    },
+    {
+      "title": "Can Anthropic afford to put safety first?",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+      "date": "2026-11-21",
+      "topic": "AI"
+    },
+    {
+      "title": "Chess.com’s next move is a new hub for classic games, from mahjong to sudoku",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/games/1038099/chess-classic-games-expansion-ai",
+      "date": "2026-11-21",
+      "topic": "AI"
+    },
+    {
+      "title": "‘I was shaking, crying, having trouble breathing’: the unchartered trauma of breaking up with AI companions",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/ng-interactive/2026/nov/21/shaking-crying-trouble-breathing-breaking-up-with-ai-companions",
+      "date": "2026-11-21",
+      "topic": "AI"
+    },
+    {
+      "title": "Anthony Albanese talks a big game about sovereignty. But Australia remains in thrall to its ‘unreliable boyfriend’ | Julianne Schultz",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/22/anthony-albanese-talks-a-big-game-about-sovereignty-but-australia-remains-in-thrall-to-its-unreliable-boyfriend",
+      "date": "2026-11-21",
+      "topic": "AI"
+    },
+    {
+      "title": "Anthropic mathematician claims he used Claude to prove 19th-century Riemann hypothesis",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/21/anthropic-riemann-hypothesis-solved-claude-ai",
+      "date": "2026-11-21",
+      "topic": "AI"
+    },
+    {
+      "title": "International UN talks on controlling use of autonomous weapons collapse",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/technology/2026/nov/21/international-talks-control-ai-autonomous-weapons-collapse",
       "date": "2026-11-21",
       "topic": "AI"
     },
     {
-      "title": "‘Little room for error’: what a debt-laden cloud computing company says about the AI boom",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/business/2026/nov/21/debt-laden-cloud-computing-company-coreweave-ai-boom",
+      "title": "Here are the top AI agents that can live in your text messages",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
       "date": "2026-11-21",
       "topic": "AI"
     },
     {
-      "title": "‘I’m opening the cage of a monster’: Taxi Driver scriptwriter Paul Schrader on unleashing AI at 80",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/film/2026/nov/21/taxi-driver-scriptwriter-paul-schrader-ai-film-making-martin-scorsese",
-      "date": "2026-11-21",
-      "topic": "AI"
-    },
-    {
-      "title": "‘The doom of humanity’: will the quest to make robotic hands render us obsolete?",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/21/robot-hands-future-of-humanity-ai",
+      "title": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
       "date": "2026-11-21",
       "topic": "AI"
     },
@@ -101,27 +136,6 @@
       "topic": "AI"
     },
     {
-      "title": "Anthropic mathematician claims to have solved prestigious Millennium Prize problem with Claude",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1010051/anthropic-riemann-hypothesis-millennium-prize-problem",
-      "date": "2026-11-20",
-      "topic": "AI"
-    },
-    {
-      "title": "The week everything fell apart",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/podcast/1038419/outage-outlook-ground-stop-tech-failure-vergecast",
-      "date": "2026-11-20",
-      "topic": "AI"
-    },
-    {
-      "title": "Signal is blocking Gemini and Siri AI from reading your screen",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
-      "date": "2026-11-20",
-      "topic": "AI"
-    },
-    {
       "title": "Daniel Ek backs AI researcher’s fusion power startup. Here’s what they’re building.",
       "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
@@ -132,20 +146,6 @@
       "title": "AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too",
       "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
-      "date": "2026-11-20",
-      "topic": "AI"
-    },
-    {
-      "title": "Chips can survive the space environment — can their financing?",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/20/chips-can-survive-the-space-environment-can-their-financing/",
-      "date": "2026-11-20",
-      "topic": "AI"
-    },
-    {
-      "title": "The fallout from Nvidia’s Jensen Huang scandal continues",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/",
       "date": "2026-11-20",
       "topic": "AI"
     },

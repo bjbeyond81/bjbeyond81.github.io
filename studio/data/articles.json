@@ -1,7 +1,30 @@
 {
-  "updated": "2026-11-21T13:27:31Z",
-  "count": 24,
+  "updated": "2026-11-21T20:05:36Z",
+  "count": 27,
   "articles": [
+    {
+      "id": "the-bot-that-wouldnt-agree-with-me",
+      "title": "The Bot That Wouldn’t Agree With Me",
+      "date": "2026-11-21",
+      "dek": "Sycophancy tests measure how far a model bends. A few days with Boardy showed me that a model which refuses to bend can still go first. Continue reading on Generative AI »",
+      "tags": [
+        "language model",
+        "grok",
+        "artificial intelligence",
+        "human edge"
+      ],
+      "lang": "en",
+      "links": [
+        {
+          "platform": "Medium",
+          "url": "https://generativeai.pub/the-bot-that-wouldnt-agree-with-me-737cd8ee73b1",
+          "date": "2026-11-21"
+        }
+      ],
+      "platforms": [
+        "Medium"
+      ]
+    },
     {
       "id": "the-night-i-asked-a-machine-which-posts-to-delete",
       "title": "The Night I Asked a Machine Which Posts to Delete",
@@ -24,6 +47,44 @@
       ],
       "platforms": [
         "Medium"
+      ]
+    },
+    {
+      "id": "i-primi-22-ricevono-ventidue",
+      "title": "I primi 22 ricevono Ventidue",
+      "date": "2026-11-21",
+      "dek": "22 visualizzazioni. Il resto viene dopo.",
+      "minutes": 2,
+      "image": "https://substackcdn.com/image/fetch/$s_!ITNV!,w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F35ec3c37-e23f-4ea4-827a-8ace4fc5328a_720x720.jpeg",
+      "lang": "en",
+      "links": [
+        {
+          "platform": "Substack",
+          "url": "https://bjbeyond.substack.com/p/i-primi-22-ricevono-ventidue",
+          "date": "2026-11-21"
+        }
+      ],
+      "platforms": [
+        "Substack"
+      ]
+    },
+    {
+      "id": "perche-ho-scritto-ventidue",
+      "title": "Perché ho scritto Ventidue",
+      "date": "2026-11-21",
+      "dek": "Un numero piccolo, un mercoledì di aprile, e sette mesi che non avevo previsto",
+      "minutes": 3,
+      "image": "https://substackcdn.com/image/fetch/$s_!V2YI!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff14ec5c4-e057-4df2-91ee-36c3c956a6ca_1280x720.jpeg",
+      "lang": "en",
+      "links": [
+        {
+          "platform": "Substack",
+          "url": "https://bjbeyond.substack.com/p/perche-ho-scritto-ventidue",
+          "date": "2026-11-21"
+        }
+      ],
+      "platforms": [
+        "Substack"
       ]
     },
     {
@@ -503,19 +564,12 @@
           "date": "2026-08-27"
         },
         {
-          "platform": "Medium",
-          "url": "https://medium.com/@bj_beyond/when-the-system-flags-the-human-who-was-helping-it-4aff85a0f0fe",
-          "title": "I Stress-Tested Grok in Public for Months. Then X Banned Me From Creator Revenue Sharing",
-          "date": "2026-11-04"
-        },
-        {
           "platform": "BJ Beyond Journal",
           "url": "articles/when-the-system-flags-the-human/"
         }
       ],
       "platforms": [
         "HackerNoon",
-        "Medium",
         "BJ Beyond Journal"
       ]
     },
