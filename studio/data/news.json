@@ -1,11 +1,18 @@
 {
-  "updated": "2026-11-22T13:20:07Z",
+  "updated": "2026-11-22T20:20:14Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
     {
       "title": "Banks Have Had It Up to Here With Your AI Agent",
       "source": "WIRED",
       "url": "https://www.wired.com/story/banks-are-cracking-down-on-ai-agents/",
+      "date": "2026-11-22",
+      "topic": "AI"
+    },
+    {
+      "title": "Binding of Isaac developer removes AI music from Repentance Plus",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
       "date": "2026-11-22",
       "topic": "AI"
     },
@@ -17,30 +24,37 @@
       "topic": "AI"
     },
     {
-      "title": "South Korean minister quits after AI cheating scandal engulfs university exams",
+      "title": "Jensen Huang’s reported affair was ‘most expensive sex since Helen of Troy’, US senator says",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/world/2026/nov/22/south-korea-education-minister-resigns-after-ai-cheating-scandal-engulfs-university-exams",
+      "url": "https://www.theguardian.com/us-news/2026/nov/22/jensen-huang-nvidia-john-kennedy",
       "date": "2026-11-22",
       "topic": "AI"
     },
     {
-      "title": "As the real world falls apart, Grand Theft Auto looks more and more appealing | Dave Schilling",
+      "title": "Datacentre bosses met Australian state premiers and ministers almost 120 times in three years, analysis finds",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/22/grand-theft-auto-vi-gaming",
+      "url": "https://www.theguardian.com/australia-news/2026/nov/23/datacentre-bosses-met-australian-state-premiers-and-ministers-almost-120-times-in-three-years-analysis-finds",
       "date": "2026-11-22",
       "topic": "AI"
     },
     {
-      "title": "Why I won’t leave mathematics, despite AI solving centuries-old problems | Ken Ono",
+      "title": "Two groups verify mathematician’s claim that Claude helped prove mathematics problem",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/22/why-i-wont-leave-mathematics-despite-ai-solving-centuries-old-problems",
+      "url": "https://www.theguardian.com/technology/2026/nov/21/anthropic-riemann-hypothesis-solved-claude-ai",
       "date": "2026-11-22",
       "topic": "AI"
     },
     {
-      "title": "It will soon be too late to regulate use of autonomous weapons, warns Red Cross",
+      "title": "I stopped talking to my husband and let AI do it instead. He didn’t even notice | Polly Hudson",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/science/2026/nov/22/red-cross-warns-too-late-regulate-autonomous-weapons-united-nations",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/22/stopped-talking-to-husband-let-ai-do-it-instead",
+      "date": "2026-11-22",
+      "topic": "AI"
+    },
+    {
+      "title": "Why data centers are at the center of the Big Tech backlash",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/",
       "date": "2026-11-22",
       "topic": "AI"
     },
@@ -73,13 +87,6 @@
       "topic": "AI"
     },
     {
-      "title": "Chess.com’s next move is a new hub for classic games, from mahjong to sudoku",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/games/1038099/chess-classic-games-expansion-ai",
-      "date": "2026-11-21",
-      "topic": "AI"
-    },
-    {
       "title": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
       "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
@@ -97,13 +104,6 @@
       "title": "Here are the top AI agents that can live in your text messages",
       "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
-      "date": "2026-11-21",
-      "topic": "AI"
-    },
-    {
-      "title": "Is selling an AI version of your face to this microdrama startup the future of Hollywood?",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/",
       "date": "2026-11-21",
       "topic": "AI"
     },
