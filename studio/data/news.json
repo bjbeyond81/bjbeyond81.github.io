@@ -1,11 +1,123 @@
 {
-  "updated": "2026-11-22T20:20:14Z",
+  "updated": "2026-11-23T15:57:01Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
     {
-      "title": "Banks Have Had It Up to Here With Your AI Agent",
+      "title": "Jensen Huang Is Back as Nvidia CEO",
       "source": "WIRED",
-      "url": "https://www.wired.com/story/banks-are-cracking-down-on-ai-agents/",
+      "url": "https://www.wired.com/story/jensen-huang-is-back-as-nvidia-ceo/",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "Nvidia Is Powering Brain-Computer Interfaces Now",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/nvidia-is-powering-brain-computer-interfaces-now/",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "Submit Your Questions: Will Anyone Keep You Safe From AI?",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/livestream-will-anyone-keep-us-safe-from-ai/",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "States Sue SpaceX Over Grok Deepfakes",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/states-sue-spacex-over-grok-deepfakes/",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "Jensen Huang reinstated as Nvidia CEO, board chair",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/ai/2026/11/jensen-huang-reinstated-as-nvidia-ceo-board-chair/",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "Review: The Asus ProArt P16 offers a glimpse of a future powered by local AI",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/reviews/2026/11/review-the-asus-proart-p16-offers-a-glimpse-of-a-future-powered-by-local-ai/",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "Jensen Huang is back as Nvidia’s CEO",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1039937/nvidia-ceo-jensen-huang-reinstated",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "Meta Muse can do your Black Friday shopping at Walmart",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "‘Pervert glasses’ named word of the year by Macquarie dictionary, ahead of ‘nudify’ and ‘AI;DR’",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/science/2026/nov/23/pervert-glasses-meta-word-of-the-year-macquarie-dictionary-nudify-aidr",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "Dylan Moran goes looking for trouble and disappears off the beaten track in this baffling comedy show",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/stage/2026/nov/23/dylan-moran-looking-for-trouble-review",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "AI conquered chess. What happened next should give us hope",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/sport/ng-interactive/2026/nov/23/chess-world-championship-ai",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "Anthropic’s IPO was great for the tech elite – and not so great for the rest of us | Steven Greenhouse",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/23/anthropic-ipo-tech-elite-stock-bubble",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "Trump endorses Jensen Huang’s return to Nvidia, says US has no evidence of wrongdoing",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/23/trump-endorses-jensen-huangs-return-to-nvidia-says-us-has-no-evidence-of-wrongdoing/",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "Sierra doubles valuation to $30B within six months as demand for AI in CX takes off",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/23/sierra-doubles-valuation-to-30b-within-six-months-as-demand-for-ai-in-cx-takes-off/",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "Nvidia reverses course and brings Jensen Huang back as CEO",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/23/nvidia-reverses-course-and-brings-jensen-huang-back-as-ceo/",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "How Notable Capital, GIC, and Baillie Gifford bet big on Anthropic before its IPO",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "We haven’t seen the last of the major tech outages",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1039851/major-tech-outages",
       "date": "2026-11-22",
       "topic": "AI"
     },
@@ -17,109 +129,11 @@
       "topic": "AI"
     },
     {
-      "title": "The vibe-coding revolution is coming to all the gadgets",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/column/1039139/vibe-coding-gadgets-tv-camera",
-      "date": "2026-11-22",
-      "topic": "AI"
-    },
-    {
-      "title": "Jensen Huang’s reported affair was ‘most expensive sex since Helen of Troy’, US senator says",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/us-news/2026/nov/22/jensen-huang-nvidia-john-kennedy",
-      "date": "2026-11-22",
-      "topic": "AI"
-    },
-    {
-      "title": "Datacentre bosses met Australian state premiers and ministers almost 120 times in three years, analysis finds",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/australia-news/2026/nov/23/datacentre-bosses-met-australian-state-premiers-and-ministers-almost-120-times-in-three-years-analysis-finds",
-      "date": "2026-11-22",
-      "topic": "AI"
-    },
-    {
-      "title": "Two groups verify mathematician’s claim that Claude helped prove mathematics problem",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/21/anthropic-riemann-hypothesis-solved-claude-ai",
-      "date": "2026-11-22",
-      "topic": "AI"
-    },
-    {
-      "title": "I stopped talking to my husband and let AI do it instead. He didn’t even notice | Polly Hudson",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/22/stopped-talking-to-husband-let-ai-do-it-instead",
-      "date": "2026-11-22",
-      "topic": "AI"
-    },
-    {
-      "title": "Why data centers are at the center of the Big Tech backlash",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/",
-      "date": "2026-11-22",
-      "topic": "AI"
-    },
-    {
-      "title": "The Outages Are Just Getting Started",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/brace-yourself-for-years-of-outage-chaos/",
-      "date": "2026-11-21",
-      "topic": "AI"
-    },
-    {
-      "title": "Cops Are Pushing Extremely Corny ‘Grand Theft Auto 6’ Slop",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/cops-are-being-extremely-corny-about-gta-vi/",
-      "date": "2026-11-21",
-      "topic": "AI"
-    },
-    {
-      "title": "The UN fails to agree on rules regulating ‘killer robots’",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1039554/un-regulations-killer-robots",
-      "date": "2026-11-21",
-      "topic": "AI"
-    },
-    {
-      "title": "Can Anthropic afford to put safety first?",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
-      "date": "2026-11-21",
-      "topic": "AI"
-    },
-    {
-      "title": "Signal restricts mobile screenshots as it confronts ‘existential threat’ of AI surveillance",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/21/signal-restricts-mobile-screenshots-as-it-confronts-existential-threat-of-ai-surveillance/",
-      "date": "2026-11-21",
-      "topic": "AI"
-    },
-    {
-      "title": "A tale of two Nvidias",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/",
-      "date": "2026-11-21",
-      "topic": "AI"
-    },
-    {
-      "title": "Here are the top AI agents that can live in your text messages",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/",
-      "date": "2026-11-21",
-      "topic": "AI"
-    },
-    {
       "title": "Podcast: I Spoke to an AI Fraud Kingpin",
       "source": "404 Media",
       "url": "https://www.404media.co/podcast-i-spoke-to-an-ai-fraud-kingpin/",
       "date": "2026-11-20",
       "topic": "AI detection"
-    },
-    {
-      "title": "Jensen Huang’s ‘Lying’ Alarmed Nvidia Board Ahead of His Resignation",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/jensen-huangs-lying-alarmed-nvidia-board-ahead-of-his-resignation/",
-      "date": "2026-11-20",
-      "topic": "AI"
     },
     {
       "title": "The most misunderstood graph in AI just got a major update",
@@ -143,13 +157,6 @@
       "topic": "AI"
     },
     {
-      "title": "Researcher plants 2m canaries into the AI supply chain. A privacy disaster surfaced.",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/",
-      "date": "2026-11-20",
-      "topic": "AI"
-    },
-    {
       "title": "Meet Shepherd, the Meta-Agent Keeping Rogue AI In Check",
       "source": "IEEE Spectrum",
       "url": "https://spectrum.ieee.org/ai-agent-manager",
@@ -164,13 +171,6 @@
       "topic": "AI"
     },
     {
-      "title": "Traumatized teens sue school, cops after Doritos bag triggers AI gun alert",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/tech-policy/2026/11/traumatized-teens-sue-school-cops-after-doritos-bag-triggers-ai-gun-alert/",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
       "title": "Startup Makes Headway Towards Formalizing All of Math With AI",
       "source": "IEEE Spectrum",
       "url": "https://spectrum.ieee.org/enormous-theorem-ai",
@@ -178,11 +178,11 @@
       "topic": "AI"
     },
     {
-      "title": "'Defense by ChatGPT'",
-      "source": "404 Media",
-      "url": "https://www.404media.co/defense-by-chatgpt/",
-      "date": "2026-11-17",
-      "topic": "AI detection"
+      "title": "Will AI Coding Eat Video Game Engines?",
+      "source": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/epic-games-unreal-engine-ai",
+      "date": "2026-11-18",
+      "topic": "AI"
     },
     {
       "title": "GPTZero vs Pangram: AI Detector Accuracy Comparison",

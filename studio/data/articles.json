@@ -1,12 +1,12 @@
 {
-  "updated": "2026-11-22T20:20:14Z",
+  "updated": "2026-11-23T15:57:01Z",
   "count": 27,
   "articles": [
     {
       "id": "the-bot-that-wouldnt-agree-with-me",
       "title": "The Bot That Wouldn’t Agree With Me",
       "date": "2026-11-21",
-      "dek": "Sycophancy tests measure how far a model bends. A few days with Boardy showed me that a model which refuses to bend can still go first. Continue reading on Generative AI »",
+      "dek": "Sycophancy tests measure how far a model bends. A few days with Boardy showed me that a model which refuses to bend can still go first.",
       "tags": [
         "language model",
         "grok",
@@ -17,7 +17,7 @@
       "links": [
         {
           "platform": "Medium",
-          "url": "https://generativeai.pub/the-bot-that-wouldnt-agree-with-me-737cd8ee73b1",
+          "url": "https://medium.com/@bj_beyond/the-bot-that-wouldnt-agree-with-me-737cd8ee73b1",
           "date": "2026-11-21"
         }
       ],
@@ -150,7 +150,7 @@
         },
         {
           "platform": "Medium",
-          "url": "https://generativeai.pub/i-typed-my-name-to-grok-it-sent-me-a-phoenix-i-never-asked-for-2c6bf5c1e7e3",
+          "url": "https://medium.com/@bj_beyond/i-typed-my-name-to-grok-it-sent-me-a-phoenix-i-never-asked-for-2c6bf5c1e7e3",
           "date": "2026-11-10"
         }
       ],
