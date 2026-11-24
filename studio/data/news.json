@@ -1,7 +1,21 @@
 {
-  "updated": "2026-11-23T15:57:01Z",
+  "updated": "2026-11-24T00:49:34Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "Introducing GPTZero 5.0",
+      "source": "GPTZero",
+      "url": "https://gptzero.me/news/introducing-gptzero-5/",
+      "date": "2026-11-23",
+      "topic": "AI detection"
+    },
+    {
+      "title": "Jensen Huang Is Back, and So Is Nvidia’s Stock",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/jensens-back-stocks-up-what-the-hell-sure/",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
     {
       "title": "Jensen Huang Is Back as Nvidia CEO",
       "source": "WIRED",
@@ -24,9 +38,16 @@
       "topic": "AI"
     },
     {
-      "title": "States Sue SpaceX Over Grok Deepfakes",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/states-sue-spacex-over-grok-deepfakes/",
+      "title": "A legendary philosopher isn’t buying Anthropic’s consciousness argument",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "States sue SpaceX to stop Grok from generating child sex images, revenge porn",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/tech-policy/2026/11/states-sue-spacex-to-stop-grok-from-generating-child-sex-images-revenge-porn/",
       "date": "2026-11-23",
       "topic": "AI"
     },
@@ -45,16 +66,51 @@
       "topic": "AI"
     },
     {
-      "title": "Jensen Huang is back as Nvidia’s CEO",
+      "title": "Trump engineered a risky comeback for Jensen Huang",
       "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1039937/nvidia-ceo-jensen-huang-reinstated",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1040652/jensen-huang-nvidia-trump-reinstated",
       "date": "2026-11-23",
       "topic": "AI"
     },
     {
-      "title": "Meta Muse can do your Black Friday shopping at Walmart",
+      "title": "Nvidia CEO Jensen Huang is back. What happens next?",
       "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1039874/walmart-agent-gateway-meta-muse-black-friday",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "Welcome to elite impunity, Jensen Huang",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1040819/welcome-to-elite-impunity-jensen-huang",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "AI data centers throw another wrench into chaotic UN climate talks",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/science/1040497/ai-data-centers-electricity-un-climate-summit",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "Child safety groups urge Amazon and eBay to stop selling AI toys until proved safe",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/23/child-safety-groups-urge-amazon-ebay-stop-selling-ai-toys-until-proved-safe",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "Sweden’s datacentre politics are more complicated than they appear | Letter",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/nov/23/swedens-datacentre-politics-are-more-complicated-than-they-appear",
+      "date": "2026-11-23",
+      "topic": "AI"
+    },
+    {
+      "title": "How freaked out should we be? After mass outages, experts tell us how close we are to ‘doomsday’",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/23/tech-outages-security-experts",
       "date": "2026-11-23",
       "topic": "AI"
     },
@@ -66,66 +122,31 @@
       "topic": "AI"
     },
     {
-      "title": "Dylan Moran goes looking for trouble and disappears off the beaten track in this baffling comedy show",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/stage/2026/nov/23/dylan-moran-looking-for-trouble-review",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "AI conquered chess. What happened next should give us hope",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/sport/ng-interactive/2026/nov/23/chess-world-championship-ai",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "Anthropic’s IPO was great for the tech elite – and not so great for the rest of us | Steven Greenhouse",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/23/anthropic-ipo-tech-elite-stock-bubble",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "Trump endorses Jensen Huang’s return to Nvidia, says US has no evidence of wrongdoing",
+      "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/23/trump-endorses-jensen-huangs-return-to-nvidia-says-us-has-no-evidence-of-wrongdoing/",
+      "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
       "date": "2026-11-23",
       "topic": "AI"
     },
     {
-      "title": "Sierra doubles valuation to $30B within six months as demand for AI in CX takes off",
+      "title": "Supertake raises $20M to let AI agents turn your market predictions into stock portfolios",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/23/sierra-doubles-valuation-to-30b-within-six-months-as-demand-for-ai-in-cx-takes-off/",
+      "url": "https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/",
       "date": "2026-11-23",
       "topic": "AI"
     },
     {
-      "title": "Nvidia reverses course and brings Jensen Huang back as CEO",
+      "title": "Elon Musk and others rejoice as Jensen Huang is reinstated at Nvidia amid scandal",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/23/nvidia-reverses-course-and-brings-jensen-huang-back-as-ceo/",
+      "url": "https://techcrunch.com/2026/11/23/elon-musk-and-others-rejoice-as-jensen-huang-is-reinstated-at-nvidia-amid-scandal/",
       "date": "2026-11-23",
       "topic": "AI"
     },
     {
-      "title": "How Notable Capital, GIC, and Baillie Gifford bet big on Anthropic before its IPO",
+      "title": "Megaspeed, the company at the center of the Jensen Huang scandal, appears headed for a US blacklist",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/",
+      "url": "https://techcrunch.com/2026/11/23/megaspeed-the-company-at-the-center-of-the-jensen-huang-scandal-appears-headed-for-a-u-s-blacklist/",
       "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "We haven’t seen the last of the major tech outages",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1039851/major-tech-outages",
-      "date": "2026-11-22",
-      "topic": "AI"
-    },
-    {
-      "title": "Binding of Isaac developer removes AI music from Repentance Plus",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music",
-      "date": "2026-11-22",
       "topic": "AI"
     },
     {
@@ -150,14 +171,7 @@
       "topic": "AI"
     },
     {
-      "title": "Meta reconsiders 2030 net-zero goal amid record emissions from AI data centers",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/ai/2026/11/meta-reconsiders-2030-net-zero-goal-amid-record-emissions-from-ai-data-centers/",
-      "date": "2026-11-20",
-      "topic": "AI"
-    },
-    {
-      "title": "Meet Shepherd, the Meta-Agent Keeping Rogue AI In Check",
+      "title": "Meet Shepherd, the Meta-Agent Keeping Rogue AI in Check",
       "source": "IEEE Spectrum",
       "url": "https://spectrum.ieee.org/ai-agent-manager",
       "date": "2026-11-19",
@@ -171,16 +185,9 @@
       "topic": "AI"
     },
     {
-      "title": "Startup Makes Headway Towards Formalizing All of Math With AI",
+      "title": "Startup Makes Headway Toward Formalizing All of Math With AI",
       "source": "IEEE Spectrum",
       "url": "https://spectrum.ieee.org/enormous-theorem-ai",
-      "date": "2026-11-18",
-      "topic": "AI"
-    },
-    {
-      "title": "Will AI Coding Eat Video Game Engines?",
-      "source": "IEEE Spectrum",
-      "url": "https://spectrum.ieee.org/epic-games-unreal-engine-ai",
       "date": "2026-11-18",
       "topic": "AI"
     },
@@ -203,13 +210,6 @@
       "source": "GPTZero",
       "url": "https://gptzero.me/news/gptzero-no-bias-against-esl-writers/",
       "date": "2026-10-20",
-      "topic": "AI detection"
-    },
-    {
-      "title": "Presidents Say the Same Things: Analysis of 81st United Nations General Assembly Speeches",
-      "source": "GPTZero",
-      "url": "https://gptzero.me/news/presidents-say-the-same-things-analysis-of-81st-united-nations-general-assembly-speeches/",
-      "date": "2026-10-18",
       "topic": "AI detection"
     }
   ]
