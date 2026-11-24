@@ -1,11 +1,25 @@
 {
-  "updated": "2026-11-24T15:52:29Z",
+  "updated": "2026-11-24T23:00:18Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
     {
       "title": "Why Does Voice AI Still Struggle With Kenyans’ Speech?",
       "source": "IEEE Spectrum",
       "url": "https://spectrum.ieee.org/swahili-speech-recognition",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "Jensen Huang Apologizes to Nvidia Employees in First All-Hands Since His Return",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/jensen-huang-apologizes-to-nvidia-employees-in-first-all-hands-since-his-return/",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "Anthropic Created a Honeypot to Lure AI Agents Into Misbehaving",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/ai-agents-can-get-honeypotted-too-aw/",
       "date": "2026-11-24",
       "topic": "AI"
     },
@@ -31,6 +45,27 @@
       "topic": "AI"
     },
     {
+      "title": "What's going on with the Riemann hypothesis?",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/ai/2026/11/whats-going-on-with-the-riemann-hypothesis/",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "Amazon drone crashes on garage after delivering shampoo, draws FAA probe",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/gadgets/2026/11/faa-opens-probe-after-amazon-delivery-drone-clips-cable-crashes-into-garage/",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "Tidal announces ban on AI-generated music; 27 million tracks will be deleted",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/ai/2026/11/tidal-will-ban-fully-ai-generated-music-on-december-9/",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
       "title": "How Trump and Silicon Valley forced Nvidia to take Jensen Huang back",
       "source": "Ars Technica",
       "url": "https://arstechnica.com/tech-policy/2026/11/how-trump-and-silicon-valley-forced-nvidia-to-take-jensen-huang-back/",
@@ -38,9 +73,30 @@
       "topic": "AI"
     },
     {
-      "title": "Amazon says hackers' AI agents found and exploited 0-day with little human input",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/",
+      "title": "Jensen Huang reportedly tells Nvidia staff it’s ‘not true’ Trump got him rehired",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "David Fincher is being dragged for suspected use of AI in his latest film",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/entertainment/1041417/david-fincher-netflix-cliff-booth-ai-interpositive",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "Tidal will start banning AI-generated music next month",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "Jensen Huang deepfakes are the hot new AI slop",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1041222/jensen-huang-nvidia-scandal-deepfakes",
       "date": "2026-11-24",
       "topic": "AI"
     },
@@ -52,30 +108,51 @@
       "topic": "AI"
     },
     {
-      "title": "Meta launches Muse in UK – the AI agent that can do your Christmas shopping",
+      "title": "Tech sell-off resumes as euphoria from Jensen Huang’s Nvidia return subsides",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/24/meta-launches-muse-uk-ai-agent-do-christmas-shopping",
+      "url": "https://www.theguardian.com/business/2026/nov/24/nvidia-stock-falls-jensen-huang",
       "date": "2026-11-24",
       "topic": "AI"
     },
     {
-      "title": "Mamdani says Nvidia drama shows stock market is overly dependent on AI",
+      "title": "Mamdani questions AI economy as Jensen Huang returns to Nvidia – video",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/us-news/2026/nov/24/mamdani-nvidia-stock-market-ai",
+      "url": "https://www.theguardian.com/technology/video/2026/nov/24/mamdani-questions-ai-economy-as-jensen-huang-returns-to-nvidia-video",
       "date": "2026-11-24",
       "topic": "AI"
     },
     {
-      "title": "Jensen Huang returns to Nvidia as Silicon Valley rethinks its alliance with Trump",
+      "title": "‘The mistake has been corrected’: end of Jensen Huang’s brief walk in the wilderness",
       "source": "The Guardian",
-      "url": "https://www.theguardian.com/global/2026/nov/24/jensen-huang-nvidia-return-silicon-valley-trump",
+      "url": "https://www.theguardian.com/technology/2026/nov/24/mistake-corrected-jensen-huang-resinstated-nvidia-analysis",
       "date": "2026-11-24",
       "topic": "AI"
     },
     {
-      "title": "Amazon’s Decart acquisition is a bet on using software to narrow the gap with Nvidia in the AI chip race",
+      "title": "Jensen Huang still thinks a succession plan creates unnecessary hierarchy",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/24/amazons-decart-acquisition-is-a-bet-on-using-software-to-narrow-the-gap-with-nvidia-in-the-ai-chip-race/",
+      "url": "https://techcrunch.com/2026/11/24/jensen-huang-still-thinks-a-succession-plan-creates-unnecessary-hierarchy/",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "In all-hands meeting, Jensen Huang thanks White House and says he’s in therapy",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy/",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "Even the best AI agents struggle with everyday life",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "Maple raises $5.3M to build AI products that protect your data, even from itself",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/24/maple-raises-5-3m-to-build-ai-products-that-protect-your-data-even-from-itself/",
       "date": "2026-11-24",
       "topic": "AI"
     },
@@ -87,86 +164,9 @@
       "topic": "AI detection"
     },
     {
-      "title": "Jensen Huang Is Back, and So Is Nvidia’s Stock",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/jensens-back-stocks-up-what-the-hell-sure/",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "Jensen Huang Is Back as Nvidia CEO",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/jensen-huang-is-back-as-nvidia-ceo/",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
       "title": "A legendary philosopher isn’t buying Anthropic’s consciousness argument",
       "source": "MIT Technology Review",
       "url": "https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "States sue SpaceX to stop Grok from generating child sex images, revenge porn",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/tech-policy/2026/11/states-sue-spacex-to-stop-grok-from-generating-child-sex-images-revenge-porn/",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "Jensen Huang reinstated as Nvidia CEO, board chair",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/ai/2026/11/jensen-huang-reinstated-as-nvidia-ceo-board-chair/",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "Trump engineered a risky comeback for Jensen Huang",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1040652/jensen-huang-nvidia-trump-reinstated",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "Nvidia CEO Jensen Huang is back. What happens next?",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "Welcome to elite impunity, Jensen Huang",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1040819/welcome-to-elite-impunity-jensen-huang",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "AI data centers throw another wrench into chaotic UN climate talks",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/science/1040497/ai-data-centers-electricity-un-climate-summit",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "Supertake raises $20M to let AI agents turn your market predictions into stock portfolios",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "Elon Musk and others rejoice as Jensen Huang is reinstated at Nvidia amid scandal",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/23/elon-musk-and-others-rejoice-as-jensen-huang-is-reinstated-at-nvidia-amid-scandal/",
       "date": "2026-11-23",
       "topic": "AI"
     },
