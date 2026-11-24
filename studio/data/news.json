@@ -1,7 +1,84 @@
 {
-  "updated": "2026-11-24T00:49:34Z",
+  "updated": "2026-11-24T15:52:29Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "Why Does Voice AI Still Struggle With Kenyans’ Speech?",
+      "source": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/swahili-speech-recognition",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "Don’t Bring Up AI if You Want to Enjoy Your Thanksgiving",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/dont-bring-up-ai-if-you-want-to-enjoy-your-thanksgiving/",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "AI Solved Math’s Most Famous Problem. Now Humans Are Struggling to Understand It",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/ai-solved-maths-most-famous-problem/",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "Raising the stakes for enterprise networks with AI modernization",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/11/24/1148091/raising-the-stakes-for-enterprise-networks-with-ai-modernization/",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "How Trump and Silicon Valley forced Nvidia to take Jensen Huang back",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/tech-policy/2026/11/how-trump-and-silicon-valley-forced-nvidia-to-take-jensen-huang-back/",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "Amazon says hackers' AI agents found and exploited 0-day with little human input",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/security/2026/11/amazon-says-hackers-ai-agents-found-and-exploited-0-day-with-little-human-input/",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "Have you downloaded Meta’s AI assistant Muse or do you plan to?",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/24/have-you-downloaded-metas-ai-assistant-muse-or-do-you-plan-to",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "Meta launches Muse in UK – the AI agent that can do your Christmas shopping",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/24/meta-launches-muse-uk-ai-agent-do-christmas-shopping",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "Mamdani says Nvidia drama shows stock market is overly dependent on AI",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/nov/24/mamdani-nvidia-stock-market-ai",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "Jensen Huang returns to Nvidia as Silicon Valley rethinks its alliance with Trump",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/global/2026/nov/24/jensen-huang-nvidia-return-silicon-valley-trump",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
+    {
+      "title": "Amazon’s Decart acquisition is a bet on using software to narrow the gap with Nvidia in the AI chip race",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/24/amazons-decart-acquisition-is-a-bet-on-using-software-to-narrow-the-gap-with-nvidia-in-the-ai-chip-race/",
+      "date": "2026-11-24",
+      "topic": "AI"
+    },
     {
       "title": "Introducing GPTZero 5.0",
       "source": "GPTZero",
@@ -24,20 +101,6 @@
       "topic": "AI"
     },
     {
-      "title": "Nvidia Is Powering Brain-Computer Interfaces Now",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/nvidia-is-powering-brain-computer-interfaces-now/",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "Submit Your Questions: Will Anyone Keep You Safe From AI?",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/livestream-will-anyone-keep-us-safe-from-ai/",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
       "title": "A legendary philosopher isn’t buying Anthropic’s consciousness argument",
       "source": "MIT Technology Review",
       "url": "https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/",
@@ -55,13 +118,6 @@
       "title": "Jensen Huang reinstated as Nvidia CEO, board chair",
       "source": "Ars Technica",
       "url": "https://arstechnica.com/ai/2026/11/jensen-huang-reinstated-as-nvidia-ceo-board-chair/",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "Review: The Asus ProArt P16 offers a glimpse of a future powered by local AI",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/reviews/2026/11/review-the-asus-proart-p16-offers-a-glimpse-of-a-future-powered-by-local-ai/",
       "date": "2026-11-23",
       "topic": "AI"
     },
@@ -94,34 +150,6 @@
       "topic": "AI"
     },
     {
-      "title": "Child safety groups urge Amazon and eBay to stop selling AI toys until proved safe",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/23/child-safety-groups-urge-amazon-ebay-stop-selling-ai-toys-until-proved-safe",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "Sweden’s datacentre politics are more complicated than they appear | Letter",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/world/2026/nov/23/swedens-datacentre-politics-are-more-complicated-than-they-appear",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "How freaked out should we be? After mass outages, experts tell us how close we are to ‘doomsday’",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/23/tech-outages-security-experts",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
-      "title": "‘Pervert glasses’ named word of the year by Macquarie dictionary, ahead of ‘nudify’ and ‘AI;DR’",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/science/2026/nov/23/pervert-glasses-meta-word-of-the-year-macquarie-dictionary-nudify-aidr",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
       "title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
       "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
@@ -143,13 +171,6 @@
       "topic": "AI"
     },
     {
-      "title": "Megaspeed, the company at the center of the Jensen Huang scandal, appears headed for a US blacklist",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/23/megaspeed-the-company-at-the-center-of-the-jensen-huang-scandal-appears-headed-for-a-u-s-blacklist/",
-      "date": "2026-11-23",
-      "topic": "AI"
-    },
-    {
       "title": "Podcast: I Spoke to an AI Fraud Kingpin",
       "source": "404 Media",
       "url": "https://www.404media.co/podcast-i-spoke-to-an-ai-fraud-kingpin/",
@@ -164,31 +185,10 @@
       "topic": "AI"
     },
     {
-      "title": "Google rolls out new search homepage with AI chat history and no search button",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/ai/2026/11/googles-latest-search-page-redesign-drops-the-search-button-adds-ai-sidebar/",
-      "date": "2026-11-20",
-      "topic": "AI"
-    },
-    {
       "title": "Meet Shepherd, the Meta-Agent Keeping Rogue AI in Check",
       "source": "IEEE Spectrum",
       "url": "https://spectrum.ieee.org/ai-agent-manager",
       "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "Why a Computer Scientist Thinks Superintelligence Won’t Happen",
-      "source": "IEEE Spectrum",
-      "url": "https://spectrum.ieee.org/ai-superintelligence-debate",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "Startup Makes Headway Toward Formalizing All of Math With AI",
-      "source": "IEEE Spectrum",
-      "url": "https://spectrum.ieee.org/enormous-theorem-ai",
-      "date": "2026-11-18",
       "topic": "AI"
     },
     {
