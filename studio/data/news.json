@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T15:35:13Z",
+  "updated": "2026-11-25T22:29:45Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
     {
@@ -24,6 +24,13 @@
       "topic": "AI"
     },
     {
+      "title": "Ars Live recap: Don’t expect military attacks on data centers to stop",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/gadgets/2026/11/ars-live-recap-dont-expect-military-attacks-on-data-centers-to-stop/",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
+    {
       "title": "AI may soon change what it means to be a theoretical physicist",
       "source": "Ars Technica",
       "url": "https://arstechnica.com/ai/2026/11/ai-can-do-the-calculations-physicists-are-figuring-out-what-comes-next/",
@@ -31,16 +38,30 @@
       "topic": "AI"
     },
     {
-      "title": "Amazon is reportedly in talks to end Muse AI shopping block",
+      "title": "Google’s patent for custom AI video feeds paints a bleak picture of entertainment’s future",
       "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+      "url": "https://www.theverge.com/entertainment/1042221/google-my-channel-ai-video-patent",
       "date": "2026-11-25",
       "topic": "AI"
     },
     {
-      "title": "Has vibe coding made open source the new normal for synths?",
+      "title": "FCC signs off on SpaceX’s plan to put up to 1 million data center satellites into space",
       "source": "The Verge",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/1040081/vibe-coding-open-source-music-firmware",
+      "url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
+    {
+      "title": "Nothing offers a full look at its AI earbuds and charging case",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/gadgets/1042162/nothing-ear-note-ai-earbuds-reveal",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
+    {
+      "title": "Amazon is reportedly in talks to end Muse AI shopping block",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
       "date": "2026-11-25",
       "topic": "AI"
     },
@@ -73,23 +94,30 @@
       "topic": "AI"
     },
     {
-      "title": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
+      "title": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/",
+      "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/",
       "date": "2026-11-25",
       "topic": "AI"
     },
     {
-      "title": "The questions Jensen Huang and Nvidia will still have to answer about Megaspeed",
+      "title": "Jensen Huang broke Nvidia’s code of conduct, and his employees may not forget it",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/",
+      "url": "https://techcrunch.com/2026/11/25/jensen-huang-broke-nvidias-code-of-conduct-and-his-employees-may-not-forget-it/",
       "date": "2026-11-25",
       "topic": "AI"
     },
     {
-      "title": "Yale’s Sonnenfeld: Nvidia is a ‘detriment’ to US industrial might — not a champion",
+      "title": "Anthropic’s Dario Amodei calls accusations of surrendering human control to AI ‘absurd’",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion/",
+      "url": "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
+    {
+      "title": "Want to buy your kid an AI toy this Christmas? Not in New York",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/25/want-to-buy-your-kid-an-ai-toy-this-christmas-not-in-new-york/",
       "date": "2026-11-25",
       "topic": "AI"
     },
@@ -125,34 +153,6 @@
       "title": "Amazon drone crashes on garage after delivering shampoo, draws FAA probe",
       "source": "Ars Technica",
       "url": "https://arstechnica.com/gadgets/2026/11/faa-opens-probe-after-amazon-delivery-drone-clips-cable-crashes-into-garage/",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
-      "title": "Tidal announces ban on AI-generated music; 27 million tracks will be deleted",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/ai/2026/11/tidal-will-ban-fully-ai-generated-music-on-december-9/",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
-      "title": "Jensen Huang reportedly tells Nvidia staff it’s ‘not true’ Trump got him rehired",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
-      "title": "David Fincher is being dragged for suspected use of AI in his latest film",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/entertainment/1041417/david-fincher-netflix-cliff-booth-ai-interpositive",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
-      "title": "Jensen Huang still thinks a succession plan creates unnecessary hierarchy",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/24/jensen-huang-still-thinks-a-succession-plan-creates-unnecessary-hierarchy/",
       "date": "2026-11-24",
       "topic": "AI"
     },
