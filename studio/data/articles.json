@@ -1,30 +1,7 @@
 {
-  "updated": "2026-11-24T23:00:18Z",
-  "count": 27,
+  "updated": "2026-11-25T15:35:13Z",
+  "count": 26,
   "articles": [
-    {
-      "id": "the-bot-that-wouldnt-agree-with-me",
-      "title": "The Bot That Wouldn’t Agree With Me",
-      "date": "2026-11-21",
-      "dek": "Sycophancy tests measure how far a model bends. A few days with Boardy showed me that a model which refuses to bend can still go first.",
-      "tags": [
-        "language model",
-        "grok",
-        "artificial intelligence",
-        "human edge"
-      ],
-      "lang": "en",
-      "links": [
-        {
-          "platform": "Medium",
-          "url": "https://medium.com/@bj_beyond/the-bot-that-wouldnt-agree-with-me-737cd8ee73b1",
-          "date": "2026-11-21"
-        }
-      ],
-      "platforms": [
-        "Medium"
-      ]
-    },
     {
       "id": "the-night-i-asked-a-machine-which-posts-to-delete",
       "title": "The Night I Asked a Machine Which Posts to Delete",
@@ -564,12 +541,19 @@
           "date": "2026-08-27"
         },
         {
+          "platform": "Medium",
+          "url": "https://medium.com/@bj_beyond/when-the-system-flags-the-human-who-was-helping-it-4aff85a0f0fe",
+          "title": "I Stress-Tested Grok in Public for Months. Then X Banned Me From Creator Revenue Sharing",
+          "date": "2026-11-04"
+        },
+        {
           "platform": "BJ Beyond Journal",
           "url": "articles/when-the-system-flags-the-human/"
         }
       ],
       "platforms": [
         "HackerNoon",
+        "Medium",
         "BJ Beyond Journal"
       ]
     },

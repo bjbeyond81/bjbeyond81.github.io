@@ -109,19 +109,6 @@
  "medium": [
   {
    "platform": "Medium",
-   "url": "https://medium.com/@bj_beyond/the-bot-that-wouldnt-agree-with-me-737cd8ee73b1",
-   "title": "The Bot That Wouldn’t Agree With Me",
-   "date": "2026-11-21",
-   "dek": "Sycophancy tests measure how far a model bends. A few days with Boardy showed me that a model which refuses to bend can still go first.",
-   "tags": [
-    "language model",
-    "grok",
-    "artificial intelligence",
-    "human edge"
-   ]
-  },
-  {
-   "platform": "Medium",
    "url": "https://medium.com/@bj_beyond/the-night-i-asked-a-machine-which-posts-to-delete-cacd2965b9a0",
    "title": "The Night I Asked a Machine Which Posts to Delete",
    "date": "2026-11-21",
@@ -234,6 +221,19 @@
     "artificial intelligence",
     "writing",
     "machine learning"
+   ]
+  },
+  {
+   "platform": "Medium",
+   "url": "https://medium.com/@bj_beyond/when-the-system-flags-the-human-who-was-helping-it-4aff85a0f0fe",
+   "title": "I Stress-Tested Grok in Public for Months. Then X Banned Me From Creator Revenue Sharing",
+   "date": "2026-11-04",
+   "dek": "A documented record of bias tests, a rare spontaneous AI image, and a “permanent” suspension email no one will answer.",
+   "tags": [
+    "creator economy",
+    "ai",
+    "artificial intelligence",
+    "grok"
    ]
   }
  ],

@@ -1,7 +1,98 @@
 {
-  "updated": "2026-11-24T23:00:18Z",
+  "updated": "2026-11-25T15:35:13Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "Airplane Turbulence Is Extremely Hard to Predict, but Maybe Not for Long",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/airplane-turbulence-is-extremely-hard-to-predict-and-avoid/",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
+    {
+      "title": "Jensen Huang’s Return Shows Nvidia Is Too Big to Police",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/jensen-huang-nvidia-us-national-security-risks/",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
+    {
+      "title": "AI is straining America’s open records systems",
+      "source": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
+    {
+      "title": "AI may soon change what it means to be a theoretical physicist",
+      "source": "Ars Technica",
+      "url": "https://arstechnica.com/ai/2026/11/ai-can-do-the-calculations-physicists-are-figuring-out-what-comes-next/",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
+    {
+      "title": "Amazon is reportedly in talks to end Muse AI shopping block",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
+    {
+      "title": "Has vibe coding made open source the new normal for synths?",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1040081/vibe-coding-open-source-music-firmware",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
+    {
+      "title": "New York bans AI toys, including those using internet to talk to children",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/nov/25/new-york-bans-ai-toys",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
+    {
+      "title": "Botty? AI helps resurrect voice of John Motson for football video game",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/media/2026/nov/25/ai-helps-resurrect-voice-john-motson-football-video-game-fc27",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
+    {
+      "title": "Aidan is one of thousands of students forced to verbally defend his honours thesis as universities take on AI",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/australia-news/2026/nov/25/australian-universities-tackle-ai-plagiarism-oral-assessment-honours-masters-phd",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
+    {
+      "title": "Democrats must unite on AI regulation. Here’s our three-point plan | Nathan E Sanders and Bruce Schneier",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/25/democrats-ai-regulation-plan",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
+    {
+      "title": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
+    {
+      "title": "The questions Jensen Huang and Nvidia will still have to answer about Megaspeed",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/25/the-questions-jensen-huang-and-nvidia-will-still-have-to-answer-about-megaspeed/",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
+    {
+      "title": "Yale’s Sonnenfeld: Nvidia is a ‘detriment’ to US industrial might — not a champion",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion/",
+      "date": "2026-11-25",
+      "topic": "AI"
+    },
     {
       "title": "Why Does Voice AI Still Struggle With Kenyans’ Speech?",
       "source": "IEEE Spectrum",
@@ -20,27 +111,6 @@
       "title": "Anthropic Created a Honeypot to Lure AI Agents Into Misbehaving",
       "source": "WIRED",
       "url": "https://www.wired.com/story/ai-agents-can-get-honeypotted-too-aw/",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
-      "title": "Don’t Bring Up AI if You Want to Enjoy Your Thanksgiving",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/dont-bring-up-ai-if-you-want-to-enjoy-your-thanksgiving/",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
-      "title": "AI Solved Math’s Most Famous Problem. Now Humans Are Struggling to Understand It",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/ai-solved-maths-most-famous-problem/",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
-      "title": "Raising the stakes for enterprise networks with AI modernization",
-      "source": "MIT Technology Review",
-      "url": "https://www.technologyreview.com/2026/11/24/1148091/raising-the-stakes-for-enterprise-networks-with-ai-modernization/",
       "date": "2026-11-24",
       "topic": "AI"
     },
@@ -66,13 +136,6 @@
       "topic": "AI"
     },
     {
-      "title": "How Trump and Silicon Valley forced Nvidia to take Jensen Huang back",
-      "source": "Ars Technica",
-      "url": "https://arstechnica.com/tech-policy/2026/11/how-trump-and-silicon-valley-forced-nvidia-to-take-jensen-huang-back/",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
       "title": "Jensen Huang reportedly tells Nvidia staff it’s ‘not true’ Trump got him rehired",
       "source": "The Verge",
       "url": "https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology",
@@ -87,72 +150,9 @@
       "topic": "AI"
     },
     {
-      "title": "Tidal will start banning AI-generated music next month",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
-      "title": "Jensen Huang deepfakes are the hot new AI slop",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/tech/1041222/jensen-huang-nvidia-scandal-deepfakes",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
-      "title": "Have you downloaded Meta’s AI assistant Muse or do you plan to?",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/24/have-you-downloaded-metas-ai-assistant-muse-or-do-you-plan-to",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
-      "title": "Tech sell-off resumes as euphoria from Jensen Huang’s Nvidia return subsides",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/business/2026/nov/24/nvidia-stock-falls-jensen-huang",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
-      "title": "Mamdani questions AI economy as Jensen Huang returns to Nvidia – video",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/video/2026/nov/24/mamdani-questions-ai-economy-as-jensen-huang-returns-to-nvidia-video",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
-      "title": "‘The mistake has been corrected’: end of Jensen Huang’s brief walk in the wilderness",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/24/mistake-corrected-jensen-huang-resinstated-nvidia-analysis",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
       "title": "Jensen Huang still thinks a succession plan creates unnecessary hierarchy",
       "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/11/24/jensen-huang-still-thinks-a-succession-plan-creates-unnecessary-hierarchy/",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
-      "title": "In all-hands meeting, Jensen Huang thanks White House and says he’s in therapy",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy/",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
-      "title": "Even the best AI agents struggle with everyday life",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
-      "title": "Maple raises $5.3M to build AI products that protect your data, even from itself",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/11/24/maple-raises-5-3m-to-build-ai-products-that-protect-your-data-even-from-itself/",
       "date": "2026-11-24",
       "topic": "AI"
     },
@@ -192,6 +192,13 @@
       "topic": "AI"
     },
     {
+      "title": "Is GPTZero Biased Against ESL Writers? What the Latest Data Shows",
+      "source": "GPTZero",
+      "url": "https://gptzero.me/news/esl-and-ai-detection/",
+      "date": "2026-11-17",
+      "topic": "AI detection"
+    },
+    {
       "title": "GPTZero vs Pangram: AI Detector Accuracy Comparison",
       "source": "GPTZero",
       "url": "https://gptzero.me/news/gptzero-vs-pangram/",
@@ -203,13 +210,6 @@
       "source": "GPTZero",
       "url": "https://gptzero.me/news/gptzero-writing-report/",
       "date": "2026-11-03",
-      "topic": "AI detection"
-    },
-    {
-      "title": "GPTZero records 0 false positives on essays by ESL students or students with disabilities",
-      "source": "GPTZero",
-      "url": "https://gptzero.me/news/gptzero-no-bias-against-esl-writers/",
-      "date": "2026-10-20",
       "topic": "AI detection"
     }
   ]
