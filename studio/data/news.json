@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-27T15:03:29Z",
+  "updated": "2026-11-27T21:57:38Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
     {
@@ -24,30 +24,30 @@
       "topic": "AI"
     },
     {
+      "title": "Trump is destroying the rule of law in the US – to protect himself and the tech titans he worships as new gods | Jonathan Freedland",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/27/donald-trump-destroying-us-law-tech-titans-jensen-huang-nvidia",
+      "date": "2026-11-27",
+      "topic": "AI"
+    },
+    {
+      "title": "The Guardian view on AI and the Riemann hypothesis: a triumph of intelligence, a test of democracy | Editorial",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/27/the-guardian-view-on-ai-and-the-riemann-hypothesis-a-triumph-of-intelligence-a-test-of-democracy",
+      "date": "2026-11-27",
+      "topic": "AI"
+    },
+    {
+      "title": "Google told to halt Belgium datacentre construction over lack of planning permit",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/nov/27/belgian-authorities-order-google-to-halt-datacentre-construction-over-lack-of-permits",
+      "date": "2026-11-27",
+      "topic": "AI"
+    },
+    {
       "title": "Meta whistleblower calls on Burnham to go further with ban on NDAs",
       "source": "The Guardian",
       "url": "https://www.theguardian.com/technology/2026/nov/27/meta-whistleblower-sarah-wynn-williams-calls-on-burnham-to-go-further-with-ban-on-non-disclosure-agreements",
-      "date": "2026-11-27",
-      "topic": "AI"
-    },
-    {
-      "title": "‘It’s not helping’: calls for guardrails and regulations as AI use rises at US retailers",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/us-news/2026/nov/27/ai-retailer-consumer-guardrails",
-      "date": "2026-11-27",
-      "topic": "AI"
-    },
-    {
-      "title": "‘I am scared’: Careless People author Sarah Wynn-Williams on living under a gag order - and why it’s time to speak out against big tech",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/books/2026/nov/27/careless-people-author-sarah-wynn-williams-the-silence-is-mine-it-doesnt-have-to-be-yours",
-      "date": "2026-11-27",
-      "topic": "AI"
-    },
-    {
-      "title": "Pizza history: AI agent’s cardless purchase is a first for UK",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/business/2026/nov/27/ai-agent-cardless-transaction-pizza-papa-john-uk-fca-truelayer",
       "date": "2026-11-27",
       "topic": "AI"
     },
