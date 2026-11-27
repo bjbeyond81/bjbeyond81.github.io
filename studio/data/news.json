@@ -1,7 +1,56 @@
 {
-  "updated": "2026-11-26T22:20:26Z",
+  "updated": "2026-11-27T15:03:29Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "This ER Doctor Became a Hospital’s First Clinical AI Engineer",
+      "source": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/clinical-ai-engineer-dinesh-rai",
+      "date": "2026-11-27",
+      "topic": "AI"
+    },
+    {
+      "title": "A New Breed of Chip Runs AI Models Using Waves of Light",
+      "source": "WIRED",
+      "url": "https://www.wired.com/story/a-new-breed-of-chip-runs-ai-models-using-waves-of-light/",
+      "date": "2026-11-27",
+      "topic": "AI"
+    },
+    {
+      "title": "Android’s DIY widgets are a bit of vibe-coding fun",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini",
+      "date": "2026-11-27",
+      "topic": "AI"
+    },
+    {
+      "title": "Meta whistleblower calls on Burnham to go further with ban on NDAs",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/27/meta-whistleblower-sarah-wynn-williams-calls-on-burnham-to-go-further-with-ban-on-non-disclosure-agreements",
+      "date": "2026-11-27",
+      "topic": "AI"
+    },
+    {
+      "title": "‘It’s not helping’: calls for guardrails and regulations as AI use rises at US retailers",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/us-news/2026/nov/27/ai-retailer-consumer-guardrails",
+      "date": "2026-11-27",
+      "topic": "AI"
+    },
+    {
+      "title": "‘I am scared’: Careless People author Sarah Wynn-Williams on living under a gag order - and why it’s time to speak out against big tech",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/books/2026/nov/27/careless-people-author-sarah-wynn-williams-the-silence-is-mine-it-doesnt-have-to-be-yours",
+      "date": "2026-11-27",
+      "topic": "AI"
+    },
+    {
+      "title": "Pizza history: AI agent’s cardless purchase is a first for UK",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/nov/27/ai-agent-cardless-transaction-pizza-papa-john-uk-fca-truelayer",
+      "date": "2026-11-27",
+      "topic": "AI"
+    },
     {
       "title": "Meta Refused to Share Muse for Testing, UK Financial Watchdog Complains",
       "source": "WIRED",
@@ -13,34 +62,6 @@
       "title": "42 state AGs are trying to stop Character.AI from selling users’ chats",
       "source": "The Verge",
       "url": "https://www.theverge.com/policy/1042620/character-ai-sale-state-ags-block-selling-users-chats",
-      "date": "2026-11-26",
-      "topic": "AI"
-    },
-    {
-      "title": "Dozens of court cases in England and Wales affected by undisclosed AI use in 2026",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/26/dozens-of-court-cases-in-england-and-wales-affected-by-undisclosed-ai-use-in-2026",
-      "date": "2026-11-26",
-      "topic": "AI"
-    },
-    {
-      "title": "Can Elon Musk really put AI datacentres in space? - The Latest",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/news/video/2026/nov/26/can-elon-musk-really-put-ai-datacentres-in-space-the-latest",
-      "date": "2026-11-26",
-      "topic": "AI"
-    },
-    {
-      "title": "I’m an AI leader at a tech giant. Our industry has stopped taking safety seriously | Anonymous",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/26/ai-leader-tech-giant-trust-safeguarding-privacy-profit",
-      "date": "2026-11-26",
-      "topic": "AI"
-    },
-    {
-      "title": "Employers: do you have concerns about the rollout of Muse and other AI agents?",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/26/employers-do-you-have-concerns-about-the-rollout-of-muse-and-other-ai-agents",
       "date": "2026-11-26",
       "topic": "AI"
     },
@@ -108,13 +129,6 @@
       "topic": "AI"
     },
     {
-      "title": "Nothing offers a full look at its AI earbuds and charging case",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/gadgets/1042162/nothing-ear-note-ai-earbuds-reveal",
-      "date": "2026-11-25",
-      "topic": "AI"
-    },
-    {
       "title": "S&P considers Nvidia credit downgrade over governance and ‘key man’ risks",
       "source": "TechCrunch",
       "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/",
@@ -132,13 +146,6 @@
       "title": "Why Does Voice AI Still Struggle With Kenyans’ Speech?",
       "source": "IEEE Spectrum",
       "url": "https://spectrum.ieee.org/swahili-speech-recognition",
-      "date": "2026-11-24",
-      "topic": "AI"
-    },
-    {
-      "title": "Jensen Huang Apologizes to Nvidia Employees in First All-Hands Since His Return",
-      "source": "WIRED",
-      "url": "https://www.wired.com/story/jensen-huang-apologizes-to-nvidia-employees-in-first-all-hands-since-his-return/",
       "date": "2026-11-24",
       "topic": "AI"
     },
@@ -181,13 +188,6 @@
       "title": "Meet Shepherd, the Meta-Agent Keeping Rogue AI in Check",
       "source": "IEEE Spectrum",
       "url": "https://spectrum.ieee.org/ai-agent-manager",
-      "date": "2026-11-19",
-      "topic": "AI"
-    },
-    {
-      "title": "Why a Computer Scientist Thinks Superintelligence Won’t Happen",
-      "source": "IEEE Spectrum",
-      "url": "https://spectrum.ieee.org/ai-superintelligence-debate",
       "date": "2026-11-19",
       "topic": "AI"
     },
