@@ -1,7 +1,42 @@
 {
-  "updated": "2026-11-27T21:57:38Z",
+  "updated": "2026-11-28T14:11:28Z",
   "note": "External headlines from publishers' official RSS/Atom feeds. Title, source name, date and link only; no descriptions, snippets or images. Headlines belong to their publishers.",
   "items": [
+    {
+      "title": "Poetry for Engineers: Prompt Engineering for Odysseus",
+      "source": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/poetry-for-engineers-odysseus",
+      "date": "2026-11-28",
+      "topic": "AI"
+    },
+    {
+      "title": "AI labs sitting on ‘bombshell’ revelations that could cause global chaos, experts warn",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/28/ai-artificial-intelligence-encryption-global-chaos",
+      "date": "2026-11-28",
+      "topic": "AI"
+    },
+    {
+      "title": "‘I told it to never call me again’: AI bots wreak havoc with UK restaurant bookings",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/business/2026/nov/28/ai-bots-wreak-havoc-uk-restaurant-bookings-meta-muse",
+      "date": "2026-11-28",
+      "topic": "AI"
+    },
+    {
+      "title": "Grand Theft Anthropic: how GTA can inspire a fightback against AI | Alexander Hurst",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/nov/28/grand-theft-anthropic-gta-fightback-against-ai",
+      "date": "2026-11-28",
+      "topic": "AI"
+    },
+    {
+      "title": "Could AI break encryption? What mathematical breakthroughs mean for cybersecurity",
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/nov/28/could-ai-break-encryption-what-mathematical-breakthroughs-mean-for-cybersecurity",
+      "date": "2026-11-28",
+      "topic": "AI"
+    },
     {
       "title": "This ER Doctor Became a Hospital’s First Clinical AI Engineer",
       "source": "IEEE Spectrum",
@@ -20,34 +55,6 @@
       "title": "Android’s DIY widgets are a bit of vibe-coding fun",
       "source": "The Verge",
       "url": "https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini",
-      "date": "2026-11-27",
-      "topic": "AI"
-    },
-    {
-      "title": "Trump is destroying the rule of law in the US – to protect himself and the tech titans he worships as new gods | Jonathan Freedland",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/27/donald-trump-destroying-us-law-tech-titans-jensen-huang-nvidia",
-      "date": "2026-11-27",
-      "topic": "AI"
-    },
-    {
-      "title": "The Guardian view on AI and the Riemann hypothesis: a triumph of intelligence, a test of democracy | Editorial",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/commentisfree/2026/nov/27/the-guardian-view-on-ai-and-the-riemann-hypothesis-a-triumph-of-intelligence-a-test-of-democracy",
-      "date": "2026-11-27",
-      "topic": "AI"
-    },
-    {
-      "title": "Google told to halt Belgium datacentre construction over lack of planning permit",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/world/2026/nov/27/belgian-authorities-order-google-to-halt-datacentre-construction-over-lack-of-permits",
-      "date": "2026-11-27",
-      "topic": "AI"
-    },
-    {
-      "title": "Meta whistleblower calls on Burnham to go further with ban on NDAs",
-      "source": "The Guardian",
-      "url": "https://www.theguardian.com/technology/2026/nov/27/meta-whistleblower-sarah-wynn-williams-calls-on-burnham-to-go-further-with-ban-on-non-disclosure-agreements",
       "date": "2026-11-27",
       "topic": "AI"
     },
@@ -182,13 +189,6 @@
       "source": "MIT Technology Review",
       "url": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
       "date": "2026-11-20",
-      "topic": "AI"
-    },
-    {
-      "title": "Meet Shepherd, the Meta-Agent Keeping Rogue AI in Check",
-      "source": "IEEE Spectrum",
-      "url": "https://spectrum.ieee.org/ai-agent-manager",
-      "date": "2026-11-19",
       "topic": "AI"
     },
     {
